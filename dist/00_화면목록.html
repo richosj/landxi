@@ -921,6 +921,46 @@ layFc.miniAlert = function(text,type){
           <tbody>
             <tr class="">
   <td class="table-col-code" style="text-align:center;"></td>
+  <td class="table-col-title">메인화면 - LX - NEW</td>
+  <td class="table-col-cate" style="text-align:center;"></td>
+  <td class="table-col-url">
+    <div style="display:inline-block;"></div>
+    <button onclick="textCopy('00-메인A.html')">c</button>
+    <!-- <button type="button" onclick="window.open('00-메인A.html', '_newwindwaa')">nw</button> -->
+    <!--
+    <a href="00-메인A.html" onclick="
+    var input = $(this).parent().find('input[type=checkbox]');
+    var checkValue = input.is(':checked');
+
+    if(siteList.clickCheck()){
+      localStorage.setItem('urlopen@@idx', 'true');
+      $(this).closest('tr').addClass('urlopen');
+    }
+    ">00-메인A.html</a>
+    -->
+
+    <a href="#none" onclick="
+    // popupopen(event,'00-메인A.html',this);
+    var input = $(this).parent().find('input[type=checkbox]');
+    var idx = $(this).closest('tr').data('idx');
+    console.log(idx);
+    var checkValue = input.is(':checked');
+
+    if(siteList.clickCheck()){
+      localStorage.setItem('urlopen'+idx, 'true');
+      $(this).closest('tr').addClass('urlopen');
+    }
+
+    window.open('00-메인A.html', '_newwindwaa');
+    return false;
+
+    ">00-메인A.html</a>
+  </td>
+  <td style="text-align:center" class="table-col-createDate">2024-04-17</td>
+  <td style="text-align:center;" class="table-col-modifyDate"></td>
+  <td style="font-size: 11px;" class="table-col-extra"></td>
+</tr><tr class="">
+  <td class="table-col-code" style="text-align:center;"></td>
   <td class="table-col-title">메인화면 - LX</td>
   <td class="table-col-cate" style="text-align:center;"></td>
   <td class="table-col-url">
@@ -1079,6 +1119,46 @@ layFc.miniAlert = function(text,type){
   <td style="text-align:center" class="table-col-createDate">2023-12-11</td>
   <td style="text-align:center;" class="table-col-modifyDate">2023-12-14</td>
   <td style="font-size: 11px;" class="table-col-extra">[{'text': '내용변경 일부'}]</td>
+</tr><tr class="">
+  <td class="table-col-code" style="text-align:center;"></td>
+  <td class="table-col-title">공통 - 회원가입- NEW - 정보입력</td>
+  <td class="table-col-cate" style="text-align:center;"></td>
+  <td class="table-col-url">
+    <div style="display:inline-block;"></div>
+    <button onclick="textCopy('99-02-02-회원가입-정보입력2.html')">c</button>
+    <!-- <button type="button" onclick="window.open('99-02-02-회원가입-정보입력2.html', '_newwindwaa')">nw</button> -->
+    <!--
+    <a href="99-02-02-회원가입-정보입력2.html" onclick="
+    var input = $(this).parent().find('input[type=checkbox]');
+    var checkValue = input.is(':checked');
+
+    if(siteList.clickCheck()){
+      localStorage.setItem('urlopen@@idx', 'true');
+      $(this).closest('tr').addClass('urlopen');
+    }
+    ">99-02-02-회원가입-정보입력2.html</a>
+    -->
+
+    <a href="#none" onclick="
+    // popupopen(event,'99-02-02-회원가입-정보입력2.html',this);
+    var input = $(this).parent().find('input[type=checkbox]');
+    var idx = $(this).closest('tr').data('idx');
+    console.log(idx);
+    var checkValue = input.is(':checked');
+
+    if(siteList.clickCheck()){
+      localStorage.setItem('urlopen'+idx, 'true');
+      $(this).closest('tr').addClass('urlopen');
+    }
+
+    window.open('99-02-02-회원가입-정보입력2.html', '_newwindwaa');
+    return false;
+
+    ">99-02-02-회원가입-정보입력2.html</a>
+  </td>
+  <td style="text-align:center" class="table-col-createDate">2024-04-24</td>
+  <td style="text-align:center;" class="table-col-modifyDate"></td>
+  <td style="font-size: 11px;" class="table-col-extra"></td>
 </tr><tr class="">
   <td class="table-col-code" style="text-align:center;"></td>
   <td class="table-col-title">공통 - 회원가입 - 정보입력</td>
