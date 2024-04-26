@@ -241,5 +241,5 @@ if (false == true) {
                 indexNav.classList.remove('black');
             }
         }
-    })
+    });
 }
