@@ -16670,6 +16670,53 @@ body {
   padding: 0 16px;
 }
 
+.bs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bs-list .empty {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.bs-list li {
+  border-bottom: 1px solid #cfcfcf;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.bs-list a {
+  display: flex;
+  align-items: center;
+}
+
+.bs-list a .badge {
+  background-color: var(--color);
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  border-radius: 2px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bs-list a div {
+  padding-left: 25px;
+  display: inline-block;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  font-size: 22px;
+  width: calc(100% - 125px);
+}
+
 @media (max-width: 1300px) {
   .section-4 .list li {
     width: calc(50% - 16px);
