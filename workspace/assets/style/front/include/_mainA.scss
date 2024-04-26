@@ -732,6 +732,48 @@
     width: calc(33.333% - 16px);
     padding: 0 16px;
   }
+
+  .bs-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .empty{
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    li{
+      border-bottom: 1px solid #cfcfcf;
+      align-items: center;
+      padding: 20px 24px;
+    }
+    a{
+      display: flex;
+      align-items: center;
+      .badge{
+        background-color: var(--color);
+        color: #fff;
+        width: 100px;
+        height: 40px;
+        border-radius: 2px;
+        font-size: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      div{
+        padding-left: 25px;
+        display: inline-block;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 700;
+        font-size: 22px;
+        width: calc(100% - 125px);
+      }
+    }
+  }
   
   @media (max-width: 1300px) {
     .section-4 .list li {
