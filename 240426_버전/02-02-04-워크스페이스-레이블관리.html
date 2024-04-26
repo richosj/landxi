@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LAND XI</title>
+<link rel="shortcut icon" type="image/x-icon" href="./common/images/favicon.png">
+
+<link rel="stylesheet" href="./common/css/plat/layout.css">
+<script src="./common/libjs/jquery.min.js"></script>
+<script src="./common/libjs/jquery-ui.min.js"></script>
+<script src="./common/js/plat_ui.js"></script>
+</head>
+
+<body>
+  <div class="lay-body">
+    <!-- header -->
+    <div class="lay-header">
+	<div class="lay-wrap">
+		<h1 class="lay-logo"><a href="#"><span class="ir_wa">LAND-XI PLATFORM</span></a></h1>
+		<div class="lay-location">
+			<ul>
+				<li><a href="#" class="lay-location-home">홈</a></li>
+				<li><a href="#">DAVIS님 마이 스페이스</a></li>
+				<li><strong>Main</strong></li>
+			</ul>
+		</div>
+		<div class="lay-hedaer-right">
+			<!-- 알림 -->
+			<a href="#" class="member-alarm" title="알림 열림" onClick="headerModal(this,'#memberAlarm'); return false;"><i>신규</i> <span class="sr-only">알람</span></a>
+			<!-- 알림모달 -->
+			<div class="lay-header-pop" id="memberAlarm">
+				<div class="lay-header-pop-wrap">
+					<ul class="alarm-ul">
+						<li>
+							<a href="#" class="member-alarm-stat1">
+								<i></i>
+								<span>분석중</span>
+								<div><strong>15</strong>건</div>
+							</a>
+						</li>
+						<li>
+						<a href="#" class="member-alarm-stat2">
+							<i></i>
+							<span>분석완료</span>
+							<div><strong>15</strong>건</div>
+						</a>
+						</li>
+						<li>
+							<a href="#" class="member-alarm-stat3">
+								<i></i>
+								<span>참여자 승인</span>
+								<div><strong>15</strong>건</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div> 
+
+			<!-- 회원정보 -->
+			<a href="#" class="member-info" title="회원정보 열림" onClick="headerModal(this,'#memberProfile'); return false;">
+				<span>
+					<img src="./common/images/platform/sample-profile.png" alt="">
+				</span>
+				<strong>Davis</strong>
+			</a>
+
+			<!-- 회원정보 모달 -->
+			<div class="lay-header-pop" id="memberProfile">
+				<div class="lay-header-pop-wrap">
+					<div class="logout">
+						<a href="#" class="btn-logout">로그아웃 <i></i></a>
+					</div>
+					<div class="avatar">
+
+					</div>
+					<div class="user-info">
+						국토교통부<strong>홍길동</strong>
+					</div>
+					<a href="#" class="user-modify"><i></i>회원정보수정</a>
+				</div>
+			</div>
+
+			<!-- 햄버거 메뉴 -->
+			<a href="#" class="lay-allmenu-btn" title="메뉴열림">
+				<em class="sr-only">메뉴</em>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="lay-sitemap">
+  <div class="lay-sitemap_bg1"></div>
+  <div class="lay-sitemap_bg2"></div>
+  <div class="lay-sitemap_bar">
+    <div class="lay-wrap"><button class="lay-sitemap_close">닫기</button></div>
+  </div>
+  <div class="lay-sitemap-warp">
+    <div class="sitem-map-nav">
+      <ul>
+        <li>
+          <a href="#"><span>플랫폼 소개</span></a>
+          <div class="lay-gnb-depth">
+            <ul>
+              <li><a href="#"><span>서비스 소개</span></a></li>
+              <li><a href="#"><span>서비스 로드맵</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"><span>서비스 모델</span></a>
+          <div class="lay-gnb-depth">
+            <ul>
+              <li><a href="#"><span>마이 스페이스</span></a></li>
+              <li><a href="#"><span>AI 프로젝트</span></a></li>
+              <li><a href="#"><span>AI 모델</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"><span>서비스 활용</span></a>
+          <div class="lay-gnb-depth">
+            <ul>
+              <li><a href="#"><span>AI 활용 모델</span></a></li>
+              <li><a href="#"><span>튜토리얼</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"><span>이용안내</span></a>
+          <div class="lay-gnb-depth">
+            <ul>
+              <li><a href="#"><span>공지사항</span></a></li>
+              <li><a href="#"><span>자주 묻는 질문</span></a></li>
+              <li><a href="#"><span>문의하기</span></a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="selectbg"></div>
+    </div>
+  </div>
+</div>
+<!--// header -->
+    <!--// header -->
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-nav wide">
+        <div class="lay-myspace-menu">
+  <ul>
+    <li><a href="#" class="active"><i class="nav-icon1"></i><span>마이 스페이스</span></a></li>
+    <li><a href="#"><i class="nav-icon2"></i><span>워크 스페이스</span></a></li>
+    <li><a href="#"><i class="nav-icon3"></i><span>초대 요청 관리</span></a></li>
+    <li><a href="#"><i class="nav-icon4"></i><span>즐겨찾기</span></a></li>
+    <li><a href="#"><i class="nav-icon5"></i><span>이용안내</span></a></li>
+  </ul>
+</div>
+
+<div class="lay-work-menu">
+  <ul class="ul">
+    <li><button type="button">Annotation<i></i></button>
+      <ul>
+        <li><a href="">레이블 관리</a></li>
+        <li><a href="">파일 업로드</a></li>
+        <li><a href="">작업자 지정</a></li>
+        <li><a href="">어노테이션</a></li>
+        <li><a href="">라벨링 이미지</a></li>
+        <li><a href="">데이터셋 관리</a></li>
+      </ul>
+    </li>
+    <li class="current"><button type="button">모델 활용<i></i></button>
+      <ul>
+        <li><a href="#"></a>워크 플로우</a></li>
+        <li><a href="#">학습 관리</a></li>
+        <li><a href="#">추론 관리</a></li>
+        <li><a href="#">분석 관리</a></li>         
+      </ul>
+    </li>
+    <li><button type="button">모니터링<i></i></button>
+      <ul>
+        <li><a href="#">실행 로그</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<button class="lay-nav-exp-btn" type="button" title="메뉴 열림"><span>버튼</span></button>
+      </div>
+      <div class="lay-content">
+        <div class="lay-content-wrap">
+          
+          <div class="row">
+            <div class="col-12"><h3 class="basic-tit">레이블 관리</h3></div>
+            <div class="col col-3 col-lg-6 workspace-item3 col-add">
+              <button type="button" class="add" onClick="addModal();">
+                <i class="icon-add"></i>
+                <span>신규 레이블 만들기</span>
+              </button>
+            </div>
+            <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #033272;">
+              <h2>이름  </h2>
+              <div class="background-round-white align-center">
+                <div class="desc">
+                  <p class="label-tit"><i class="icon-label label-blue" aria-hidden="true"></i>BBox</p>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                  <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                </div>
+              </div>
+            </div>
+            <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #16bb9b;">
+                <h2>이름  </h2>
+                <div class="background-round-white align-center">
+                  <div class="desc">
+                    <p class="label-tit"><i class="icon-label label-gr" aria-hidden="true"></i>BBox</p>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                    <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #a574ee;">
+                <h2>이름  </h2>
+                <div class="background-round-white align-center">
+                  <div class="desc">
+                    <p class="label-tit"><i class="icon-label label-pur" aria-hidden="true"></i>BBox</p>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                    <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #033272;">
+                <h2>이름  </h2>
+                <div class="background-round-white align-center">
+                  <div class="desc">
+                    <p class="label-tit"><i class="icon-label label-blue" aria-hidden="true"></i>BBox</p>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                    <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #16bb9b;">
+                  <h2>이름  </h2>
+                  <div class="background-round-white align-center">
+                    <div class="desc">
+                      <p class="label-tit"><i class="icon-label label-gr" aria-hidden="true"></i>BBox</p>
+                    </div>
+                    <div class="btn-group">
+                      <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                      <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #a574ee;">
+                  <h2>이름  </h2>
+                  <div class="background-round-white align-center">
+                    <div class="desc">
+                      <p class="label-tit"><i class="icon-label label-pur" aria-hidden="true"></i>BBox</p>
+                    </div>
+                    <div class="btn-group">
+                      <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                      <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <!--// row -->
+        </div>
+        <!--// lay-content-wrap -->
+      </div>
+      <!--// lay-content -->
+    </div>
+    <!--// container -->
+  </div>
+  <!--// lay-body -->
+  <div class="popup-wrap" id="addModal" style="width:730px;">
+    <div class="popup-container">
+      <!-- header -->
+      <div class="popup-header">
+        <span class="popup-header-text">신규 레이블  만들기</span>
+        <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+      </div>
+      <!-- content -->
+      <div class="popup-content">
+        <!-- popup-content-wrap -->
+        <div class="popup-content-wrap">
+          <div class="pop-inner-con">
+            <div class="cs-table">
+              <table>
+                <colgroup>
+                  <col style="width:140px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>레이블 이름</th>
+                    <td class="cell-input"><input type="text" class="cs-input width100p" placeholder="레이블 이름을 입력하세요." title="레이블 이름 입력"></td>
+                  </tr>
+                  <tr>
+                    <th>레이블 이름</th>
+                    <td class="cell-input"><input type="text" class="cs-input" placeholder="레이블 이름을 입력하세요." title="레이블 이름 입력"></td>
+                  </tr>
+                  <tr>
+                        <th>색상</th>
+                        <td class="cell-input">
+                        <div class="color-input">
+                            <input type="text" class="txt-input" placeholder="#f0f0f0f" value="#a574ee" title="색상 선택" readonly>
+                            <input type="color" class="color">
+                        </div>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+
+            
+            <div class="cs-table-header">
+                <h3>레이블 속성</h3>
+                <div class="btn-g">
+                    <button type="button" class="btn btn-sm">속성 추가</button>
+                </div>
+            </div>
+            <div class="cs-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="cell-input" colspan="3">
+                        <div class="cell-add-input">
+                            <input type="text" class="cs-input width200" title="속성 이름 입력" placeholder="속성 이름">
+                            <select name="" id="" class="cs-input width150" title="선택">
+                                <option value="">text</option>
+                            </select>
+                            <input type="text" class="cs-input width220" title="기본 값 입력" placeholder="기본 값">
+                            <button type="button" class="btn-del" title="열삭제">삭제</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+          </div>
+          <!-- footer -->
+          <div class="popup-footer">
+            <button class="btn btn-3 btn-width115" data-modal="closebtn">확인</button>
+            <button class="btn btn-width115" data-modal="closebtn">취소</button>
+          </div>
+        </div>
+        <!-- popup-content-wrap -->
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.color').change(function () {
+      $(this).siblings('.txt-input').val($(this).val())
+    })
+
+    function addModal(t) {
+      uiModal.open({
+        elm: 'addModal',
+        bgBlock: true,
+        drag: false,
+      }, t);
+    }
+
+    //openuiguidepop4();
+  </script>
+  <!-- @include('./include/footer.html') -->
+</body>
+
+</html>

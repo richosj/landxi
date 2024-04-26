@@ -89,7 +89,7 @@
 }
 
 .welcom-logo{
-  width: 327px;height: 116px;background: url('#{var.$image}/front/logo_big.png');
+  width: 327px;height: 116px;background: url('#{var.$image}/front/logo_big_v2.png');
   overflow: hidden;line-height:400px;
   display: block;
 }
@@ -108,19 +108,20 @@
 }
 
 .login-welcom{
-  background: url('#{var.$image}/front/login_bg.jpg') right bottom / cover;
+  background: url('#{var.$image}/front/login_bg_v2.jpg') right bottom / cover;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   .login-welcom-wrap{
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     flex: 0 0 700px;
     width: 700px;
     margin-right: auto;margin-right: 0;
     .welcom-text{
       margin-top: 80px;
       font-family: var.$font-gmarket;
-      font-size: 26px;color: #091634;
+      font-size: 26px;
+      color: #fff;
     }
 
     .welcom-copy{
@@ -131,10 +132,11 @@
 }
 
 .login-container{
-  background: url('#{var.$image}/front/login_bg2.jpg') center / cover;
+  //background: url('#{var.$image}/front/login_bg2.jpg') center / cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #f6f8f9;
 }
 
 .login-cont{width: 430px;flex: 0 0 430px;}
@@ -187,7 +189,7 @@
     font-size: 16px;
     display: flex;
     align-items: center;
-    color: #18b0ef;
+    color: #006ef6;
     font-weight: bold;
     justify-content: center;
     box-sizing: border-box;
@@ -198,11 +200,11 @@
       position: absolute;
       left: 0;top: 0;right: 0;bottom: 0;
       border-radius: 8px;
-      border: 1px solid transparent;
-      background: linear-gradient(90deg, rgba(4,119,235,1) 0%, rgba(25,198,240,1) 100%) border-box;
-      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
+      border: 1px solid #006ef6;
+      // background: linear-gradient(90deg, rgba(4,119,235,1) 0%, rgba(25,198,240,1) 100%) border-box;
+      // -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      // -webkit-mask-composite: destination-out;
+      // mask-composite: exclude;
     }
     i{margin-right: 5px;}
   }
@@ -212,7 +214,8 @@
     cursor: pointer;
     color: #fff;
     border: 0;
-    background: linear-gradient(90deg, rgba(4,119,235,1) 0%, rgba(25,198,240,1) 100%);
+    //background: linear-gradient(90deg, rgba(4,119,235,1) 0%, rgba(25,198,240,1) 100%);
+    background-color: #006ef6;
   }
 
 }
