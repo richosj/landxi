@@ -780,8 +780,6 @@ layFc.miniAlert = function(text,type){
 
             <button onclick="dataShow( $('[jq-id=searchDay]').val() )">적용</button>
             <!-- <label style="font-size:12px;"><input type="checkbox"> 날짜고정</label> -->
-
-            
             <script>
               jQuery(function(){
                 const today = new Date();
@@ -921,7 +919,7 @@ layFc.miniAlert = function(text,type){
           <tbody>
             <tr class="">
   <td class="table-col-code" style="text-align:center;"></td>
-  <td class="table-col-title">메인화면 - LX - NEW</td>
+  <td class="table-col-title">메인화면 - LX</td>
   <td class="table-col-cate" style="text-align:center;"></td>
   <td class="table-col-url">
     <div style="display:inline-block;"></div>
@@ -938,66 +936,10 @@ layFc.miniAlert = function(text,type){
     }
     ">00-메인A.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'00-메인A.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('00-메인A.html', '_newwindwaa');
-    return false;
-
-    ">00-메인A.html</a>
-  </td>
-  <td style="text-align:center" class="table-col-createDate">2024-04-17</td>
-  <td style="text-align:center;" class="table-col-modifyDate"></td>
-  <td style="font-size: 11px;" class="table-col-extra"></td>
-</tr><tr class="">
-  <td class="table-col-code" style="text-align:center;"></td>
-  <td class="table-col-title">메인화면 - LX</td>
-  <td class="table-col-cate" style="text-align:center;"></td>
-  <td class="table-col-url">
-    <div style="display:inline-block;"></div>
-    <button onclick="textCopy('00-메인.html')">c</button>
-    <!-- <button type="button" onclick="window.open('00-메인.html', '_newwindwaa')">nw</button> -->
-    <!--
-    <a href="00-메인.html" onclick="
-    var input = $(this).parent().find('input[type=checkbox]');
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen@@idx', 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-    ">00-메인.html</a>
-    -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'00-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('00-메인.html', '_newwindwaa');
-    return false;
-
-    ">00-메인.html</a>
+    <a href="00-메인A.html" target="_blank" class="liveView">00-메인A.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-20</td>
-  <td style="text-align:center;" class="table-col-modifyDate"></td>
+  <td style="text-align:center;" class="table-col-modifyDate">2024-04-17</td>
   <td style="font-size: 11px;" class="table-col-extra"></td>
 </tr><tr class="">
   <td class="table-col-code" style="text-align:center;"></td>
@@ -1018,23 +960,7 @@ layFc.miniAlert = function(text,type){
     }
     ">01-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'01-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('01-메인.html', '_newwindwaa');
-    return false;
-
-    ">01-메인.html</a>
+    <a href="01-메인.html" target="_blank" class="liveView">01-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-20</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1058,23 +984,7 @@ layFc.miniAlert = function(text,type){
     }
     ">99-01-공통-로그인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-01-공통-로그인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-01-공통-로그인.html', '_newwindwaa');
-    return false;
-
-    ">99-01-공통-로그인.html</a>
+    <a href="99-01-공통-로그인.html" target="_blank" class="liveView">99-01-공통-로그인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-11</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1098,30 +1008,14 @@ layFc.miniAlert = function(text,type){
     }
     ">99-02-01-회원가입-약관동의.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-02-01-회원가입-약관동의.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-02-01-회원가입-약관동의.html', '_newwindwaa');
-    return false;
-
-    ">99-02-01-회원가입-약관동의.html</a>
+    <a href="99-02-01-회원가입-약관동의.html" target="_blank" class="liveView">99-02-01-회원가입-약관동의.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-11</td>
   <td style="text-align:center;" class="table-col-modifyDate">2023-12-14</td>
   <td style="font-size: 11px;" class="table-col-extra">[{'text': '내용변경 일부'}]</td>
 </tr><tr class="">
   <td class="table-col-code" style="text-align:center;"></td>
-  <td class="table-col-title">공통 - 회원가입- NEW - 정보입력</td>
+  <td class="table-col-title">공통 - 회원가입 - 정보입력(기관)</td>
   <td class="table-col-cate" style="text-align:center;"></td>
   <td class="table-col-url">
     <div style="display:inline-block;"></div>
@@ -1138,30 +1032,14 @@ layFc.miniAlert = function(text,type){
     }
     ">99-02-02-회원가입-정보입력2.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-02-02-회원가입-정보입력2.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-02-02-회원가입-정보입력2.html', '_newwindwaa');
-    return false;
-
-    ">99-02-02-회원가입-정보입력2.html</a>
+    <a href="99-02-02-회원가입-정보입력2.html" target="_blank" class="liveView">99-02-02-회원가입-정보입력2.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-04-24</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
   <td style="font-size: 11px;" class="table-col-extra"></td>
 </tr><tr class="">
   <td class="table-col-code" style="text-align:center;"></td>
-  <td class="table-col-title">공통 - 회원가입 - 정보입력</td>
+  <td class="table-col-title">공통 - 회원가입 - 정보입력(LX)</td>
   <td class="table-col-cate" style="text-align:center;"></td>
   <td class="table-col-url">
     <div style="display:inline-block;"></div>
@@ -1178,23 +1056,7 @@ layFc.miniAlert = function(text,type){
     }
     ">99-02-02-회원가입-정보입력.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-02-02-회원가입-정보입력.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-02-02-회원가입-정보입력.html', '_newwindwaa');
-    return false;
-
-    ">99-02-02-회원가입-정보입력.html</a>
+    <a href="99-02-02-회원가입-정보입력.html" target="_blank" class="liveView">99-02-02-회원가입-정보입력.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-11</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1218,23 +1080,7 @@ layFc.miniAlert = function(text,type){
     }
     ">99-02-03-회원가입-가입완료.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-02-03-회원가입-가입완료.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-02-03-회원가입-가입완료.html', '_newwindwaa');
-    return false;
-
-    ">99-02-03-회원가입-가입완료.html</a>
+    <a href="99-02-03-회원가입-가입완료.html" target="_blank" class="liveView">99-02-03-회원가입-가입완료.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-11</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1258,23 +1104,7 @@ layFc.miniAlert = function(text,type){
     }
     ">99-03-01-공통-정책-이용약관.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-03-01-공통-정책-이용약관.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-03-01-공통-정책-이용약관.html', '_newwindwaa');
-    return false;
-
-    ">99-03-01-공통-정책-이용약관.html</a>
+    <a href="99-03-01-공통-정책-이용약관.html" target="_blank" class="liveView">99-03-01-공통-정책-이용약관.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-14</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1298,23 +1128,7 @@ layFc.miniAlert = function(text,type){
     }
     ">99-03-02-공통-정책-개인정보처리방침.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-03-02-공통-정책-개인정보처리방침.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-03-02-공통-정책-개인정보처리방침.html', '_newwindwaa');
-    return false;
-
-    ">99-03-02-공통-정책-개인정보처리방침.html</a>
+    <a href="99-03-02-공통-정책-개인정보처리방침.html" target="_blank" class="liveView">99-03-02-공통-정책-개인정보처리방침.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-14</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1338,23 +1152,7 @@ layFc.miniAlert = function(text,type){
     }
     ">99-03-03-공통-정책-이메일무단수집거부.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-03-03-공통-정책-이메일무단수집거부.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-03-03-공통-정책-이메일무단수집거부.html', '_newwindwaa');
-    return false;
-
-    ">99-03-03-공통-정책-이메일무단수집거부.html</a>
+    <a href="99-03-03-공통-정책-이메일무단수집거부.html" target="_blank" class="liveView">99-03-03-공통-정책-이메일무단수집거부.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-14</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1378,23 +1176,7 @@ layFc.miniAlert = function(text,type){
     }
     ">99-04-01-공통-기능-시스템장애.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-04-01-공통-기능-시스템장애.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-04-01-공통-기능-시스템장애.html', '_newwindwaa');
-    return false;
-
-    ">99-04-01-공통-기능-시스템장애.html</a>
+    <a href="99-04-01-공통-기능-시스템장애.html" target="_blank" class="liveView">99-04-01-공통-기능-시스템장애.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-14</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1418,23 +1200,7 @@ layFc.miniAlert = function(text,type){
     }
     ">99-04-02-공통-기능-접속장애.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'99-04-02-공통-기능-접속장애.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('99-04-02-공통-기능-접속장애.html', '_newwindwaa');
-    return false;
-
-    ">99-04-02-공통-기능-접속장애.html</a>
+    <a href="99-04-02-공통-기능-접속장애.html" target="_blank" class="liveView">99-04-02-공통-기능-접속장애.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-14</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1458,23 +1224,7 @@ layFc.miniAlert = function(text,type){
     }
     ">01-01-플랫폼소개-서비스개요-플랫폼소개.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'01-01-플랫폼소개-서비스개요-플랫폼소개.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('01-01-플랫폼소개-서비스개요-플랫폼소개.html', '_newwindwaa');
-    return false;
-
-    ">01-01-플랫폼소개-서비스개요-플랫폼소개.html</a>
+    <a href="01-01-플랫폼소개-서비스개요-플랫폼소개.html" target="_blank" class="liveView">01-01-플랫폼소개-서비스개요-플랫폼소개.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-15</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1498,23 +1248,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02', '_newwindwaa');
-    return false;
-
-    ">02</a>
+    <a href="02" target="_blank" class="liveView">02</a>
   </td>
   <td style="text-align:center" class="table-col-createDate"></td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1538,23 +1272,7 @@ layFc.miniAlert = function(text,type){
     }
     ">03</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'03',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('03', '_newwindwaa');
-    return false;
-
-    ">03</a>
+    <a href="03" target="_blank" class="liveView">03</a>
   </td>
   <td style="text-align:center" class="table-col-createDate"></td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1578,23 +1296,7 @@ layFc.miniAlert = function(text,type){
     }
     ">04-01-01-이용안내-공지사항-목록.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'04-01-01-이용안내-공지사항-목록.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('04-01-01-이용안내-공지사항-목록.html', '_newwindwaa');
-    return false;
-
-    ">04-01-01-이용안내-공지사항-목록.html</a>
+    <a href="04-01-01-이용안내-공지사항-목록.html" target="_blank" class="liveView">04-01-01-이용안내-공지사항-목록.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-08</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1618,23 +1320,7 @@ layFc.miniAlert = function(text,type){
     }
     ">04-01-02-이용안내-공지사항-상세.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'04-01-02-이용안내-공지사항-상세.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('04-01-02-이용안내-공지사항-상세.html', '_newwindwaa');
-    return false;
-
-    ">04-01-02-이용안내-공지사항-상세.html</a>
+    <a href="04-01-02-이용안내-공지사항-상세.html" target="_blank" class="liveView">04-01-02-이용안내-공지사항-상세.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-08</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1658,23 +1344,7 @@ layFc.miniAlert = function(text,type){
     }
     ">04-02-이용안내-자주묻는질문.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'04-02-이용안내-자주묻는질문.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('04-02-이용안내-자주묻는질문.html', '_newwindwaa');
-    return false;
-
-    ">04-02-이용안내-자주묻는질문.html</a>
+    <a href="04-02-이용안내-자주묻는질문.html" target="_blank" class="liveView">04-02-이용안내-자주묻는질문.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-08</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1698,23 +1368,7 @@ layFc.miniAlert = function(text,type){
     }
     ">04-04-01-이용안내-문의하기-목록.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'04-04-01-이용안내-문의하기-목록.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('04-04-01-이용안내-문의하기-목록.html', '_newwindwaa');
-    return false;
-
-    ">04-04-01-이용안내-문의하기-목록.html</a>
+    <a href="04-04-01-이용안내-문의하기-목록.html" target="_blank" class="liveView">04-04-01-이용안내-문의하기-목록.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-08</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1738,23 +1392,7 @@ layFc.miniAlert = function(text,type){
     }
     ">04-04-02-이용안내-문의하기-상세.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'04-04-02-이용안내-문의하기-상세.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('04-04-02-이용안내-문의하기-상세.html', '_newwindwaa');
-    return false;
-
-    ">04-04-02-이용안내-문의하기-상세.html</a>
+    <a href="04-04-02-이용안내-문의하기-상세.html" target="_blank" class="liveView">04-04-02-이용안내-문의하기-상세.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-08</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1778,23 +1416,7 @@ layFc.miniAlert = function(text,type){
     }
     ">04-04-03-이용안내-문의하기-작성.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'04-04-03-이용안내-문의하기-작성.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('04-04-03-이용안내-문의하기-작성.html', '_newwindwaa');
-    return false;
-
-    ">04-04-03-이용안내-문의하기-작성.html</a>
+    <a href="04-04-03-이용안내-문의하기-작성.html" target="_blank" class="liveView">04-04-03-이용안내-문의하기-작성.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-08</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1818,23 +1440,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-마이스페이스-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-마이스페이스-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-마이스페이스-메인.html', '_newwindwaa');
-    return false;
-
-    ">02-마이스페이스-메인.html</a>
+    <a href="02-마이스페이스-메인.html" target="_blank" class="liveView">02-마이스페이스-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1858,23 +1464,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-01-워크스페이스-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-01-워크스페이스-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-01-워크스페이스-메인.html', '_newwindwaa');
-    return false;
-
-    ">02-02-01-워크스페이스-메인.html</a>
+    <a href="02-02-01-워크스페이스-메인.html" target="_blank" class="liveView">02-02-01-워크스페이스-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-17</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1898,23 +1488,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-03-워크스페이스-프로젝트개요.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-03-워크스페이스-프로젝트개요.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-03-워크스페이스-프로젝트개요.html', '_newwindwaa');
-    return false;
-
-    ">02-02-03-워크스페이스-프로젝트개요.html</a>
+    <a href="02-02-03-워크스페이스-프로젝트개요.html" target="_blank" class="liveView">02-02-03-워크스페이스-프로젝트개요.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2023-12-08</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1938,23 +1512,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-03-워크스페이스-참여자.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-03-워크스페이스-참여자.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-03-워크스페이스-참여자.html', '_newwindwaa');
-    return false;
-
-    ">02-02-03-워크스페이스-참여자.html</a>
+    <a href="02-02-03-워크스페이스-참여자.html" target="_blank" class="liveView">02-02-03-워크스페이스-참여자.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -1978,23 +1536,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-04-워크스페이스-레이블관리.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-04-워크스페이스-레이블관리.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-04-워크스페이스-레이블관리.html', '_newwindwaa');
-    return false;
-
-    ">02-02-04-워크스페이스-레이블관리.html</a>
+    <a href="02-02-04-워크스페이스-레이블관리.html" target="_blank" class="liveView">02-02-04-워크스페이스-레이블관리.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2018,23 +1560,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-05-워크스페이스-파일업로드.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-05-워크스페이스-파일업로드.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-05-워크스페이스-파일업로드.html', '_newwindwaa');
-    return false;
-
-    ">02-02-05-워크스페이스-파일업로드.html</a>
+    <a href="02-02-05-워크스페이스-파일업로드.html" target="_blank" class="liveView">02-02-05-워크스페이스-파일업로드.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2058,23 +1584,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-06-워크스페이스-어노테이션-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-06-워크스페이스-어노테이션-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-06-워크스페이스-어노테이션-메인.html', '_newwindwaa');
-    return false;
-
-    ">02-02-06-워크스페이스-어노테이션-메인.html</a>
+    <a href="02-02-06-워크스페이스-어노테이션-메인.html" target="_blank" class="liveView">02-02-06-워크스페이스-어노테이션-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2098,23 +1608,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-07-워크스페이스-어노테이션-상세.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-07-워크스페이스-어노테이션-상세.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-07-워크스페이스-어노테이션-상세.html', '_newwindwaa');
-    return false;
-
-    ">02-02-07-워크스페이스-어노테이션-상세.html</a>
+    <a href="02-02-07-워크스페이스-어노테이션-상세.html" target="_blank" class="liveView">02-02-07-워크스페이스-어노테이션-상세.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2138,23 +1632,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-08-워크스페이스-데이터셋관리-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-08-워크스페이스-데이터셋관리-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-08-워크스페이스-데이터셋관리-메인.html', '_newwindwaa');
-    return false;
-
-    ">02-02-08-워크스페이스-데이터셋관리-메인.html</a>
+    <a href="02-02-08-워크스페이스-데이터셋관리-메인.html" target="_blank" class="liveView">02-02-08-워크스페이스-데이터셋관리-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2178,23 +1656,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-08-워크스페이스-데이터셋관리-상세.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-08-워크스페이스-데이터셋관리-상세.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-08-워크스페이스-데이터셋관리-상세.html', '_newwindwaa');
-    return false;
-
-    ">02-02-08-워크스페이스-데이터셋관리-상세.html</a>
+    <a href="02-02-08-워크스페이스-데이터셋관리-상세.html" target="_blank" class="liveView">02-02-08-워크스페이스-데이터셋관리-상세.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2218,23 +1680,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-09-워크스페이스-워크플로우-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-09-워크스페이스-워크플로우-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-09-워크스페이스-워크플로우-메인.html', '_newwindwaa');
-    return false;
-
-    ">02-02-09-워크스페이스-워크플로우-메인.html</a>
+    <a href="02-02-09-워크스페이스-워크플로우-메인.html" target="_blank" class="liveView">02-02-09-워크스페이스-워크플로우-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2258,23 +1704,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-09-워크스페이스-워크플로우-상세.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-09-워크스페이스-워크플로우-상세.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-09-워크스페이스-워크플로우-상세.html', '_newwindwaa');
-    return false;
-
-    ">02-02-09-워크스페이스-워크플로우-상세.html</a>
+    <a href="02-02-09-워크스페이스-워크플로우-상세.html" target="_blank" class="liveView">02-02-09-워크스페이스-워크플로우-상세.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-17</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2298,23 +1728,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-10-워크스페이스-학습관리-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-10-워크스페이스-학습관리-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-10-워크스페이스-학습관리-메인.html', '_newwindwaa');
-    return false;
-
-    ">02-02-10-워크스페이스-학습관리-메인.html</a>
+    <a href="02-02-10-워크스페이스-학습관리-메인.html" target="_blank" class="liveView">02-02-10-워크스페이스-학습관리-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2338,23 +1752,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-10-워크스페이스-학습관리-상세.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-10-워크스페이스-학습관리-상세.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-10-워크스페이스-학습관리-상세.html', '_newwindwaa');
-    return false;
-
-    ">02-02-10-워크스페이스-학습관리-상세.html</a>
+    <a href="02-02-10-워크스페이스-학습관리-상세.html" target="_blank" class="liveView">02-02-10-워크스페이스-학습관리-상세.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate">2024-01-24</td>
@@ -2378,23 +1776,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-11-워크스페이스-추론관리-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-11-워크스페이스-추론관리-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-11-워크스페이스-추론관리-메인.html', '_newwindwaa');
-    return false;
-
-    ">02-02-11-워크스페이스-추론관리-메인.html</a>
+    <a href="02-02-11-워크스페이스-추론관리-메인.html" target="_blank" class="liveView">02-02-11-워크스페이스-추론관리-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2418,23 +1800,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-11-워크스페이스-추론관리-상세.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-11-워크스페이스-추론관리-상세.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-11-워크스페이스-추론관리-상세.html', '_newwindwaa');
-    return false;
-
-    ">02-02-11-워크스페이스-추론관리-상세.html</a>
+    <a href="02-02-11-워크스페이스-추론관리-상세.html" target="_blank" class="liveView">02-02-11-워크스페이스-추론관리-상세.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate">2024-01-24</td>
@@ -2458,23 +1824,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-12-워크스페이스-분석관리-메인.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-12-워크스페이스-분석관리-메인.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-12-워크스페이스-분석관리-메인.html', '_newwindwaa');
-    return false;
-
-    ">02-02-12-워크스페이스-분석관리-메인.html</a>
+    <a href="02-02-12-워크스페이스-분석관리-메인.html" target="_blank" class="liveView">02-02-12-워크스페이스-분석관리-메인.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2498,23 +1848,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-12-워크스페이스-분석관리-상세.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-12-워크스페이스-분석관리-상세.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-12-워크스페이스-분석관리-상세.html', '_newwindwaa');
-    return false;
-
-    ">02-02-12-워크스페이스-분석관리-상세.html</a>
+    <a href="02-02-12-워크스페이스-분석관리-상세.html" target="_blank" class="liveView">02-02-12-워크스페이스-분석관리-상세.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate">2024-01-24</td>
@@ -2538,23 +1872,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-13-워크스페이스-프로젝트-실행로그.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-13-워크스페이스-프로젝트-실행로그.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-13-워크스페이스-프로젝트-실행로그.html', '_newwindwaa');
-    return false;
-
-    ">02-02-13-워크스페이스-프로젝트-실행로그.html</a>
+    <a href="02-02-13-워크스페이스-프로젝트-실행로그.html" target="_blank" class="liveView">02-02-13-워크스페이스-프로젝트-실행로그.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-12</td>
   <td style="text-align:center;" class="table-col-modifyDate">2024-01-24</td>
@@ -2578,23 +1896,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-99-워크스페이스-AI활용모델설계-목록썸네일.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-99-워크스페이스-AI활용모델설계-목록썸네일.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-99-워크스페이스-AI활용모델설계-목록썸네일.html', '_newwindwaa');
-    return false;
-
-    ">02-02-99-워크스페이스-AI활용모델설계-목록썸네일.html</a>
+    <a href="02-02-99-워크스페이스-AI활용모델설계-목록썸네일.html" target="_blank" class="liveView">02-02-99-워크스페이스-AI활용모델설계-목록썸네일.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-24</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2618,23 +1920,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-99-워크스페이스-AI활용모델설계-목록리스트.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-99-워크스페이스-AI활용모델설계-목록리스트.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-99-워크스페이스-AI활용모델설계-목록리스트.html', '_newwindwaa');
-    return false;
-
-    ">02-02-99-워크스페이스-AI활용모델설계-목록리스트.html</a>
+    <a href="02-02-99-워크스페이스-AI활용모델설계-목록리스트.html" target="_blank" class="liveView">02-02-99-워크스페이스-AI활용모델설계-목록리스트.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-24</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2658,23 +1944,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-99-워크스페이스-공통_modal_toast.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-99-워크스페이스-공통_modal_toast.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-99-워크스페이스-공통_modal_toast.html', '_newwindwaa');
-    return false;
-
-    ">02-02-99-워크스페이스-공통_modal_toast.html</a>
+    <a href="02-02-99-워크스페이스-공통_modal_toast.html" target="_blank" class="liveView">02-02-99-워크스페이스-공통_modal_toast.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-24</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2698,23 +1968,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-02-99-워크스페이스-워크스페이스관리-프로젝트초대.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-02-99-워크스페이스-워크스페이스관리-프로젝트초대.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-02-99-워크스페이스-워크스페이스관리-프로젝트초대.html', '_newwindwaa');
-    return false;
-
-    ">02-02-99-워크스페이스-워크스페이스관리-프로젝트초대.html</a>
+    <a href="02-02-99-워크스페이스-워크스페이스관리-프로젝트초대.html" target="_blank" class="liveView">02-02-99-워크스페이스-워크스페이스관리-프로젝트초대.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-01-24</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -2738,23 +1992,7 @@ layFc.miniAlert = function(text,type){
     }
     ">02-04-01-워크스페이스-이용안내.html</a>
     -->
-
-    <a href="#none" onclick="
-    // popupopen(event,'02-04-01-워크스페이스-이용안내.html',this);
-    var input = $(this).parent().find('input[type=checkbox]');
-    var idx = $(this).closest('tr').data('idx');
-    console.log(idx);
-    var checkValue = input.is(':checked');
-
-    if(siteList.clickCheck()){
-      localStorage.setItem('urlopen'+idx, 'true');
-      $(this).closest('tr').addClass('urlopen');
-    }
-
-    window.open('02-04-01-워크스페이스-이용안내.html', '_newwindwaa');
-    return false;
-
-    ">02-04-01-워크스페이스-이용안내.html</a>
+    <a href="02-04-01-워크스페이스-이용안내.html" target="_blank" class="liveView">02-04-01-워크스페이스-이용안내.html</a>
   </td>
   <td style="text-align:center" class="table-col-createDate">2024-03-25</td>
   <td style="text-align:center;" class="table-col-modifyDate"></td>
@@ -3152,9 +2390,10 @@ layFc.miniAlert = function(text,type){
         // $('.cs-table--page tbody').html(rows.join());
         
       });
-
-      
     });
+
+    
+
   </script>
 
 </body>
