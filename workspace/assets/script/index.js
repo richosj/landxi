@@ -139,6 +139,7 @@ const s2Swiper = new Swiper('.section-2 .swiper', {
 })
 
 
+/*
 const noticeSwiper = new Swiper('.notic-swiper .swiper', {
     direction: 'horizontal',
     //autoHeight: true,
@@ -170,7 +171,7 @@ $('.selector').on('click', function () {
         noticeSwiper.autoplay.pause()
     }
 })
-
+*/
 
 $('svg').attr('aria-hidden', true);
 
@@ -200,7 +201,7 @@ var OKS = {
     EASE: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
 };
 
-if (!Mobile()) {
+if (false == true) {
     $('#fullpage').fullpage({
         licenseKey: 'FB75CBCF-678A49C4-88C3BA08-F5F9BEEA',
         paddingTop: '0',

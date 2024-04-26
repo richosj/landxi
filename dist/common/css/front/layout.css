@@ -16255,26 +16255,55 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #091634;
-  background-color: #fff;
-  border-radius: 35px;
-  font-size: 20px;
+  color: #fff;
+  font-size: 18px;
   width: 300px;
   height: 60px;
-  opacity: 1;
   transition: all 0.15s;
+  position: relative;
+}
+
+.visual-link a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  border: 1px solid #026cf6;
+  border-left: 1px solid #318fda;
+  border-right: 1px solid #318fda;
+  background: linear-gradient(to right, rgba(2, 108, 246, 0.7) 0%, rgba(125, 185, 232, 0.7) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.visual-link a span, .visual-link a i, .visual-link a svg {
+  z-index: 2;
+  position: relative;
+}
+
+.visual-link a svg {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.visual-link a:nth-child(2)::after {
+  border: 1px solid #00a1b9;
+  border-left: 1px solid #26d3c8;
+  border-right: 1px solid #26d3c8;
+  background: linear-gradient(to right, rgba(1, 182, 209, 0.7) 0%, rgba(21, 204, 193, 0.7) 100%);
 }
 
 .visual-link a i {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-left: 14px;
-  background: url("../../images/main/icon-visual-link.png") no-repeat 0 0;
-}
-
-.visual-link a:hover, .visual-link a:focus {
-  opacity: 0.85;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  background: url("../../images/main/link-arw.png") no-repeat 0 0;
 }
 
 .visual-control {
@@ -16609,8 +16638,8 @@ body {
 }
 
 .section-4 .tabs nav button.active {
-  background-color: #016bf7;
-  border-color: #016bf7;
+  background-color: #091634;
+  border-color: #091634;
   color: #fff;
   transition: all 0.175s;
 }
