@@ -1,0 +1,27 @@
+.mini-alert-wrap{
+  position: fixed;
+  // height: 0;
+  height: 0;
+  z-index:99999;bottom: 0;
+  width: 100%;left: 0;
+  text-align: center;
+}
+
+.mini-alert{
+  height:30px;line-height: 30px;padding:0 10px;border-radius:15px;
+  top:0px;
+  transition: top .25s;
+  position: absolute;
+  // top: -35px;
+  left:50%;
+  display: inline-block;
+  &.success{
+    background: #4283db;
+    color: #fff;
+  }
+
+  &.fail{
+    background:#ff690f;
+    color: #fff;
+  }
+}

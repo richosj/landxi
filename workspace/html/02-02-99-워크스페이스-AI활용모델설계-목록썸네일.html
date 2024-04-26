@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/plat/head.html')
+</head>
+
+<body>
+    <div class="lay-body">
+        <!-- header -->
+        @@include('./include/plat/header.html')
+        <!--// header -->
+        <!-- container -->
+        <div class="lay-container">
+            <div class="lay-nav wide">
+                @@include('./include/plat/nav.html')
+            </div>
+            <div class="lay-content">
+                <div class="lay-content-wrap">
+
+                    <div class="row">
+                        <div class="col-12 ti_flex">
+                            <h3 class="basic-tit">작업자 지정</h3>
+                            <button type="button" class="btn btn-gradient">작업자 지정</button>
+                        </div>
+
+
+
+                        <div class="col-12 board-wrap">
+                            <div class="board-list-header">
+                                <!-- 게시물 갯수 등 -->
+                                <div class="board-stat">
+                                    작업자 미 지정 파일 <span>(<b>999</b>건)</span>
+                                </div>
+                                <!-- 선택옵션 등 -->
+                                <div class="board-extra">
+                                    <div class="search">
+                                        <input type="text" class="cs-input" title="검색어 입력" placeholder="검색어를 입력하세요.">
+                                        <button type="button">검색</button>
+                                    </div>
+
+                                    <select class="cs-input cs-input-point">
+                                        <option>파일명 / 날짜</option>
+                                    </select>
+                                    
+                                    <div class="type-g">
+                                        <button type="button" class="view_type view-list current" title="일반 목록으로 보기"></button>
+                                        <button type="button" class="view_type view-gall" title="이미지 목록 보기"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="board-options">
+                                <button type="button" class="btn">전체선택</button>
+                                <button type="button" class="btn">선택</button>
+                                <button type="button" class="btn">삭제</button>
+                            </div>
+
+                            
+                            <div class="col col-3 col-lg-6 gall-item">
+                                <div class="background-round-white">
+                                    <div class="workspace-item-header">
+                                        <h3><a href="#">Image 10.JPG</a></h3>
+                                        <div class="checkgroup">
+                                            <input type="checkbox" class="cs-checkbox" id="nam1">
+                                            <label for="nam1"><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <div class="badge-g">
+                                                <span class="badge">label#1</span>
+                                                <span class="badge">label#1</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="single">
+                                        <span>이미지 해상도<strong>1225 x 300</strong></span>
+                                    </div>
+                                    <button type="button" class="btn-icon icon-setting"></button>
+                                </div>
+                            </div>
+                            <div class="board-list-bottom">
+                            @@include('./include/board-paging.html')
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                    <!--// row -->
+                </div>
+                <!--// lay-content-wrap -->
+            </div>
+            <!--// lay-content -->
+        </div>
+        <!--// container -->
+    </div>
+    <!--// lay-body -->
+
+    <!-- @include('./include/footer.html') -->
+</body>
+
+</html>

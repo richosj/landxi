@@ -1,0 +1,60 @@
+@use 'global';
+@use 'respon';
+
+.cs-grid
+{
+  &::after{content: '';display: block;clear: both;}
+  margin:-5px;display: block;
+
+  *[class*=cs-grid-col]{float: left;margin: 5px;box-sizing: border-box;display: block;}
+
+  @for $i from 1 through 12{
+    // $wdith : 100 / 12 * $i;
+    $width: calc(100% / 12 * $i);
+    .cs-grid-col#{$i}{
+      width: calc(#{$width} - 10px);
+    }
+  }
+
+  // &.--margin5{
+  //   @for $i from 1 through 12{
+  //     // $wdith : 100 / 12 * $i;
+  //     margin:-3px;
+  //     *[class*=cs-grid-col]{margin: 3px;}
+  //     $width: calc(100 / 12 * $i);
+  //     .cs-grid-col#{$i}{width:calc(#{$width}% - 6px);}
+  //   } 
+  // }
+
+  // @media(max-width: $mediaMobile){
+  //   .cs-grid-mo-col1{width:calc(25% - 10px);}
+  //   .cs-grid-mo-col2{width:calc(50% - 10px);}
+  //   .cs-grid-mo-col3{width:calc(75% - 10px);}
+  //   .cs-grid-mo-col4{width:calc(100% - 10px);}
+  // }
+}
+
+//flex// ::미사용::
+.cs-flex-col{
+  display: flex;
+  align-items: center;
+  > *{
+    margin-left: 10px;
+    flex: auto;
+    &:first-child{margin-left: 0;}
+  }
+}
+
+.cs-flex-grid{
+  display: flex;
+  gap: 20px;
+
+  &.cs-flex-grid--gap0{
+    gap:0;
+  }
+  > *{flex:1;}
+
+  @for $i from 1 to 100{
+    > .width#{$i*5} {flex:0 0 $i * 5px;}
+  }
+}

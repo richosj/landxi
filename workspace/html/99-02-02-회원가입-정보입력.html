@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+    
+    @@include('./include/front/location.html',{cate1:'회원가입', cate2: '이용약관'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+        @@include('./include/front/agg-step-nav.html',{ "activeStep": 2 })
+
+        <div class="mj-cont">
+          <form>
+            <section class="cont-memberreg">
+              <h3 class="cont-memberreg_header">
+                <strong>회원 유형 선택 </strong>
+                <div>'<i class="cs-icon-req">필수 입력</i>'는 필수 입력 사항입니다</div>
+              </h3>
+              <div class="cs-table">
+                <table>
+                  <colgroup>
+                    <col class="width180">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">회원 유형 <i class="cs-icon-req">필수 입력</i></th>
+                      <td>
+                        <input type="radio" class="cs-checkbox" name="userType" id="ipt-user-type1"><label for="ipt-user-type1"><span></span> 일반</label>
+                        <input type="radio" class="cs-checkbox" name="userType" id="ipt-user-type2"><label for="ipt-user-type2"><span></span> 연구기관/개발업체</label>
+                        <input type="radio" class="cs-checkbox" name="userType" id="ipt-user-type3"><label for="ipt-user-type3"><span></span> 자치단체</label>
+                        <input type="radio" class="cs-checkbox" name="userType" id="ipt-user-type4"><label for="ipt-user-type4"><span></span> 중앙부처</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">기관 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input">
+                        <div class="cs-inputs-findoffice width470">
+                          <input type="text" class="cs-input">
+                          <button class="cs-btn">선택</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            
+            <section class="cont-memberreg">
+              <h3 class="cont-memberreg_header">
+                <strong>정보 입력</strong>
+                <div>'<i class="cs-icon-req">필수 입력</i>'는 필수 입력 사항입니다</div>
+              </h3>
+              <div class="cs-table">
+                <table>
+                  <colgroup>
+                    <col class="width180">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">아이디 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input"><input type="text" class="cs-input width470" placeholder="이메일 주소 입력"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">비밀번호 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input"><input type="text" class="cs-input width470" placeholder="8~12자의 영문 대소문자와 숫자로만 입력"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">비밀번호 확인 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input">
+                        <input type="text" class="cs-input width470 cs-input-error" placeholder="8~12자의 영문 대소문자와 숫자로만 입력">
+                        <div class="frm-alert_error">
+                          ! 입력된 비밀번호와 일치하지 않음
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이름 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input">
+                        <input type="text" class="cs-input width470" placeholder="이름 입력">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">연락처</th>
+                      <td class="cell-input">
+                        <div class="cs-inputs-tel width470">
+                          <select class="cs-input">
+                            <option>02</option>
+                          </select>
+                          <span>-</span>
+                          <input type="text" class="cs-input">
+                          <span>-</span>
+                          <input type="text" class="cs-input">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="cons-btns mj-btns">
+              <button class=" cs-btn2 cs-btn-color3 flex-width75">이전</button>
+              <button class="cs-btn2 cs-btn-color2 flex-width75">다음</button>
+            </section>
+          </form>
+        </div>
+        <!--// mj-cont -->
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+.cs-table{
+  border-top: 1px solid #333333;
+  table{width: 100%;table-layout: fixed;}
+  th, td{
+    border-bottom:1px solid #e1e1e1;box-sizing: border-box;padding: 22px;color: #666666;
+    height: 60px;
+  }
+  th{font-weight: 500;color: #333333;background: #fafafa;}
+  tbody{
+    th{text-align: left;}
+  }
+
+  // 셀의 텍스트일때
+  .cell-cont{line-height: 1.7em;}
+  // 셀의 내용이 input일때
+  .cell-input{padding-top: 15px;padding-bottom: 15px;}
+}
+
+.cs-table-line{
+  @extend .cs-table;
+  thead th{font-weight: bold;}
+  th, td{
+    border-left:1px solid #e1e1e1;
+  }
+
+  tr > *:first-child{border-left: 0;}
+
+  .bdrl{border-left:1px solid #e1e1e1 !important;}
+}
+
+.cs-table-line2{
+  @extend .cs-table-line;
+  thead {
+    th{background: #eeeeee;font-size: 18px;border-left:0;}
+    th + th{
+      position: relative;
+      &::before{
+        content: '';height: 20px;
+        position: absolute;
+        border-left: 1px solid #999999;
+        left: 0;top: calc(50% - 10px);
+      }
+    }
+  }
+
+
+  th{color: #000000;}
+}

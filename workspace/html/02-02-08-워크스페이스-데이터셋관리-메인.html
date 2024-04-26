@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/plat/head.html')
+</head>
+
+<body>
+    <div class="lay-body">
+        <!-- header -->
+        @@include('./include/plat/header.html')
+        <!--// header -->
+        <!-- container -->
+        <div class="lay-container">
+            <div class="lay-nav wide">
+                @@include('./include/plat/nav.html')
+            </div>
+            <div class="lay-content">
+                <div class="lay-content-wrap">
+
+                    <div class="row">
+                        <div class="col-12 flex align-center between">
+                            <h3 class="basic-tit">데이터 셋 관리</h3>
+                            <button type="button" class="btn btn-outline-blue">자동 데이터 셋 생성</button>
+                        </div>
+                        <div class="col col-3 col-lg-6 workspace-item3 col-add">
+                            <button type="button" class="add" onClick="addModal();">
+                                <i class="icon-add"></i>
+                                <span>신규 데이터 셋 만들기</span>
+                            </button>
+                        </div>
+                        <div class="col-3 col-lg-6 workspace-item3" style="background-color: #033272;">
+                            <h2>데이터 셋(Train) #1</h2>
+                            <div class="background-round-white align-center">
+                                <div class="desc">
+                                    <p class="label-tit"><i class="icon-data data-blue" aria-hidden="true"></i><b style="color: #033272;">10</b> 개 파일
+                                    </p>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                                    <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3 col-lg-6 workspace-item3" style="background-color: #16bb9b;">
+                            <h2>데이터 셋(Train) #1</h2>
+                            <div class="background-round-white align-center">
+                                <div class="desc">
+                                    <p class="label-tit"><i class="icon-data data-gr" aria-hidden="true"></i><b style="color: #16bb9b;">10</b> 개 파일
+                                    </p>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                                    <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3 col-lg-6 workspace-item3" style="background-color: #a574ee;">
+                            <h2>데이터 셋(Train) #1</h2>
+                            <div class="background-round-white align-center">
+                                <div class="desc">
+                                    <p class="label-tit"><i class="icon-data data-pur" aria-hidden="true"></i><b style="color: #a574ee;">10</b> 개 파일
+                                    </p>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                                    <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// row -->
+                </div>
+                <!--// lay-content-wrap -->
+                <!-- 학습 모달 -->
+                <aside class="aside_modal">
+                    <header>
+                        <h3>데이터 셋 구성</h3>
+                        <p>라벨링된 이미지로 데이터 셋 자동 구성</p>
+                        <button type="button" class="close" title="팝업닫힘">닫기</button>
+                    </header>
+
+                    <div class="aside_content">
+                        
+                        <div class="dataset_list">
+                            <p>데이터(Train) 셋 #1</p>
+                            <span><strong>7</strong>이미지 할당</span>
+                        </div>
+
+                    </div>
+
+                    <div class="aside_foot">
+                        <button type="button" class="btn btn-3 btn-width120">생성</button>
+                        <button type="button" class="btn btn-width120">취소</button>
+                    </div>
+
+                </aside>
+                <!-- // 학습 모달 -->
+            </div>
+            <!--// lay-content -->
+        </div>
+        <!--// container -->
+    </div>
+    <!--// lay-body -->
+
+    <!-- @include('./include/footer.html') -->
+</body>
+
+</html>

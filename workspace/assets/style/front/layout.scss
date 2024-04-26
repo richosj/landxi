@@ -1,0 +1,34 @@
+// 초기설정
+@use './include/var';
+// 반응형
+@use '../include/respon' with ($use : var.$setting-use-respon);
+
+@use '../include/base';
+@use '../include/size';
+@use '../include/grid';
+
+@use './include/icons';
+
+// font
+@use '../font/noto';
+@use '../font/pretendard';
+@use '../font/gmarketsans';
+
+@use './include/common';
+
+// layout
+@use './include/layout';
+
+// board
+@use '../include/board';
+@use '../include/input';
+@use '../include/btns';
+@use '../include/table';
+@use '../include/list';
+
+// content
+@use './include/memberJoin';
+@use './include/contagg';
+@use './include/consinfo';
+@use './include/main';
+@use './include/mainA';

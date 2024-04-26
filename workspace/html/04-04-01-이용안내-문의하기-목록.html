@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+
+    @@include('./include/front/location.html',{cate1:'이용안내', cate2: '문의하기'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+        <div class="board-wrap">
+          <!-- board-search -->
+          <div class="board-search2">
+            <form>
+              <div class="board-search_col-extra">
+                <strong>문의항목</strong>
+                <select class="board-search_input">
+                  <option>유형 선택</option>
+                </select>
+              </div>
+              <div class="board-search_col-text">
+                <strong>검색어</strong>
+                <select class="board-search_input">
+                  <option>유형 선택</option>
+                </select>
+                <input type="text" class="board-search_input" placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
+                <button class="board-search_btn">검색</button>
+              </div>
+            </form>
+          </div>
+          
+          <div class="board-list-header">
+            <!-- 게시물 갯수 등 -->
+            <div class="board-stat">
+              총 게시물 <span>(<b>999</b>건/9999건)</span>
+            </div>
+
+            <!-- 선택옵션 등 -->
+            <div class="board-extra">
+              <select class="cs-input cs-input-point">
+                <option>최신순</option>
+              </select>
+              <select class="cs-input cs-input-point">
+                <option>10개씩 보기</option>
+              </select>
+            </div>
+          </div>
+          <!-- board-list-text -->
+          <div class="board-list-text">
+            <table>
+              <colgroup>
+                <col class="width150">
+                <col class="width115">
+                <col>
+                <col class="width170">
+                <col class="width120">
+                <col class="width110">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="row">번호</th>
+                  <th scope="row">문의 항목</th>
+                  <th scope="row">제목</th>
+                  <th scope="row">상태</th>
+                  <th scope="row">작성자</th>
+                  <th scope="row">등록일</th>
+                  <th scope="row">조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 10; i > 7; i--){
+                <tr>
+                  <td class="tac">${i}</td>
+                  <td class="tac"><span class="cs-tag width100p">일반</span></td>
+                  <td class="item_list-title"><a href="#" class="cs-link-text"><i class="cs-icon-lock"></i><span>Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈</span> <i class="cs-icon-attach"></i></a></td>
+                  <td class="tac"><span class="fc-gray">처리중</span></td>
+                  <td class="tac">홍*동</td>
+                  <td class="tac">등록일</td>
+                  <td class="tac">조회수</td>
+                </tr>
+                }
+                @@for(var i = 7; i > 0; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="tac"><span class="cs-tag width100p">데이터</span></td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><i class="cs-icon-lock"></i><span>Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈Land-XI통합관리시스템 서비스 오픈</span> <i class="cs-icon-attach"></i></a></td>
+                    <td class="tac"><span class="fc-red">답변 완료</span></td>
+                    <td class="tac">홍*동</td>
+                    <td class="tac">등록일</td>
+                    <td class="tac">조회수</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+
+          <div class="board-list-bottom">
+            @@include('./include/board-paging.html')
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

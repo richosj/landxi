@@ -1,0 +1,229 @@
+// ***************************************
+// 달력 / 달력 - 리스트
+// 심의회 달력
+// 고유컬러사용
+// ***************************************
+
+// common
+.b-calendar-btn-calendar,
+.b-calendar-btn-lit{
+  display: inline-block;width: 30px;height: 30px;border: 0;margin: 0;padding: 0;font-size:0;
+  background-color: transparent;
+  background-repeat: no-repeat; background-position: center;
+  cursor: pointer;
+  transition: all .25s;
+  opacity:.3;
+  filter: grayscale(100);
+
+  &:hover{opacity:1;}
+  &.active{opacity:1; filter: grayscale(0);}
+}
+
+.b-calendar-btn-calendar{background-image:url('#{$image}/btn_calendar_calendar.png')}
+.b-calendar-btn-lit{background-image:url('#{$image}/btn_calendar_list.png')}
+
+// ***************************************
+// color
+// ***************************************
+
+$color-complte: #5279ba; // 성공
+$color-cancel: #fe4c71; // 취소
+$color-ready: #21ad8e; // 대기
+
+.b-calendar-color-complete{background: $color-complte !important;}
+.b-calendar-color-cancel{background: $color-cancel !important;}
+.b-calendar-color-ready{background: $color-ready !important;}
+
+// ***************************************
+// layout
+// ***************************************
+.board-calendar-wrap{
+  .board-calendar,
+  .board-calendar-list{
+    display: none;
+    &.active{display: block;}
+  }
+  .board-calendar__header{margin-bottom: 10px;}	
+}
+
+// ***************************************
+// header
+// ***************************************
+.board-calendar__header{
+  display: flex;
+  > *{
+    // flex:1;
+    display: flex;
+    align-items: center;
+  }
+
+  // left calendar legend?
+  .b-calendar-key{
+    span{display: inline-block;width: 20px;height: 20px;border-radius: 3px;vertical-align: middle;margin-top:-3px;}
+
+    .b-calendar-key-wrap{
+      flex:1;
+      display: none;
+      white-space: nowrap;
+      > * + *{margin-left: 25px;}
+    }
+    .b-calendar-key-wrap.active{display: flex;}
+  }
+
+  // center current date
+  .b-calendar-curdate{
+    margin:0 auto;
+    position: relative;
+    right: -30px;
+    gap: 5px;
+
+    .date-prev,
+    .date-next {
+      font-size: 0;cursor: pointer;
+      width: 30px;height: 30px;display: inline-block;
+      position: relative;border:0;margin: 0;padding: 0;background: none;
+      &::after{
+        $w: 10px;
+        content: '';display: inline-block;width: $w;height: $w;border: 1px solid #111;border-left:0;border-top:0;
+        transform: rotate(-45deg);vertical-align: middle;
+        position: absolute;
+        left: calc(50% - 2px);top: calc(50% - 5px);
+        // margin-top: -5px;margin-left: 8px;
+        transition: all .3s;
+      }
+
+      &:disabled{
+        cursor: default;
+        &::after{
+          opacity:.3;
+        }
+      }
+
+      
+    }
+
+
+    .date-prev{
+      &::after{
+        transform: rotate(135deg);
+      }
+
+      &:hover{
+        &::after{margin-left: -5px;}
+      }
+    }
+
+    .date-next{
+      &::after{
+        left: auto;
+        right:calc(50% - 2px);
+      }
+
+      &:hover{
+        &::after{margin-right: -5px;}
+      }
+    }
+
+    strong{font-size: 15px;color: #111;
+      font-weight: 400;
+    }
+  }
+
+  // 달력, 리스트 toggle button
+  .b-calendar-btn-group{
+    // width:200px;
+    // margin-right:0;
+    justify-content: flex-end;
+  }
+}
+
+.box-content__btns[data-id=calendar-1]{display: none;}
+.box-content__btns.active[data-id=calendar-1]{display: flex;}
+
+
+// ***************************************
+// calendar
+// ***************************************
+.board-calendar{
+  table{width: 100%;border:1px solid #d7d7d7;table-layout: fixed;}
+  thead th{background: #f3f8fb;border-bottom: 1px solid #d7d7d7;height:30px;}
+  th, td{border:1px solid #eaedf3;border-top:0;border-left:0;}
+  tr > *:last-child{border-right: 0;}
+  tbody tr:last-child > *{border-bottom: 0;}
+
+  // cell
+  td{padding: 10px 5px;height:120px;vertical-align: top;box-sizing: border-box;}
+
+  // day
+  tbody td > strong{text-align: right;display: block;font-weight: normal;padding-right: 10px;}
+
+  // list
+  tbody td ul{
+    @include listRest();
+    &{margin-top: 10px;}
+    display: flex;
+    flex-direction: column;
+    > * + *{margin-top: 5px !important;}
+  }
+}
+
+.calendar-week{background:#f3f3f3;border-bottom-color:#dfe2e9 !important}
+
+.calendar-review-item{
+  color: #fff;
+  box-sizing: border-box;
+  background: $color-ready;
+  border-radius:4px;padding: 8px;display: inline-block;width: 100%;
+  span{margin-left: 5px;}
+}
+
+// ***************************************
+// calendar - list
+// ***************************************
+.board-calendar-list{
+  border:1px solid #d7d7d7;
+  padding:25px;max-height:calc(100vh - 300px);overflow-y: auto;
+  
+  
+  .review-item{
+    padding-bottom: 30px;
+    + .review-item{margin-top: 10px;border-top: 1px solid #eaedf3;padding-top: 30px;}
+  }
+}
+
+.review-item{}
+
+.review-title{
+  display: block;
+  > strong{font-size: 15px;}
+  div{
+    color: $root__color-black3;
+    margin-top: 5px;
+  }
+
+  &:hover{color: $root__color-point;}
+}
+
+.review-petition-list{
+  margin-top: 15px;
+  .petition-item + .petition-item{margin-top: 5px;}
+}
+
+.petition-item{
+  display: flex;
+  gap: 20px;
+  strong{color: $root__color-black1;}
+  div{
+    font-size: 12px;
+    color: $root__color-black3;
+    position: relative;
+    &::after{content: '';width:1px;height:10px;background:#d5d5d5;position: absolute;left: -10px;top: calc(50% - 5px)}
+    &:first-child::after{content:none}
+  }
+
+  .petition-item__title{
+    // flex: 0 0 calc(100% - 400px);
+    white-space:nowrap;
+    overflow: hidden;text-overflow: ellipsis;
+  }
+}

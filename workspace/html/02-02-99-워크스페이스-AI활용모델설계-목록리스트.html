@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/plat/head.html')
+</head>
+
+<body>
+    <div class="lay-body">
+        <!-- header -->
+        @@include('./include/plat/header.html')
+        <!--// header -->
+        <!-- container -->
+        <div class="lay-container">
+            <div class="lay-nav wide">
+                @@include('./include/plat/nav.html')
+            </div>
+            <div class="lay-content">
+                <div class="lay-content-wrap">
+
+                    <div class="row">
+                        <div class="col-12 ti_flex">
+                            <h3 class="basic-tit">작업자 지정</h3>
+                            <button type="button" class="btn btn-gradient">작업자 지정</button>
+                        </div>
+
+                        <div class="col-12 board-wrap">
+                            <div class="board-list-header">
+                                <!-- 게시물 갯수 등 -->
+                                <div class="board-stat">
+                                    작업자 미 지정 파일 <span>(<b>999</b>건)</span>
+                                </div>
+                                <!-- 선택옵션 등 -->
+                                <div class="board-extra">
+                                    <div class="search">
+                                        <input type="text" class="cs-input" title="검색어 입력" placeholder="검색어를 입력하세요.">
+                                        <button type="button">검색</button>
+                                    </div>
+
+                                    <select class="cs-input cs-input-point">
+                                        <option>파일명 / 날짜</option>
+                                    </select>
+                                    
+                                    <div class="type-g">
+                                        <button type="button" class="view_type view-list current" title="일반 목록으로 보기"></button>
+                                        <button type="button" class="view_type view-gall" title="이미지 목록 보기"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="board-options">
+                                <button type="button" class="btn">전체선택</button>
+                                <button type="button" class="btn">선택</button>
+                                <button type="button" class="btn">삭제</button>
+                            </div>
+
+                            <div class="board-list-text">
+                                <table>
+                                    <colgroup>
+                                        <col class="width100">
+                                        <col class="width100">
+                                        <col style="width:auto">
+                                        <col class="width140">
+                                        <col class="width140">
+                                        <col class="width140">
+                                        <col class="width170">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><input type="checkbox" class="cs-checkbox" id="allChk"><label for="allChk"><span></span></label></th>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">파일명</th>
+                                            <th scope="col">파일 타입</th>
+                                            <th scopr="col">이미지 해상도</th>
+                                            <th scope="col">용량</th>
+                                            <th scope="col">등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tac">
+                                                <input type="checkbox" class="cs-checkbox" id="test1"><label for="test1"><span></span></label>
+                                            </td>
+                                            <td class="tac">10</td>
+                                            <td class="item_list-title"><a href="#"class="cs-link-text"><i class="cs-icon-img"></i><span>Land-XI통합관리시스템 서비스 오픈</span></a></td>
+                                            <td class="tac">Image/jpeg</td>
+                                            <td class="tac">1024 x 500</td>
+                                            <td class="tac">888 M</td>
+                                            <td class="tac">2023.03.31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // board-list-text -->
+                            <div class="board-list-bottom">
+                            @@include('./include/board-paging.html')
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--// row -->
+                </div>
+                <!--// lay-content-wrap -->
+            </div>
+            <!--// lay-content -->
+        </div>
+        <!--// container -->
+    </div>
+    <!--// lay-body -->
+
+    <!-- @include('./include/footer.html') -->
+</body>
+</html>

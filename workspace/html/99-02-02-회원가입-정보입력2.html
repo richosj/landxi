@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+    
+    @@include('./include/front/location.html',{cate1:'회원가입', cate2: '이용약관'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+        @@include('./include/front/agg-step-nav.html',{ "activeStep": 2 })
+
+        <div class="mj-cont">
+          <form> 
+            <section class="cont-memberreg">
+              <h3 class="cont-memberreg_header">
+                <strong>회원 정보 입력</strong>
+                <div>'<i class="cs-icon-req">필수 입력</i>'는 필수 입력 사항입니다</div>
+              </h3>
+              <div class="cs-table">
+                <table>
+                  <colgroup>
+                    <col class="width180">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">이름 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input">
+                        <input type="text" class="cs-input width470" placeholder="이름 입력">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">아이디 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input"><input type="text" class="cs-input width470" placeholder="이메일 주소 입력"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">비밀번호 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input"><input type="text" class="cs-input width470" placeholder="8~12자의 영문 대소문자와 숫자로만 입력"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">비밀번호 확인 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input">
+                        <input type="text" class="cs-input width470 cs-input-error" placeholder="비밀번호 재 입력">
+                        <div class="frm-alert_error">
+                          ! 입력된 비밀번호와 일치하지 않음
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">직위</th>
+                      <td class="cell-input">
+                        <input type="text" class="cs-input">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">전화번호</th>
+                      <td class="cell-input">
+                        <div class="cs-inputs-tel width470">
+                          <select class="cs-input">
+                            <option>010</option>
+                          </select>
+                          <span>-</span>
+                          <input type="text" class="cs-input">
+                          <span>-</span>
+                          <input type="text" class="cs-input">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">기관 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input">
+                        <input type="text" class="cs-input width470" placeholder="예) LX 한국국토정보공사">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">소속</th>
+                      <td class="cell-input">
+                        <select name="" id="" class="cs-input width470">
+                          <option value="">선택하세요.</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">부서 <i class="cs-icon-req">필수 입력</i></th>
+                      <td class="cell-input">
+                        <select name="" id="" class="cs-input width235">
+                          <option value="">서울지역본부</option>
+                        </select>
+                        <select name="" id="" class="cs-input width235">
+                          <option value="">서울중부지사</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="cons-btns mj-btns">
+              <button class=" cs-btn2 cs-btn-color3 flex-width75">이전</button>
+              <button class="cs-btn2 cs-btn-color2 flex-width75">다음</button>
+            </section>
+          </form>
+        </div>
+        <!--// mj-cont -->
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

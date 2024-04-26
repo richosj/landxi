@@ -1,0 +1,29 @@
+@use 'global';
+
+html,body{
+  margin: 0;padding: 0;
+  height: 100%;box-sizing: border-box;
+}
+
+body{
+  font-size:14px;
+  color: #383737;
+  font-family: "Pretendard", sans-serif;
+  // font-weight: 500;
+}
+
+pre{font:14px/1.3em 'Pretendard', 맑은고딕, sans-serif;color: #383737;letter-spacing:-.02em;}
+
+a{text-decoration: none;color: #171717;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+table{border-collapse:collapse; vertical-align:top;}
+img{border:0;}
+
+input, select, button, textarea{font-size: inherit;font-family:inherit;letter-spacing:inherit;}
+button{cursor: pointer;}
+
+table{position: relative;}
+table caption{position: absolute;height:1px;overflow: hidden;left: 0;top: 0;}
+
+b, strong, th{}

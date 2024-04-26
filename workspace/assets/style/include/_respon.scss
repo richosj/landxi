@@ -1,0 +1,49 @@
+$use: true !default;
+
+@mixin mobile {
+  @if($use == true){
+    @media(max-width: 760px){
+      @content;
+    }
+  }
+}
+
+@mixin mobileMax {
+  @if($use == true){
+    @media(max-width: 761px){
+      @content;
+    }
+  }
+}
+
+@mixin tablet {
+  @if($use == true){
+    @media(max-width: 1000px){
+      @content;
+    }
+  }
+}
+
+@mixin tabletMax {
+  @if($use == true){
+    @media(max-width: 1001px){
+      @content;
+    }
+  }
+}
+
+@mixin pc {
+  @if($use == true){
+    @media(min-width: 1200px){
+      @content;
+    }
+  }
+}
+
+@mixin pcMax {
+  @if($use == true){
+    @media(min-width: 1201px){
+      @content;
+    }
+  }
+}

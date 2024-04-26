@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('./include/plat/head.html')
+</head>
+
+<body>
+  <div class="lay-body">
+    <!-- header -->
+    @@include('./include/plat/header.html')
+    <!--// header -->
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-nav wide">
+        @@include('./include/plat/nav.html')
+      </div>
+      <div class="lay-content">
+        <div class="lay-content-wrap">
+          
+          <div class="row">
+            <div class="col-12"><h3 class="basic-tit">워크 플로우</h3></div>
+            <div class="col col-3 col-lg-6 workspace-item3 col-add">
+              <button type="button" class="add" onClick="addModal();">
+                <i class="icon-add"></i>
+                <span>신규 워크 플로우 만들기</span>
+              </button>
+            </div>
+            <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #033272;">
+                <h2>워크 플로우  #1</h2>
+                <div class="background-round-white align-center">
+                    <div class="desc">
+                        <span class="date">등록일자 : <strong>2023-12-01</strong></span>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                        <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #16bb9b;">
+                <h2>워크 플로우  #1</h2>
+                <div class="background-round-white align-center">
+                    <div class="desc">
+                        <span class="date">등록일자 : <strong>2023-12-01</strong></span>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                        <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-3 col-lg-6 workspace-item3" style="background-color: #a574ee;">
+                <h2>워크 플로우  #1</h2>
+                <div class="background-round-white align-center">
+                    <div class="desc">
+                        <span class="date">등록일자 : <strong>2023-12-01</strong></span>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                        <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                </div>
+            </div>
+              
+          </div>
+          <!--// row -->
+        </div>
+        <!--// lay-content-wrap -->
+      </div>
+      <!--// lay-content -->
+    </div>
+    <!--// container -->
+  </div>
+  <!--// lay-body -->
+  <div class="popup-wrap" id="addModal" style="width:730px;">
+    <div class="popup-container">
+      <!-- header -->
+      <div class="popup-header">
+        <span class="popup-header-text">신규 워크 플로우 만들기</span>
+        <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+      </div>
+      <!-- content -->
+      <div class="popup-content">
+        <!-- popup-content-wrap -->
+        <div class="popup-content-wrap">
+          <div class="pop-inner-con">
+            <div class="cs-table">
+              <table>
+                <colgroup>
+                  <col style="width:170px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>워크 플로우  이름 </th>
+                    <td class="cell-input"><input type="text" class="cs-input width100p" placeholder="워크 플로우을 입력하세요." title="워크 플로우 이름 입력"></td>
+                  </tr>
+                  <tr>
+                        <th>색상</th>
+                        <td class="cell-input">
+                        <div class="color-input">
+                            <input type="text" class="txt-input" placeholder="#f0f0f0f" value="#a574ee" title="색상 선택" readonly>
+                            <input type="color" class="color">
+                        </div>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="popup-footer">
+            <button class="btn btn-3 btn-width115" data-modal="closebtn">확인</button>
+            <button class="btn btn-width115" data-modal="closebtn">취소</button>
+          </div>
+        </div>
+        <!-- popup-content-wrap -->
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.color').change(function () {
+      $(this).siblings('.txt-input').val($(this).val())
+    })
+
+    function addModal(t) {
+      uiModal.open({
+        elm: 'addModal',
+        bgBlock: true,
+        drag: false,
+      }, t);
+    }
+
+    //openuiguidepop4();
+  </script>
+  <!-- @include('./include/footer.html') -->
+</body>
+
+</html>`

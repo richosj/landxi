@@ -1,0 +1,41 @@
+$image : '../../images'; // 이미지 경로 css 기준
+$setting-use-respon: false; // true || false
+
+$root__color-point: red;
+$root__fontSize: 14px;
+$root__color-black2: black;
+$root__color-black3: black;
+$root__color-black4: black;
+$root__color-blue: blue;
+$root__color-red: red;
+
+@mixin listReset ($ul:'&') {
+	#{$ul}{margin: 0;padding: 0;}
+  #{$ul},li {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+}
+
+@mixin clearBoth($selector:'&') {
+  #{$selector}::after{content: '';display: block;clear: both;}
+}
+
+@mixin cutTextRot($rows, $height){
+  display:-webkit-box;
+  -webkit-box-orient: vertical;height:$height;
+  -webkit-line-clamp: $rows;text-overflow:ellipsis;overflow: hidden;
+}
+
+@mixin setIcon($class, $width, $height, $url, $flex: true) {
+  #{'.' + $class}{
+    display: inline-block;vertical-align: middle;width: #{$width}px;height: #{$height}px;
+    font-size: 0;
+    background:url('#{$url}') center no-repeat;
+    
+    @if ($flex){
+      background-size:#{$width}px #{$height}px;
+    }
+  }
+}

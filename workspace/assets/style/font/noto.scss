@@ -1,0 +1,85 @@
+$fontsrc : '../../fonts';
+
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*NotoSans*/
+@font-face {
+  font-family: 'noto';
+  font-style: normal;
+  font-weight: 100;
+  src: url(#{$fontsrc}/NotoSans-Thin.eot);
+  src: url(#{$fontsrc}/NotoSans-Thin.eot?#iefix) format('embedded-opentype'),
+  url(#{$fontsrc}/NotoSans-Thin.woff2) format('woff2'),
+  url(#{$fontsrc}/NotoSans-Thin.woff) format('woff'),
+  url(#{$fontsrc}/NotoSans-Thin.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'noto';
+  font-style: normal;
+  font-weight: 200;
+  src: url(#{$fontsrc}/NotoSans-Light.eot);
+  src: url(#{$fontsrc}/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
+  url(#{$fontsrc}/NotoSans-Light.woff2) format('woff2'),
+  url(#{$fontsrc}/NotoSans-Light.woff) format('woff'),
+  url(#{$fontsrc}/NotoSans-Light.otf) format('opentype');
+}
+
+
+@font-face {
+  font-family: 'noto';
+  font-style: normal;
+  font-weight: 300;
+  src: url(#{$fontsrc}/NotoSans-DemiLight.eot);
+  src: url(#{$fontsrc}/NotoSans-DemiLight.eot?#iefix) format('embedded-opentype'),
+  url(#{$fontsrc}/NotoSans-DemiLight.woff2) format('woff2'),
+  url(#{$fontsrc}/NotoSans-DemiLight.woff) format('woff'),
+  url(#{$fontsrc}/NotoSans-DemiLight.otf) format('opentype');
+}
+
+
+@font-face {
+  font-family: 'noto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(#{$fontsrc}/NotoSans-Regular.eot);
+  src: url(#{$fontsrc}/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
+  url(#{$fontsrc}/NotoSans-Regular.woff2) format('woff2'),
+  url(#{$fontsrc}/NotoSans-Regular.woff) format('woff'),
+  url(#{$fontsrc}/NotoSans-Regular.otf) format('opentype');
+}
+
+
+@font-face {
+  font-family: 'noto';
+  font-style: normal;
+  font-weight: 500;
+  src: url(#{$fontsrc}/NotoSans-Medium.eot);
+  src: url(#{$fontsrc}/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
+  url(#{$fontsrc}/NotoSans-Medium.woff2) format('woff2'),
+  url(#{$fontsrc}/NotoSans-Medium.woff) format('woff'),
+  url(#{$fontsrc}/NotoSans-Medium.otf) format('opentype');
+}
+
+
+@font-face {
+  font-family: 'noto';
+  font-style: normal;
+  font-weight: 600;
+  src: url(#{$fontsrc}/NotoSans-Bold.eot);
+  src: url(#{$fontsrc}/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+  url(#{$fontsrc}/NotoSans-Bold.woff2) format('woff2'),
+  url(#{$fontsrc}/NotoSans-Bold.woff) format('woff'),
+  url(#{$fontsrc}/NotoSans-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'noto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(#{$fontsrc}/NotoSans-Black.eot);
+  src: url(#{$fontsrc}/NotoSans-Black.eot?#iefix) format('embedded-opentype'),
+  url(#{$fontsrc}/NotoSans-Black.woff2) format('woff2'),
+  url(#{$fontsrc}/NotoSans-Black.woff) format('woff'),
+  url(#{$fontsrc}/NotoSans-Black.otf) format('opentype');
+}

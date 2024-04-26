@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/plat/head.html')
+</head>
+
+<body>
+    <div class="lay-body">
+        <!-- header -->
+        @@include('./include/plat/header.html')
+        <!--// header -->
+        <!-- container -->
+        <div class="lay-container">
+            <div class="lay-nav wide">
+                @@include('./include/plat/nav.html')
+            </div>
+            <div class="lay-content">
+                <div class="lay-content-wrap">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="basic-tit">어노테이션</h3>
+                        </div>
+
+                        <div class="fileuploader-ui">
+                            <i class="icon" aria-hidden="true"><img src="./common/images/platform/icon-fileupload.png"
+                                    alt=""></i>
+                            <p class="text">Upload Assets (.PNG, .JPG, .JPEG, .MP4) Drag assets here, or click to select
+                                folder. (Max 10MB Images, 100MB Videos)</p>
+                            <button type="button" class="btn-gradient" title="파일 첨부">파일 업로드</button>
+                        </div>
+
+                        <div class="col-12 board-wrap">
+                            <div class="board-list-header">
+                                <!-- 게시물 갯수 등 -->
+                                <div class="board-stat">
+                                    총 게시물 <span>(<b>999</b>건/9999건)</span>
+                                </div>
+                                <!-- 선택옵션 등 -->
+                                <div class="board-extra">
+                                    <div class="search">
+                                        <input type="text" class="cs-input" title="검색어 입력" placeholder="검색어를 입력하세요.">
+                                        <button type="button">검색</button>
+                                    </div>
+
+                                    <select class="cs-input cs-input-point">
+                                        <option>파일명 / 날짜</option>
+                                    </select>
+                                    
+                                    <div class="type-g">
+                                        <button type="button" class="view_type view-list current" title="일반 목록으로 보기"></button>
+                                        <button type="button" class="view_type view-gall" title="이미지 목록 보기"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="board-options">
+                                <button type="button" class="btn">전체선택</button>
+                                <button type="button" class="btn">선택</button>
+                                <button type="button" class="btn">삭제</button>
+                            </div>
+
+                            <div class="board-list-text">
+                                <table>
+                                    <colgroup>
+                                        <col class="width100">
+                                        <col class="width100">
+                                        <col style="width:auto">
+                                        <col class="width140">
+                                        <col class="width140">
+                                        <col class="width170">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><input type="checkbox" class="cs-checkbox" id="allChk"><label for="allChk"><span></span></label></th>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">파일명</th>
+                                            <th scope="col">타입</th>
+                                            <th scope="col">용량</th>
+                                            <th scope="col">등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tac">
+                                                <input type="checkbox" class="cs-checkbox" id="test1"><label for="test1"><span></span></label>
+                                            </td>
+                                            <td class="tac">10</td>
+                                            <td class="item_list-title"><a href="#"class="cs-link-text"><i class="cs-icon-img"></i><span>Land-XI통합관리시스템 서비스 오픈</span></a></td>
+                                            <td class="tac">Image/jpeg</td>
+                                            <td class="tac">888 M</td>
+                                            <td class="tac">2023.03.31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // board-list-text -->
+                            
+                            <div class="col col-3 col-lg-6 gall-item">
+                                <div class="background-round-white">
+                                    <div class="workspace-item-header">
+                                        <h3><a href="#">Image 10.JPG</a></h3>
+                                        <div class="checkgroup">
+                                            <input type="checkbox" class="cs-checkbox" id="nam1">
+                                            <label for="nam1"><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <div class="badge-g">
+                                                <span class="badge">label#1</span>
+                                                <span class="badge">label#1</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div>
+                                        <span>용량<strong>7.5MB</strong></span>
+                                        <span class="date">등록일자<strong>2023-10-09</strong></span>
+                                    </div>
+                                    <div>
+                                        <span>작업자<strong>7.5MB</strong></span>
+                                        <span class="date">완료일자<strong>2023-10-09</strong></span>
+                                    </div>
+
+                                    <button type="button" class="btn-icon icon-setting"></button>
+                                </div>
+                            </div>
+                            <div class="board-list-bottom">
+                            @@include('./include/board-paging.html')
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                    <!--// row -->
+                </div>
+                <!--// lay-content-wrap -->
+            </div>
+            <!--// lay-content -->
+        </div>
+        <!--// container -->
+    </div>
+    <!--// lay-body -->
+
+    <!-- @include('./include/footer.html') -->
+</body>
+
+</html>

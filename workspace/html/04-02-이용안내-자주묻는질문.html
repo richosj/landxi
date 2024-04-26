@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+    
+    @@include('./include/front/location.html',{cate1:'이용안내', cate2: '자주 묻는 질문'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+        <div class="board-wrap">
+          <!-- board-search -->
+          <div class="board-search">
+            <form>
+              <select class="board-search_input">
+                <option>유형 선택</option>
+              </select>
+              <input type="text" class="board-search_input" placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
+              <button class="board-search_btn">검색</button>
+            </form>
+          </div>
+          
+          <div class="board-list-header">
+            <!-- 게시물 갯수 등 -->
+            <div class="board-stat">
+              총 게시물 <span>(<b>999</b>건/9999건)</span>
+            </div>
+
+            <!-- 선택옵션 등 -->
+            <div class="board-extra">
+              <select class="cs-input cs-input-point">
+                <option>최신순</option>
+              </select>
+              <select class="cs-input cs-input-point">
+                <option>10개씩 보기</option>
+              </select>
+            </div>
+          </div>
+          <!-- board-list-qna -->
+          <div class="board-list-qna">
+            <ul>
+              @@for(var i = 0;i < 4; i++){
+              <li class="qna_item">
+                <a href="javascript:void(0)" onclick="ui.qnaToggle(this)">
+                  <i class="item_q">Q</i>
+                  <span class="item_tag">데이터</span>
+                  <strong class="item_title">AI 학습자료 연구 분석 데이터 활용</strong>
+                  <i class="item_toggle"></i>
+                </a>
+                <div class="qna_item_text">
+                  <div class="qna_item_text-wrap">
+                    <p>Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                    <p>Land-XI 통합관리시스템 서비스 오픈</p>
+                    <p>회원정보의 목적 외 이용 또는 제3자 제공 Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                    <div style="text-align:center;margin-top:25px;">
+                      <img src="@@imageRoot/front/sample_image.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              }
+              <li class="qna_item">
+                <a href="javascript:void(0)" onclick="ui.qnaToggle(this)">
+                  <i class="item_q">Q</i>
+                  <span class="item_tag">신청</span>
+                  <strong class="item_title">AI 분석 데이터 활용</strong>
+                  <i class="item_toggle"></i>
+                </a>
+                <div class="qna_item_text">
+                  <div class="qna_item_text-wrap">
+                    <div>Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</div>
+                    <p>Land-XI 통합관리시스템 서비스 오픈</p>
+                    <p>회원정보의 목적 외 이용 또는 제3자 제공 Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                    <div style="text-align:center;margin-top:25px;">
+                      <img src="@@imageRoot/front/sample_image.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="board-list-bottom">
+            @@include('./include/board-paging.html')
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

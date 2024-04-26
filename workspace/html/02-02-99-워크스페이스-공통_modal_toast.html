@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/plat/head.html')
+</head>
+
+<body>
+    <div class="lay-body">
+        <!-- header -->
+        @@include('./include/plat/header.html')
+        <!--// header -->
+        <!-- container -->
+        <div class="lay-container">
+            <div class="lay-nav wide">
+                @@include('./include/plat/nav.html')
+            </div>
+            <div class="lay-content">
+                <div class="lay-content-wrap">
+
+                    <div class="row">
+                        <div class="col-12 ti_flex">
+                            <h3 class="basic-tit">Toast</h3>
+                        </div>
+                        <div class="col-12">
+                            <div class="ds-view">
+                                <button type="button" onclick="layFc.miniAlert('조회에 성공했습니다.','success');" class="btn">성공 문구 출력</button>
+                                <button type="button" onclick="layFc.miniAlert('조회에 실패했습니다.','fail');" class="btn">실패 문구 출력</button>
+                            </div>
+                        </div>
+                        <div class="col-12 ti_flex">
+                            <h3 class="basic-tit">시스템 모달</h3>
+                        </div>
+                        <div class="col-12">
+                            <div class="ds-view">
+                                <button type="button" onClick="addModal();" class="btn add">시스템 모달</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// row -->
+                </div>
+                <!--// lay-content-wrap -->
+            </div>
+            <!--// lay-content -->
+        </div>
+        <!--// container -->
+    </div>
+    <!--// lay-body -->
+
+    <div class="popup-wrap system-wrap" id="addModal" style="width:500px;">
+        <div class="system-popup-container">
+          <!-- header -->
+          <div class="system-popup-header">
+            <span class="system-popup-header-text">제주 공간지능정보(Geo-AI) 시스템</span>
+          </div>
+          <!-- content -->
+          <div class="system-popup-content">
+            <!-- popup-content-wrap -->
+            <div class="system-popup-content-wrap">
+              <div class="system-pop-inner-con">
+                SMS 발송대상을 선택해주십시오.<br>선택하신 번호로 SMS를 발송합니다.
+              </div>
+              <!-- footer -->
+              <div class="system-popup-footer">
+                <button type="button" class="sysyem-cancle-btn btn" data-modal="closebtn">확인</button>
+              </div>
+            </div>
+            <!-- popup-content-wrap -->
+          </div>
+        </div>
+      </div>
+      <!-- modal -->
+      <script>
+        function addModal(t) {
+            uiModal.open({
+                elm: 'addModal',
+                bgBlock: true,
+                drag: false,
+            }, t);
+        }
+      </script>
+
+    <!-- @include('./include/footer.html') -->
+</body>
+</html>

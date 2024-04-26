@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/plat/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    <!-- header -->
+    @@include('./include/plat/header.html')
+    <!--// header -->
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-nav">
+        @@include('./include/plat/nav.html')
+      </div>
+
+      <div class="lay-content">
+        <div class="lay-content-wrap">
+
+          <header class="workspace-header">
+            <div class="user"><strong>DAVIS</strong>님 의 워크 스페이스</div>
+            <div class="btn-group">
+              <button type="button" class="btn">전체선택</button>
+              <button type="button" class="btn">선택</button>
+              <button type="button" class="btn btn-outline-blue">삭제</button>
+            </div>
+          </header>
+
+          <div class="row">
+            <div class="col col-3 col-lg-6 workspace-add">
+              <button type="button" class="btn-work-add btn-gradient" title="팝업 열림" onClick="addModal()">신규 워크 스페이스 만들기</button>
+            </div>
+            <!--// col  -->
+            
+            <div class="col col-3 col-lg-6 workspace-item">
+              <h3>워크 스페이스 #1 <input type="checkbox" id="cs1" class="cs-checkbox cs-checkbox--single" title="선택"><label for="cs1"><span></span></label></h3>
+              <div class="figure">
+                <div class="thumb"></div>
+                <div class="caption">
+                  <div class="desc">
+                    <strong>홍길동</strong><span class="date">(2023-12-30)</span>
+                    <p class="project-count">프로젝트 : <b>6</b></p>
+                  </div>
+                  <div class="control">
+                    <label class="like-push"><input type="checkbox"><i></i></label>
+                    <button type="button" class="btn-icon icon-modify" title="수정">수정</button>
+                    <button type="button" class="btn-icon icon-del" title="삭제">삭제</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// col  -->
+            <div class="col col-3 col-lg-6 workspace-item">
+              <h3>워크 스페이스 #1 <input type="checkbox" id="cs2" class="cs-checkbox cs-checkbox--single" title="선택"><label for="cs2"><span></span></label></h3>
+              <div class="figure">
+                <div class="thumb"></div>
+                <div class="caption">
+                  <div class="desc">
+                    <strong>홍길동</strong><span class="date">(2023-12-30)</span>
+                    <p class="project-count">프로젝트 : <b>6</b></p>
+                  </div>
+                  <div class="control">
+                    <label class="like-push"><input type="checkbox"><i></i></label>
+                    <button type="button" class="btn-icon icon-modify" title="수정">수정</button>
+                    <button type="button" class="btn-icon icon-del" title="삭제">삭제</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// col  -->
+            <div class="col col-3 col-lg-6 workspace-item">
+              <h3>워크 스페이스 #1 <input type="checkbox" id="cs3" class="cs-checkbox cs-checkbox--single" title="선택"><label for="cs3"><span></span></label></h3>
+              <div class="figure">
+                <div class="thumb noimage"></div>
+                <div class="caption">
+                  <div class="desc">
+                    <strong>홍길동</strong><span class="date">(2023-12-30)</span>
+                    <p class="project-count">프로젝트 : <b>6</b></p>
+                  </div>
+                  <div class="control">
+                    <label class="like-push"><input type="checkbox"><i></i></label>
+                    <button type="button" class="btn-icon icon-modify" title="수정">수정</button>
+                    <button type="button" class="btn-icon icon-del" title="삭제">삭제</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// col  -->
+            <div class="col col-3 col-lg-6 workspace-item">
+              <h3>워크 스페이스 #1 <input type="checkbox" id="cs4" class="cs-checkbox cs-checkbox--single" title="선택"><label for="cs4"><span></span></label></h3>
+              <div class="figure">
+                <div class="thumb"></div>
+                <div class="caption">
+                  <div class="desc">
+                    <strong>홍길동</strong><span class="date">(2023-12-30)</span>
+                    <p class="project-count">프로젝트 : <b>6</b></p>
+                  </div>
+                  <div class="control">
+                    <label class="like-push"><input type="checkbox"><i></i></label>
+                    <button type="button" class="btn-icon icon-modify" title="수정">수정</button>
+                    <button type="button" class="btn-icon icon-del" title="삭제">삭제</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// col  -->
+            <div class="col col-3 col-lg-6 workspace-item">
+              <h3>워크 스페이스 #1 <input type="checkbox" id="cs5" class="cs-checkbox cs-checkbox--single" title="선택"><label for="cs5"><span></span></label></h3>
+              <div class="figure">
+                <div class="thumb"></div>
+                <div class="caption">
+                  <div class="desc">
+                    <strong>홍길동</strong><span class="date">(2023-12-30)</span>
+                    <p class="project-count">프로젝트 : <b>6</b></p>
+                  </div>
+                  <div class="control">
+                    <label class="like-push"><input type="checkbox"><i></i></label>
+                    <button type="button" class="btn-icon icon-modify" title="수정">수정</button>
+                    <button type="button" class="btn-icon icon-del" title="삭제">삭제</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// col  -->
+            
+
+          </div>
+          <!--// row -->
+
+        </div>
+        <!--// lay-content-wrap -->
+      </div>
+      <!--// lay-content -->
+    </div>
+    <!--// container -->
+  </div>
+  <!--// lay-body -->
+  <div class="popup-wrap" id="addModal" style="width:750px;">
+    <div class="popup-container">
+      <!-- header -->
+      <div class="popup-header">
+        <span class="popup-header-text">새 프로젝트  만들기</span>
+        <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+      </div>
+      <!-- content -->
+      <div class="popup-content">
+        <!-- popup-content-wrap -->
+        <div class="popup-content-wrap">
+          <div class="pop-inner-con">
+            <div class="cs-table">
+              <table>
+                <colgroup>
+                  <col style="width:140px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>프로젝트 이름</th>
+                    <td class="cell-input"><input type="text" class="cs-input width100p" title="프로젝트 이름 입력"></td>
+                  </tr>
+                  <tr>
+                    <th>모델 타입</th>
+                    <td class="cell-input">
+                      <select name="" id="" class="cs-input" title="모델 타입 선택">
+                        <option value="">데이터 유형</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>데이터 유형</th>
+                    <td class="cell-input">
+                      <select name="" id="" class="cs-input" title="데이터 유형 선택">
+                        <option value="">데이터 유형</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>컬러</th>
+                    <td class="cell-input">
+                      <div class="color-input">
+                        <input type="text" class="txt-input" placeholder="#f0f0f0f" title="색상 선택" readonly>
+                        <input type="color" class="color">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="popup-footer">
+            <button class="btn btn-3" data-modal="closebtn">취소</button>
+            <button class="btn btn-1" data-modal="closebtn">확인</button>
+          </div>
+        </div>
+        <!-- popup-content-wrap -->
+      </div>
+    </div>
+  </div>
+  <script>
+
+    $('.color').change(function(){
+      $(this).siblings('.txt-input').val($(this).val())
+    })
+    
+    function addModal(t){
+      uiModal.open({
+        elm:'addModal',
+        bgBlock: true,
+        drag: false,
+      },t);
+    }
+  </script>
+  
+  <!-- @include('./include/footer.html') -->
+  
+</body>
+</html>`

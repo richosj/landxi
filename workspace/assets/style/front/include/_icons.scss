@@ -1,0 +1,69 @@
+@use 'var';
+
+// global.setIcon($class, $width, $height, $url, $flex: true) {
+@include var.setIcon('cs-icon-lock',18,18,'#{var.$image}/front/icon_lock.png',false);
+@include var.setIcon('cs-icon-home',18,18,'#{var.$image}/front/icon_home.png');
+
+.cs-icon-menu{
+  width: 18px;height: 18px;
+  display: inline-block;
+  position: relative;
+  span{
+    height:2px;
+    background: #e3f3fd;
+    width: 16px;
+    position: absolute;
+    left: 0;right: 0;
+    top: calc(50% - 1px);
+    margin: 0 auto;
+
+    &::after,
+    &::before{
+      content: '';
+      height:2px;
+      background: #e3f3fd;
+      width: 16px;
+      position: absolute;
+    }
+    
+    &::after{top:-5px;}
+    &::before{bottom:-5px;}
+  }
+}
+
+$fileiconArr: [hwp,pdf,png,pptx,txt,xlsx];
+@each $name in $fileiconArr {
+  @include var.setIcon('cs-icon-file-#{$name}',23,25,'#{var.$image}/front/file_#{$name}.png');
+  @include var.setIcon('cs-icon-file-#{$name}-active',23,25,'#{var.$image}/front/file_#{$name}_hover.png');
+  a, button{
+    &:hover{
+      .cs-icon-file-#{$name}{background:url('#{var.$image}/front/file_#{$name}_hover.png')}
+    }
+  }
+}
+
+a, button{
+  [class*=cs-icon-file-]{transition: background .25s;}
+}
+
+@include var.setIcon('cs-icon-lock',18,18,'#{var.$image}/front/icon_lock2.png');
+@include var.setIcon('cs-icon-attach',18,18,'#{var.$image}/front/icon_attch.png');
+@include var.setIcon('cs-icon-preview',18,18,'#{var.$image}/front/icon_preview.png');
+@include var.setIcon('cs-icon-down',18,18,'#{var.$image}/front/icon_down.png');
+
+.cs-icon-req{
+  font-style: normal;color: #18c5f0;font-size: 16px;
+  display: inline-block;
+  width: 10px;height: 10px;
+  line-height: 40px;overflow: hidden;
+  vertical-align: text-top;
+  // margin-top: -7px;
+  margin-left: 1px;margin-right: 1px;
+  position: relative;
+  &::after{
+    content: '*';font-size: 16px;
+    position: absolute;
+    line-height: 1em;
+    left: 0;top: 0;
+  }
+}

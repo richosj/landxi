@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/plat/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    <!-- header -->
+    @@include('./include/plat/header.html')
+    <!--// header -->
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-nav">
+        @@include('./include/plat/nav.html')
+      </div>
+
+      <div class="lay-content">
+        <div class="lay-content-wrap">
+          <div class="row">
+            <div class="col-9 col-lg-12">
+              <div class="row">
+                <div class="col col-4 bg-1">
+                  <header class="project-profile">
+                    <strong class="user-name">DAVIS</strong>님 환영합니다.
+                    <p class="user-project">
+                      프로젝트 업데이트 <b>56</b>건
+                    </p>
+                  </header>
+                  <ul class="project-list">
+                    <li>
+                      <a href="#" class="flex align-center between">
+                        <span class="name">Project A</span>
+                        <span><b>1</b>건</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="flex align-center between">
+                        <span class="name">Project A</span>
+                        <span><b>1</b>건</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="flex align-center between">
+                        <span class="name">Project A</span>
+                        <span><b>1</b>건</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col col-4 bg-2">
+                  <header class="col-header">
+                    <h3 class="white">전체 현황</h3>
+                  </header>
+
+                  <div class="rank">
+                    <!--
+                    <div class="box">
+                      <span class="name">Workspace</span>
+                      <b class="count">12</b>
+                      <span class="var">-</span>
+                    </div>
+                    -->
+                    <div class="box">
+                      <span class="name">Project</span>
+                      <b class="count">12</b>
+                      <span class="var down">2</span>
+                    </div>
+                    <div class="box">
+                      <span class="name">Project</span>
+                      <b class="count">12</b>
+                      <span class="var up">2</span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col col-4">
+                  <header class="col-header">
+                    <h3>분석 현황</h3>
+                  </header>
+                  <div class="grid-template-2">
+                    <div>
+                      그래프 자리
+                    </div>
+                    <div>
+                      그래프 자리
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4">
+                  <header class="col-header">
+                    <h3>작업 이력</h3>
+                    <a href="#" class="link-more" title="더보기">이동</a>
+                  </header>
+
+                  <ul class="work-history">
+                    <li>
+                      <a href="#"  class="flex align-center between">
+                        <strong>AI 학습 데이터 5차 분석</strong>
+                        <span class="time-area">13분 전 </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"  class="flex align-center between">
+                        <strong>Project_B 라벨링 이미지 추가</strong>
+                        <span class="time-area">13분 전 </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"  class="flex align-center between">
+                        <strong>AI 학습 데이터 4차 분석</strong>
+                        <span class="time-area">1일 전</span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+
+                </div>
+                <div class="col col-8">
+                  <header class="col-header">
+                    <h3>Workspace 현황</h3>
+                  </header>
+
+                  <div>
+                    그래프 자리
+                  </div>
+
+                </div>
+                <div class="col col-4">
+                  <header class="col-header">
+                    <h3>메모</h3>
+                    <a href="#" class="link-more" title="더보기">이동</a>
+                  </header>
+
+                  <ul class="main-memo">
+                    <li><a href="#" onClick="openDetailMemo()">AI 학습 데이터 2차 분석 체크리스트</a></li>
+                    <li><a href="#">Project A 데이터 셋 생성 날짜</a></li>
+                    <li><a href="#">Project B 업데이트 버전</a></li>
+                  </ul>
+
+                </div>
+                <div class="col col-8">
+                  <header class="col-header">
+                    <h3>레이블 통계</h3>
+                    <a href="#" class="link-more" title="더보기">이동</a>
+                  </header>
+
+                  <div class="label-list">
+                    <dl class="label-item type-1">
+                      <dt>전체 원시 데이터 파일</dt>
+                      <dd class="track-ui">
+                        <span class="track">
+                          <span class="bg" style="width: 50%;"></span>
+                        </span>
+                        <span class="count">
+                          300/300
+                        </span>
+                      </dd>
+                    </dl>
+
+                    <dl class="label-item type-2">
+                      <dt>업로드 된 이미지</dt>
+                      <dd class="track-ui">
+                        <span class="track">
+                          <span class="bg" style="width: 50%;"></span>
+                        </span>
+                        <span class="count">
+                          300/300
+                        </span>
+                      </dd>
+                    </dl>
+
+                    <dl class="label-item type-3">
+                      <dt>레이블된 이미지</dt>
+                      <dd class="track-ui">
+                        <span class="track">
+                          <span class="bg" style="width: 50%;"></span>
+                        </span>
+                        <span class="count">
+                          300/300
+                        </span>
+                      </dd>
+                    </dl>
+
+                    <dl class="label-item type-4">
+                      <dt>어노테이션 레이블 갯수</dt>
+                      <dd class="track-ui">
+                        <span class="track">
+                          <span class="bg" style="width: 50%;"></span>
+                        </span>
+                        <span class="count">
+                          300/300
+                        </span>
+                      </dd>
+                    </dl>
+                  </div>
+
+                </div>
+              </div>
+              <!--// row -->
+            </div>
+            <div class="col-3 col-lg-12">
+              <div class="row">
+                <div class="col col-12 col-lg-6">
+                  <header class="col-header">
+                    <h3 onClick="openDetailCal()">일정</h3>
+
+                    <div class="month-list">
+                      <button class="selected" title="월 선택">4월</button>
+                      <ul>
+                        <li><a href="#">1월</a></li>
+                        <li><a href="#">2월</a></li>
+                        <li><a href="#">3월</a></li>
+                        <li><a href="#">4월</a></li>
+                        <li><a href="#">5월</a></li>
+                        <li><a href="#">6월</a></li>
+                        <li><a href="#">7월</a></li>
+                        <li><a href="#">8월</a></li>
+                        <li><a href="#">9월</a></li>
+                        <li><a href="#">10월</a></li>
+                        <li><a href="#">11월</a></li>
+                        <li><a href="#">12월</a></li>
+                      </ul>
+                    </div>
+                  </header>
+
+                  <div class="week-list">
+                    <div class="day">
+                      <button type="button" title="선택">
+                        <span class="name" aria-label="day">Mon</span>
+                        <span class="num">12</span>
+                      </button>
+                    </div>
+                    <div class="day">
+                      <button type="button" title="선택">
+                        <span class="name" aria-label="day">Tue</span>
+                        <span class="num">12</span>
+                      </button>
+                    </div>
+                    <div class="day">
+                      <button type="button" class="current" title="선택">
+                        <span class="name" aria-label="day">Wed</span>
+                        <span class="num">12</span>
+                      </button>
+                    </div>
+                    <div class="day">
+                      <button type="button" title="선택">
+                        <span class="name" aria-label="day">Thu</span>
+                        <span class="num">12</span>
+                      </button>
+                    </div>
+                    <div class="day">
+                      <button type="button" title="선택">
+                        <span class="name" aria-label="day">Fri</span>
+                        <span class="num">12</span>
+                      </button>
+                    </div>
+                    <div class="day">
+                      <button type="button" title="선택">
+                        <span class="name" aria-label="day">Sat</span>
+                        <span class="num">12</span>
+                      </button>
+                    </div>
+                    <div class="day">
+                      <button type="button" title="선택">
+                        <span class="name sun" aria-label="day">Sun</span>
+                        <span class="num">12</span>
+                      </button>
+                    </div>
+                  </div>
+
+
+                  <div class="todo-list">
+                    <div class="today">4월 12일(화)</div>
+                    <dl class="todo-cont">
+                      <dt>2:00 pm</dt>
+                      <dd>No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석</dd>
+                    </dl>
+                    <dl class="todo-cont">
+                      <dt>2:00 pm</dt>
+                      <dd>No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석</dd>
+                    </dl>
+                    <dl class="todo-cont">
+                      <dt>2:00 pm</dt>
+                      <dd>No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석</dd>
+                    </dl>
+                    <dl class="todo-cont">
+                      <dt>2:00 pm</dt>
+                      <dd>No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석</dd>
+                    </dl>
+                    <dl class="todo-cont">
+                      <dt>2:00 pm</dt>
+                      <dd>No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석</dd>
+                    </dl>
+                    <dl class="todo-cont">
+                      <dt>2:00 pm</dt>
+                      <dd>No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석No-Code 기반의 AI 학습 데이터 4차 분석</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="col col-12 col-lg-6">
+                  <header class="col-header">
+                    <h3>공지사항</h3>
+                    <a href="#" class="link-more" title="더보기">이동</a>
+                  </header>
+                    <ul class="main-notic">
+                      <li>
+                        <spna class="day">01</spna>
+                        <div class="cont">
+                          <p class="subject"><a href="#">Land-XI 플랫폼 서비스 오픈</a></p>
+                          <p class="date">2023-11-01</p>
+                        </div>
+                        <i class="arw"></i>
+                      </li>
+                      <li>
+                        <spna class="day">12</spna>
+                        <div class="cont">
+                          <p class="subject"><a href="#">Land-XI 플랫폼 서비스 오픈</a></p>
+                          <p class="date">2023-11-12</p>
+                        </div>
+                        <i class="arw"></i>
+                      </li>
+                      <li>
+                        <spna class="day">09</spna>
+                        <div class="cont">
+                          <p class="subject"><a href="#">Land-XI 플랫폼 서비스 오픈</a></p>
+                          <p class="date">2023-11-09</p>
+                        </div>
+                        <i class="arw"></i>
+                      </li>
+                      <li>
+                        <spna class="day">31</spna>
+                        <div class="cont">
+                          <p class="subject"><a href="#">Land-XI 플랫폼 서비스 오픈</a></p>
+                          <p class="date">2023-11-31</p>
+                        </div>
+                        <i class="arw"></i>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+              <!--// row -->
+            </div>
+          </div>
+          <!--// row -->
+          
+        </div>
+      </div>
+    </div>
+    <!--// container -->
+  </div>
+  <!--// lay-body -->
+  <div class="popup-wrap" style="width:750px;" id="calendarDetail">
+    <div class="popup-container">
+      <!-- header -->
+      <div class="popup-header">
+        <span class="popup-header-text">일정</span>
+        <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+      </div>
+      <!-- content -->
+      <div class="popup-content">
+        <!-- popup-content-wrap -->
+        <div class="popup-content-wrap">
+          <div class="pop-inner-con">
+            <div class="cld-top">
+              <div>
+                <select name="" id="" class="cs-input" title="년 선택">
+                  <option value="">2023년</option>
+                </select>
+                <select name="" id="" class="cs-input" title="월 선택">
+                  <option value="">12월</option>
+                </select>
+              </div>
+              <div>
+                <button type="button" class="prev" title="이전"></button>
+                <button type="button" class="next" title="다음"></button>
+              </div>
+            </div>
+            <div class="cs-table">
+              <table>
+                <colgroup>  
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">11.12(월)</th>
+                    <th scope="col">11.13(화)</th>
+                    <th scope="col">11.14(수)</th>
+                    <th scope="col">11.15(목)</th>
+                    <th scope="col">11.16(금)</th>
+                    <th scope="col">11.17(토)</th>
+                    <th scope="col">11.18(일)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="popup-footer">
+            <button class="btn btn-3" data-modal="closebtn">저장</button>
+            <button class="btn" data-modal="closebtn">취소</button>
+          </div>
+        </div>
+        <!-- popup-content-wrap -->
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-wrap" style="width:750px;" id="memoDetail">
+    <div class="popup-container">
+      <!-- header -->
+      <div class="popup-header">
+        <span class="popup-header-text">메모</span>
+        <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+      </div>
+      <!-- content -->
+      <div class="popup-content">
+        <!-- popup-content-wrap -->
+        <div class="popup-content-wrap">
+          <div class="pop-inner-con">
+            <div class="moemo-view">
+              <p class="tit">이미치 추가</p>
+              <p class="desc">이미지 추가 필요</p>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="popup-footer">
+            <button class="btn btn-3" data-modal="closebtn">저장</button>
+            <button class="btn" data-modal="closebtn">취소</button>
+          </div>
+        </div>
+        <!-- popup-content-wrap -->
+      </div>
+    </div>
+  </div>
+  <script>
+    
+    
+    function openDetailCal(t){
+      uiModal.open({
+        elm:'calendarDetail',
+        bgBlock: true,
+        drag: false,
+        width: 300,
+        height: 150,
+      },t);
+    }
+    function openDetailMemo(t){
+      uiModal.open({
+        elm:'memoDetail',
+        bgBlock: true,
+        drag: false,
+        width: 300,
+        height: 150,
+      },t);
+    }
+    
+    //openDetailCal();
+  </script>
+  
+  <!-- @include('./include/footer.html') -->
+  
+</body>
+</html>`

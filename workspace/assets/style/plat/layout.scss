@@ -1,0 +1,16 @@
+// 초기설정
+@use './include/var';
+// 반응형
+@use '../include/respon' with ($use : var.$setting-use-respon);
+
+@use '../include/base';
+@use '../include/size';
+@use '../include/grid';
+@use '../include/table';
+@use '../include/modal';
+@use '../include/input';
+@use '../include/board';
+
+@use './include/common';
+
+@use './include/layout';

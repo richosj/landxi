@@ -1,0 +1,15 @@
+@use 'global'; //기본설정
+
+button[type=button]{cursor: pointer;}
+
+.sr-only{
+  position: absolute;
+  width: 0;height: 0;overflow: hidden;
+}
+
+.tac{text-align: center;}
+.vat{vertical-align: top;}
+
+.fc-red{color: #d40000;}
+.fc-blue{color: #2149a6;}
+.fc-gray{color: #999999;}

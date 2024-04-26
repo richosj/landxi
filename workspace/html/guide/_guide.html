@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" `="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>guide</title>
+	<link rel="stylesheet" href="./guide.css">
+	<link rel="stylesheet" href="../common/css/front/layout.css">
+	<!-- 가이드용 -->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+
+	<script src="../common/libjs/jquery.min.js"></script>
+	<script src="./guide.js"></script>
+	<script src="../common/libjs/jquery-ui.min.js"></script>
+	<script src="../common/js/datepicker.js"></script>
+	<script src="../common/js/common.js"></script>
+	<script src="../common/js/modal.js"></script>
+	<script src="../common/js/front_ui.js"></script>
+
+	
+
+	<script src="../@@htmlRoot/common/libjs/pagination.js"></script>
+	<link rel="stylesheet" href="../@@htmlRoot/common/libjs/pagination.css">
+
+
+	
+	
+	<script>hljs.highlightAll();</script>
+
+	<script>
+		jQuery(function(){
+  //페이징
+  testFcSetPagination = () => {
+    if($('[data-test-id=pagination]').length < 1) return false;
+    $('[data-test-id=pagination]').pagination({
+      dataSource: ['safasfd', 2, 3, 4, 5, 6, 7, 40,'safasfd', 2, 3, 4, 5, 6, 7, 40,'safasfd', 2, 3, 4, 5, 6, 7, 40,'safasfd', 2, 3, 4, 5, 6, 7, 40],
+      pageSize: 5,
+      showGoInput: false,
+      showGoButton: false,
+      callback: function (data, pagination) {
+      }
+    });
+  }
+
+  // testFcSetPagination();
+});
+	</script>
+
+</head>
+<body>
+	<nav class="build-nav">
+		<ul>
+			<!-- <li><a href="#"></a></li> -->
+		</ul>
+	</nav>
+	<div class="build-body">
+
+		<section>
+			<div class="testBox"></div>
+		</section>
+		<section>
+			<h2 class="build-h2">퍼블리싱 개발환경</h2>
+
+			<h3 class="build-h3">Commands</h3>
+			<div>
+				gulp<br>
+				gulp clear
+			</div>
+
+			<h3 class="build-h3">Features</h3>
+			<div>
+				scss<br>
+				javascript<br>
+				file-include<br>
+				gulp
+			</div>	
+		</section>
+
+		<section>
+			<h2 class="build-h2">color</h2>
+			<div class="ds-view">
+				<span class="fc-blue">가나다라마바사 사이트 대표색상</span> <span class="class">.fc-blue</span><br>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="build-h2">INPUT</h2>
+			<div class="ds-view" style="background:#fff;">
+				<input type="text" class="cs-input">
+				<input type="text" class="cs-input" readonly placeholder="readonly">
+				<input type="text" class="cs-input" disabled placeholder="disabled" value="disabled">
+
+				<hr>
+
+				<select class="cs-input">
+					<option>선택해주세요</option>
+					<option>2회차</option>
+					<option>3회차</option>
+					<option>4회차</option>
+				</select>
+
+				<select class="cs-input" disabled>
+					<option>선택해주세요</option>
+					<option>2회차</option>
+					<option>3회차</option>
+					<option>4회차</option>
+				</select>
+
+				<hr>
+
+				<div class="cs-grid">
+					<div class="cs-grid-col3">
+						<!-- code -->
+						<input type="checkbox" class="cs-checkbox-toggle" id="ipt-checkboxToggle">
+						<label for="ipt-checkboxToggle">알림 <span></span></label>
+						<!--// code -->
+					</div>
+					<div class="cs-grid-col3">
+						<div class="mb10 fz-s">단독사용</div>
+						<!-- code -->
+						<input type="checkbox" class="cs-checkbox-toggle" id="ipt-checkboxToggle2">
+						<label for="ipt-checkboxToggle2"><span></span></label>
+						<!--// code -->
+					</div>
+					<div class="cs-grid-col3">
+						<div class="mb10 fz-s">체크박스 토글버튼 disabled</div>
+						<!-- code -->
+						<input type="checkbox" class="cs-checkbox-toggle" id="ipt-checkboxToggle3" disabled>
+						<label for="ipt-checkboxToggle3"><span></span></label>
+						<!--// code -->
+					</div>
+					<div class="cs-grid-col3">
+						<div class="mb10 fz-s">가로 100%로 사용시</div>
+						<div class="mt10 width200">
+							<!-- code -->
+							<input type="checkbox" class="cs-checkbox-toggle cs-checkbox-toggle--full" id="ipt-checkboxToggle4">
+							<label for="ipt-checkboxToggle4">알림 <span></span></label>
+							<!--// code -->
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<input type="radio" id="ipt-radio-1" name="ipt-input" class="cs-checkbox"><label for="ipt-radio-1"><span></span> 라디오</label>
+				<input type="radio" id="ipt-radio-2" name="ipt-input" class="cs-checkbox"><label for="ipt-radio-2"><span></span> 라디오</label>
+				<input type="radio" id="ipt-radio-3" name="ipt-input" class="cs-checkbox" disabled><label for="ipt-radio-3"><span></span> 라디오</label>
+
+				<hr>
+
+				<input type="checkbox" id="ipt-checkbox-1" class="cs-checkbox" checked><label for="ipt-checkbox-1"><span></span> 체크박스</label>
+				<input type="checkbox" id="ipt-checkbox-2" class="cs-checkbox"><label for="ipt-checkbox-2"><span></span> 체크박스</label>
+				<input type="checkbox" id="ipt-checkbox-3" class="cs-checkbox"><label for="ipt-checkbox-3"><span></span> 체크박스</label>
+				<input type="checkbox" id="ipt-checkbox-4" class="cs-checkbox" disabled><label for="ipt-checkbox-4"><span></span> 체크박스</label>
+
+				<hr>
+				<div class="mb10 fz-s">라디오 선택</div>
+				<input type="radio" id="ipt-selectortt1" name="ipt-selector" class="cs-checkbox-selector"><label for="ipt-selectortt1"><span></span> 1번을 포함합니다.</label>
+				<input type="radio" id="ipt-selectortt2" name="ipt-selector" class="cs-checkbox-selector"><label for="ipt-selectortt2"><span></span> 2번을 포함합니다.</label>
+
+				<hr>
+				<div class="mb10 fz-s">체크박스 선택</div>
+				<input type="checkbox" id="ipt-selector-checkbox1" name="ipt-selector-checkbox" class="cs-checkbox-selector"><label for="ipt-selector-checkbox1"><span></span> 1번을 포함합니다.</label>
+				<input type="checkbox" id="ipt-selector-checkbox2" name="ipt-selector-checkbox" class="cs-checkbox-selector"><label for="ipt-selector-checkbox2"><span></span> 2번을 포함합니다.</label>
+
+				<hr>
+
+				<div class="mb10 fz-s">체크박스 선택</div>
+				<input type="checkbox" id="ipt-selector-checkbox3" name="ipt-selector-checkbox" class="cs-checkbox-selector"><label for="ipt-selector-checkbox3"><span></span> 동의합니다.</label>
+
+				<hr>
+
+				<div class="mb10 fz-s">textarea</div>
+				<textarea class="cs-input width100p"></textarea>
+
+				<hr>
+				
+				<div class="mb10 fz-s">textarea 글자수 카운트</div>
+				<div class="cs-inputs-textcounter">
+					<textarea class="cs-input width100p"></textarea>
+					<div class="number-counter"><span>10</span> / 100</div>
+				</div>
+
+			</div>
+
+			<div class="ds-view">
+				<div class=" fz-s">날짜 단일 사용</div>
+				<input type="text" class="cs-input-date" placeholder="2022-01-01">
+
+				<div class="mt15 fz-s">년도 변경</div>
+				<div class="mt5fz-s"> <b>data-opt-yearrange="1986:2022"</b> 년도 선택 구간 지정</div>
+				<input type="text" class="cs-input-date" placeholder="2022-01-01" data-opt-changeYear="true" data-opt-yearrange="1986:2022">
+
+				<div class="mt15 fz-s">년도 변경</div>
+				<div class="mt5 fz-s">
+					<b>data-opt-YearPoint="today"</b> 올해기준<br>
+					<b>data-opt-yearrange="today-3:today+3"</b>  "<b>today-3</b>  올해기준 - 3 : <b>today+3</b> 올해기준 + 3"</div>
+				<input type="text" class="cs-input-date" placeholder="2022-01-01" data-opt-changeYear="true" data-opt-YearPoint="today" data-opt-yearrange="today-3:today+3">
+				
+				<div class="mt15 fz-s">년도 변경</div>
+				<input type="text" class="cs-input-date" placeholder="2022-01-01" data-opt-changeYear="true" data-opt-changeMonth="true">
+
+				<div class="mt10">
+					<b>data-opt-changeYear</b> : true ? false  / 년도 변경 가능 여부<br>
+					<b>data-opt-changeMonth</b> : true ? false / 월 변경 가능 여부<br>
+					<b>data-opt-YearPoint</b> : 'today' / 년도 시작날짜 끝날짜 선택시 기준점을 올해로 잡는다, 해당옵션을 안쓸경우 시작년도 끝년도 XXXX:XXXX 형태로 입력<br>
+					<b>data-opt-yearrange</b> : <span class="fc-blue">'1986:2022'</span> ? '<span class="fc-red">today-3:today+3</span>' / YearPoint 없을경우 파랑색과 같이 작성 YearPoint가 'today'일 경우 빨간색과 같이 작성
+				</div>
+			</div>
+
+			<div class="guide-api">
+				<pre><code>
+					<input type="text" class="cs-input-date">
+					<input type="text" class="cs-input-date" placeholder="2022-01-01" data-opt-changeYear="true" data-opt-yearrange="1986:2022">
+					<input type="text" class="cs-input-date" placeholder="2022-01-01" data-opt-changeYear="true" data-opt-YearPoint="today" data-opt-yearrange="today-3:today+3">
+				</code></pre>
+			</div>
+
+			<div class="ds-view">
+				<div class="mb10 fz-s">년도만 선택시</div>
+				<div class="cs-input-year-selector">
+					<button type="button">년도 선택</button>
+					<input type="hidden" data-id="year-value">
+				</div>
+			</div>
+
+			<div class="guide-api">
+				<pre><code>
+					<div class="cs-input-year-selector">
+						<button type="button">년도 선택</button>
+						<input type="hidden" data-id="year-value">
+					</div>
+				</code></pre>
+			</div>
+
+			<div class="ds-view">
+				<div class="mb10 fz-s">기간선택</div>
+				<div class="cs-datepicker-set">
+					<input type="text" class="js__datepicker js__date-from cs-input-date" placeholder="2022-01-01" title="시작날짜">
+					<span> ~ </span>
+					<input type="text" class="js__datepicker js__date-to cs-input-date" placeholder="2022-01-01" title="종료날짜">
+				</div>
+			</div>
+
+			<div class="guide-api">
+				<pre><code>
+					<div class="cs-datepicker-set">
+						<input type="text" class="js__datepicker js__date-from cs-input-date" placeholder="시작날짜" title="시작날짜">
+						<span> ~ </span>
+						<input type="text" class="js__datepicker js__date-to cs-input-date" placeholder="종료날짜" title="종료날짜">
+					</div>
+				</code></pre>
+			</div>
+
+			<div class="ds-view">
+				<div class="mb10 fz-s">기간선택</div>
+				<div class="cs-datepicker-set">
+					<input type="text" class="js__datepicker js__date-from cs-input-date" placeholder="시작날짜" title="시작날짜">
+					<span> ~ </span>
+					<input type="text" class="js__datepicker js__date-to cs-input-date" placeholder="종료날짜" title="종료날짜">
+				</div>
+
+				<div class="cs-checkbox-combo">
+					<input name="dselectw" id="dselectw1" type="radio" checked><label for="dselectw1">당일</label>
+					<input name="dselectw" id="dselectw2" type="radio"><label for="dselectw2">1주일</label>
+					<input name="dselectw" id="dselectw3" type="radio"><label for="dselectw3">1개월</label>
+					<input name="dselectw" id="dselectw4" type="radio"><label for="dselectw4">3개월</label>
+					<input name="dselectw" id="dselectw4" type="radio"><label for="dselectw4">6개월</label>
+				</div>
+			</div>	
+
+
+			<div class="guide-api">
+				<pre><code>
+					<div class="cs-datepicker-set">
+						<input type="text" class="js__datepicker js__date-from cs-input-date" placeholder="시작날짜" title="시작날짜">
+						<span> ~ </span>
+						<input type="text" class="js__datepicker js__date-to cs-input-date" placeholder="종료날짜" title="종료날짜">
+					</div>
+					<div class="cs-checkbox-combo">
+						<input name="dselectw" id="dselectw1" type="radio" checked><label for="dselectw1">당일</label>
+						<input name="dselectw" id="dselectw2" type="radio"><label for="dselectw2">1주일</label>
+						<input name="dselectw" id="dselectw3" type="radio"><label for="dselectw3">1개월</label>
+						<input name="dselectw" id="dselectw4" type="radio"><label for="dselectw4">3개월</label>
+						<input name="dselectw" id="dselectw4" type="radio"><label for="dselectw4">6개월</label>
+					</div>
+				</code></pre>
+			</div>
+
+
+			<h3 class="build-h3">radio/checkbox</h3>
+			<div class="ds-view">
+				<input type="checkbox" class="cs-checkbox" id="iptcheckbox1"><label for="iptcheckbox1"><span></span> 체크박스</label>
+				<input type="checkbox" class="cs-checkbox" id="iptcheckbox2"><label for="iptcheckbox2"><span></span> 체크박스</label>
+				<input type="checkbox" class="cs-checkbox" id="iptcheckbox3"><label for="iptcheckbox3"><span></span> 체크박스</label>
+
+				<hr>
+
+				<div class="mb10 fz-s">여러개 사용시</div>
+				<div class="cs-input-checkboxs">
+					@@for(var i = 0; i < 20; i++){
+					<input type="checkbox" class="cs-checkbox" id="ipt-sample${i}"><label for="ipt-sample${i}"><span></span> 체크박스</label>
+					}
+				</div>
+
+				<hr>
+				<input type="radio" class="cs-checkbox-selector2" name="ipt-person-sel" id="ipt-person-sel1"> <label for="ipt-person-sel1"><span></span> 홍길동</label>
+				<input type="radio" class="cs-checkbox-selector2" name="ipt-person-sel" id="ipt-person-sel2"> <label for="ipt-person-sel2"><span></span> 홍길동</label>
+
+				<input type="radio" class="cs-checkbox-selector" name="ipt-sel" id="ipt-sel-1"><label for="ipt-sel-1"><b class="dibvam">공개 [</b> <span></span> <b class="dibvam">]</b></label>
+											<input type="radio" class="cs-checkbox-selector" name="ipt-sel" id="ipt-sel-2" checked><label for="ipt-sel-2"><b class="dibvam">비공개 [</b> <span></span> <b class="dibvam">]</b></label>
+			</div>
+
+			<h3 class="build-h3">input-set</h3>
+			<div class="ds-view">
+
+				<div class="mb10 fz-s">전자우편 입력폼</div>
+				<div class="cs-inputs-email">
+					<input type="text" class="cs-input">
+					<span>@</span>
+					<input type="text" class="cs-input" id="email2">
+					<select class="cs-input">
+						<option value="직접입력">직접입력</option>
+						<option value="korea.kr">korea.kr</option>
+						<option value="naver.com">naver.com</option>
+						<option value="nate.com">nate.com</option>
+						<option value="hanmail.net">hanmail.net</option>
+						<option value="gmail.com">gmail.com</option>
+						<option value="kakao.com">kakao.com</option>
+						<option value="yahoo.com">yahoo.com</option>
+						<option value="hotmail.com">hotmail.com</option>
+					</select>
+				</div>
+
+				<hr>
+
+				<div class="mb10 fz-s">전화번호 입력폼</div>
+				<div class="cs-inputs-tel">
+					<input type="text" class="cs-input" title="전화번호 앞 3자리">
+					<span>-</span>
+					<input type="text" class="cs-input" title="전화번호 중간 4자리">
+					<span>-</span>
+					<input type="text" class="cs-input" title="전화번호 끝 4자리">
+				</div>
+				
+				<div class="mt20 mb10 fz-s">전화번호 입력폼 지역번호 selectbox</div>
+				<div class="cs-inputs-tel">
+					<select type="text" class="cs-input" title="전화번호 앞 3자리">
+						<option>010</option>
+						<option>010</option>
+						<option>010</option>
+					</select>
+					<span>-</span>
+					<input type="text" class="cs-input" title="전화번호 중간 4자리">
+					<span>-</span>
+					<input type="text" class="cs-input" title="전화번호 끝 4자리">
+				</div>
+
+				<hr>
+
+				<div class="mb10 fz-s">검색 버튼이 있는 input</div>
+				<div class="cs-input-search width200"><input type="text" placeholder="기관을 검색해 주세요"><button class="searhc-btn">검색</button></div>
+
+
+				<hr>
+
+				<div class="cs-inputs-address">
+					<div class="btn-addon-group ">
+						<input type="text" class="cs-input width210" readonly value="우편번호" title="우편번호"> <button class="cs-btn2 cs-fill-blue2">우편번호 검색</button>
+					</div>
+					<div class="addr-line-2">
+						<input type="text" class="cs-input" value="주소" title="주소">
+						<input type="text" class="cs-input" value="상세주소" title="상세주소">
+					</div>
+				</div>
+
+
+			</div>
+
+			<h3 class="build-h3">첨부파일</h3>
+			<div class="ds-view">
+				<div class="mb10 fz-s">첨부파일(선택전)</div>
+				<div class="cs-file-uploader">
+					<input type="file" multiple id="ipt-file"><label class="cs-btn2 cs-fill-blue2 cs-file__btn" for="ipt-file">파일 선택</label>
+					<div class="cs-file__info">최대용량 <b>100MB</b>, 최대개수 <b>3개</b></div>
+					<ul class="cs-file-list"></ul>
+				</div>
+				<hr>
+				
+				<div class="mb10 fz-s">첨부파일(선택후)</div>
+				<div class="cs-file-uploader">
+					<input type="file" multiple id="ipt-file"><label class="cs-btn2 cs-fill-blue2 cs-file__btn" for="ipt-file">파일 선택</label>
+					<div class="cs-file__info">최대용량 <b>100MB</b>, 최대개수 <b>3개</b></div>
+					<ul class="cs-file-list">
+						<li>
+							<div>파일명입니다.html(100kb)</div>
+							<button type="button">삭제</button>
+						</li>
+					</ul>
+				</div>
+
+				<hr>
+
+				<div class="mb10 fz-s">첨부파일 리스트</div>
+				<ul class="cs-file-list">
+					<li><a href="#">파일명입니다.html(100kb)</a></li>
+					<li><a href="#">파일명입니다.html(100kb)</a></li>
+					<li><a href="#">파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)파일명입니다.html(100kb)</a></li>
+				</ul>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 class="build-h2">버튼</h2>
+
+			<div class="ds-view guide-cs-btn" style="background: #fff;">
+
+				<div class="mb10 fz-s">BUTTON <span class="class">.cs-btn</span></div>
+				<button class="cs-btn">버튼</button>
+				<button class="cs-btn cs-btn-color1">버튼</button>
+				<button class="cs-btn cs-btn-color2">버튼</button>
+
+				<hr>
+				<div class="mb10 fz-s">BUTTON <span class="class">.cs-btn2</span></div>
+
+				<button class="cs-btn2">버튼</button>
+				<button class="cs-btn2 cs-btn-color1">버튼</button>
+				<button class="cs-btn2 cs-btn-color2">버튼</button>
+
+
+				<hr>
+				<div class="mb10 fz-s">A <span class="class">.cs-btn</span></div>
+				<a class="cs-btn">버튼</a>
+				<a class="cs-btn cs-btn-color1">버튼</a>
+				<a class="cs-btn cs-btn-color2">버튼</a>
+
+				<hr>
+				<div class="mb10 fz-s">A <span class="class">.cs-btn2</span></div>
+				<a href="#" class="cs-btn2">버튼</a>
+				<a href="#" class="cs-btn2 cs-btn-color1">버튼</a>
+				<a href="#" class="cs-btn2 cs-btn-color2">버튼</a>
+
+
+				<hr>
+				<div class="mb10 fz-s">색상값</div>
+				<button class="cs-btn">default</button>
+				<button class="cs-btn cs-btn-color1">cs-btn-color1</button>
+				<button class="cs-btn cs-btn-color2">cs-btn-color2</button>
+				<button class="cs-btn cs-btn-color3">cs-btn-color3</button>
+			</div>
+			
+			
+			<style>
+				/* .guide-cs-btn button{margin:3px;} */
+			</style>
+		</section>
+
+
+		<section>
+			<h2 class="build-h2">TABLE</h2>
+
+			<div class="ds-view">
+				<span class="class">cs-table</span><br><br>
+				<div class="cs-table">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">제목</th>
+								<th scope="col">제목</th>
+								<th scope="col">제목</th>
+								<th scope="col">제목</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">제목</th>
+								<td>내용</td>
+								<td>내용</td>
+								<td>내용</td>
+							</tr>
+							<tr>
+								<th scope="row">제목</th>
+								<td colspan="3">내용</td>
+							</tr>
+							<tr>
+								<th scope="row">제목</th>
+								<td>내용</td>
+								<th scope="row">제목</th>
+								<td><input type="text" class="cs-input"></td>
+							</tr>
+							<tr>
+								<th scope="row">제목</th>
+								<td colspan="3">내용</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="build-h2">리스트</h2>
+			<div class="ds-view">
+				<ul class="cs-list">
+					<li>리스트</li>
+					<li>리스트</li>
+					<li>리스트</li>
+				</ul>
+
+				<ul class="cs-list2">
+					<li>리스트</li>
+					<li>리스트</li>
+					<li>리스트</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="build-h2">GRID</h2>
+			<div class="ds-view cs-grid-sample">
+				<div class="cs-grid">
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col1"></div>
+
+					<div class="cs-grid-col6"></div>
+					<div class="cs-grid-col6"></div>
+
+					<div class="cs-grid-col1"></div>
+					<div class="cs-grid-col11"></div>
+
+					<div class="cs-grid-col2"></div>
+					<div class="cs-grid-col10"></div>
+				</div>
+
+
+				@@if(0){
+				<div class="cs-grid">
+					<div class="cs-grid-col2 cs-grid-mo-col4">모바일용</div>
+					<div class="cs-grid-col10 cs-grid-mo-col4">모바일용</div>
+
+					<div class="cs-grid-col2 cs-grid-mo-col2">모바일용</div>
+					<div class="cs-grid-col10 cs-grid-mo-col2">모바일용</div>
+				</div>
+
+				<hr>
+				<div class="cs-grid">
+					<div class="cs-grid-col6 cs-grid-mo-col1">모바일용</div>
+					<div class="cs-grid-col6 cs-grid-mo-col1">모바일용</div>
+					<div class="cs-grid-col6 cs-grid-mo-col1">모바일용</div>
+					<div class="cs-grid-col6 cs-grid-mo-col1">모바일용</div>
+				</div>
+				}
+			</div>
+		</section>
+		
+		<style>
+			.cs-grid-sample{}
+			.cs-grid-sample [class*=cs-grid-col]{background:#e2e2e2;border:1px solid #bbbbbb;box-sizing: border-box;height:50px;}
+		</style>
+
+		<section>
+			<h2 class="build-h2">아이콘</h2>
+			<div class="ds-view">
+				<i class="cs-icon-file-hwp"></i>
+				<i class="cs-icon-file-pdf"></i>
+				<i class="cs-icon-file-png"></i>
+				<i class="cs-icon-file-pptx"></i>
+				<i class="cs-icon-file-txt"></i>
+				<i class="cs-icon-file-xlsx"></i>
+				
+				<a href="#"><i class="cs-icon-file-hwp"></i></a>
+				<a href="#"><i class="cs-icon-file-pdf"></i></a>
+				<a href="#"><i class="cs-icon-file-png"></i></a>
+				<a href="#"><i class="cs-icon-file-pptx"></i></a>
+				<a href="#"><i class="cs-icon-file-txt"></i></a>
+				<a href="#"><i class="cs-icon-file-xlsx"></i></a>
+
+				<i class="cs-icon-file-hwp-active"></i>
+				<i class="cs-icon-file-pdf-active"></i>
+				<i class="cs-icon-file-png-active"></i>
+				<i class="cs-icon-file-pptx-active"></i>
+				<i class="cs-icon-file-txt-active"></i>
+				<i class="cs-icon-file-xlsx-active"></i>
+
+				<i class="cs-icon-reset">초기화</i>
+				<i class="cs-icon-search">검색</i>
+				<i class="cs-icon-logout">로그아웃</i>
+				<i class="cs-icon-arr"></i>
+				<i class="cs-icon-file">첨부파일</i>
+				<i class="icon-req">필수</i>
+				<i class="icon-check"></i>
+				<i class="icon-check selected"></i>
+				<span class="selected">
+					<i class="icon-check"></i>
+				</span>
+
+				<i class="icon-check2"></i>
+				<i class="icon-check2 checked"></i>
+				<span class="checked"><i class="icon-check2"></i></span>
+			</div>
+			<div class="ds-view" style="background:#777777">
+			</div>
+		</section>
+
+		<section>
+			<h2 class="build-h2">태그</h2>
+			<div class="ds-view">
+				<span class="cs-tag">cs-tag</span>
+				<span class="cs-tag cs-fill-lv1">cs-tag</span>
+				<span class="cs-tag cs-fill-lv2">cs-tag</span>
+				<span class="cs-tag cs-fill-lv3">cs-tag</span>
+				<span class="cs-tag cs-fill-lv4">cs-tag</span>
+				<span class="cs-tag cs-fill-lv5">cs-tag</span>
+
+				<hr>
+
+				<span class="cs-tag2">cs-tag2</span>
+				<span class="cs-tag2 cs-fill-lv1">cs-tag2</span>
+				<span class="cs-tag2 cs-fill-lv2">cs-tag2</span>
+				<span class="cs-tag2 cs-fill-lv3">cs-tag2</span>
+				<span class="cs-tag2 cs-fill-lv4">cs-tag2</span>
+				<span class="cs-tag2 cs-fill-lv5">cs-tag2</span>
+			</div>
+			<div class="ds-view" style="background:#777777">
+			</div>
+		</section>
+
+		<section>
+			<h2 class="build-h2">컨텐츠</h2>
+			<h3 class="build-h3">컨텐츠 레이아웃</h3>
+			<div class="ds-view">
+
+			</div>
+
+			<h3 class="build-h3">BOX-TEXT</h3>
+			<div>경고문구등</div>
+			<div class="ds-view">
+				<div class="cs-alert-fail">실패</div>
+				<div class="cs-alert-success">성공</div>
+			</div>
+
+			<h3 class="build-h3">CONTEXT-BOX</h3>
+			<div>컨텐츠용 박스</div>
+			<div class="ds-view">
+				<div class="cont-box">dddd</div>
+			</div>
+			
+			<h3 class="build-h3">아코디언</h3>
+			<div class="ds-view"></div>
+
+
+		</section>
+
+		<section>
+			<h2 class="build-h2">모달</h2>
+			<div class="ds-view">
+				<button onclick="layModalOpen('.js__modal-modal', this)">팝업열기</button>
+
+				<div class="laymodal width500 js__modal-modal">
+					<div class="laymodal-header">
+						<h2>권한설정</h2>
+						<button class="laymodal-close" data-id="modal-close">닫기</button>
+					</div>
+					<div class="laymodal-content">
+						<div class="edit-row-wrap edit-row-title-width70">
+							<div class="edit-row">
+								<div class="edit-item">
+									<strong class="edit-item__title"><span class="edit-req">필수</span> 계정명</strong>
+									<div class="edit-item__cont">
+										<input type="text" class="cs-input width100p" placeholder="계정명을 입력해 주세요.">
+									</div>
+								</div>
+							</div>
+							<div class="edit-row">
+								<div class="edit-item">
+									<strong class="edit-item__title"><span class="edit-req">필수</span> 계정명</strong>
+									<div class="edit-item__cont">
+										<input type="text" class="cs-input width100p" placeholder="계정명을 입력해 주세요.">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button onclick="layModalOpen('.js__modal-modal2', this)">팝업내 팝업</button>
+					</div>
+					<div class="laymodal-footer">
+						<button type="button" class="cs-btn" onclick="layModalClose(this)">취소</button>
+						<button type="button" class="cs-btn" onclick="layModalClose(this)">확인</button>
+					</div>
+				</div>
+			
+				<div class="laymodal width300 js__modal-modal2">
+					<div class="laymodal-header">
+							<h2>2번째모달</h2>
+							<button class="laymodal-close" data-id="modal-close">닫기</button>
+					</div>
+					<div class="laymodal-content">
+						2번
+					</div>
+					<div class="laymodal-footer">
+							<button type="button" class="cs-btn" onclick="layModalClose(this)">확인</button>
+							<button type="button" class="cs-btn" onclick="layModalClose(this)">취소</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+		@@include('./inc/게시판.html')
+
+		<section>
+			<h2 class="build-h2">pagination</h2>
+			<div class="ds-view"></div>
+
+			<div class="guide-api">
+				<pre><code>
+					<div class="pagingination text_center">
+						<div class ="paging" id="reviewPaging2"></div>
+					</div>
+	
+					<div class="pagingination text_center">
+						<div class ="paging" id="reviewPaging3"></div>
+					</div>
+
+					<div class="pagingination text_center">
+						<div class ="paging" data-test-id="pagination"></div>
+					</div>
+				</code></pre>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="build-h2">SCRIPT</h2>
+			<h3 class="build-h3">초기설정</h3>
+
+			<div class="guide-api">
+				<pre><code>
+					<script>
+						jQuery(function(){
+							// setDatePicker();
+							// setInputFile();
+						});
+					</script>
+				</code></pre>
+			</div>
+
+			<div class="guide-api" style="display:none;">
+				<p>
+					<strong>setDeatePicker(<b class="gcolor1">변수1</b>, <b class="gcolor1">변수1</b>, <b class="gcolor1">변수1</b>) [샘플]</strong>
+					<span>
+						설명글
+					</span>
+				</p>
+				<div class="guide-cs-table">
+					<table>
+						<tr>
+							<th>변수1</th>
+							<td>내용이 들어갑니다.</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+
+			<h3 class="build-h3">function</h3>
+
+
+			<div class="guide-api">
+				<p>
+					<strong>lay_pop_open(<b class="gcolor1">objID</b>,<b class="gcolor1">this</b>)</strong>
+					<span>
+						레이어팝업 호출
+					</span>
+					<strong>lay_pop_close(<b class="gcolor1">closeObjID</b>)</strong>
+					<span>
+						레이어팝업 닫기
+					</span>
+					
+				</p>
+
+				<div class="guide-cs-table">
+					<table>
+						<tr>
+							<th>objID(필수)</th>
+							<td>레이어 팝업 ID</td>
+						</tr>
+						<tr>
+							<th>this(필수)</th>
+							<td>this  :   this를 넣어야 닫기를 했을때에 누른 버튼 위치로 되돌아감</td>
+						</tr>
+						<tr>
+							<th>closeObjID</th>
+							<td>
+								닫기 버튼에 들어가는 아이디값<br>
+								없어도 잘닫히긴 하지만,<br>
+								팝업을 닫고 바로 다른 팝업을 실행할 경우 아이다값을 넣어줘여함]
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="gclear"></div>
+
+				<div class="ds-view">
+					<button onclick="lay_pop_open('#js__alert',this)" type="button" class="cs-btn cs-btn-blue">팝업열기</button>
+					<button onclick="lay_pop_close('#js__alert')" type="button" class="cs-btn cs-btn-blue">팝업닫기</button>
+
+					<button onclick="lay_pop_open('#js__alert2',this)" type="button" class="cs-btn cs-btn-blue">팝업내에 팝업</button>
+
+					<button onclick="lay_pop_open('#js__alert4',this)" type="button" class="cs-btn cs-btn-blue">팝업열기 테스트</button>
+					
+					<!-- 팝업 -->
+					<div id="js__alert" class="laymodal modal-alert width500">
+						<div class="laymodal-header">
+							<h2>사용 권한 신청</h2>
+							<button class="laymodal-close" onclick="lay_pop_close();" type="button">닫기</button>
+						</div>
+						<div class="laymodal-content tac">
+							개인정보 수집 및 이용에 대한 동의 후<br>
+							사용 권한 신청을 하실 수 있습니다. 
+						</div>
+						<div class="laymodal-footer cs-btn-set">
+							<button class="cs-btn cs-btn-x cs-btn-blue" onclick="lay_pop_close();">확인</button>
+						</div>
+					</div>
+					<!-- //팝업 -->
+
+					<div id="js__alert2" class="laymodal modal-alert width500">
+						<div class="laymodal-header">
+							<h2>사용 권한 신청</h2>
+							<button class="laymodal-close" onclick="lay_pop_close();" type="button">닫기</button>
+						</div>
+						<div class="laymodal-content tac">
+							개인정보 수집 및 이용에 대한 동의 후<br>
+							사용 권한 신청을 하실 수 있습니다. 
+						</div>
+						<div class="laymodal-footer cs-btn-set">
+							<button class="cs-btn cs-btn-x cs-btn-blue" onclick="lay_pop_open('#js__alert3',this);">팝업열기</button>
+						</div>
+					</div>
+
+					<div id="js__alert3" class="laymodal modal-alert width300">
+						<div class="laymodal-header">
+							<h2>팝업내의 팝업</h2>
+							<button class="laymodal-close" onclick="lay_pop_close();" type="button">닫기</button>
+						</div>
+						<div class="laymodal-content tac">
+							개인정보 수집 및 이용에 대한 동의 후<br>
+							사용 권한 신청을 하실 수 있습니다. 
+						</div>
+						<div class="laymodal-footer cs-btn-set">
+							<button class="cs-btn cs-btn-x cs-btn-blue" onclick="lay_pop_close('#js__alert3');">하나닫기</button>
+							<button class="cs-btn cs-btn-x cs-btn-blue" onclick="lay_pop_close();">전체닫기</button>
+						</div>
+					</div>
+					<div id="js__alert4" class="laymodal modal-alert width300">
+						<div class="laymodal-header">
+							<h2>팝업내의 팝업</h2>
+							<button class="laymodal-close" onclick="lay_pop_close();" type="button">닫기</button>
+						</div>
+						<div class="laymodal-content tac" style="height:1000px;">
+							개인정보 수집 및 이용에 대한 동의 후<br>
+							사용 권한 신청을 하실 수 있습니다. 
+						</div>
+						<div class="laymodal-footer cs-btn-set">
+							<button class="cs-btn cs-btn-x cs-btn-blue" onclick="lay_pop_close('#js__alert3');">하나닫기</button>
+							<button class="cs-btn cs-btn-x cs-btn-blue" onclick="lay_pop_close();">전체닫기</button>
+						</div>
+					</div>
+				</div>
+
+				<pre><code>
+					<!-- 팝업 실행 버튼 -->
+					<button onclick="lay_pop_open('#js__alert',this)" type="button">팝업열기</button>
+					<button onclick="lay_pop_close('#js__alert')" type="button">팝업닫기</button>
+
+					<!-- 팝업 -->
+					<div id="js__alert" class="laymodal modal-alert width500">
+						<div class="laymodal-header">
+							<h2>타이틀</h2>
+							<button class="laymodal-close" onclick="lay_pop_close('#js__alert');" type="button">닫기</button>
+						</div>
+						<div class="laymodal-content">
+							내용
+						</div>
+						<div class="laymodal-footer">
+							<button class="cs-btn cs-btn-x cs-btn-blue" onclick="lay_pop_close('#js__alert');">확인</button>
+						</div>
+					</div>
+				</code></pre>
+			</div>
+
+			<div class="guide-api">
+				<p>
+					<strong>layFc.miniAlert(<b class="gcolor1">TEXT</b>,<b class="gcolor1">TYPE</b>)</strong>
+					<span>
+						미니 alert 출력
+					</span>
+				</p>
+
+				<div class="guide-cs-table">
+					<table>
+						<tr>
+							<th>TEXT (string)</th>
+							<td>출력할 텍스트 한줄 출려만 가능 짧은 알림, 경고 등에서만 사용</td>
+						</tr>
+						<tr>
+							<th>TYPE (string)</th>
+							<td>
+								success: 성공 파랑<br>
+								fali: 실패 주황<br>
+								TYPE의 text를 class에 추가함
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="gclear"></div>
+
+				<div class="ds-view">
+					<button type="button" onclick="layFc.miniAlert('조회에 성공했습니다.','success');" class="cs-btn2">성공 문구 출력</button>
+					<button type="button" onclick="layFc.miniAlert('조회에 실패했습니다.','fail');" class="cs-btn2 cs-fill-red">실패 문구 출력</button>
+				</div>
+				
+
+				<pre><code>
+					<button type="button" onclick="layFc.miniAlert('조회에 성공했습니다.','success');" class="cs-btn2">성공 문구 출력</button>
+					<button type="button" onclick="layFc.miniAlert('조회에 실패했습니다.','fail');" class="cs-btn2 cs-fill-red">실패 문구 출력</button>
+				</code></pre>
+			</div>
+		</section>
+
+		
+	</div>
+	<div class="guide">
+		<input type="text" class="cs-checkbox">
+		
+
+
+		<!-- <textarea class="ui_codeChage" data-tabsize="10" value=''></textarea> -->
+		
+		<!-- <pre><code>
+			<div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+				<div class="laymodal-header">
+					<h2>사용 권한 신청</h2>
+				</div>
+				<div class="laymodal-content tac">
+					개인정보 수집 및 이용에 대한 동의 후<br>
+					사용 권한 신청을 하실 수 있습니다. 
+				</div>
+				<div class="laymodal-footer cs-btn-set">
+					<button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+				</div>
+			</div>
+		</code></pre> -->
+	</div>
+</body>
+</html>

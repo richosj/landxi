@@ -1,0 +1,109 @@
+@use 'var';
+
+.cont-agg-all{
+  color: #666666;
+  .agg-item_text{
+    font-size: 18px;
+  }
+
+  > section{
+    > h3{font-size: 22px;color: #000000;margin: 0 0 10px 0;padding: 0;}
+    > h3 + *{margin-top: 0;}
+    > * + *{margin-top: 15px;}
+    + section{
+      margin-top: 35px;
+    }
+  }
+
+ .cont-agg-all_boxtext{
+    background: #edf1f4;
+    font-size: 16px;line-height: 1.5em;
+    border-radius: 4px;
+    padding: 25px;
+  }
+
+  .cont-agg-all_list{
+    background: #fafafa;
+    border-radius: 4px;
+    padding: 25px;
+    margin-top: 8px;
+    .cont-agg-all_list_header{
+      > h3{
+        font-size: 22px;color: #091634;
+        font-weight: normal;
+        margin: 0 0 15px 0;padding: 0;
+        &::before{
+          content: '';
+          display: inline-block;
+          width: 16px;height: 16px;
+          background: var.$root__point-bg;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+  
+        text-align: center;
+      }
+
+      > div{float: right;margin-top: -35px;font-size: 16px;}
+    }
+
+    .cont-agg-all_list_nav{
+      display: flex;
+      @include var.listReset('ul');
+      > ul{
+        flex: 1;
+        + ul{margin-left: 8px;}
+      }
+      
+      li{
+        + li{margin-top: 4px;}
+        a{
+          border: 1px solid #8d9096;
+          background: #fff;
+          border-radius: 4px;
+          height:44px;
+          box-sizing: border-box;
+          display: block;
+          display: flex;
+          align-items: center;
+          strong{flex: 0 0 85px;font-size: 16px;color: #2149a6;text-align: center;}
+        }
+      }
+    }
+  }
+
+  .cs-table-line, .cs-table-line2{
+    font-size: 16px;
+    .cs-list{font-size: 14px;}
+  }
+}
+
+.agg-item_list1{
+  &, > li{margin:0;padding:0;list-style:none;}
+  > li{
+    padding-left: 1em;position: relative;
+    font-size: 18px;
+    padding-left: 24px;
+    &::before{content:attr(data-no);position: absolute;left: 0;top: 0;color: #2149a6;font-size: 18px;}
+    + li{margin-top: 19px;}
+
+    > ul{margin-top: 10px;}
+  }
+
+  .cs-list li{font-size: 14px;}
+}
+
+.agg-item_list2{
+  &, > li{margin:0;padding:0;list-style:none;}
+  > li{
+    padding-left: 1em;position: relative;
+    font-size: 14px;
+    padding-left: 20px;
+
+    &::before{
+      content:attr(data-no);position: absolute;left: 0;top: -2px;color: #666666;font-size: 18px;font-family: var.$font-noto;
+      font-size: 13px;
+    }
+    + li{margin-top: 8px;}
+  }
+}

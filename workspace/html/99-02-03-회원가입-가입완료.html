@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+
+    @@include('./include/front/location.html',{cate1:'회원가입', cate2: '이용약관'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+        @@include('./include/front/agg-step-nav.html',{ "activeStep": 3 })
+
+        <div class="mj-cont">
+          <div class="cont-regcomplete">
+            <div class="cont-regcomplete_header">
+              <i></i>
+              <div>
+                안녕하세요. Land-XI입니다.<br>
+                <strong>홍길동</strong>님의 회원가입을 진심으로 환영합니다.
+              </div>
+            </div>
+            <div class="cs-table">
+              <table>
+                <colgroup>
+                  <col class="width180">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">아이디</th>
+                    <td>ASGDG@test.com</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">이름</th>
+                    <td>홍길동</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <section class="cons-btns mj-btns">
+            <a href="#" class=" cs-btn2 cs-btn-color2 flex-width180">로그인 페이지로 이동</a>
+          </section>
+        </div>
+        <!--// mj-cont -->
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

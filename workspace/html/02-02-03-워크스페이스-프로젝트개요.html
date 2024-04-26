@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/plat/head.html')
+</head>
+
+<body>
+    <div class="lay-body">
+        <!-- header -->
+        @@include('./include/plat/header.html')
+        <!--// header -->
+        <!-- container -->
+        <div class="lay-container">
+            <div class="lay-nav wide">
+                @@include('./include/plat/nav.html')
+            </div>
+            <div class="lay-content">
+                <div class="lay-content-wrap">
+                    <nav class="lay-tab">
+                        <ul class="lay-tab-ul">
+                            <li class="current"><button type="button" class="trigger" title="현재 페이지">프로젝트 개요</button></li>
+                            <li><button type="button" class="trigger">참여자</button></li>
+                        </ul>
+                    </nav>
+
+                    <div class="row">
+                        <div class="col-12"><h2 class="basic-tit">데이터 셋 요약</h2></div>
+                        <div class="col col-4 col-lg-6">
+                            <header class="col-header">
+                                <h3>레이블 통계</h3>
+                            </header>
+
+                            <div class="track-ui width100p">
+                                <span class="track">
+                                    <span class="bg" style="width: 50%;"></span>
+                                </span>
+                                <span class="count">300/300</span>
+                            </div>
+
+                            <ul class="project-list pt-15">
+                                <li>
+                                    <a href="#" class="flex align-center between">
+                                    <span class="name">업로드 된 이미지</span>
+                                    <span>300</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex align-center between">
+                                    <span class="name">레이블 된 이미지</span>
+                                    <span>300</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex align-center between">
+                                    <span class="name">Annotation 레이블 갯수</span>
+                                    <span>300</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-4 col-lg-6">
+                            <header class="col-header"><h3>레이블 분포</h3></header>
+                            <div>
+                                그래프자리
+                            </div>
+                        </div>
+                        <div class="col col-4 col-lg-12">
+                            <header class="col-header"><h3>데이터 셋</h3></header>
+                            <div class="cs-table cs-table-sm">
+                                <table>
+                                    <colgroup>
+                                        <col>
+                                        <col class="width110">
+                                        <col class="width110">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">데이터 셋</th>
+                                            <th scope="col">갯수</th>
+                                            <th scope="col">구분</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tac">학습 데이터</td>
+                                            <td class="tac">884</td>
+                                            <td class="tac">884</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tac">학습 데이터</td>
+                                            <td class="tac">884</td>
+                                            <td class="tac">884</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tac">학습 데이터</td>
+                                            <td class="tac">884</td>
+                                            <td class="tac">884</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-12"><h2 class="basic-tit">학습 모델 요약</h2></div>
+
+                        <div class="col col-12">
+                            <header class="col-header"><h3>학습 모델 통계</h3></header>
+
+                            <div class="summary-list">
+                                <div class="item1">
+                                    <p>AI 학습 모델 Artifacts</p>
+                                    <span><b>12</b>개</span>
+                                </div>
+                                <div class="item2">
+                                    <p>AI 추론결과 Artifacts</p>
+                                    <span><b>12</b>개</span>
+                                </div>
+                                <div class="item3">
+                                    <p>AI 분석결과 Artifacts</p>
+                                    <span><b>12</b>개</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- // row -->
+                    
+
+                </div>
+                <!--// lay-content-wrap -->
+            </div>
+            <!--// lay-content -->
+        </div>
+        <!--// container -->
+    </div>
+    <!--// lay-body -->
+</body>
+</html>
