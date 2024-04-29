@@ -270,3 +270,73 @@ jQuery(function(){
     console.log($(this).text());
   });
 });
+
+$(function(){ 
+  // tabNav
+  var tabNav = function(elm){
+      var tabNav = elm;
+      var tabIds = [];
+
+      var toggleAllHidden = function(){
+          $(tabIds).each(function(){
+              ui.toggle(this,'close');
+          });
+      }
+
+      tabNav.find('button').each(function(){
+          var btn = $(this);
+          tabIds.push($(this).data('id'));
+
+          btn.on('click', function(){
+              tabNav.find(' > li').removeClass('active');
+              btn.parent().addClass('active');
+              toggleAllHidden();
+              ui.toggle(btn.data('id'),'open');
+          });
+      });
+  }
+  uiSetTabNav = function(){
+      if($('[data-js=tabNav]').length > 0){
+          $('[data-js=tabNav]').each(function(){
+              if(!$(this).hasClass('hastabnav')){
+                  $(this).addClass('hastabnav');
+                  tabNav($(this));
+              }
+          });
+      }
+  }
+  
+  uiSetTabNav();    
+})
+/**
+* 토글
+* @param {String} toggleID 토글될 element의 data-toggle-id
+* @param {String} action open || close
+*/
+ui = {}
+
+ui.toggle = function(toggleID, action, btn, opt){
+  // toggle-id
+  var elm = $('[data-toggle-id=' + toggleID + ']');
+  var btn = $(btn);
+      if(action){
+          if(action == 'open'){
+              btn.addClass('active');
+              elm.removeClass('toggle-hidden');
+          }else if(action == 'close'){
+              btn.removeClass('active');
+              elm.addClass('toggle-hidden');
+          }else{
+      }
+      }else{
+      if(!elm.hasClass('toggle-hidden')){
+          if(opt.ani) elm.stop().slideUp(250);
+          btn.removeClass('active');
+          elm.addClass('toggle-hidden');
+      }else{
+          if(opt.ani) elm.stop().slideDown(250);
+          btn.addClass('active');
+          elm.removeClass('toggle-hidden');
+      }
+  }
+}
