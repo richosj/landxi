@@ -98,8 +98,6 @@ const s2Array = [{
 
 
 
-
-
 const s2Swiper = new Swiper('.section-2 .swiper', {
     direction: 'horizontal',
     effect: 'slide',
@@ -150,40 +148,6 @@ s2Swiper.on('slideChange', function () {
 })
 
 
-/*
-const noticeSwiper = new Swiper('.notic-swiper .swiper', {
-    direction: 'horizontal',
-    //autoHeight: true,
-    effect: 'slide',
-    speed: 500,
-    autoplay: false,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    debugger: true,
-    mousewheel: false,
-    loop: false,
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".notice-group .next",
-        prevEl: ".notice-group .prev",
-    },
-    pagination: {
-        el: ".section-4 .fraction",
-        type: "fraction",
-    },
-})
-
-$('.selector').on('click', function () {
-    if ($(this).is('.active')) {
-        $(this).removeClass('active')
-        noticeSwiper.autoplay.start()
-    } else {
-        $(this).addClass('active')
-        noticeSwiper.autoplay.pause()
-    }
-})
-*/
-
 $('svg').attr('aria-hidden', true);
 
 document.querySelectorAll('.tabs button').forEach(button => {
@@ -205,51 +169,3 @@ document.querySelectorAll('.tabs button').forEach(button => {
         }
     });
 });
-
-// var OKS = {
-//     DUR: .8,
-//     EASE: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
-// };
-
-// if (false == true) {
-//     $('#fullpage').fullpage({
-//         licenseKey: 'FB75CBCF-678A49C4-88C3BA08-F5F9BEEA',
-//         paddingTop: '0',
-//         scrollingSpeed: OKS.DUR * 1300,
-//         easingcss3: OKS.EASE,
-//         css3: true,
-//         autoScrolling: true,
-//         onLeave: function (origin, destination, direction) {
-
-
-//             const currentText = document.querySelector('.index-nav .current');
-
-//             if (destination.index == 1) {
-//                 s2Swiper.autoplay.start()
-//             } else {
-//                 s2Swiper.autoplay.pause()
-//             }
-
-//             if (destination.index == 3) {
-//                 noticeSwiper.autoplay.start()
-//             } else {
-//                 noticeSwiper.autoplay.pause()
-//             }
-
-//             if (destination.index < 4) {
-//                 currentText.textContent = "0" + (destination.index + 1);
-//             }
-
-//             const layHeader = document.querySelector('.lay-header');
-//             const indexNav = document.querySelector('.index-nav');
-
-//             if (destination.index > 2) {
-//                 layHeader.classList.add('black');
-//                 indexNav.classList.add('black');
-//             } else {
-//                 layHeader.classList.remove('black');
-//                 indexNav.classList.remove('black');
-//             }
-//         }
-//     });
-// }

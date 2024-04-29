@@ -98,11 +98,13 @@ const s2Array = [{
 
 
 
+
+
 const s2Swiper = new Swiper('.section-2 .swiper', {
     direction: 'horizontal',
     effect: 'slide',
     speed: 1000,
-    autoplay: false,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 0,
     debugger: true,
@@ -111,7 +113,6 @@ const s2Swiper = new Swiper('.section-2 .swiper', {
     centeredSlides: false,
     navigation: false,
     pagination: false,
-    effect: "fade",
     navigation: {
         nextEl: ".section-2 .next",
         prevEl: ".section-2 .prev",
@@ -121,21 +122,31 @@ const s2Swiper = new Swiper('.section-2 .swiper', {
         type: "fraction",
     },
     on: {
-        slideChange: function () {
-
-            let html = `<div class="s2-tpl">
-                    <div class="tit">Land-XI 분석 서비스</div>
-                    <div class="link"><a href="${s2Array[this.realIndex].link}">분석 서비스 바로가기<i>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" aria-hidden="true">
-                                    <image x="0px" y="0px" width="16px" height="16px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAJNAVXy/7nAAAATElEQVQoz4XQSQ4AIAgEwYH//xkPboAMcjKplhjFsOYc4ig+I8bE+g3nnjYsLHBcBYHfIHEOHo5BwT4o+QaE909SnhsaBrTn/QbKwAAvBhEZ9MuJewAAAABJRU5ErkJggg=="></image>
-                                </svg>
-                            </i></a></div>
-                    <div class="s-tit"><span class="num">${s2Array[this.realIndex].number}</span><b>${s2Array[this.realIndex].title}</b></div>
-                    <div class="txt">${s2Array[this.realIndex].text}</div>
-                </div>`;
-            $('.s2-tpl').html(html)
+        init : function(){
+            document.querySelector('.s2-tpl').classList.add('first-active');
         }
     }
+})
+
+s2Swiper.on('slideChange', function () {
+    let html = `
+    <div class="tit" style="--delay:0.25s">Land-XI 분석 서비스</div>
+    <div class="link" style="--delay:0.55s"><a href="${s2Array[this.realIndex].link}">분석 서비스 바로가기<i>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" aria-hidden="true">
+                    <image x="0px" y="0px" width="16px" height="16px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAJNAVXy/7nAAAATElEQVQoz4XQSQ4AIAgEwYH//xkPboAMcjKplhjFsOYc4ig+I8bE+g3nnjYsLHBcBYHfIHEOHo5BwT4o+QaE909SnhsaBrTn/QbKwAAvBhEZ9MuJewAAAABJRU5ErkJggg=="></image>
+                </svg>
+            </i></a></div>
+    <div class="s-tit"  style="--delay:0.85s"><span class="num">${s2Array[this.realIndex].number}</span><b>${s2Array[this.realIndex].title}</b></div>
+    <div class="txt"  style="--delay:1.15s">${s2Array[this.realIndex].text}</div>`;
+        
+    document.querySelector('.s2-tpl').classList.remove('first-active');
+    document.querySelector('.s2-tpl').innerHTML = html;
+    console.log('cahnge');
+
+    let addTime = setTimeout(() => {
+        console.log('cahnge');
+        document.querySelector('.s2-tpl').classList.add('first-active');
+    },250)
 })
 
 
@@ -185,7 +196,6 @@ document.querySelectorAll('.tabs button').forEach(button => {
                     sibling.classList.remove('active');
                 }
             });
-
             target.classList.add('show');
             target.parentNode.querySelectorAll('.tabs-cont').forEach(sibling => {
                 if (sibling !== target) {
@@ -196,50 +206,50 @@ document.querySelectorAll('.tabs button').forEach(button => {
     });
 });
 
-var OKS = {
-    DUR: .8,
-    EASE: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
-};
+// var OKS = {
+//     DUR: .8,
+//     EASE: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
+// };
 
-if (false == true) {
-    $('#fullpage').fullpage({
-        licenseKey: 'FB75CBCF-678A49C4-88C3BA08-F5F9BEEA',
-        paddingTop: '0',
-        scrollingSpeed: OKS.DUR * 1300,
-        easingcss3: OKS.EASE,
-        css3: true,
-        autoScrolling: true,
-        onLeave: function (origin, destination, direction) {
+// if (false == true) {
+//     $('#fullpage').fullpage({
+//         licenseKey: 'FB75CBCF-678A49C4-88C3BA08-F5F9BEEA',
+//         paddingTop: '0',
+//         scrollingSpeed: OKS.DUR * 1300,
+//         easingcss3: OKS.EASE,
+//         css3: true,
+//         autoScrolling: true,
+//         onLeave: function (origin, destination, direction) {
 
 
-            const currentText = document.querySelector('.index-nav .current');
+//             const currentText = document.querySelector('.index-nav .current');
 
-            if (destination.index == 1) {
-                s2Swiper.autoplay.start()
-            } else {
-                s2Swiper.autoplay.pause()
-            }
+//             if (destination.index == 1) {
+//                 s2Swiper.autoplay.start()
+//             } else {
+//                 s2Swiper.autoplay.pause()
+//             }
 
-            if (destination.index == 3) {
-                noticeSwiper.autoplay.start()
-            } else {
-                noticeSwiper.autoplay.pause()
-            }
+//             if (destination.index == 3) {
+//                 noticeSwiper.autoplay.start()
+//             } else {
+//                 noticeSwiper.autoplay.pause()
+//             }
 
-            if (destination.index < 4) {
-                currentText.textContent = "0" + (destination.index + 1);
-            }
+//             if (destination.index < 4) {
+//                 currentText.textContent = "0" + (destination.index + 1);
+//             }
 
-            const layHeader = document.querySelector('.lay-header');
-            const indexNav = document.querySelector('.index-nav');
+//             const layHeader = document.querySelector('.lay-header');
+//             const indexNav = document.querySelector('.index-nav');
 
-            if (destination.index > 2) {
-                layHeader.classList.add('black');
-                indexNav.classList.add('black');
-            } else {
-                layHeader.classList.remove('black');
-                indexNav.classList.remove('black');
-            }
-        }
-    });
-}
+//             if (destination.index > 2) {
+//                 layHeader.classList.add('black');
+//                 indexNav.classList.add('black');
+//             } else {
+//                 layHeader.classList.remove('black');
+//                 indexNav.classList.remove('black');
+//             }
+//         }
+//     });
+// }
