@@ -16104,31 +16104,31 @@ body {
   background-color: #01b2d4;
 }
 
-.lay-gnb > ul > li.active > a {
+.lay-header.v3 .lay-gnb > ul > li.active > a {
   color: #2149a6;
 }
 
-.lay-gnb > ul > li.active > a:hover + .lay-gnb-depth, .lay-gnb > ul > li.active > a:focus + .lay-gnb-depth {
+.lay-header.v3 .lay-gnb > ul > li.active > a:hover + .lay-gnb-depth, .lay-header.v3 .lay-gnb > ul > li.active > a:focus + .lay-gnb-depth {
   background-color: #f6f8f9;
 }
 
-.lay-gnb-depth {
+.lay-header.v3 .lay-gnb-depth {
   border-top: 1px solid #eee;
   opacity: 0;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
 }
 
-.lay-gnb .lay-gnb-depth ul a {
+.lay-header.v3 .lay-gnb .lay-gnb-depth ul a {
   color: #666666;
   font-weight: 700;
 }
 
-.lay-gnb .lay-gnb-depth ul a:hover, .lay-gnb .lay-gnb-depth ul a:focus {
+.lay-header.v3 .lay-gnb .lay-gnb-depth ul a:hover, .lay-header.v3 .lay-gnb .lay-gnb-depth ul a:focus {
   color: #000000;
 }
 
-.lay-gnb .lay-gnb-depth ul a span::after {
+.lay-header.v3 .lay-gnb .lay-gnb-depth ul a span::after {
   background-color: #000;
 }
 
@@ -16831,6 +16831,10 @@ body {
   margin: 0;
 }
 
+.bs-list.long li a .subject {
+  width: calc(100% - 200px);
+}
+
 .bs-list .empty {
   text-align: center;
   font-weight: 700;
@@ -16868,8 +16872,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 700;
-  font-size: 22px;
+  font-weight: 500;
+  font-size: 20px;
   width: calc(100% - 540px);
 }
 

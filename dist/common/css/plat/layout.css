@@ -17239,4 +17239,18 @@ div.toggle-hidden {
 .info-wrap .info-con-inner .info-con-right .scrollTarget {
   min-height: 1000px;
 }
+
+/*
+24.04.29(월) 추가
+1. 마이페이지
+*/
+.mypage-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.mypage-title b {
+  color: #18b0ef;
+}
 /*# sourceMappingURL=../maps/plat/layout.css.map */
