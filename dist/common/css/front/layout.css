@@ -11928,8 +11928,7 @@ button[type=button] {
   position: absolute;
   left: 0;
   width: 100%;
-  background: #edf1f4 url("../../images/front/gnb_bg.png") no-repeat right bottom;
-  border-radius: 0 0 70px 0;
+  background-color: #fff;
   height: 0;
   text-align: right;
   overflow: hidden;
@@ -15965,6 +15964,10 @@ body {
   width: 100%;
 }
 
+.lay-header.v3.gnb-open .lay-header-bg {
+  border-top: 1px solid #eee;
+}
+
 .lay-header.v3 .btn-search {
   display: none;
 }
@@ -16705,7 +16708,7 @@ body {
   justify-content: center;
 }
 
-.bs-list a div {
+.bs-list a .subject {
   padding-left: 25px;
   display: inline-block;
   align-items: center;
@@ -16714,7 +16717,51 @@ body {
   text-overflow: ellipsis;
   font-weight: 700;
   font-size: 22px;
-  width: calc(100% - 125px);
+  width: calc(100% - 540px);
+}
+
+.bs-list a .info {
+  display: flex;
+}
+
+.bs-list a .info dl {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.bs-list a .info dl::after {
+  content: "";
+  display: inline-block;
+  margin: 0 20px;
+  border-left: 1px solid #bdbdbd;
+  border-right: 1px solid #e6e6e6;
+  height: 11px;
+}
+
+.bs-list a .info dl:last-child::after {
+  display: none;
+}
+
+.bs-list a .info dl dt {
+  font-weight: 400;
+  color: #bdbdbd;
+  font-size: 1em;
+}
+
+.bs-list a .info dl dt::after {
+  content: ":";
+  color: #bdbdbd;
+  font-size: 1em;
+  display: inline-block;
+  padding: 0 3px;
+}
+
+.bs-list a .info dl dd {
+  font-weight: 400;
+  font-size: 1em;
+  color: #999999;
+  margin: 0;
 }
 
 @media (max-width: 1300px) {
