@@ -1,0 +1,44 @@
+@use 'var';
+
+div.toggle-hidden{
+    display: none;
+}
+.service-guide{
+    .service-guide-ti{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .img-box{
+        margin: 30px 0;
+    }
+}
+
+.service-nav{
+    display: flex;
+    list-style: none;
+    margin:0 ;
+    padding: 0;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    li{
+        flex: 1;
+        height: 50px;
+        button{
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+            border-radius:4px 4px 0 0;
+            background: #f5f5f5;
+            border: 1px solid #dddddd;
+            border-bottom: 1px solid #000;
+        }
+        &.active{
+            button{
+                background: #fff;
+                border: 1px solid #000;
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+}

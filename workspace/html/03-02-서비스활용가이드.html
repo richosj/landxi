@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+
+    @@include('./include/front/location.html',{cate1:'서비스 활용', cate2: '서비스 활용 가이드'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+        <div class="service-guide">
+
+          <!--// tab-nav -->
+          <ul class="tab-nav tab-type01 service-nav" data-js="tabNav">
+            <li class="active">
+              <button type="button" class="" data-id="tabnav1">
+                레이블 관리
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav2">
+                파일 업로드
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav3">
+                작업자 지정
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav4">
+                어노테이션
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav5">
+                라벨링 이미지
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav6">
+                데이터셋 관리
+              </button>
+            </li>
+          </ul>
+          <!-- tab-nav //-->
+
+          <!--// tab-con -->
+          
+          <div data-toggle-id="tabnav1">
+            <h3 class="service-guide-ti">레이블 관리</h3>
+            <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
+              레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
+            </p>
+            <div class="img-box">
+              <img src="../common/images/front/service-test.png" alt="">
+            </div>
+            <h3 class="service-guide-ti">레이블 관리</h3>
+            <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
+              레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
+            </p>
+          </div>
+          <div data-toggle-id="tabnav2" class="toggle-hidden">
+            <h3 class="service-guide-ti">파일 업로드</h3>
+          </div>
+          <div data-toggle-id="tabnav3" class="toggle-hidden">
+            <h3 class="service-guide-ti">작업자 지정</h3>
+          </div>
+          <div data-toggle-id="tabnav4" class="toggle-hidden">
+            <h3 class="service-guide-ti">어노테이션</h3>
+          </div>
+          <div data-toggle-id="tabnav5" class="toggle-hidden">
+            <h3 class="service-guide-ti">라벨링 이미지</h3>
+          </div>
+          <div data-toggle-id="tabnav6" class="toggle-hidden">
+            <h3 class="service-guide-ti">데이터셋 관리</h3>
+          </div>
+          <!-- tab-con //-->
+        </div>
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>
