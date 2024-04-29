@@ -13,4 +13,131 @@
     }
 }
 
+.welcome-user{
+    background: url("../images/platform/welcome-bg.png") no-repeat 100% 0;
+    .name{
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 15px;
+        color: #000;
+        b{
+            font-weight: 700;
+        }
+    }
+    .ment{
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0;
+    }
+}
 
+.col.disk-view{
+    background-color: #edf1f4;
+    .col-header h3{
+        margin-bottom: 0;
+    }
+    .track-wrap{
+        padding: 0;
+    }
+}
+.disk-per{
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-end;
+    line-height: 1;
+    transform: translateY(-5px);
+    b{
+        color: #2149a6;
+        font-size: 36px;
+    }
+    span{
+        color: #202432;
+        font-size: 18px;
+        display: block;
+        transform: translateY(-5px);
+    }
+}
+.disk-inc-button{
+    button{
+        display: block;
+        width: 100%;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+.disk-volume{
+    text-align: right;
+    color: #666;
+    font-size: 14px;
+    padding: 12px 0 15px;
+    b{
+        color: #2149a6;
+    }
+}
+.disk-modal-view{
+    background-color: #edf1f4;
+    border: 1px solid #e0e4e7;
+    border-radius: 10px;
+    padding: 20px;
+    .track-wrap{
+        padding: 0;
+        border-radius: 0;
+        margin-top: 12px;
+        margin-bottom: 7px;
+    }
+    .disk-volume{
+        padding: 0;
+    }
+}
+.now-use-disk{
+    display: flex;
+    justify-content: space-between;
+    .tit{
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .disk-per{
+        transform: translateY(0);
+    }
+}
+
+.disk-inc-form{
+    padding-top: 25px;
+    dl{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        +dl{
+            margin-top: 15px;
+        }
+        dt{
+            font-weight: 400;
+            width: 80px;
+        }
+        dd{
+            width: calc(100% - 80px);
+            margin: 0;
+            .g{
+                display: flex;
+                align-items: center;
+                gap: 0 8px;
+                .cs-input{
+                    width: calc(50% - 4px);
+                }
+            }
+            textarea{
+                width: 100%;
+                height: 90px;
+                
+            }
+        }
+    }
+}
+.flex-g2{
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    .cs-input{
+        width: calc(50% - 4px);
+    }
+}

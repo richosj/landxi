@@ -38,7 +38,22 @@ $focusBdc: #3d3d3d;
     border-color:#fc3b6f;
   }
 }
-
+.cs-icon-req{
+  font-style: normal;color: #ed1c24;font-size: 16px;
+  display: inline-block;
+  width: 10px;height: 10px;
+  line-height: 40px;overflow: hidden;
+  vertical-align: text-top;
+  // margin-top: -7px;
+  margin-left: 1px;margin-right: 1px;
+  position: relative;
+  &::after{
+    content: '*';font-size: 16px;
+    position: absolute;
+    line-height: 1em;
+    left: 0;top: 0;
+  }
+}
 
 div.cs-input, span.cs-input{
   line-height: $height;
@@ -242,6 +257,14 @@ textarea.cs-input{padding: $iptPadding;height:auto;}
   }
 }
 
+.cs-inputs-tel2{
+  width: 100%;
+  display: flex;
+  gap:0 9px;
+  >.cs-input{
+    width: 33.33%;
+  }
+}
 .cs-inputs-tel{
   // max-width: 200px;
   width: 100%;

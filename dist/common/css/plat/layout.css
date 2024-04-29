@@ -11433,6 +11433,30 @@ table caption {
   border-color: #fc3b6f;
 }
 
+.cs-icon-req {
+  font-style: normal;
+  color: #ed1c24;
+  font-size: 16px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  line-height: 40px;
+  overflow: hidden;
+  vertical-align: text-top;
+  margin-left: 1px;
+  margin-right: 1px;
+  position: relative;
+}
+
+.cs-icon-req::after {
+  content: "*";
+  font-size: 16px;
+  position: absolute;
+  line-height: 1em;
+  left: 0;
+  top: 0;
+}
+
 div.cs-input, span.cs-input {
   line-height: 36px;
   display: inline-block;
@@ -11688,6 +11712,16 @@ textarea.cs-input {
 
 .cs-inputs-address .addr-line-2 .cs-input + .cs-input {
   margin-top: 5px;
+}
+
+.cs-inputs-tel2 {
+  width: 100%;
+  display: flex;
+  gap: 0 9px;
+}
+
+.cs-inputs-tel2 > .cs-input {
+  width: 33.33%;
 }
 
 .cs-inputs-tel {
@@ -17461,5 +17495,157 @@ div.toggle-hidden {
 
 .mypage-title b {
   color: #18b0ef;
+}
+
+.welcome-user {
+  background: url("../images/platform/welcome-bg.png") no-repeat 100% 0;
+}
+
+.welcome-user .name {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.welcome-user .name b {
+  font-weight: 700;
+}
+
+.welcome-user .ment {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.col.disk-view {
+  background-color: #edf1f4;
+}
+
+.col.disk-view .col-header h3 {
+  margin-bottom: 0;
+}
+
+.col.disk-view .track-wrap {
+  padding: 0;
+}
+
+.disk-per {
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+  transform: translateY(-5px);
+}
+
+.disk-per b {
+  color: #2149a6;
+  font-size: 36px;
+}
+
+.disk-per span {
+  color: #202432;
+  font-size: 18px;
+  display: block;
+  transform: translateY(-5px);
+}
+
+.disk-inc-button button {
+  display: block;
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+}
+
+.disk-volume {
+  text-align: right;
+  color: #666;
+  font-size: 14px;
+  padding: 12px 0 15px;
+}
+
+.disk-volume b {
+  color: #2149a6;
+}
+
+.disk-modal-view {
+  background-color: #edf1f4;
+  border: 1px solid #e0e4e7;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.disk-modal-view .track-wrap {
+  padding: 0;
+  border-radius: 0;
+  margin-top: 12px;
+  margin-bottom: 7px;
+}
+
+.disk-modal-view .disk-volume {
+  padding: 0;
+}
+
+.now-use-disk {
+  display: flex;
+  justify-content: space-between;
+}
+
+.now-use-disk .tit {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.now-use-disk .disk-per {
+  transform: translateY(0);
+}
+
+.disk-inc-form {
+  padding-top: 25px;
+}
+
+.disk-inc-form dl {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.disk-inc-form dl + dl {
+  margin-top: 15px;
+}
+
+.disk-inc-form dl dt {
+  font-weight: 400;
+  width: 80px;
+}
+
+.disk-inc-form dl dd {
+  width: calc(100% - 80px);
+  margin: 0;
+}
+
+.disk-inc-form dl dd .g {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.disk-inc-form dl dd .g .cs-input {
+  width: calc(50% - 4px);
+}
+
+.disk-inc-form dl dd textarea {
+  width: 100%;
+  height: 90px;
+}
+
+.flex-g2 {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.flex-g2 .cs-input {
+  width: calc(50% - 4px);
 }
 /*# sourceMappingURL=../maps/plat/layout.css.map */
