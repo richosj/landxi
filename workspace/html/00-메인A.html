@@ -548,6 +548,26 @@
     </div>
     <script src="./common/js/index.js?ver=240426"></script>
     <script>
+        // IntersectionObserver 등록
+    const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        // 주시 대상이 뷰포트 안으로 들어오면 active 클래스 추가
+        console.log(entry.intersectionRatio, entry)
+        if (entry.intersectionRatio > 0) {
+        entry.target.classList.add("active");
+        }
+        // 아니면 active 클래스 제거
+        else {
+        //entry.target.classList.remove("active");
+        }
+    });
+    });
+
+    // 주시 대상 선언, 주시 시작
+    const boxElList = document.querySelectorAll(".section-3");
+    boxElList.forEach((el) => {
+    io.observe(el);
+    });
 
 $(window).scroll(function(){
       // 현재 스크롤 위치
@@ -556,15 +576,8 @@ $(window).scroll(function(){
       $('.section-container .section').each(function(indx){
         if($(this).offset().top <= scrollPos){
             indx = indx+1;
-            //$('.index-nav').removeClass('active');
-            //$('.section-container .section').eq(indx).addClass('active');
+            
             $('.index-nav .current').text('').text("0"+indx);
-
-            if(indx == 3){
-                $('.section-3').addClass('active');
-            } else {
-                $('.section-3').removeClass('active');
-             }
 
             if(indx == 4){
                 $('.index-nav').addClass('black');
