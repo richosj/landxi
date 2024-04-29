@@ -2,169 +2,21 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LAND XI</title>
-<link rel="shortcut icon" type="image/x-icon" href="./common/images/favicon.png">
-<link rel="stylesheet" href="./common/css/front/layout.css">
-<script src="./common/libjs/jquery.min.js"></script>
-<script src="./common/js/front_ui.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남원시-XI</title>
+    <link rel="shortcut icon" type="image/x-icon" href="@@imageRoot/favicon.png">
+    <link rel="stylesheet" href="@@cssRoot/front/layoutAgency.css">
+    <script src="@@htmlRoot/common/libjs/jquery.min.js"></script>
+    <script src="@@htmlRoot/common/js/front_ui.js"></script>
+
     <link rel="stylesheet" href="./common/libjs/swiper-bundle.min.css">
     <!-- <link rel="stylesheet" href="./common/libjs/fullpage.min.css"> -->
     <script src="./common/libjs/swiper-bundle.min.js"></script>
     <!-- <script src="./common/libjs/fullpage.js"></script> -->
 </head>
 <body>
-    <!-- header -->
-<div class="lay-header v3" id="header">
-    <div class="lay-wrap">
-      <h1 class="lay-logo"><a href="#">LAND-XI PLATFORM</a></h1>
-      <div class="lay-gnb">
-        <ul>
-          <li>
-            <a href="#">플랫폼 소개</a>
-            <div class="lay-gnb-depth">
-              <ul>
-                <li><a href="#"><span>서비스 개요</span></a></li>
-                <!-- <li><a href="#"><span>서비스 로드맵</span></a></li> -->
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">서비스 모델</a>
-            <div class="lay-gnb-depth">
-              <ul>
-                <li><a href="#"><span>마이 스페이스</span></a></li>
-                <li><a href="#"><span>워크 스페이스</span></a></li>
-                <li><a href="#"><span>즐겨찾기</span></a></li>
-                <!-- <li><a href="#"><span>AI 프로젝트</span></a></li>
-                <li><a href="#"><span>AI 모델</span></a></li> -->
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">서비스 활용</a>
-            <div class="lay-gnb-depth">
-              <ul>
-                <li><a href="#"><span>AI 활용 모델</span></a></li>
-                <li><a href="#"><span>서비스 활용 가이드</span></a></li>
-                <!-- <li><a href="#"><span>튜토리얼</span></a></li> -->
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">이용안내</a>
-            <div class="lay-gnb-depth">
-              <ul>
-                <li><a href="#"><span>공지사항</span></a></li>
-                <li><a href="#"><span>자주 묻는 질문</span></a></li>
-                <li><a href="#"><span>문의하기</span></a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="lay-hedaer-right">
-        <a href="javascript: void(0);" class="btn-search">검색</a>
-        <a href="#" class="btn-login"><span><i class="cs-icon-lock"></i>로그인</span></a>
-        <a href="javascript: void(0);" class="btn-sitemap"><span><i class="cs-icon-menu"><span></span></i>전체메뉴 보기</span></a>
-      </div>
-    </div>
-    <div class="lay-header-bg" aria-disabled="true">
-        <!-- <strong>플랫폼 소개</strong> -->
-    </div>
-  
-    <!-- 통합검색 -->
-    <div class="lay-total-search">
-      <div class="lay-wrap">
-        <div class="total-search-wrap">
-          <h2>통합검색</h2>
-          <form class="total-inputs">
-            <div><input type="text" placeholder="검색어를 입력하세요" data-id="totalSearchIpt"></div>
-            <button type="button">검색</button>
-          </form>
-        </div>
-        <button class="total-search_close">검색 닫기</button>
-      </div>
-      <div class="lay-cont-visual-particle">
-        
-        <div class="item-particle1"></div>
-        
-        <div class="item-particle2"></div>
-        
-        <div class="item-particle3"></div>
-        
-        <div class="item-particle4"></div>
-        
-        <div class="item-particle5"></div>
-        
-        <div class="item-particle6"></div>
-        
-        <div class="item-particle7"></div>
-        
-        <div class="item-particle8"></div>
-        
-      </div>
-    </div>
-  
-  </div>
-  <div class="lay-header-dim"></div>
-  
-  <div class="lay-sitemap">
-    <div class="lay-sitemap_bg1"></div>
-    <div class="lay-sitemap_bg2"></div>
-    <div class="lay-sitemap_bar">
-      <div class="lay-wrap"><button class="lay-sitemap_close">닫기</button></div>
-    </div>
-    <div class="lay-sitemap-warp">
-      <div class="sitem-map-nav">
-        <ul>
-          <li>
-            <a href="#"><span>플랫폼 소개</span></a>
-            <div class="lay-gnb-depth">
-              <ul>
-                <li><a href="#"><span>서비스 개요</span></a></li>
-                <!-- <li><a href="#"><span>서비스 로드맵</span></a></li> -->
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#"><span>서비스 모델</span></a>
-            <div class="lay-gnb-depth">
-              <ul>
-                <li><a href="#"><span>마이 스페이스</span></a></li>
-                <li><a href="#"><span>워크 스페이스</span></a></li>
-                <li><a href="#"><span>즐겨찾기</span></a></li>
-                <!-- <li><a href="#"><span>AI 프로젝트</span></a></li>
-                <li><a href="#"><span>AI 모델</span></a></li> -->
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#"><span>서비스 활용</span></a>
-            <div class="lay-gnb-depth">
-              <ul>
-                <li><a href="#"><span>AI 활용 모델</span></a></li>
-                <li><a href="#"><span>서비스 활용 가이드</span></a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#"><span>이용안내</span></a>
-            <div class="lay-gnb-depth">
-              <ul>
-                <li><a href="#"><span>공지사항</span></a></li>
-                <li><a href="#"><span>자주 묻는 질문</span></a></li>
-                <li><a href="#"><span>문의하기</span></a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div class="selectbg"></div>
-      </div>
-    </div>
-  </div>
-  <!--// header -->
+    @@include('./include/front/header.v3.html')
     <aside class="index-nav">
         <i class="icon-home"></i>
         <p class="current">01</p>
@@ -180,7 +32,7 @@
                     <div class="swiper-slide slide01">
                         <div class="visual-slide">
                             <div class="typo">
-                                <b><span style="--delay:0.15s;color:#00bbcf">NO-CODE</span></b> <span><span
+                                <b><span style="--delay:0.15s;color:#f1628e">NO-CODE</span></b> <span><span
                                         style="--delay:0.45s">기반의</span></span> <b><span style="--delay:0.75s">AI</span></b>
                                 <span><span style="--delay:1.05s">학습모델을</span></span><br>
                                 <div class="typing" style="--delay:1.25s">
@@ -195,7 +47,7 @@
                     <div class="swiper-slide slide02">
                         <div class="visual-slide">
                             <div class="typo">
-                                <b><span style="--delay:0.15s;color:#00bbcf">NO-CODE</span></b> <span><span
+                                <b><span style="--delay:0.15s;color:#f1628e">NO-CODE</span></b> <span><span
                                         style="--delay:0.45s">기반의</span></span> <b><span style="--delay:0.75s">AI</span></b>
                                 <span><span style="--delay:1.05s">모델을</span></span><br>
                                 <div class="typing" style="--delay:1.25s">
@@ -297,14 +149,14 @@
         <!-- section-2 -->
         <section class="section section-3" id="section-3">
             <div class="container">
-                <h3 style="--delay:.15s"><img src="./common/images/main/s3-tit.png" alt=""></h3>
+                <h3 style="--delay:.15s"><img src="./common/images/agency/s3-tit.png" alt=""></h3>
 
                 <div class="flex-wrap">
                     <div style="--delay:0.25s">
                         <a href="#">
                             <div class="num">01</div>
                             <div class="subject">데이터 셋 구성</div>
-                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="text">남원시-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     width="48px" height="48px">
@@ -431,11 +283,9 @@
                             <ul class="list">
                                 <li>
                                     <a href="#">
-                                        <div class="img"><img src="./common/images/main/dummy-1_03.jpg" alt=""></div>
+                                        <div class="img"><img src="./common/images/agency/dummy.png" alt=""></div>
                                         <div class="subject">
-                                            Land-XI 플랫폼 서비스 오픈, 직관적인 <br>
-                                            인터페이스를 사용하여 AI 모델의 학습 <br>
-                                            데이터를 구축합니다.
+                                            남원시-XI 플랫폼 서비스 오픈,직관적인 <br>인터페이스를 사용하여 AI 모델의 학습 <br>데이터를 구축합니다.
                                         </div>
                                         <div class="date">2024.02.27</div>
                                     </a>
@@ -444,8 +294,9 @@
                                     <a href="#">
                                         <div class="img"><img src="./common/images/main/dummy-2_03.jpg" alt=""></div>
                                         <div class="subject">
-                                            Land-XI 플랫폼 서비스 오픈, 직관적인 <br>
-
+                                            남원시-XI 플랫폼 서비스 오픈,직관적인 <br>인터페이스를 사용하여 AI 모델의 학습 <br>데이터를 구축합니다.
+                                            남원시-XI 플랫폼 서비스 오픈,직관적인 <br>인터페이스를 사용하여 AI 모델의 학습 <br>데이터를 구축합니다.
+                                            남원시-XI 플랫폼 서비스 오픈,직관적인 <br>인터페이스를 사용하여 AI 모델의 학습 <br>데이터를 구축합니다.
                                         </div>
                                         <div class="date">2024.02.27</div>
                                     </a>
@@ -454,18 +305,16 @@
                                     <a href="#">
                                         <div class="img"><img src="./common/images/main/dummy-3_03.jpg" alt=""></div>
                                         <div class="subject">
-                                            Land-XI 플랫폼 서비스 오픈, 직관적인
-                                            Land-XI 플랫폼 서비스 오픈, 직관적인
+                                            남원시-XI 플랫폼 서비스 오픈,직관적인
                                         </div>
                                         <div class="date">2024.02.27</div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="img"><img src="./common/images/main/dummy-3_03.jpg" alt=""></div>
+                                        <div class="img"><img src="./common/images/agency/dummy-2.png" alt=""></div>
                                         <div class="subject">
-                                            Land-XI 플랫폼 서비스 오픈, 직관적인
-                                            Land-XI 플랫폼 서비스 오픈, 직관적인
+                                            남원시-XI 플랫폼 서비스 오픈,직관적인
                                         </div>
                                         <div class="date">2024.02.27</div>
                                     </a>
@@ -473,7 +322,7 @@
                             </ul>
                         </div>
                         <div class="tabs-cont tabs-2">
-                            <ul class="bs-list">
+                            <ul class="bs-list long">
                                 <li>
                                     <a href="#">
                                         <span class="badge" style="--color:#0063de">모델</span>
@@ -548,53 +397,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="notice-group">
-                    <h3>알림판</h3>
-                    <div class="boxing">
-                        <div class="control">
-                            <button type="button" class="prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="30px" height="30px">
-                                    <image x="0px" y="0px" width="30px" height="30px"
-                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8RIieEfL/VAAABTklEQVQ4y6XVIU8DQRCG4bfb5qoIFgIJDgeSoBD8ggJ3RVRBQi0CgSZVbQgICBJcDRU1/IdqDAkVhUBSkjoIgqbJh6ClJewud8ecODH7XPZmNzOI7ydQUXV19CFbvOlOdUUKxmJMN9RWnGhr8yfOqhoLjqKq7Bgno198iMPEVJJCgQI9pcLPCgwR86SJOYqGQioKUMjogYWU+NEw41/xwg4rHNtSsxnJR+/ZpwfkaFmyxkdb7NEDYNeaz7npDRUGgOGA7WT4kgsA8lRYd6xx4BPqAExzyrJzb46CrTIYfmTNUxNHwYrD9xG3Huw8qjj/7Dnnv6vtvSQtDnkHoEzZil+ZcnPvDesbup6KsMgVSxhCW7KLrlO1AklqGJqkjeZ/2lAeoSgVjkatt5aY1iab/lkiej7Z9BHaij1uwt+zCgUqqaGO+lbUV0cNlSYH3SdDh+moqX+nYgAAAABJRU5ErkJggg==" />
-                                </svg>
-                            </button>
-
-                            <button type="button" class="next">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="30px" height="30px">
-                                    <image x="0px" y="0px" width="30px" height="30px"
-                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8RIi1kqVbLAAABSklEQVQ4y6XVv0vDQBjG8W+vJQ7iKCgKbm6u0v/BxR9JBzspuLjp3sGxRQfRqYtbQezQv8DBybmLQ4cqChWc1KlFfBxMbaWXmDvfLOEJH3J3HO+L+HkCldRQV33Z6l13aihSMBIjuqGOslRHm79xXtVMcFhV5UfYjX7zGIfOVJJCgQI9euEnBYaIRXxqgZJh3YsCrOd0z5InfjDM2fJjVtnhOR3P5yRbXuQDmOWU5RRt7PEuAC/scZuCE/4Ml5zwCRSosOaK4ZoKfQD245U4YGhzwCsA2xy6YriJUcG6d5NG2xzFbyXr90Iy/XvPiTjLaSfgOnUApqlSTFxbTm/MTMaZbtjA0LPlIYYVLlIvJz105dUKJKlpaOFbrf+0oSmEIi8cDVtvzZnWxpv+mRM9H2/6CG1lHjfh5KxCgcpqqquBFQ3UVVPl8UH3BcTg6ahAhc29AAAAAElFTkSuQmCC" />
-                                </svg>
-                            </button>
-                            <div class="fraction">01/12</div>
-                            <button type="button" class="selector">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="11px" height="13px" class="pause">
-                                    <image x="0px" y="0px" width="11px" height="13px"
-                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAQAAADV/FywAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8RNRg3mRZ+AAAAPUlEQVQY093IsQ2AMAwAMNMtR1SRysz/hzCDqHpEVh7gAjx6G49EOe5r7E6B2SQIHV2AbD79ricoC0uB+QKa8Qwc/08+MgAAAABJRU5ErkJggg==" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="11px" height="13px" class="play">
-                                    <image x="0px" y="0px" width="11px" height="13px"
-                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAQAAADV/FywAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8RNhFlaP0ZAAAAh0lEQVQY02NW2iE4Q/Cv4Kn3/xiQAKPSfwYGBgaG6wwZ9w4hhJmgtCbDQaUFSmLowgwMDAzxDDeU0pSY0IUZGAQZZjIcUzJAmI0M/jK0YBNmYPjNhEXwL0M7C4bgSYaMexdQVb9nSGewuneBgQFZ9SKG0nuvIEyYMJovGZR2KH1RKldiRbUAAPYPI8w3RVEmAAAAAElFTkSuQmCC" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="notic-swiper">
-                            <div class="swiper ">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a href="#"><img src="./common/images/main/dummy.png" alt=""></a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#"><img src="./common/images/main/dummy.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <div class="more">
                 <a href="#">새로운 소식 더보기
@@ -613,11 +415,11 @@
                 <div class="footer-content-1">
                     <div class="container">
                         <div class="block">
-                            <div class="landxi"><img src="./common/images/main/land.png" alt=""></div>
-                            <p class="copy">Copyright © 2024 LX All rights reserved.</p>
+                            <div class="landxi"><img src="./common/images/agency/xi.png" alt=""></div>
+                            <p class="copy">Copyright© NAMWON CITY. ALL RIGHTS RESERVED.</p>
                             <ul>
-                                <li><b>주소</b> (우)54870 전라북도 전주시 덕진구 기지로 120 (중동) LX</li>
-                                <li><b>고객센터</b> 1588-7704</li>
+                                <li><b>주소</b> 우)55738 전라북도 남원시 시청로 60</li>
+                                <li><b>고객센터</b> 063-620-6114</li>
                             </ul>
                         </div>
                         <div class="family">
@@ -636,7 +438,7 @@
                         </ul>
 
                         <div class="partners">
-                            <a href="#"><img src="./common/images/main/lx.png" alt=""></a>
+                            <a href="#"><img src="./common/images/agency/namwon.png" alt=""></a>
                             <a href="#"><img src="./common/images/main/nia.png" alt=""></a>
                         </div>
                     </div>
@@ -645,9 +447,10 @@
         </section>
         <!-- footer -->
     </div>
-    <script src="./common/js/index.js?ver=240426"></script>
+    <script src="./common/js/index_agency.js?ver=240426"></script>
     <script>
-        // IntersectionObserver 등록
+        
+    // IntersectionObserver 등록
     const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         // 주시 대상이 뷰포트 안으로 들어오면 active 클래스 추가
@@ -675,8 +478,15 @@ $(window).scroll(function(){
       $('.section-container .section').each(function(indx){
         if($(this).offset().top <= scrollPos){
             indx = indx+1;
-            
+            //$('.index-nav').removeClass('active');
+            //$('.section-container .section').eq(indx).addClass('active');
             $('.index-nav .current').text('').text("0"+indx);
+
+            // if(indx == 3){
+            //     $('.section-3').addClass('active');
+            // } else {
+            //     $('.section-3').removeClass('active');
+            //  }
 
             if(indx == 4){
                 $('.index-nav').addClass('black');

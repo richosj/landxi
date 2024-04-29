@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/plat/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    <!-- header -->
+    @@include('./include/plat/header.html')
+    <!--// header -->
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-nav">
+        @@include('./include/plat/nav.html')
+      </div>
+
+      <div class="lay-content">
+        <div class="lay-content-wrap">
+          <div class="mypage-title"><b>DAVIS</b>님의 마이 페이지</div>
+          <div class="row">
+            <div class="col-3">
+                <div class="row">
+                    <div class="col col-12">
+                      
+                    </div>
+                    <div class="col col-12">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col col-9" style="border-color: #027aeb;">
+				<header class="col-header"><h3><b style="font-size: 18px;">기본 정보</b></h3></header>
+            </div>
+          </div>
+          <!-- // row -->
+          <div class="row">
+            <div class="col col-12">
+                <header class="col-header"><h3>디스크 증량 신청 이력</h3></header>
+                <div class="board-list-text">
+                    <table class="cs-table">
+                        <colgroup>
+                            <col class="width90">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">처리여부</th>
+                                <th scope="col">요청 일시</th>
+                                <th scope="col">요청 사유</th>
+                                <th scope="col">처리내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tac">
+                                <td>3</td>
+                                <td style="color:#18b0ef">승인</td>
+                                <td>2024-01-03 <span style="color:#888">14:37:51</span></td>
+                                <td>  용량 부족으로 인하여 3G 추가 요청 합니다.</td>
+                                <td>사용 권한 부족으로 요청내용을 거절 처리합니다.</td>
+                            </tr>
+                            <tr class="tac">
+                                <td>2</td>
+                                <td style="color:#ed1c24">거절</td>
+                                <td>2024-01-03 <span style="color:#888">14:37:51</span></td>
+                                <td>  용량 부족으로 인하여 3G 추가 요청 합니다.</td>
+                                <td>사용 권한 부족으로 요청내용을 거절 처리합니다.</td>
+                            </tr>
+                            <tr class="tac">
+                                <td>1s</td>
+                                <td style="color:#2149a6">신청</td>
+                                <td>2024-01-03 <span style="color:#888">14:37:51</span></td>
+                                <td>용량 부족으로 인하여 3G 추가 요청 합니다.</td>
+                                <td>사용 권한 부족으로 요청내용을 거절 처리합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <!--// row -->
+          
+        </div>
+      </div>
+    </div>
+    <!--// container -->
+  </div>
+  <!--// lay-body -->
+  <div class="popup-wrap" style="width:750px;" id="calendarDetail">
+    <div class="popup-container">
+      <!-- header -->
+      <div class="popup-header">
+        <span class="popup-header-text">일정</span>
+        <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+      </div>
+      <!-- content -->
+      <div class="popup-content">
+        <!-- popup-content-wrap -->
+        <div class="popup-content-wrap">
+          <div class="pop-inner-con">
+            <div class="cld-top">
+              <div>
+                <select name="" id="" class="cs-input" title="년 선택">
+                  <option value="">2023년</option>
+                </select>
+                <select name="" id="" class="cs-input" title="월 선택">
+                  <option value="">12월</option>
+                </select>
+              </div>
+              <div>
+                <button type="button" class="prev" title="이전"></button>
+                <button type="button" class="next" title="다음"></button>
+              </div>
+            </div>
+            <div class="cs-table">
+              <table>
+                <colgroup>  
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                  <col style="width:14.285%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">11.12(월)</th>
+                    <th scope="col">11.13(화)</th>
+                    <th scope="col">11.14(수)</th>
+                    <th scope="col">11.15(목)</th>
+                    <th scope="col">11.16(금)</th>
+                    <th scope="col">11.17(토)</th>
+                    <th scope="col">11.18(일)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                    <td class="cell-txt">일정내용</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="popup-footer">
+            <button class="btn btn-3" data-modal="closebtn">저장</button>
+            <button class="btn" data-modal="closebtn">취소</button>
+          </div>
+        </div>
+        <!-- popup-content-wrap -->
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-wrap" style="width:750px;" id="memoDetail">
+    <div class="popup-container">
+      <!-- header -->
+      <div class="popup-header">
+        <span class="popup-header-text">메모</span>
+        <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+      </div>
+      <!-- content -->
+      <div class="popup-content">
+        <!-- popup-content-wrap -->
+        <div class="popup-content-wrap">
+          <div class="pop-inner-con">
+            <div class="moemo-view">
+              <p class="tit">이미치 추가</p>
+              <p class="desc">이미지 추가 필요</p>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="popup-footer">
+            <button class="btn btn-3" data-modal="closebtn">저장</button>
+            <button class="btn" data-modal="closebtn">취소</button>
+          </div>
+        </div>
+        <!-- popup-content-wrap -->
+      </div>
+    </div>
+  </div>
+  <script>
+    
+    
+    function openDetailCal(t){
+      uiModal.open({
+        elm:'calendarDetail',
+        bgBlock: true,
+        drag: false,
+        width: 300,
+        height: 150,
+      },t);
+    }
+    function openDetailMemo(t){
+      uiModal.open({
+        elm:'memoDetail',
+        bgBlock: true,
+        drag: false,
+        width: 300,
+        height: 150,
+      },t);
+    }
+    
+    //openDetailCal();
+  </script>
+  
+  <!-- @include('./include/footer.html') -->
+  
+</body>
+</html>`

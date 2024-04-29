@@ -17240,6 +17240,7 @@ div.toggle-hidden {
   min-height: 1000px;
 }
 
+<<<<<<< HEAD
 .main-sh-row01 table thead th,
 .main-sh-row02 table thead th {
   font-size: 15px;
@@ -17441,5 +17442,19 @@ div.toggle-hidden {
   width: 148px;
   height: 44px;
   font-size: 16px;
+=======
+/*
+24.04.29(월) 추가
+1. 마이페이지
+*/
+.mypage-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.mypage-title b {
+  color: #18b0ef;
+>>>>>>> 77bb15646945f7dfd7a28b2d5c65970de7b7fc92
 }
 /*# sourceMappingURL=../maps/plat/layout.css.map */

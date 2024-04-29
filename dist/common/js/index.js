@@ -102,7 +102,7 @@ const s2Swiper = new Swiper('.section-2 .swiper', {
     direction: 'horizontal',
     effect: 'slide',
     speed: 1000,
-    autoplay: false,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 0,
     debugger: true,
@@ -111,7 +111,6 @@ const s2Swiper = new Swiper('.section-2 .swiper', {
     centeredSlides: false,
     navigation: false,
     pagination: false,
-    effect: "fade",
     navigation: {
         nextEl: ".section-2 .next",
         prevEl: ".section-2 .prev",
@@ -121,57 +120,33 @@ const s2Swiper = new Swiper('.section-2 .swiper', {
         type: "fraction",
     },
     on: {
-        slideChange: function () {
-
-            let html = `<div class="s2-tpl">
-                    <div class="tit">Land-XI 분석 서비스</div>
-                    <div class="link"><a href="${s2Array[this.realIndex].link}">분석 서비스 바로가기<i>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" aria-hidden="true">
-                                    <image x="0px" y="0px" width="16px" height="16px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAJNAVXy/7nAAAATElEQVQoz4XQSQ4AIAgEwYH//xkPboAMcjKplhjFsOYc4ig+I8bE+g3nnjYsLHBcBYHfIHEOHo5BwT4o+QaE909SnhsaBrTn/QbKwAAvBhEZ9MuJewAAAABJRU5ErkJggg=="></image>
-                                </svg>
-                            </i></a></div>
-                    <div class="s-tit"><span class="num">${s2Array[this.realIndex].number}</span><b>${s2Array[this.realIndex].title}</b></div>
-                    <div class="txt">${s2Array[this.realIndex].text}</div>
-                </div>`;
-            $('.s2-tpl').html(html)
+        init : function(){
+            document.querySelector('.s2-tpl').classList.add('first-active');
         }
     }
 })
 
+s2Swiper.on('slideChange', function () {
+    let html = `
+    <div class="tit" style="--delay:0.25s">Land-XI 분석 서비스</div>
+    <div class="link" style="--delay:0.55s"><a href="${s2Array[this.realIndex].link}">분석 서비스 바로가기<i>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" aria-hidden="true">
+                    <image x="0px" y="0px" width="16px" height="16px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAJNAVXy/7nAAAATElEQVQoz4XQSQ4AIAgEwYH//xkPboAMcjKplhjFsOYc4ig+I8bE+g3nnjYsLHBcBYHfIHEOHo5BwT4o+QaE909SnhsaBrTn/QbKwAAvBhEZ9MuJewAAAABJRU5ErkJggg=="></image>
+                </svg>
+            </i></a></div>
+    <div class="s-tit"  style="--delay:0.85s"><span class="num">${s2Array[this.realIndex].number}</span><b>${s2Array[this.realIndex].title}</b></div>
+    <div class="txt"  style="--delay:1.15s">${s2Array[this.realIndex].text}</div>`;
+        
+    document.querySelector('.s2-tpl').classList.remove('first-active');
+    document.querySelector('.s2-tpl').innerHTML = html;
+    console.log('cahnge');
 
-/*
-const noticeSwiper = new Swiper('.notic-swiper .swiper', {
-    direction: 'horizontal',
-    //autoHeight: true,
-    effect: 'slide',
-    speed: 500,
-    autoplay: false,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    debugger: true,
-    mousewheel: false,
-    loop: false,
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".notice-group .next",
-        prevEl: ".notice-group .prev",
-    },
-    pagination: {
-        el: ".section-4 .fraction",
-        type: "fraction",
-    },
+    let addTime = setTimeout(() => {
+        console.log('cahnge');
+        document.querySelector('.s2-tpl').classList.add('first-active');
+    },250)
 })
 
-$('.selector').on('click', function () {
-    if ($(this).is('.active')) {
-        $(this).removeClass('active')
-        noticeSwiper.autoplay.start()
-    } else {
-        $(this).addClass('active')
-        noticeSwiper.autoplay.pause()
-    }
-})
-*/
 
 $('svg').attr('aria-hidden', true);
 
@@ -185,7 +160,6 @@ document.querySelectorAll('.tabs button').forEach(button => {
                     sibling.classList.remove('active');
                 }
             });
-
             target.classList.add('show');
             target.parentNode.querySelectorAll('.tabs-cont').forEach(sibling => {
                 if (sibling !== target) {
@@ -194,6 +168,7 @@ document.querySelectorAll('.tabs button').forEach(button => {
             });
         }
     });
+<<<<<<< HEAD
 });
 
 var OKS = {
@@ -243,3 +218,6 @@ if (false == true) {
         }
     });
 }
+=======
+});
+>>>>>>> 77bb15646945f7dfd7a28b2d5c65970de7b7fc92
