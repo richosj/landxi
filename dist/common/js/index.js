@@ -6,7 +6,7 @@ function Mobile() {
 
 if (Mobile()) {
   //var viewportMetaTag = document.querySelector('meta[name="viewport"]');
-  //viewportMetaTag.setAttribute("content", "width=1560");
+  viewportMetaTag.setAttribute("content", "width=1560");
 
   const ds = document.querySelector("#section1");
 
