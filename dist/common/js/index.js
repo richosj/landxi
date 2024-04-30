@@ -8,9 +8,9 @@ if (Mobile()) {
   var viewportMetaTag = document.querySelector('meta[name="viewport"]');
   viewportMetaTag.setAttribute("content", "width=1560");
 
-  const layBody = document.querySelector(".laybody");
+  //const layBody = document.querySelector(".laybody");
 
-  layBody.classList.add("mobile");
+  //layBody.classList.add("mobile");
 }
 
 function cutOffText(element) {
@@ -18,31 +18,37 @@ function cutOffText(element) {
   let text = element.textContent.trim();
   element.textContent = ""; // Clear existing text
 
-  // Iterate through each character of the original text
+  //Iterate through each character of the original text
 
   setTimeout(function () {
     for (let i = 0; i < text.length; i++) {
       // Delay the addition of each character to create the effect
       setTimeout(function () {
         element.textContent += text[i];
-      }, i * 70); // Adjust the delay (100ms in this example)
+      }, i * 50); // Adjust the delay (100ms in this example)
     }
-  }, 1400);
+  }, 400);
 }
 
-setTimeout(() => {
-    $(".slide02").find(".visual-slide").addClass("firAction");
-  //const typoElement2 = document.querySelector(".temp2");
+const action_m = setTimeout(() => {
+  $(".slide02").find(".visual-slide").addClass("firAction");
+  const typoElement2 = document.querySelector(".temp2");
   //cutOffText(typoElement2);
+
+}, 100);
+
+// Move the code block here
+const addClasses = () => {
   const visual = document.querySelectorAll(".object");
-    visual.forEach(element => {
-        element.classList.add("object-action");
-    });
-    const visualbtn = document.querySelector(".visual-link");
-    
-       visualbtn.classList.add("action");
-    
-}, 200);
+  visual.forEach(element => {
+    element.classList.add("object-action");
+  });
+  const visualbtn = document.querySelector(".visual-link");
+  const moving = document.querySelector(".moving");
+  visualbtn.classList.add("action");
+  moving.classList.add("action");
+};
+setTimeout(addClasses, 200);
 
 
 
