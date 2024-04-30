@@ -5,12 +5,12 @@ function Mobile() {
 }
 
 if (Mobile()) {
-  var viewportMetaTag = document.querySelector('meta[name="viewport"]');
-  viewportMetaTag.setAttribute("content", "width=1560");
+  //var viewportMetaTag = document.querySelector('meta[name="viewport"]');
+  //viewportMetaTag.setAttribute("content", "width=1560");
 
-  //const layBody = document.querySelector(".laybody");
+  const ds = document.querySelector("#section1");
 
-  //layBody.classList.add("mobile");
+  ds.classList.add("mobile");
 }
 
 function cutOffText(element) {
