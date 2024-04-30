@@ -1985,7 +1985,6 @@ $cols: 12;
   position: relative;
   width: 32px;
   height: 32px;
-
   input {
     width: 1px;
     height: 1px;
@@ -2006,7 +2005,7 @@ $cols: 12;
     width: 100%;
     height: 100%;
     background-image: url('#{var.$image}/platform/icon-start-off.png');
-
+    background-size: cover;
     &.v2 {
       background-image: url('#{var.$image}/platform/icon-start-2.png');
     }

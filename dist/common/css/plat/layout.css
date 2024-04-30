@@ -15292,6 +15292,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: url("../../images/platform/icon-start-off.png");
+  background-size: cover;
 }
 
 .like-push i.v2 {
