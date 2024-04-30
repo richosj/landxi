@@ -12,37 +12,85 @@
 		<!-- container -->
 		<div class="lay-container">
 			<div class="lay-wrap">
-				<div>
-					<ul class="tab-nav tab-type01 service-nav hastabnav" data-js="tabNav">
-						<li class="active">
-						  <button type="button" class="" data-id="tabnav1">
-							레이블 관리
-						  </button>
-						</li>
-						<li class="">
-						  <button type="button" class="" data-id="tabnav2">
-							파일 업로드
-						  </button>
-						</li>
-					</ul>
+				<div class="row">					
+					<div class="col col-12 workspace-item4" style="background-color: #033272;">
+						<div class="background-round-white">
+							<p class="subject"><a href="#"><i class="cs-icon-ai"></i><span>분석 결과 #2</span></a></p>
+							<div class="extra">
+								<div class="badge-group">
+									<span class="badge">분석 파라메터 #1</span>
+									<span class="badge">학습 결과 #1</span>
+								</div>
+							</div>
+							<div class="desc">
+								<span>상태 :<strong>학습 완료</strong></span>
+								<span>학습 시작:<strong>2023-09-01  12:00:00</strong></span>
+								<span>학습 종료:<strong>2023-09-01  12:00:00</strong></span>
+								<span>학습시간:<strong>1hr 3mins</strong></span>
+
+								<button type="button" class="btn btn-4">학습종료</button>
+							</div>
+							<div class="btn-group">
+								<label class="like-push"><input type="checkbox"><i></i></label>
+								<button type="button" class="btn-icon icon-del3" title="삭제">삭제</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 pt-10">
+						<nav class="lay-tab">
+							<ul class="lay-tab-ul">
+								<li class="current"><button type="button" title="현재 페이지" class="trigger">추론 결과</button></li>
+								<li><button type="button" class="trigger">추론 로그</button></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="col-12">
+						<div class="track-wrap">
+							<div class="writer">
+								<span><strong>분석 진행 율</strong></span>
+							</div>
+							<div class="track-area v2">
+								<div class="track">
+									<div class="bg" style="width:50%"></div>
+								</div>
+							</div>
+							<div class="track-per">
+								30%
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="col-12"><h3 class="basic-tit">추론 결과</h3></div>
+						<div class="cs-table">
+							<table>
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:80%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">학습 모델 Artifact</th>
+										<td class="cell-input">AI 모델명</td>
+									</tr>
+									<tr>
+										<th scope="row">모델 이름</th>
+										<td class="cell-input">				
+										</td>
+									</tr>
+									<tr>
+										<th rowspan="2" scope="row">추론 파라메터</th>
+										<td class="cell-input"></td>
+									</tr>
+									<tr>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
-
-				<div class="cs-table">
-					<table>
-						<colgroup></colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"></th>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-				<div>
-
-				</div>
-
 			</div>
 		</div>
 		<!--// container -->
