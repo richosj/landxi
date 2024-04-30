@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	@@include('./include/front/head.html')
+</head>
+
+<body>
+	<div class="lay-body">
+		@@include('./include/front/header.html')
+		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
+		<!-- container -->
+		<div class="lay-container">
+			<div class="lay-wrap">
+				<div class="board-wrap">
+
+                    <div class="board-ai-header">
+                        <h3>불법 쓰레기 탐지</h3>
+                        <a href="#" class="btn btn-gra">모델 분석 실행</a>
+                    </div>
+
+                    <div class="board-ai-detail">
+                        <ul>
+                            <li>
+                                <strong>모델 설명</strong>
+                                <span> 본 AI 모델은 Detection 모델로 000에 활용되는 000 학습모델</span>
+                            </li>
+                            <li>
+                                <strong>입력 학습데이터</strong>
+                                <span>리싸이클링 학습데이터  : Tiff 형식의 정사영상, Tiff 형식의 수치표면모델(DSM)</span>
+                            </li>
+                        </ul>
+                    </div>
+					
+					<!-- board-gall-list -->
+					<div class="board-ai-gall">
+						<ul>
+							@@for(var i = 0; i < 2; i++){
+								<li>
+									<a href="#">
+										<div class="thumb"></div>
+										<div class="subject">불법 쓰레기 탐지 불법 쓰레기 탐지 불법 쓰레기 탐지 불법 쓰레기 탐지 불법 쓰레기 탐지</div>
+										<div class="date">2023-12-11</div>
+									</a>
+								</li>
+							}	
+						</ul>
+					</div>
+
+                    <div class="board-ai-desc">
+
+                    </div>
+					
+
+				</div>
+			</div>
+		</div>
+		<!--// container -->
+		@@include('./include/front/footer.html')
+	</div>
+	<!--// lay-body -->
+</body>
+
+</html>

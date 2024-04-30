@@ -139,6 +139,9 @@
 }
 .lay-header.v3:not(.gnb-open) .btn-login,
 .lay-header.v3:not(.gnb-open) .btn-sitemap{border: 1px solid #697685;}
+.lay-sitemap .lay-sitemap_bg1, .lay-sitemap .lay-sitemap_bg2{
+  background-image: none;
+}
 .lay-header.v3.gnb-open {
   .lay-gnb-depth {
     opacity: 1;

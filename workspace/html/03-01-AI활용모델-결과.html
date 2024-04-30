@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	@@include('./include/front/head.html')
+</head>
+
+<body>
+	<div class="lay-body">
+		@@include('./include/front/header.html')
+		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
+		<!-- container -->
+		<div class="lay-container">
+			<div class="lay-wrap">
+				<div>
+					<ul class="tab-nav tab-type01 service-nav hastabnav" data-js="tabNav">
+						<li class="active">
+						  <button type="button" class="" data-id="tabnav1">
+							레이블 관리
+						  </button>
+						</li>
+						<li class="">
+						  <button type="button" class="" data-id="tabnav2">
+							파일 업로드
+						  </button>
+						</li>
+					</ul>
+				</div>
+
+				<div class="cs-table">
+					<table>
+						<colgroup></colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"></th>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div>
+
+				</div>
+
+			</div>
+		</div>
+		<!--// container -->
+		@@include('./include/front/footer.html')
+	</div>
+	<!--// lay-body -->
+</body>
+
+</html>

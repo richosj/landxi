@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	@@include('./include/front/head.html')
+</head>
+
+<body>
+	<div class="lay-body">
+		@@include('./include/front/header.html')
+		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
+		<!-- container -->
+		<div class="lay-container">
+			<div class="lay-wrap">
+				<div class="board-wrap">
+					<!-- board-search -->
+					<div class="board-search">
+						<form>
+							<select class="board-search_input">
+								<option>유형 선택</option>
+							</select>
+							<input type="text" class="board-search_input" placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
+							<button class="board-search_btn">검색</button>
+						</form>
+					</div>
+
+					<div class="board-list-header">
+						<!-- 게시물 갯수 등 -->
+						<div class="board-stat">
+							총 게시물 <span>(<b>999</b>건/9999건)</span>
+						</div>
+
+						<!-- 선택옵션 등 -->
+						<div class="board-extra">
+							<select class="cs-input cs-input-point">
+								<option>최신순</option>
+							</select>
+							<select class="cs-input cs-input-point">
+								<option>10개씩 보기</option>
+							</select>
+						</div>
+					</div>
+					
+					<!-- board-gall-list -->
+					<div class="board-gall-list">
+						<ul>
+							@@for(var i = 0; i < 8; i++){
+								<li>
+									<a href="#">
+										<div class="thumb"></div>
+										<div class="subject">불법 쓰레기 탐지 불법 쓰레기 탐지 불법 쓰레기 탐지 불법 쓰레기 탐지 불법 쓰레기 탐지</div>
+										<div class="date">2023-12-11</div>
+									</a>
+								</li>
+							}	
+						</ul>
+					</div>
+					<!--// board-gall-list -->
+
+
+					<div class="board-list-bottom">
+						@@include('./include/board-paging.html')
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// container -->
+		@@include('./include/front/footer.html')
+	</div>
+	<!--// lay-body -->
+</body>
+
+</html>
