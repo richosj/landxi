@@ -137,6 +137,63 @@
   align-items: center;
   justify-content: center;
   background-color: #f6f8f9;
+  &.v3{
+    background: url('#{var.$image}/front/login_bg_v3.jpg') center / cover;
+    .login-logo{
+      background-image: url("../../images/main/logo.png");
+      height: 27px;
+      width: 314px;
+      overflow: hidden;
+      line-height: 100px;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    .login-txt{
+      font-size: 16px;
+      color:#adbedb;
+      text-align: center;
+      margin-bottom: 60px;
+      font-family: "GmarketSans";
+    }
+    .login-input{
+      background: rgba(0,0,0,0.4);
+      border: 1px solid #fff;
+      color:#fff;
+    }
+    .login-cont_inputs{
+      label{
+        color:#fff;
+      }
+    } 
+    .cs-checkbox{
+      & + label{
+        color:#fff
+      }
+    }
+    .login-cont_extra{
+      .login-cont_passfinder{
+        a{
+          color:#fff;
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+    .login-cont_btns a{
+      cursor: pointer;
+      color: #fff;
+      border: 0;
+      background-color: #006ef6;
+    }
+    .login-cont_btns button{
+      color: #fff;
+      border: 0;
+      background-position: 0 50%;
+      transition: all 1s;
+      background: linear-gradient(90deg, rgb(4, 119, 235), rgb(25, 198, 240), rgb(25, 198, 240), rgb(4, 119, 235));
+      background-size: 400% 400%;
+    }
+  }
 }
 
 .login-cont{width: 430px;flex: 0 0 430px;}
@@ -234,6 +291,10 @@
   .login-body .login-container {
       padding: 30px;
       width: calc(100% - 550px);
+      &.v3{
+        width: 100%;
+        padding: 0;
+      }
   }
 }
 @media (max-width: 990px) {

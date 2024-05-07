@@ -29,7 +29,7 @@
     }
     .over-scroll::-webkit-scrollbar {
         width: 8px;
-        padding-left: 12px;
+        // padding-left: 12px;
     }
     .over-scroll::-webkit-scrollbar-thumb {
         background-color: #e0e0e0;
@@ -48,6 +48,7 @@
             font-size: 22px;
             margin-top: 0;
             margin-bottom: 15px;
+            line-height: 1;
         }
         ul{
             display: flex;
@@ -122,29 +123,49 @@
         }
     }
     .main-sh-col02{
+        background-image: url('#{var.$image}/platform/main_bg02.png');
+        background-size: cover;
+        padding: 0;
         h3{
-            font-size: 16px;
-            margin: 0;
-            margin-bottom: 24px;
+            font-size: 20px;
+            margin: 32px 0 15px 36px;
+            color:#fff;
+        }
+        .card-inner{
+            background: #fff;
+            height: 345px;
+            padding: 8px;
+            border-radius: 20px;
+            box-sizing: border-box;
         }
         .over-scroll{
-            height: 315px;
-            padding-right: 5px;
+            height: 275px;
+            padding: 28px;
             .board-list-text:first-child{
                 margin-bottom: 16px;
             }
         }
     }
     .main-sh-col03{
+        background-image: url('#{var.$image}/platform/main_bg03.png');
+        background-size: cover;
+        padding: 0;
         h3{
-            font-size: 16px;
-            margin: 0;
-            margin-bottom: 24px;
+            font-size: 20px;
+            margin: 32px 0 15px 36px;
+            color:#fff;
+        }
+        .card-inner{
+            background: #fff;
+            height: 345px;
+            padding: 8px;
+            border-radius: 20px;
+            box-sizing: border-box;
         }
         .over-scroll{
-            height: 271px;
-            padding-right: 5px;
-            margin-bottom: 16px;
+            height: 225px;
+            padding: 28px;
+            margin-bottom: 10px;
             p{
                 margin: 0;
             }
@@ -156,54 +177,88 @@
 }
 
 .main-sh-row02{
-    .tab-nav-wrap{
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 24px;
-        &>span{
-            margin-right: 37px;
-            i{
-                display: inline-block;
-                width: 24px;
-                height: 24px;
-                background-image: url('#{var.$image}/platform/icon-start.png');
-                background-size: contain;
-                vertical-align: text-top;
-                margin-right: 11px;
-            }
+    .main-sh-col04{
+        position: relative;
+        background: #e1e1e1;
+        padding: 0;
+        background-image: url('#{var.$image}/platform/main_bg04_ico.jpg');
+        background-position: 98% 16px;
+        background-repeat: no-repeat;
+        h3{
+            padding-left: 37px;
             font-size: 22px;
             font-weight: bold;
-
         }
     }
+    .tab-nav-wrap{
+        position: absolute;
+        top: 38px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
     .tab-nav{
+        
         display: flex;
-
-        background: #edf1f4;
+        background: #fff;
         margin: 0;
         padding: 8px;
         border-radius: 6px;
+        border: 1px solid #e0e4e7;
         
         li{
             list-style: none;
             &.active{
                 button{
-                    background: #2149a6;
+                    background: linear-gradient(to right, #0083ec, #10bbf0 50%);
                     color:#fff;
                 }
             }
             button{
                 border-radius:6px;
                 background: none;
-                border: none;
+                border: none;   
                 width: 148px;
                 height: 44px;
                 font-size: 16px;
             }
         }
         
+    }
+    .card-inner{
+        background-color: #fff;
+        padding: 48px 36px 36px 36px;
+        border-radius: 20px;
+        margin:0 1px 4px 1px;
+       
+        table{
+            th,td{
+                height: auto;
+            }
+            .state_span{
+                display: inline-block;
+                font-size: 14px;
+                height: 24px;
+                width: 82px;
+                border-radius: 12px;
+                line-height: 24px;
+                &.state_comp{
+                    background: #e5eaf1;
+                    color:#033272;
+                    
+                }
+                &.state_ing{
+                    background: #e7f7fd;
+                    color:#18b0ef;
+                    
+                }
+                &.state_error{
+                    background: #ffe5e5;
+                    color:#ff3a3a;
+                    
+                }
+            }
+        }
     }
     .like-push{
         i{

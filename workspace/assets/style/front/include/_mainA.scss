@@ -23,6 +23,9 @@
   left: 0;
   right: 0;
   width: 100%;
+  &.lay_fixed{
+    position: relative;
+  }
   &.gnb-open {
     .lay-header-bg {
       border-top: 1px solid #eee;
@@ -33,7 +36,49 @@
 .lay-header.v3 .btn-search {
   display: none;
 }
-
+.lay-header .btn-bulb{
+  position: relative;
+  line-height: 100px;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../images/front/util_bulb-ico.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius:8px;
+  transition: all ease 0.3s;
+  &:hover{
+    border: 1px solid #26879a !important;
+    background-color: rgba(38,135,154,0.5);
+    &:after{
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      content:"서비스 활용가이드";
+      text-align: center;
+      font-size: 14px;
+      width: 132px;
+      height: 38px;
+      color:#fff;
+      line-height: 44px;
+      border-radius: 5px;
+      transition: all ease 0.3s;
+      background: url(../../images/front/util_bulb-ico-edge.png) no-repeat center;
+    }
+  }
+}
+.lay-header.v3:not(.gnb-open).black .btn-bulb{
+  background-image: url(../../images/front/util_bulb-ico02.png);
+  &:hover{
+    border: 1px solid #26879a !important;
+    background-image: url(../../images/front/util_bulb-ico.png);
+    &:after{
+      background: url(../../images/front/util_bulb-ico-edge02.png) no-repeat center;
+    }
+  }
+}
 .lay-header.v3.gnb-open .cs-icon-lock {
   background-image: url("../../images/main/icon-lock-black.png") !important;
 }
@@ -111,7 +156,7 @@
 
 .lay-header.v3:not(.gnb-open).black .lay-logo a {
   background-image: url("../../images/main/logo-black.png");
-  height: 17px;
+  height: 27px;
 }
 
 .lay-header.v3:not(.gnb-open).black .cs-icon-lock {
@@ -132,7 +177,8 @@
 }
 
 .lay-header.v3:not(.gnb-open).black .btn-login,
-.lay-header.v3:not(.gnb-open).black .btn-sitemap {
+.lay-header.v3:not(.gnb-open).black .btn-sitemap,
+.lay-header.v3:not(.gnb-open).black .btn-bulb {
   color: #000;
   border: 1px solid #cfcfcf;
 }
@@ -142,7 +188,8 @@
   }
 }
 .lay-header.v3:not(.gnb-open) .btn-login,
-.lay-header.v3:not(.gnb-open) .btn-sitemap{border: 1px solid #697685;}
+.lay-header.v3:not(.gnb-open) .btn-sitemap,
+.lay-header.v3:not(.gnb-open) .btn-bulb{border: 1px solid #697685;}
 .lay-sitemap .lay-sitemap_bg1, .lay-sitemap .lay-sitemap_bg2{
   background-image: none;
 }
@@ -186,10 +233,10 @@
   }
   .lay-gnb-depth {
     //background-color: #fff;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(238,238,238,0.4);
     opacity: 0;
-    border-left: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
+    border-left: 1px solid rgba(238,238,238,0.4);
+    border-right: 1px solid rgba(238,238,238,0.4);
   }
   .lay-gnb .lay-gnb-depth ul a {
     color: #666666;
@@ -206,6 +253,7 @@
 
 .lay-sitemap{
   background:#f6f8f9 url('../../images/front/allmenu-bg.png') no-repeat 50% 100%;
+  background-size: contain;
   .lay-sitemap_bar{
     top: 0;
     height: 80px;
@@ -219,7 +267,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-image: url(../../images/main/logo-black.png);
-    height: 27px;
+    height: 24px;
     width: 314px;
   }
   .lay-sitemap_close{
@@ -356,7 +404,7 @@
   &-group{
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 5%;
     width: 100%;
   }
   &-container{
@@ -463,7 +511,7 @@
   text-align: center;
   z-index: 4;
   position: absolute;
-  top: 0;
+  top: 5%;
   left: 0;
   width: 100%;
   color: #fff;
@@ -1533,4 +1581,122 @@ body.mobile .section-4 {
   height: auto;
   padding-top: 5vh;
   padding-bottom: 5vh;
+}
+
+
+.slideUP {
+  animation: slideUP 1.8s linear 0s infinite alternate;
+	-webkit-animation: slideUP 1.8s linear 0s infinite alternate;
+  -moz-animation: slideUP 1.8s linear 0s infinite alternate
+}
+.slideDown {
+  animation: slideDown 1.8s linear 0s infinite alternate;
+	-webkit-animation: slideDown 1.8s linear 0s infinite alternate;
+  -moz-animation: slideDown 1.8s linear 0s infinite alternate
+}
+
+@-moz-keyframes slideUP {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes slideUP {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideUP {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@-moz-keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.lay_fixed{
+  .lay-hedaer-right{
+    .btn-bulb{
+      border: 1px solid #cfcfcf;
+      background-image: url(../../images/front/util_bulb-ico02.png);
+      &:hover{
+        border: 1px solid #26879a !important;
+        background-color: rgba(38,135,154,0.5);
+        background-image: url(../../images/front/util_bulb-ico.png);
+        &:after{
+          background: url(../../images/front/util_bulb-ico-edge02.png) no-repeat center;
+        }
+      }
+    }
+    .btn-login{
+      i{
+        &.cs-icon-lock {
+          background-image: url(../../images/main/icon-lock-black.png);
+        }
+      }
+    }
+    .btn-sitemap{
+      background: #fff;
+      color: #091634;
+      font-weight: 400;
+      border: 1px solid #cfcfcf;
+      i{
+        span{
+          background-color: #01b2d4;
+          &:after{
+            background-color: #01b2d4;
+          }
+          &:before{
+            background-color: #01b2d4;
+          }
+        }
+      }
+    }
+  }
+  .lay-gnb-depth {
+    border-top: 1px solid rgba(238, 238, 238, 0.4);
+    border-left: 1px solid rgba(238, 238, 238, 0.4);
+    border-right: 1px solid rgba(238, 238, 238, 0.4);
+  }
 }

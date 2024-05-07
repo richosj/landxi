@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	@@include('./include/front/head.html')
+</head>
+
+<body>
+	<div class="lay-body">
+		@@include('./include/front/header.html')
+		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
+		<!-- container -->
+		<div class="lay-container">
+			<div class="lay-wrap">
+				<div class="row">
+					<div class="ai_card">
+						<h2>추론배치추가<button class="add_btn"></button></h2>
+						<div class="ai_card_inner">
+							<h3>추론추가 </h3>
+							<div class="cs-table">
+								<table>
+									<colgroup>
+										<col style="width: 125px;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">모델명</th>
+											<td>모델명모델명</td>
+										</tr>
+										<tr>
+											<th scope="row">추론명</th>
+											<td><input type="text" class="cs-input width100p"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-12 pt-10">
+					<ul class="tab-nav tab-type01 service-nav" data-js="tabNav">
+						<li class="active">
+							<button type="button" data-id="tabnav1">
+								추론
+							</button>
+						</li>
+						<li class="">
+							<button type="button" data-id="tabnav2">
+								추론02
+							</button>
+						</li>
+					</ul>
+				</div>
+
+				<div data-toggle-id="tabnav1">
+					<div class="ai_upload_wrap">
+						<h3>추론 입력 데이터</h3>
+						<div class="row">
+							<div class="col col-6">
+								<h4>정사영상 파일 업로드</h4>
+								<div class="fileuploader-ui">
+									<i class="icon" aria-hidden="true"><img src="./common/images/platform/icon-fileupload.png" alt=""></i>
+									<p class="text">DRAG & DROP (.TIF파일만 업로드 가능합니다.)</p>
+									<button type="button" class="cs-btn cs-btn-color2" title="파일 첨부">파일 업로드</button>
+								</div>
+							</div>
+							<div class="col col-6">
+								<h4>DSM 파일 업로드</h4>
+								<div class="fileuploader-ui">
+									<i class="icon" aria-hidden="true"><img src="./common/images/platform/icon-fileupload.png" alt=""></i>
+									<p class="text">DRAG & DROP (.TIF파일만 업로드 가능합니다.)</p>
+									<button type="button" class="cs-btn cs-btn-color2" title="파일 첨부">파일 업로드</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="brn_upload_wrap">
+						<button class="btn btn-gra">실행</button>
+					</div>
+	
+					<div class="board-wrap">
+						<!-- board-search -->
+						<div class="board-list-header">
+							<!-- 게시물 갯수 등 -->
+							<div class="board-stat ai_board-stat">
+								AI 서비스 추론 검색 결과<span>(<b>999</b>건/9999건)</span>
+							</div>
+	
+							<!-- 선택옵션 등 -->
+							<div class="board-extra">
+								<button class="cs-btn cs-btn-color1">삭제</button>
+							</div>
+						</div>
+						
+						<!-- board-gall-list -->
+						<div class="board-list-text">
+							<table>
+								<colgroup>
+								<col class="width50">
+								<col class="width100">
+								<col class="width300">
+								<col>
+								<col class="width140">
+								<col class="width170">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="row">
+										<input type="checkbox" class="cs-checkbox" id="user-remember">
+										<label for="user-remember"><span></span></label>
+									</th>
+									<th scope="row">번호</th>
+									<th scope="row">모델명</th>
+									<th scope="row">추론명</th>
+									<th scope="row">상태</th>
+									<th scope="row">등록일</th>
+								</tr>
+								</thead>
+								<tbody>
+								@@for(var i = 10; i > 7; i--){
+								<tr>
+									<td class="tac">
+										<input type="checkbox" class="cs-checkbox" id="user-remember">
+										<label for="user-remember"><span></span></label>
+									</td>
+									<td class="tac">${i}</td>
+									<td class="tac">농작물 분류 위성 모델</td>
+									<td class="item_list-title"><a href="#" class="cs-link-text"><span>20240429 농작물 분류 위성 모델</span></a></td>
+									<td class="tac">실행중</td>
+									<td class="tac">2023.03.31 <span class="ai_tbl_time">14:32</span></td>
+								</tr>
+								}
+								@@for(var i = 7; i > 0; i--){
+									<tr>
+										<td class="tac">
+											<input type="checkbox" class="cs-checkbox" id="user-remember">
+											<label for="user-remember"><span></span></label>
+										</td>
+										<td class="tac">${i}</td>
+										<td class="tac">농작물 분류 위성 모델</td>
+										<td class="item_list-title"><a href="#" class="cs-link-text"><span>20240429 농작물 분류 위성 모델</span></a></td>
+										<td class="tac">실행대기</td>
+										<td class="tac">2023.03.31 <span class="ai_tbl_time">14:32</span></td>
+									</tr>
+								}
+								</tbody>
+							</table>
+						</div>
+						<div class="board-list-bottom">
+							@@include('./include/board-paging.html')
+						</div>
+					</div>
+					<!--// board-gall-list -->
+				</div>
+				
+
+
+					
+
+				<div data-toggle-id="tabnav2" class="toggle-hidden">
+					<div class="ai_upload_wrap">
+						<h3>추론 입력 데이터</h3>
+						<div class="row">
+							<div class="col col-6">
+								<h4>정사영상 파일 업로드</h4>
+								<div class="fileuploader-ui">
+									<i class="icon" aria-hidden="true"><img src="./common/images/platform/icon-fileupload.png" alt=""></i>
+									<p class="text">DRAG & DROP (.TIF파일만 업로드 가능합니다.)</p>
+									<button type="button" class="cs-btn cs-btn-color2" title="파일 첨부">파일 업로드</button>
+								</div>
+							</div>
+							<div class="col col-6">
+								<h4>DSM 파일 업로드</h4>
+								<div class="fileuploader-ui">
+									<i class="icon" aria-hidden="true"><img src="./common/images/platform/icon-fileupload.png" alt=""></i>
+									<p class="text">DRAG & DROP (.TIF파일만 업로드 가능합니다.)</p>
+									<button type="button" class="cs-btn cs-btn-color2" title="파일 첨부">파일 업로드</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="brn_upload_wrap">
+						<button class="btn btn-gra">실행</button>
+					</div>
+	
+					<div class="board-wrap">
+						<!-- board-search -->
+						<div class="board-list-header">
+							<!-- 게시물 갯수 등 -->
+							<div class="board-stat ai_board-stat">
+								AI 서비스 추론 검색 결과<span>(<b>999</b>건/9999건)</span>
+							</div>
+	
+							<!-- 선택옵션 등 -->
+							<div class="board-extra">
+								<button class="cs-btn cs-btn-color1">삭제</button>
+							</div>
+						</div>
+						
+						<!-- board-gall-list -->
+						<div class="board-list-text">
+							<table>
+								<colgroup>
+								<col class="width50">
+								<col class="width100">
+								<col class="width300">
+								<col>
+								<col class="width140">
+								<col class="width170">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="row">
+										<input type="checkbox" class="cs-checkbox" id="user-remember">
+										<label for="user-remember"><span></span></label>
+									</th>
+									<th scope="row">번호</th>
+									<th scope="row">모델명</th>
+									<th scope="row">추론명</th>
+									<th scope="row">상태</th>
+									<th scope="row">등록일</th>
+								</tr>
+								</thead>
+								<tbody>
+								@@for(var i = 10; i > 7; i--){
+								<tr>
+									<td class="tac">
+										<input type="checkbox" class="cs-checkbox" id="user-remember">
+										<label for="user-remember"><span></span></label>
+									</td>
+									<td class="tac">${i}</td>
+									<td class="tac">농작물 분류 위성 모델</td>
+									<td class="item_list-title"><a href="#" class="cs-link-text"><span>20240429 농작물 분류 위성 모델</span></a></td>
+									<td class="tac">실행중</td>
+									<td class="tac">2023.03.31 <span class="ai_tbl_time">14:32</span></td>
+								</tr>
+								}
+								@@for(var i = 7; i > 0; i--){
+									<tr>
+										<td class="tac">
+											<input type="checkbox" class="cs-checkbox" id="user-remember">
+											<label for="user-remember"><span></span></label>
+										</td>
+										<td class="tac">${i}</td>
+										<td class="tac">농작물 분류 위성 모델</td>
+										<td class="item_list-title"><a href="#" class="cs-link-text"><span>20240429 농작물 분류 위성 모델</span></a></td>
+										<td class="tac">실행대기</td>
+										<td class="tac">2023.03.31 <span class="ai_tbl_time">14:32</span></td>
+									</tr>
+								}
+								</tbody>
+							</table>
+						</div>
+						<!--// board-gall-list -->
+						<div class="board-list-bottom">
+							@@include('./include/board-paging.html')
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--// container -->
+		@@include('./include/front/footer.html')
+	</div>
+	<!--// lay-body -->
+</body>
+
+</html>

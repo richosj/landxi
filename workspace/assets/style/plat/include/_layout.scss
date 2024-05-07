@@ -214,7 +214,7 @@ body {
   margin-left: auto;
   margin-right: 0;
   display: flex;
-
+  align-items: center;
   >*+* {
     margin-left: 16px;
   }
@@ -967,7 +967,7 @@ $cols: 12;
     background-color: #fff;
     border-radius: 20px;
     padding: 32px 35px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   }
 
   @for $i from 1 to 12 {
@@ -4012,6 +4012,43 @@ div.toggle-hidden{
       .scrollTarget{
         min-height: 1000px;
       }
+    }
+  }
+}
+
+.btn-bulb{
+  color: #000;
+  border: 1px solid #cfcfcf;
+  position: relative;
+  line-height: 100px;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../images/front/util_bulb-ico02.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  transition: all ease 0.3s;
+  &:hover{
+    background-image: url(../../images/front/util_bulb-ico.png);
+    border: 1px solid #26879a !important;
+    background-color: rgba(38,135,154,0.5);
+    &:after{
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      content:"서비스 활용가이드";
+      text-align: center;
+      font-size: 14px;
+      width: 132px;
+      height: 38px;
+      color:#fff;
+      line-height: 44px;
+      border-radius: 5px;
+      transition: all ease 0.3s;
+      background: url(../../images/front/util_bulb-ico-edge02.png) no-repeat center;
     }
   }
 }

@@ -27,6 +27,7 @@
 			</ul>
 		</div>
 		<div class="lay-hedaer-right">
+			<a href="javascript: void(0);" class="btn-bulb">서비스 활용가이드</a>
 			<!-- 알림 -->
 			<a href="#" class="member-alarm" title="알림 열림" onClick="headerModal(this,'#memberAlarm'); return false;"><i>신규</i> <span class="sr-only">알람</span></a>
 			<!-- 알림모달 -->
@@ -193,536 +194,110 @@
 
           <header class="workspace-header">
             <div class="user"><strong>DAVIS</strong>님 의 워크 스페이스</div>
+            <div class="btn-group">
+              <button type="button" class="btn">전체선택</button>
+              <button type="button" class="btn">선택</button>
+              <button type="button" class="btn btn-outline-blue">삭제</button>
+            </div>
           </header>
-          <div class="main-sh-row01 row">
-            <div class="col col-4 col-lg-6 main-sh-col01">
-              <h3>데이터셋 생성현황</h3>
-              <ul>
-                <li class="main-sh-col01-item01">
-                  <p>생성한 학습 데이터셋</p>
-                  <div>
-                    <strong>7</strong>개 데이터셋
-                  </div>
-                  <div>
-                    <strong>380</strong>파일 업로드 등록
-                  </div>
-                </li>
-                <li class="main-sh-col01-item02">
-                  <p>레이블 된 이미지</p>
-                  <div>
-                    <strong>1,000</strong>이미지 파일 라벨링
-                  </div>
-                  <div>
-                    <strong>1,580</strong>레이블(클래스)
-                  </div>
-                </li>
-                <li class="main-sh-col01-item03">
-                  <p>추론 데이터셋</p>
-                  <div>
-                    <strong>1,000</strong>이미지 파일 라벨링
-                  </div>
-                  <div>
-                    <strong>1,580</strong>레이블(클래스)
-                  </div>
-                </li>
-                <li class="main-sh-col01-item04">
-                  <p>생성한 학습 데이터셋</p>
-                  <div>
-                    <strong>7</strong>개 데이터셋
-                  </div>
-                  <div>
-                    <strong>380</strong>파일 업로드 등록
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="col col-4 col-lg-6 main-sh-col02">
-              <h3>클래스 레이블 생성 현황</h3>
-              <div class="over-scroll">
-                <div class="board-list-text">
-                  <table>
-                    <colgroup>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">선택</th>
-                        <th scope="col">프로젝트</th>
-                        <th scope="col">레이블 갯수</th>
-                        <th scope="col">업로드 이미지 파일</th>
-                        <th scope="col">라벨링 완료 파일 갯수</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tac"><input type="radio" class="cs-checkbox" id="test1"><label for="test1"><span></span></label></td>
-                        <td class="tac">프로젝트#1</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                      </tr>
-                      <tr>
-                        <td class="tac"><input type="radio" class="cs-checkbox" id="test1"><label for="test1"><span></span></label></td>
-                        <td class="tac">프로젝트#1</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                      </tr>
-                      <tr>
-                        <td class="tac"><input type="radio" class="cs-checkbox" id="test1"><label for="test1"><span></span></label></td>
-                        <td class="tac">프로젝트#1</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="board-list-text">
-                  <table>
-                    <colgroup>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">클래스(레이블)</th>
-                        <th scope="col">프로젝트</th>
-                        <th scope="col">레이블 생성 갯수</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tac">soccer bail field</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                      </tr>
-                      <tr>
-                        <td class="tac">soccer bail field</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                      </tr>
-                      <tr>
-                        <td class="tac">soccer bail field</td>
-                        <td class="tac">600</td>
-                        <td class="tac">600</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="col col-4 col-lg-12 main-sh-col03">
-              <h3>작업 이력</h3>
-              <div class="board-list-text">
-                <div class="over-scroll">
-                  <table>
-                    <colgroup>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">번호</th>
-                        <th scope="col">구분</th>
-                        <th scope="col">작업 명</th>
-                        <th scope="col">경로</th>
-                        <th scope="col">작업일자</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tac">10</td>
-                        <td class="tac">프로젝트#1</td>
-                        <td class="tac">라벨링 수행</td>
-                        <td class="tac">-</td>
-                        <td class="tac"><p>2024-01-01</p><span>12:12:12</span></td>
-                      </tr>
-                      <tr>
-                        <td class="tac">10</td>
-                        <td class="tac">프로젝트#1</td>
-                        <td class="tac">라벨링 수행</td>
-                        <td class="tac">-</td>
-                        <td class="tac"><p>2024-01-01</p><span>12:12:12</span></td>
-                      </tr>
-                      <tr>
-                        <td class="tac">10</td>
-                        <td class="tac">프로젝트#1</td>
-                        <td class="tac">라벨링 수행</td>
-                        <td class="tac">-</td>
-                        <td class="tac"><p>2024-01-01</p><span>12:12:12</span></td>
-                      </tr>
-                      <tr>
-                        <td class="tac">10</td>
-                        <td class="tac">프로젝트#1</td>
-                        <td class="tac">라벨링 수행</td>
-                        <td class="tac">-</td>
-                        <td class="tac"><p>2024-01-01</p><span>12:12:12</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="board-list-bottom">
-                <!-- paging -->
-                <div class="cs-paging">
-                <a href="#" class="cs-paging__first">첫페이지</a>
-                <a href="#" class="cs-paging__prev">이전페이지</a>
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">7</a>
-                <a href="#">8</a>
-                <a href="#">9</a>
-                <a href="#">10</a>
-                <a href="#" class="cs-paging__next">다음페이지</a>
-                <a href="#" class="cs-paging__last">마지막페이지</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="main-sh-row02 row">
-            <div class="col">
-              <div class="tab-nav-wrap">
-                <span><i></i>즐겨찾기</span>
-                <ul class="tab-nav tab-type01" data-js="tabNav">
-                  <li class="active">
-                    <button type="button" class="" data-id="tabnav1">
-                        서비스
-                    </button>
-                  </li>
-                  <li class="">
-                    <button type="button" class="" data-id="tabnav2">
-                        프로젝트
-                    </button>
-                  </li>
-                  <li class="">
-                    <button type="button" class="" data-id="tabnav3">
-                        워크플로우
-                    </button>
-                  </li>
-                  <li class="">
-                    <button type="button" class="" data-id="tabnav4">
-                      학습
-                    </button>
-                  </li>
-                  <li class="">
-                    <button type="button" class="" data-id="tabnav5">
-                        추론
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <div data-toggle-id="tabnav1">
-                <div class="board-list-text">
-                  <table>
-                    <colgroup>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">즐겨찾기</th>
-                        <th scope="col">서비스 구분</th>
-                        <th scope="col">모델 명</th>
-                        <th scope="col">서비스 실행명</th>
-                        <th scope="col">등록일</th>
-                        <th scope="col">상태</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          서비스
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          서비스
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div data-toggle-id="tabnav2" class="toggle-hidden">
-                <div class="board-list-text">
-                  <table>
-                    <colgroup>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">즐겨찾기</th>
-                        <th scope="col">서비스 구분</th>
-                        <th scope="col">모델 명</th>
-                        <th scope="col">서비스 실행명</th>
-                        <th scope="col">등록일</th>
-                        <th scope="col">상태</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          프로젝트
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          프로젝트
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div data-toggle-id="tabnav3" class="toggle-hidden">
-                <div class="board-list-text">
-                  <table>
-                    <colgroup>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">즐겨찾기</th>
-                        <th scope="col">서비스 구분</th>
-                        <th scope="col">모델 명</th>
-                        <th scope="col">서비스 실행명</th>
-                        <th scope="col">등록일</th>
-                        <th scope="col">상태</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          워크플로우
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          워크플로우
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div data-toggle-id="tabnav4" class="toggle-hidden">
-                <div class="board-list-text">
-                  <table>
-                    <colgroup>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">즐겨찾기</th>
-                        <th scope="col">서비스 구분</th>
-                        <th scope="col">모델 명</th>
-                        <th scope="col">서비스 실행명</th>
-                        <th scope="col">등록일</th>
-                        <th scope="col">상태</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          학습
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          학습
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div data-toggle-id="tabnav5" class="toggle-hidden">
-                <div class="board-list-text">
-                  <table>
-                    <colgroup>
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">즐겨찾기</th>
-                        <th scope="col">서비스 구분</th>
-                        <th scope="col">모델 명</th>
-                        <th scope="col">서비스 실행명</th>
-                        <th scope="col">등록일</th>
-                        <th scope="col">상태</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          추론
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tac">
-                          <label class="like-push"><input type="checkbox"><i></i></label>
-                        </td>
-                        <td class="tac">
-                          추론
-                        </td>
-                        <td class="tac">
-                          모델 명
-                        </td>
-                        <td class="tac">
-                          불법 쓰레기 탐지
-                        </td>
-                        <td class="tac">
-                          2024-01-12
-                        </td>
-                        <td class="tac">
-                          실행중
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+          <div class="row">
+            <div class="col col-3 col-lg-4 workspace-txt-add">
+                <button type="button" class="add" onclick="addModal();">
+                  <i class="icon-add"></i>
+                  <span><strong>신규 레이블</strong> 만들기</span>
+                </button>
             </div>
-          </div>
+            <!--// col  -->  
+            <div class="col-3 col-lg-4 workspace-fix-item" style="background:#1d2f5f url('common/images/platform/work-bg-3.png') right 22px top no-repeat;">
+                <h3 class="icon1">나의 워크 스페이스</h3>
+                <div class="cont">
+                    <div class="info">
+                        <strong>DAVIS</strong>
+                        <p>2024-01-01</p>
+                    </div>
+                    <div class="setting">
+                        <span class="count">프로젝트 <strong style="color:#2149a6">7</strong></span>
+                        <button type="button" class="btn-icon icon-setting"></button>
+                    </div>
+                </div>
+                <!-- <i class="img"><img src="common/images/platform/avatar-f.png" alt=""></i> -->
+            </div>
+            <!--// col  -->  
+            <div class="col-3 col-lg-4 workspace-fix-item" style="background:#2f77e3 url('common/images/platform/work-bg-4.png') 100% 0 no-repeat">
+                <h3 class="icon2">초대받은 워크 스페이스</h3>
+                <div class="cont">
+                    <div class="info">
+                        <strong>DAVIS</strong>
+                        <p>2024-01-01</p>
+                    </div>
+                    <div class="setting">
+                        <span class="count">프로젝트 <strong>7</strong></span>
+                        <button type="button" class="btn-icon icon-setting"></button>
+                    </div>
+                </div>
+                <!-- <i class="img v2"><img src="common/images/platform/letter.png" alt=""></i> -->
+            </div>
+            <!--// col  -->  
 
+            <div class="col col-3 col-lg-4 workspace-item3" style="background-color: #033272;">
+                <h2>워크 플로우  #1</h2>
+                <div class="background-round-white align-center">
+                    <div class="desc">
+                        <strong>DAVIS</strong>
+                        <span class="fc-gray pl-10">2024-01-01</span>
+                    </div>
+                    <div class="btn-group">
+                        <label class="like-push v2"><input type="checkbox"><i></i></label>
+                        <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                        <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-3 col-lg-4 workspace-item3" style="background-color: #16bb9b;">
+                <h2>워크 플로우  #1</h2>
+                <div class="background-round-white align-center">
+                    <div class="desc">
+                        <strong>DAVIS</strong>
+                        <span class="fc-gray pl-10">2024-01-01</span>
+                    </div>
+                    <div class="btn-group">
+                        <label class="like-push v2"><input type="checkbox"><i></i></label>
+                        <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                        <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-3 col-lg-4 workspace-item3" style="background-color: #aba000;">
+                <h2>워크 플로우  #1</h2>
+                <div class="background-round-white align-center">
+                    <div class="desc">
+                        <strong>DAVIS</strong>
+                        <span class="fc-gray pl-10">2024-01-01</span>
+                    </div>
+                    <div class="btn-group">
+                        <label class="like-push v2"><input type="checkbox"><i></i></label>
+                        <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                        <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-3 col-lg-4 workspace-item3" style="background-color: #5574b9;">
+                <h2>워크 플로우  #1</h2>
+                <div class="background-round-white align-center">
+                    <div class="desc">
+                        <strong>DAVIS</strong>
+                        <span class="fc-gray pl-10">2024-01-01</span>
+                    </div>
+                    <div class="btn-group">
+                        <label class="like-push v2"><input type="checkbox"><i></i></label>
+                        <button type="button" class="btn-icon icon-modify3" title="수정">수정</button>
+                        <button type="button" class="btn-icon icon-del3" title="수정">삭제</button>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
         </div>
         <!--// lay-content-wrap -->
       </div>
@@ -811,4 +386,4 @@
   <!-- @include('./include/footer.html') -->
   
 </body>
-</html>`
+</html>

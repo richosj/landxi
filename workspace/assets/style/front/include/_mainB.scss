@@ -35,7 +35,49 @@ $src: agency;
 .lay-header.v3 .btn-search {
   display: none;
 }
-
+.lay-header.v3 .btn-bulb{
+  position: relative;
+  line-height: 100px;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../images/front/util_bulb-ico.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius:8px;
+  transition: all ease 0.3s;
+  &:hover{
+    border: 1px solid #26879a !important;
+    background-color: rgba(38,135,154,0.5);
+    &:after{
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      content:"서비스 활용가이드";
+      text-align: center;
+      font-size: 14px;
+      width: 132px;
+      height: 38px;
+      color:#fff;
+      line-height: 44px;
+      border-radius: 5px;
+      transition: all ease 0.3s;
+      background: url(../../images/front/util_bulb-ico-edge.png) no-repeat center;
+    }
+  }
+}
+.lay-header.v3:not(.gnb-open).black .btn-bulb{
+  background-image: url(../../images/front/util_bulb-ico02.png);
+  &:hover{
+    border: 1px solid #26879a !important;
+    background-image: url(../../images/front/util_bulb-ico.png);
+    &:after{
+      background: url(../../images/front/util_bulb-ico-edge02.png) no-repeat center;
+    }
+  }
+}
 .lay-header.v3.gnb-open .cs-icon-lock {
   background-image: url("../../images/main/icon-lock-black.png") !important;
 }
@@ -139,7 +181,8 @@ $src: agency;
 }
 
 .lay-header.v3:not(.gnb-open).black .btn-login,
-.lay-header.v3:not(.gnb-open).black .btn-sitemap {
+.lay-header.v3:not(.gnb-open).black .btn-sitemap,
+.lay-header.v3:not(.gnb-open).black .btn-bulb {
   color: #000;
   border: 1px solid #cfcfcf;
 }
@@ -152,7 +195,8 @@ $src: agency;
   background-image: none;
 }
 .lay-header.v3:not(.gnb-open) .btn-login,
-.lay-header.v3:not(.gnb-open) .btn-sitemap{border: 1px solid #697685;}
+.lay-header.v3:not(.gnb-open) .btn-sitemap,
+.lay-header.v3:not(.gnb-open) .btn-bulb{border: 1px solid #697685;}
 .lay-header.v3 .lay-gnb-depth{opacity: 0;
   border-top: 1px solid #eee;
   border-left: 1px solid #eeeeee;
