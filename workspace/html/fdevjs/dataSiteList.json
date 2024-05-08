@@ -1,6 +1,6 @@
 [
-	{"cate": "", "code": "", "title" : "메인화면 - LX", "url": "00-메인A.html", "dateNew": "2023-12-20", "dateModify": "2024-04-17", "extra": "추가수정 2024-04-23"},
-	{"cate": "", "code": "", "title" : "메인화면 - 기관", "url": "00-메인-기관.html", "dateNew": "2023-12-20", "dateModify": "2024-04-29", "extra": ""},
+	{"cate": "", "code": "", "title" : "메인화면 - LX <span class='new-tag'></span>", "url": "00-메인A.html", "dateNew": "2023-12-20", "dateModify": "2024-04-17", "extra": "추가수정 2024-04-23"},
+	{"cate": "", "code": "", "title" : "메인화면 - 기관 <span class='update-tag'></span>", "url": "00-메인-기관.html", "dateNew": "2023-12-20", "dateModify": "2024-04-29", "extra": ""},
 	{"cate": "", "code": "", "title" : "공통 - 로그인", "url": "99-01-공통-로그인.html", "dateNew": "2023-12-11", "dateModify": "", "extra": ""},
 	{"cate": "", "code": "", "title" : "공통 - 풀페이지 로그인", "url": "99-01-공통-풀페이지-로그인.html", "dateNew": "2024-05-02", "dateModify": "", "extra": ""},
 	{"cate": "", "code": "", "title" : "공통 - 회원가입 - 약관동의", "url": "99-02-01-회원가입-약관동의.html", "dateNew": "2023-12-11", "dateModify": "2023-12-14", "extra": "[{'text': '내용변경 일부'}]"},
