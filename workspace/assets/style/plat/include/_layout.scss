@@ -267,7 +267,9 @@ body {
 .member-alarm {
   background: url('#{var.$image}/platform/alarm.png') #fff no-repeat center;
   position: relative;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   i {
     position: absolute;
     border: 1px solid #000;
@@ -281,6 +283,19 @@ body {
     border-radius: 50%;
     right: 0;
     top: 0;
+  }
+  &.active{
+    border: 1px solid transparent !important;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #0477eb, #008eed, #19c6f0);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    &::after{
+      content:"";
+      background: url('#{var.$image}/platform/alarm.png') no-repeat center;
+      width: 36px;height: 36px;
+      display: block;
+
+    }
   }
 }
 

@@ -170,10 +170,8 @@ s2Swiper.on("slideChange", function () {
 
   document.querySelector(".s2-tpl").classList.remove("first-active");
   document.querySelector(".s2-tpl").innerHTML = html;
-  console.log("cahnge");
 
   let addTime = setTimeout(() => {
-    console.log("cahnge");
     document.querySelector(".s2-tpl").classList.add("first-active");
   }, 250);
 });

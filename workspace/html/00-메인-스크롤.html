@@ -4,9 +4,19 @@
 <head>
     @@include('./include/front/head.html')
     <link rel="stylesheet" href="./common/libjs/swiper-bundle.min.css">
-    <!-- <link rel="stylesheet" href="./common/libjs/fullpage.min.css"> -->
+    <link rel="stylesheet" href="./common/libjs/fullpage.min.css">
     <script src="./common/libjs/swiper-bundle.min.js"></script>
-    <!-- <script src="./common/libjs/fullpage.js"></script> -->
+    <script src="./common/libjs/fullpage.js"></script>
+    <style>
+        #section-3{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .container{overflow: hidden;}
+        #footer{
+            height: auto !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +29,7 @@
     </aside>
     <!-- nav -->
 
-    <div class="section-container">
+    <div class="section-container" id="fullpage">
         <section class="section section-1" id="section1">
             <!-- <div class="swiper">
                 <div class="swiper-wrapper"> -->
@@ -142,7 +152,6 @@
         <section class="section section-3" id="section-3">
             <div class="container">
                 <h3 style="--delay:.15s"><img src="./common/images/main/s3-tit.png" alt=""></h3>
-
                 <div class="flex-wrap">
                     <div style="--delay:0.25s">
                         <a href="#">
@@ -497,45 +506,88 @@
         // console.log(s4.offsetTop)
 
         // IntersectionObserver 등록
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                // 주시 대상이 뷰포트 안으로 들어오면 active 클래스 추가
-                console.log(entry.intersectionRatio, entry)
-                if (entry.intersectionRatio > 0) {
-                    entry.target.classList.add("active");
-                }
-                // 아니면 active 클래스 제거
-                else {
-                    //entry.target.classList.remove("active");
-                }
-            });
-        });
+        // const io = new IntersectionObserver((entries) => {
+        //     entries.forEach((entry) => {
+        //         // 주시 대상이 뷰포트 안으로 들어오면 active 클래스 추가
+        //         console.log(entry.intersectionRatio, entry)
+        //         if (entry.intersectionRatio > 0) {
+        //             entry.target.classList.add("active");
+        //         }
+        //         // 아니면 active 클래스 제거
+        //         else {
+        //             //entry.target.classList.remove("active");
+        //         }
+        //     });
+        // });
 
         // 주시 대상 선언, 주시 시작
-        const boxElList = document.querySelectorAll(".section-3");
-        boxElList.forEach((el) => {
-            io.observe(el);
-        });
-        $(window).scroll(function () {
-            // 현재 스크롤 위치
-            var scrollPos = $(this).scrollTop();
+        // const boxElList = document.querySelectorAll(".section-3");
+        // boxElList.forEach((el) => {
+        //     io.observe(el);
+        // });
+        // $(window).scroll(function () {
+        //     // 현재 스크롤 위치
+        //     var scrollPos = $(this).scrollTop();
 
-            if(scrollPos > 10){
-                $('.lay-header').addClass('black')
-            }
-            $('.section-container .section').each(function (indx) {
-                if ($(this).offset().top <= scrollPos) {
-                    indx = indx + 1;
-                    $('.index-nav .current').text('').text("0" + indx);
-                    $('.index-nav .line').attr('id', '').attr('id','line-n-'+indx+'')
-                    if (indx == 4) {
-                        $('.index-nav').addClass('black');
-                    } else {
-                        $('.index-nav').removeClass('black');
-                    }
+        //     if(scrollPos > 10){
+        //         $('.lay-header').addClass('black')
+        //     }
+        //     $('.section-container .section').each(function (indx) {
+        //         if ($(this).offset().top <= scrollPos) {
+        //             indx = indx + 1;
+        //             $('.index-nav .current').text('').text("0" + indx);
+        //             $('.index-nav .line').attr('id', '').attr('id','line-n-'+indx+'')
+        //             if (indx == 4) {
+        //                 $('.index-nav').addClass('black');
+        //             } else {
+        //                 $('.index-nav').removeClass('black');
+        //             }
+        //         }
+        //     })
+        // }).scroll()
+
+        var OKS = {
+            DUR: .8,
+            EASE: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
+        };
+
+
+        $('#fullpage').fullpage({
+            licenseKey: 'FB75CBCF-678A49C4-88C3BA08-F5F9BEEA',
+            paddingTop: '0',
+            scrollingSpeed: OKS.DUR * 1300,
+            easingcss3: OKS.EASE,
+            css3: true,
+            autoScrolling: true,
+            onLeave: function (origin, destination, direction) {
+                const currentText = document.querySelector('.index-nav .current');
+
+                // if (destination.index == 1) {
+                //     s2Swiper.autoplay.start()
+                // } else {
+                //     s2Swiper.autoplay.pause()
+                // }
+
+                if (destination.index == 3) {
+                    //noticeSwiper.autoplay.start()
+                } else {
+                    //noticeSwiper.autoplay.pause()
                 }
-            })
-        }).scroll()
+                if (destination.index < 4) {
+                    currentText.textContent = "0" + (destination.index + 1);
+                }
+                const layHeader = document.querySelector('.lay-header');
+                const indexNav = document.querySelector('.index-nav');
+
+                if (destination.index > 2) {
+                    layHeader.classList.add('black');
+                    indexNav.classList.add('black');
+                } else {
+                    layHeader.classList.remove('black');
+                    indexNav.classList.remove('black');
+                }
+            }
+        })
     </script>
 </body>
 

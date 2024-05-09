@@ -14,7 +14,7 @@
 }
 
 .welcome-user{
-    background: url("../images/platform/welcome-bg.png") no-repeat 100% 0;
+    
     .name{
         font-size: 22px;
         font-weight: 400;
@@ -45,7 +45,8 @@
     display: flex;
     align-items: flex-end;
     line-height: 1;
-    transform: translateY(-5px);
+    transform: translateY(-12px);
+    padding-bottom: 10px;
     b{
         color: #2149a6;
         font-size: 36px;
@@ -69,7 +70,7 @@
     text-align: right;
     color: #666;
     font-size: 14px;
-    padding: 12px 0 15px;
+    padding: 12px 0 18px;
     b{
         color: #2149a6;
     }
@@ -140,4 +141,19 @@
     .cs-input{
         width: calc(50% - 4px);
     }
+}
+
+.mypage-btn-group{
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0 10px;
+}
+
+.col-gra-border{
+    border:1px solid transparent !important;
+    background-image:linear-gradient(#fff, #fff), linear-gradient(to right ,#0477eb ,#008eed , #19c6f0);
+    background-origin:border-box; 
+    background-clip:padding-box, border-box;
 }

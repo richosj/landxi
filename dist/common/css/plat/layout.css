@@ -12624,6 +12624,16 @@ textarea.cs-input {
   table-layout: fixed;
 }
 
+.board-list-text.thead-sm thead th {
+  font-size: 15px;
+  height: 40px;
+}
+
+.board-list-text.thead-sm tbody td {
+  height: 45px;
+  font-size: 14px;
+}
+
 .board-list-text thead th {
   color: #000000;
   font-size: 16px;
@@ -13549,6 +13559,9 @@ body {
 .member-alarm {
   background: url("../../images/platform/alarm.png") #fff no-repeat center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .member-alarm i {
@@ -13564,6 +13577,21 @@ body {
   border-radius: 50%;
   right: 0;
   top: 0;
+}
+
+.member-alarm.active {
+  border: 1px solid transparent !important;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #0477eb, #008eed, #19c6f0);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.member-alarm.active::after {
+  content: "";
+  background: url("../../images/platform/alarm.png") no-repeat center;
+  width: 36px;
+  height: 36px;
+  display: block;
 }
 
 .lay-header-modal {
@@ -17782,10 +17810,6 @@ div.toggle-hidden {
   color: #18b0ef;
 }
 
-.welcome-user {
-  background: url("../images/platform/welcome-bg.png") no-repeat 100% 0;
-}
-
 .welcome-user .name {
   font-size: 22px;
   font-weight: 400;
@@ -17820,7 +17844,8 @@ div.toggle-hidden {
   display: flex;
   align-items: flex-end;
   line-height: 1;
-  transform: translateY(-5px);
+  transform: translateY(-12px);
+  padding-bottom: 10px;
 }
 
 .disk-per b {
@@ -17846,7 +17871,7 @@ div.toggle-hidden {
   text-align: right;
   color: #666;
   font-size: 14px;
-  padding: 12px 0 15px;
+  padding: 12px 0 18px;
 }
 
 .disk-volume b {
@@ -17932,5 +17957,20 @@ div.toggle-hidden {
 
 .flex-g2 .cs-input {
   width: calc(50% - 4px);
+}
+
+.mypage-btn-group {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+}
+
+.col-gra-border {
+  border: 1px solid transparent !important;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #0477eb, #008eed, #19c6f0);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 /*# sourceMappingURL=../maps/plat/layout.css.map */

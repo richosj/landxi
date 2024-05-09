@@ -1,4 +1,5 @@
-ui = {};
+const ui = {};
+
 
 ui.dropSelector = function(btn){
   var btn = $(btn);
@@ -313,7 +314,7 @@ $(function(){
 * @param {String} toggleID 토글될 element의 data-toggle-id
 * @param {String} action open || close
 */
-ui = {}
+//ui = {}
 
 ui.toggle = function(toggleID, action, btn, opt){
   // toggle-id

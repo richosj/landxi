@@ -1,5 +1,6 @@
 [
 	{"cate": "", "code": "", "title" : "메인화면 - LX <span class='update-tag'></span>", "url": "00-메인A.html", "dateNew": "2023-12-20", "dateModify": "2024-04-17", "extra": "추가수정 2024-04-23"},
+	{"cate": "", "code": "", "title" : "메인화면 - LX(스크롤) <span class='update-tag'></span>", "url": "00-메인-스크롤.html", "dateNew": "2024-05-09", "dateModify": "", "extra": ""},
 	{"cate": "", "code": "", "title" : "메인화면 - 기관 <span class='update-tag'></span>", "url": "00-메인-기관.html", "dateNew": "2023-12-20", "dateModify": "2024-04-29", "extra": ""},
 	{"cate": "", "code": "", "title" : "공통 - 로그인", "url": "99-01-공통-로그인.html", "dateNew": "2023-12-11", "dateModify": "", "extra": ""},
 	{"cate": "", "code": "", "title" : "공통 - 풀페이지 로그인 <span class='new-tag'></span>", "url": "99-01-공통-풀페이지-로그인.html", "dateNew": "2024-05-02", "dateModify": "", "extra": ""},
