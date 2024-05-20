@@ -15,7 +15,7 @@
 				<div class="board-wrap">
 
                     <div class="board-ai-header">
-                        <h3>불법 쓰레기 탐지</h3>
+                        <h3>불법감금 쓰레기 탐지</h3>
                         <a href="#" class="btn btn-gra">모델 분석 실행</a>
                     </div>
 
@@ -23,59 +23,62 @@
                         <ul>
                             <li>
                                 <strong>모델 설명</strong>
-                                <span> 본 AI 모델은 Detection 모델로 000에 활용되는 000 학습모델</span>
+                                <span>본 AI모델은 Detection 모델로 불법 쓰레기를 탐지하여 보여줍니다.</span>
                             </li>
                             <li>
                                 <strong>입력 학습데이터</strong>
-                                <span>리싸이클링 학습데이터  : Tiff 형식의 정사영상, Tiff 형식의 수치표면모델(DSM)</span>
+                                <span>불법 쓰레기 탐지 학습데이터:  JPG, TIFF, PNG, JPEG</span>
                             </li>
                         </ul>
                     </div>
-					
 					
 					<div class="board-ai-gall">
 						<div class="board-ai-gall_tit">
                             분석 결과(예시)
                         </div>
 						<ul>
-							@@for(var i = 0; i < 2; i++){
-								<li>
-									<div class="thumb"></div>
-								</li>
-							}	
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-p1-1.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-p1-2.png" alt="">
+								</div>
+							</li>
 						</ul>
 					</div>
 
                     <div class="board-ai-desc">
 						<div class="board-ai-gall_tit">
-                            분석 결과(예시)
+                            클래스 및 하이퍼파라메터
                         </div>
 
 						<div class="cs-table">
 							<table>
 								<colgroup>
-									<col>
+								<col class="width180">
+								<col>
 								</colgroup>
-								<thead>
-									<tr>
-										<th scope="col">클래스</th>
-										<th scope="col">배치 사이즈</th>
-										<th scope="col">에포크(Epoch)</th>
-									</tr>
-								</thead>
 								<tbody>
 									<tr>
-										<td class="tac">콘크리트</td>
-										<td class="tac">2</td>
-										<td class="tac">3</td>
+										<th>클래스</th>
+										<td>Waste</td>
+									</tr>
+									<tr>
+										<th>배치 사이즈</th>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th>에포크(Epoch)</th>
+										<td>20(<span style="color:blue">성능이 안 나오면 에포크를 늘리는 방식으로 하면 됨</span>)</td>
 									</tr>
 								</tbody>
 
 							</table>
 						</div>
                     </div>
-					
-
 				</div>
 			</div>
 		</div>
