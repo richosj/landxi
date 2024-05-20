@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	@@include('./include/front/head.html')
+</head>
+
+<body>
+	<div class="lay-body">
+		@@include('./include/front/header.html')
+		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
+		<!-- container -->
+		<div class="lay-container">
+			<div class="lay-wrap">
+				<div class="board-wrap">
+
+                    <div class="board-ai-header">
+                        <h3>노후 폐가 탐지 <span style="color:red">(개발중)</span></h3>
+                        <a href="#" class="btn btn-gra">모델 분석 실행</a>
+                    </div>
+
+                    <div class="board-ai-detail">
+                        <ul>
+                            <li>
+                                <strong>모델 설명</strong>
+                                <span>본 AI모델은   모델로 노후 폐가를 탐지하여 보여줍니다.</span>
+                            </li>
+                            <li>
+                                <strong>입력 학습데이터</strong>
+                                <span>노후 폐가 탐지 학습데이터: </span>
+                            </li>
+                        </ul>
+                    </div>
+					
+					<div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+                            분석 결과(예시)
+                        </div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<!-- <img src="./common/images/front/ai-p3-1.png" alt=""> -->
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<!-- <img src="./common/images/front/ai-p3-2.png" alt=""> -->
+								</div>
+							</li>
+						</ul>
+					</div>
+
+                    <div class="board-ai-desc">
+						<div class="board-ai-gall_tit">
+                            클래스 및 하이퍼파라메터
+                        </div>
+
+						<div class="cs-table">
+							<table>
+								<colgroup>
+								<col class="width180">
+								<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>클래스</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>배치 사이즈</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>에포크(Epoch)</th>
+										<td></td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+                    </div>
+				</div>
+			</div>
+		</div>
+		<!--// container -->
+		@@include('./include/front/footer.html')
+	</div>
+	<!--// lay-body -->
+</body>
+
+</html>

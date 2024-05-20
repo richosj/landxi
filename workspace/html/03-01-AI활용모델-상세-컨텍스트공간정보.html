@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	@@include('./include/front/head.html')
+</head>
+
+<body>
+	<div class="lay-body">
+		@@include('./include/front/header.html')
+		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
+		<!-- container -->
+		<div class="lay-container">
+			<div class="lay-wrap">
+				<div class="board-wrap">
+
+                    <div class="board-ai-header">
+                        <h3>컨텍스트 공간정보</h3>
+                        <a href="#" class="btn btn-gra">모델 분석 실행</a>
+                    </div>
+
+                    <div class="board-ai-detail">
+                        <ul>
+                            <li>
+                                <strong>모델 설명</strong>
+                                <span>본 AI모델은 Image Captioning 모델로 공간정보를 문장(텍스트)으로 보여줍니다.</span>
+                            </li>
+                            <li>
+                                <strong>입력 학습데이터</strong>
+                                <span>컨텍스트 공간정보 학습데이터: JPG, TIFF, PNG, JPEG</span>
+                            </li>
+                        </ul>
+                    </div>
+					
+					<div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+                            분석 결과(예시)
+                        </div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-p18-1.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+                                    <img src="./common/images/front/ai-p18-2.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+                    <div class="board-ai-desc">
+						<div class="board-ai-gall_tit">
+                            클래스 및 하이퍼파라메터
+                        </div>
+
+						<div class="cs-table">
+							<table>
+								<colgroup>
+								<col class="width180">
+								<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>클래스</th>
+										<td>
+                                            클래스가 정해져 있지 않고, 컨텍스트 구성 단어가 설정되어있음<br>
+                                            ① 공간의 특징 → 넓은, 곧은, 빽빽한, 푸른, 작은, 한적한<br>
+                                            ② 공간 요소 → 주택가, 녹지, 고층건물, 대로, 경작지, 농축산시설<br>
+                                            ③ 공간 요소의 상태 → 모여, 펼쳐, 둘러, 뻗어<br>
+                                            ④ 공간 요소 간 관계 → 사이에, 주변에, 근처에, 옆에
+                                        </td>
+									</tr>
+									<tr>
+										<th>배치 사이즈</th>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th>에포크(Epoch)</th>
+										<td>20 <span style="color:blue">(성능이 안 나오면 에포크를 늘리는 방식으로 하면 됨)</span></td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+                    </div>
+				</div>
+			</div>
+		</div>
+		<!--// container -->
+		@@include('./include/front/footer.html')
+	</div>
+	<!--// lay-body -->
+</body>
+
+</html>
