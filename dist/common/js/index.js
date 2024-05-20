@@ -131,6 +131,7 @@ const s2Swiper = new Swiper(".section-2 .swiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   debugger: true,
+  allowTouchMove: false,
   mousewheel: false,
   loop: true,
   centeredSlides: false,
@@ -150,6 +151,7 @@ const s2Swiper = new Swiper(".section-2 .swiper", {
     },
   },
 });
+
 
 s2Swiper.on("slideChange", function () {
   let html = `
@@ -171,12 +173,56 @@ s2Swiper.on("slideChange", function () {
   document.querySelector(".s2-tpl").classList.remove("first-active");
   document.querySelector(".s2-tpl").innerHTML = html;
 
+  document.querySelectorAll(".scroller").forEach(el => {
+    el.style.left = '50%';
+  })
+  document.querySelectorAll(".remodeling").forEach(el => {
+    el.style.width = '50%';
+  })
+
   let addTime = setTimeout(() => {
     document.querySelector(".s2-tpl").classList.add("first-active");
   }, 250);
 });
 
 $("svg").attr("aria-hidden", true);
+
+document.querySelectorAll('.bafore').forEach(slider => {
+  const sliderHandle = slider.querySelector('.scroller');
+  const sliderImageAfter = slider.querySelector('.remodeling');
+
+  let isDragging = false;
+  let startX = 0;
+
+  sliderHandle.addEventListener('mousedown', () => {
+      isDragging = true;
+      //startX = e.clientX;
+      document.body.style.cursor = 'ew-resize';
+      s2Swiper.autoplay.pause()
+  });
+
+  document.addEventListener('mouseup', (e) => {
+      isDragging = false;
+      document.body.style.cursor = 'default';
+      s2Swiper.autoplay.start()
+  });
+
+  document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+
+      const sliderRect = slider.getBoundingClientRect();
+      let offsetX = e.clientX - sliderRect.left;
+
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > sliderRect.width) offsetX = sliderRect.width;
+
+      const offsetPercentage = (offsetX / sliderRect.width) * 100;
+      sliderHandle.style.left = `${offsetPercentage}%`;
+      sliderImageAfter.style.width = `${offsetPercentage}%`;
+  });
+});
+
+
 
 document.querySelectorAll(".tabs button").forEach((button) => {
   button.addEventListener("click", function () {

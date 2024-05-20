@@ -615,12 +615,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 0;
   h3 {
     font-weight: 400;
     color: #000;
     font-size: 22px;
     margin: 0;
     padding: 0;
+    background: url("../../images/front/ai-arrw.png") no-repeat 40px 50%;
+	  padding-left: 60px;
   }
   .btn {
     color: #fff;
@@ -628,11 +631,18 @@
     font-size: 16px;
     background: linear-gradient(to right, #0083ec, #10bbf0 50%);
     border-radius: 3px;
-    width: 140px;
+    padding-left: 60px;
+    padding-right: 25px;
     height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    &::after{
+      content:"";display: block;position: absolute;
+      left: 24px;top: 50%;width: 21px;height: 21px;margin-top: -10.5px;
+      background: url("../../images/front/ai-btn-icon.png") no-repeat;
+    }
   }
 }
 .board-ai-detail {
@@ -729,3 +739,4 @@
   border-radius: 5px;
   padding: 22px 40px;
 }
+

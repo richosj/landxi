@@ -822,6 +822,87 @@
   position: relative;
 }
 
+
+/* 2024.05.20 메인 before,after */
+.section-2{background:#100f1c url("../../images/front/s2-bg.png") no-repeat 50% 0;height: 841px;}
+
+.monitor{
+  width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  z-index: 11;
+  &-container{
+    background: url("../../images/front/monitor.png") no-repeat 0 0;
+    width: 898px;
+    height: 581px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &-wrapper{
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 648px;
+    height: 405px;
+    border: 1px solid #016cf7;
+    border-radius: 10px;
+    position: relative;
+    left: 130px;
+    top: 54px;
+  }
+  .bafore{
+    overflow: hidden;
+    width: 646px;
+    height: 403px;
+    position: relative;
+    user-select:none;
+  }
+  .original,
+  .remodeling {
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    pointer-events:none;
+    overflow: hidden;
+    
+    img{
+      object-fit: cover;
+    }
+  }
+  .original{}
+  .remodeling{
+    width: 50%;
+  }
+  .scroller{
+    position: absolute;
+    width: 3px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    background-color: #1b7aef;
+    z-index: 3;
+    pointer-events:auto;
+    cursor:ew-resize;
+    &::after{
+      content:"";
+      display: block;
+      background:#1b7aef url("../../images/front/scroller.png") no-repeat 50% 50%;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+    }
+  } 
+}
+
 .section-2 .content-area {
   position: absolute;
   left: 0;
