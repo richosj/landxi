@@ -33,8 +33,7 @@ function cutOffText(element) {
 const action_m = setTimeout(() => {
   $(".slide02").find(".visual-slide").addClass("firAction");
   const typoElement2 = document.querySelector(".temp2");
-  //cutOffText(typoElement2);
-
+  cutOffText(typoElement2);
 }, 100);
 
 // Move the code block here
@@ -49,9 +48,6 @@ const addClasses = () => {
   moving.classList.add("action");
 };
 setTimeout(addClasses, 200);
-
-
-
 
 
 //const typoElement = document.querySelector('.temp');
@@ -196,7 +192,6 @@ document.querySelectorAll('.bafore').forEach(slider => {
 
   sliderHandle.addEventListener('mousedown', () => {
       isDragging = true;
-      //startX = e.clientX;
       document.body.style.cursor = 'ew-resize';
       s2Swiper.autoplay.pause()
   });

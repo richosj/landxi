@@ -887,7 +887,11 @@
     background-color: #1b7aef;
     z-index: 3;
     pointer-events:auto;
-    cursor:ew-resize;
+    cursor: grab;
+    touch-action: pan-y;
+    opacity: 0;
+    transition: opacity 0.3s 0.4s;
+    visibility: hidden;
     &::after{
       content:"";
       display: block;
@@ -900,7 +904,14 @@
       transform: translate(-50%,-50%);
       border-radius: 50%;
     }
-  } 
+  }
+}
+
+.swiper-slide-active{
+  .scroller{
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .section-2 .content-area {

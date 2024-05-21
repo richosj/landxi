@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./common/libjs/swiper-bundle.min.css">
     <!-- <link rel="stylesheet" href="./common/libjs/fullpage.min.css"> -->
     <script src="./common/libjs/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <!-- <script src="./common/libjs/fullpage.js"></script> -->
 </head>
 
@@ -18,7 +21,6 @@
         <p class="total">04</p>
     </aside>
     <!-- nav -->
-
     <div class="section-container">
         <section class="section section-1" id="section1">
             <!-- <div class="swiper">
@@ -95,15 +97,19 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="bafore">
-                                        <div class="original"><img src="https://dummyimage.com/646x403/red/000.gif" draggable="false"></div>
-                                        <div class="remodeling"><img src="https://dummyimage.com/646x403/000000/fff.gif" draggable="false"></div>
+                                        <div class="original"><img src="https://dummyimage.com/646x403/red/000.gif"
+                                                draggable="false"></div>
+                                        <div class="remodeling"><img src="https://dummyimage.com/646x403/000000/fff.gif"
+                                                draggable="false"></div>
                                         <div class="scroller"></div>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="bafore">
-                                        <div class="original"><img src="https://dummyimage.com/646x403/red/000.gif" draggable="false"></div>
-                                        <div class="remodeling"><img src="https://dummyimage.com/646x403/000000/fff.gif" draggable="false"></div>
+                                        <div class="original"><img src="https://dummyimage.com/646x403/red/000.gif"
+                                                draggable="false"></div>
+                                        <div class="remodeling"><img src="https://dummyimage.com/646x403/000000/fff.gif"
+                                                draggable="false"></div>
                                         <div class="scroller"></div>
                                     </div>
                                 </div>
@@ -152,7 +158,7 @@
                 </div>
             </div>
         </section>
-        
+
 
         <!-- section-2 -->
         <section class="section section-3" id="section-3">
@@ -508,11 +514,10 @@
     </div>
     <script src="./common/js/index.js?ver=240426"></script>
     <script>
-    
+
         // section-4 세팅
         // const s4 = document.getElementById('section-4')
         // console.log(s4.offsetTop)
-
         // IntersectionObserver 등록
         const io = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -537,14 +542,14 @@
             // 현재 스크롤 위치
             var scrollPos = $(this).scrollTop();
 
-            if(scrollPos > 10){
+            if (scrollPos > 10) {
                 $('.lay-header').addClass('black')
             }
             $('.section-container .section').each(function (indx) {
                 if ($(this).offset().top <= scrollPos) {
                     indx = indx + 1;
                     $('.index-nav .current').text('').text("0" + indx);
-                    $('.index-nav .line').attr('id', '').attr('id','line-n-'+indx+'')
+                    $('.index-nav .line').attr('id', '').attr('id', 'line-n-' + indx + '')
                     if (indx == 4) {
                         $('.index-nav').addClass('black');
                     } else {
