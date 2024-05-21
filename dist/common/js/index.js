@@ -30,24 +30,24 @@ function cutOffText(element) {
   }, 400);
 }
 
-const action_m = setTimeout(() => {
-  $(".slide02").find(".visual-slide").addClass("firAction");
-  const typoElement2 = document.querySelector(".temp2");
-  cutOffText(typoElement2);
-}, 100);
+// const action_m = setTimeout(() => {
+//   $(".slide02").find(".visual-slide").addClass("firAction");
+//   const typoElement2 = document.querySelector(".temp2");
+//   cutOffText(typoElement2);
+// }, 100);
 
 // Move the code block here
-const addClasses = () => {
-  const visual = document.querySelectorAll(".object");
-  visual.forEach(element => {
-    element.classList.add("object-action");
-  });
-  const visualbtn = document.querySelector(".visual-link");
-  const moving = document.querySelector(".moving");
-  visualbtn.classList.add("action");
-  moving.classList.add("action");
-};
-setTimeout(addClasses, 200);
+// const addClasses = () => {
+//   const visual = document.querySelectorAll(".object");
+//   visual.forEach(element => {
+//     element.classList.add("object-action");
+//   });
+//   const visualbtn = document.querySelector(".visual-link");
+//   const moving = document.querySelector(".moving");
+//   visualbtn.classList.add("action");
+//   moving.classList.add("action");
+// };
+// setTimeout(addClasses, 200);
 
 
 //const typoElement = document.querySelector('.temp');
@@ -190,22 +190,27 @@ document.querySelectorAll('.bafore').forEach(slider => {
   let isDragging = false;
   let startX = 0;
 
-  sliderHandle.addEventListener('mousedown', () => {
+  sliderHandle.addEventListener('mousedown', (e) => {
       isDragging = true;
       document.body.style.cursor = 'ew-resize';
-      s2Swiper.autoplay.pause()
+      startX = e.clientX;
+      s2Swiper.autoplay.pause();
+
   });
 
   document.addEventListener('mouseup', (e) => {
-      isDragging = false;
-      document.body.style.cursor = 'default';
-      s2Swiper.autoplay.start()
+    if (!isDragging) return;
+
+    isDragging = false;
+    document.body.style.cursor = 'default';
+    s2Swiper.autoplay.start()
   });
 
   document.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
 
       const sliderRect = slider.getBoundingClientRect();
+      
       let offsetX = e.clientX - sliderRect.left;
 
       if (offsetX < 0) offsetX = 0;

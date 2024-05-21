@@ -824,7 +824,7 @@
 
 
 /* 2024.05.20 메인 before,after */
-.section-2{background:#100f1c url("../../images/front/s2-bg.png") no-repeat 50% 0;height: 841px;}
+.section-2{background:#100f1c url("../../images/main/s2-bg.png") no-repeat 50% 0;height: 920px;}
 
 .monitor{
   width: 1280px;
@@ -832,6 +832,25 @@
   height: 100%;
   position: relative;
   z-index: 11;
+  [class^="deco"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    user-select: none;
+  }
+  .deco-1{
+    left: 371px;
+    top: 517px;
+  }
+  .deco-2{
+    left: 610px;
+    top: 650px;
+  }
+  .deco-3{
+    left: 1177px;
+    top: 417px;
+  }
   &-container{
     background: url("../../images/front/monitor.png") no-repeat 0 0;
     width: 898px;
@@ -851,6 +870,17 @@
     position: relative;
     left: 130px;
     top: 54px;
+    &::before,
+    &::after{
+      content:"";display: block;width: 101px;height: 38px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      position: absolute;
+      top: 15px;
+      z-index: 5;
+    }
+    &::before{background-image: url("../../images/main/s2-mark-1.png");left: 15px;}
+    &::after{background-image: url("../../images/main/s2-mark-2.png");right: 15px;}
   }
   .bafore{
     overflow: hidden;
@@ -1819,5 +1849,151 @@ body.mobile .section-4 {
     border-top: 1px solid rgba(238, 238, 238, 0.4);
     border-left: 1px solid rgba(238, 238, 238, 0.4);
     border-right: 1px solid rgba(238, 238, 238, 0.4);
+  }
+}
+
+
+.visualty1{
+  background: url("../../images/main/visual-05-01.png") no-repeat 50% 50%;
+  background-size: cover;
+  height: 100vh;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  &-center{
+    h3,
+    p{
+      color: #fff;
+      text-align: center;
+      margin: 0;
+    }    
+    h3{
+      font-weight: 700;
+      font-size: 62px;
+      padding-bottom: 35px;
+      small{
+        font-weight: 400;
+        font-size: 36px;
+      }
+    }
+    p{
+      font-size: 36px;
+    }
+    .btn-group{
+      display: flex;
+      gap:0 15px;
+      margin-top: 60px;
+      button{
+        display: flex;
+        align-items: center;
+        position: relative;
+        color: #fff;
+        border: 0;
+        background-color: transparent;
+        width: 300px;
+        height: 60px;
+        padding: 0;
+        font-size: 18px;
+        font-weight: 700;
+        &:nth-child(1){
+          background: url("../../images/main/link-bg-1.png") no-repeat 0 0;
+        }
+        &:nth-child(2){
+          background: url("../../images/main/link-bg-2.png") no-repeat 0 0;
+        }
+        i{
+          font-size: 0;
+          display: inline-block;
+          margin: 0 20px 0 46px;
+        }
+        &::after{
+          content:"";display: block;
+          position: absolute;
+          right: 8px;
+          top: 8px;
+          width: 11px;
+          height: 11px;
+          background: url('../../images/main/link-arw.png') no-repeat 0 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+.visualty2{
+  background: url("../../images/main/visual-05-02.png") no-repeat 50% 50%;
+  background-size: cover;
+  height: 100vh;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  &-center{
+    h3,
+    p{
+      color: #fff;
+      text-align: center;
+      margin: 0;
+    }    
+    h3{
+      font-weight: 700;
+      font-size: 62px;
+      padding-bottom: 35px;
+      small{
+        font-weight: 400;
+        font-size: 36px;
+      }
+    }
+    p{
+      font-size: 36px;
+    }
+  }
+  .btn-group{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    button{
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: #fff;
+      border: 0;
+      background-color: transparent;
+      width: 400px;
+      height: 60px;
+      padding: 0;
+      font-size: 18px;
+      font-weight: 700;
+      &:nth-child(1){
+        background: url("../../images/main/link-bg-1-ty2.png") no-repeat 0 0;
+      }
+      &:nth-child(2){
+        background: url("../../images/main/link-bg-2-ty2.png") no-repeat 0 0;
+      }
+      i{
+        font-size: 0;
+        display: inline-block;
+        margin: 0 20px 0 95px;
+      }
+      &::after{
+        content:"";display: block;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 11px;
+        height: 11px;
+        background: url('../../images/main/link-arw.png') no-repeat 0 0;
+      }
+    }
   }
 }
