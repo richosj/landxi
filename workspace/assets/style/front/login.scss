@@ -194,6 +194,46 @@
       background-size: 400% 400%;
     }
   }
+  &.v4{
+    background: url('#{var.$image}/front/login_bg_v4.png') center / cover;
+    .login-cont{
+      width: auto;
+      .login-cont-ment{
+        font-size: 22px;
+        color:#ffffff;
+        line-height: 1.5;
+      }
+    }
+    .video-login-form-inner{
+      display: flex;
+      border-radius: 24px;
+      height: 480px;
+      .video-sec{
+        border-radius: 24px 0 0 24px;
+        width: 855px;
+      }
+      .login-sec{
+        border-radius: 0 24px 24px 0;
+        width: 540px;
+        background: #f6f8f9;
+        padding: 0 80px;
+        box-sizing: border-box;
+        h3{
+          margin-top: 44px;
+          text-align: center;
+          font-size: 36px;
+          margin-bottom: 20px;
+          line-height: 1;
+        }
+        .login-info{
+          font-size: 16px;
+          color:#666666;
+          margin-bottom: 35px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
 .login-cont{width: 430px;flex: 0 0 430px;}
