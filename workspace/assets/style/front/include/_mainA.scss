@@ -2082,3 +2082,44 @@ body.mobile .section-4 {
     transform: scale(1);
   }
 }
+
+.cross-text{
+  position: relative;
+  overflow: hidden;
+  span{
+    display: block;
+    transform: translateY(100%);
+    opacity: 0;
+    white-space: nowrap;
+    transition: all 0.7s linear;
+    text-align: center;
+    &:nth-child(1){
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    &.active{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes titleAnimation{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  80%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
