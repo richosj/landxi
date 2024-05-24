@@ -268,7 +268,7 @@ jQuery(function(){
   }, 1000);
 
   $('*').on('focus', function(){
-    console.log($(this).text());
+    //console.log($(this).text());
   });
 });
 

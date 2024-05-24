@@ -134,7 +134,7 @@ const s2Swiper = new Swiper(".section-2 .swiper", {
   direction: "horizontal",
   effect: "slide",
   speed: 1000,
-  autoplay: true,
+  autoplay: false,
   slidesPerView: 1,
   spaceBetween: 0,
   debugger: true,
@@ -183,7 +183,7 @@ s2Swiper.on("slideChange", function () {
   document.querySelectorAll(".scroller").forEach(el => {
     el.style.left = '50%';
   })
-  document.querySelectorAll(".remodeling").forEach(el => {
+  document.querySelectorAll(".original").forEach(el => {
     el.style.width = '50%';
   })
 
@@ -196,7 +196,7 @@ $("svg").attr("aria-hidden", true);
 
 document.querySelectorAll('.bafore').forEach(slider => {
   const sliderHandle = slider.querySelector('.scroller');
-  const sliderImageAfter = slider.querySelector('.remodeling');
+  const sliderImageAfter = slider.querySelector('.original');
 
   let isDragging = false;
   let startX = 0;
@@ -214,7 +214,7 @@ document.querySelectorAll('.bafore').forEach(slider => {
 
     isDragging = false;
     document.body.style.cursor = 'default';
-    s2Swiper.autoplay.start()
+    //s2Swiper.autoplay.start()
   });
 
   document.addEventListener('mousemove', (e) => {
