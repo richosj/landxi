@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header-nomenu.html')
+
+    @@include('./include/front/location.html',{cate1:'회원관리', cate2: '비밀번호 찾기'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+
+        <div class="mj-cont find-pw01">
+            <div class="cont-regcomplete ">
+              <div class="cont-regcomplete_header">
+                <div>
+                	회원가입 시 입력한 이메일 주소로 임시비밀번호가 발급됩니다.
+                </div>
+              </div>
+              <div class="cs-table">
+                <table>
+                  <colgroup>
+                    <col class="width180">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">아이디(이메일)</th>
+                      <td><input class="cs-input width100p" type="text" placeholder="아이디를 입력하세요."></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이메일 주소</th>
+                      <td><input class="cs-input width100p" type="text" placeholder="이메일 주소를 입력하세요."></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <section class="cons-btns mj-btns">
+              <a href="#" class=" cs-btn2 cs-btn-color2 flex-width180">비밀번호 찾기</a>
+            </section>
+          </div>
+        <!--// mj-cont -->
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

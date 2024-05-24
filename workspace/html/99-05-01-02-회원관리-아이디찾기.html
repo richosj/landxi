@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header-nomenu.html')
+
+    @@include('./include/front/location.html',{cate1:'회원관리', cate2: '아이디 찾기'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+
+        <div class="mj-cont find-id">
+          <div class="cont-regcomplete">
+            <div class="cont-regcomplete_header">
+              <i class="id-find-ico02"></i>
+              <div>
+                회원님께서 입력하신 <strong>이메일로(Test123@naver.com )<br>아이디 정보를 전달</strong>하였습니다.
+              </div>
+            </div>
+          </div>
+          <section class="cons-btns mj-btns mj-btns-margin">
+						<a href="#" class="cs-btn2 cs-btn-color1 flex-width180">비밀번호 찾기</a>
+            <a href="#" class="cs-btn2 cs-btn-color2 flex-width180">로그인 페이지로 이동</a>
+          </section>
+        </div>
+        <!--// mj-cont -->
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

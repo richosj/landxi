@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header-nomenu.html')
+
+    @@include('./include/front/location.html',{cate1:'회원관리', cate2: '비밀번호 변경'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+
+        <div class="mj-cont find-pw01">
+            <div class="cont-regcomplete ">
+              <div class="cont-regcomplete_header">
+                <div>
+                	비밀번호 변경을 권장합니다<br>
+                  <span>회원님의 개인정보를 안전하게 보호하고, 개인정보 도용으로 인한 피해를 예방하기 위해<br>90일 이상 비밀번호를 변경하지 않을 경우 비밀번호 변경을 권장하고 있습니다</span>
+                </div>
+              </div>
+              <div class="cs-table">
+                <table>
+                  <colgroup>
+                    <col class="width180">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">기존 비밀번호</th>
+                      <td><input class="cs-input width100p" type="password" placeholder="현재 이용하는 비밀번호를 입력하세요."></td>
+                    </tr>
+										<tr>
+                      <th scope="row">신규 비밀번호</th>
+                      <td><input class="cs-input width100p" type="password" placeholder="영문, 숫자, 특수문자 조합(8~20자)"></td>
+                    </tr>
+										<tr>
+                      <th scope="row">비밀번호 확인</th>
+                      <td><input class="cs-input width100p" type="password" placeholder="비밀번호를 재입력해 주세요."></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <section class="cons-btns mj-btns mj-btns-margin">
+              <a href="#" class=" cs-btn2 cs-btn-color1 flex-width180">다음에 변경(90일)</a>
+              <a href="#" class=" cs-btn2 cs-btn-color2 flex-width180">비밀번호 변경</a>
+            </section>
+          </div>
+        <!--// mj-cont -->
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

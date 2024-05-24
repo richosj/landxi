@@ -135,6 +135,21 @@
     i{
       width: 66px;height: 66px;background:url('#{var.$image}/front/reg_complete.png');margin:0 auto;
       display: block;
+      &.id-find-ico{
+        width: 60px;
+        height: 60px;
+        background:url('#{var.$image}/front/reg_id_find.png');
+      }
+      &.id-find-ico02{
+        width: 60px;
+        height: 60px;
+        background:url('#{var.$image}/front/reg_id_find02.png');
+      }
+      &.pw-change-ico01{
+        width: 60px;
+        height: 60px;
+        background:url('#{var.$image}/front/reg_pw_find01.png');
+      }
     }
 
     > div{
@@ -144,6 +159,68 @@
       color: #091634;
       text-align: center;
       strong{font-weight: 800;}
+      span{
+        font-size: 16px;
+        line-height: 1.3;
+      }
     }
+  }
+}
+
+.join-link-btn{
+  position: relative;
+  display: inline-block;
+  width: 376px;
+  height: 56px;
+  padding-left: 135px;
+  color: #fff;
+  box-sizing:border-box;
+  font-size: 20px;
+  line-height: 57px;
+  border-radius:6px;
+  background: rgb(4,119,236);
+  background: linear-gradient(90deg, rgba(4,119,236,1) 0%, rgba(24,198,240,1) 100%);
+  &:after{
+    position: absolute;
+    left: 97px;
+    top: 17px;
+    display: block;
+    width: 21px;
+    height: 20px;
+    content:'';
+    background:url('#{var.$image}/front/id_find_btn.png');
+  }
+}
+
+
+.mj-btns-margin{
+  .cs-btn2{
+    &+.cs-btn2{
+      margin-left: 16px;
+    }
+  }
+}
+
+.find-id01{
+  .cons-btns{
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto 0;
+    p{
+      font-size: 14px;
+      color:#999999;
+      a{
+        margin-left: 10px;
+        color:#999999;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #999999;
+      }
+    }
+  }
+}
+.find-pw01{
+  .cons-btns{
+    margin-top: 25px;
   }
 }

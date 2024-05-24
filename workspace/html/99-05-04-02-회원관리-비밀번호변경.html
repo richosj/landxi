@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header-nomenu.html')
+
+    @@include('./include/front/location.html',{cate1:'회원관리', cate2: '비밀번호 변경'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+
+        <div class="mj-cont">
+          <div class="cont-regcomplete">
+            <div class="cont-regcomplete_header">
+              <i class="pw-change-ico01"></i>
+              <div>
+                비밀번호 변경이 정상적으로 완료 되었습니다.<br><strong>변경된 비밀번호는 asd******</strong> 입니다.
+
+              </div>
+            </div>
+          </div>
+          <section class="cons-btns mj-btns">
+            <a href="#" class="cs-btn2 cs-btn-color2 flex-width180">로그인 페이지로 이동</a>
+          </section>
+        </div>
+        <!--// mj-cont -->
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>
