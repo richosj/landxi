@@ -14,47 +14,76 @@
 			<div class="lay-wrap">
 				<div class="board-wrap">
 
-                    <div class="board-ai-header">
-                        <h3>불법감금 쓰레기 탐지</h3>
-                        <a href="#" class="btn btn-gra">모델 분석 실행</a>
-                    </div>
+					<div class="board-ai-header">
+							<h3>불법 쓰레기 탐지</h3>
+							<a href="#" class="btn btn-gra">모델 분석 실행</a>
+					</div>
 
-                    <div class="board-ai-detail">
-                        <ul>
-                            <li>
-                                <strong>모델 설명</strong>
-                                <span>본 AI모델은 Detection 모델로 불법 쓰레기를 탐지하여 보여줍니다.</span>
-                            </li>
-                            <li>
-                                <strong>입력 학습데이터</strong>
-                                <span>불법 쓰레기 탐지 학습데이터:  JPG, TIFF, PNG, JPEG</span>
-                            </li>
-                        </ul>
-                    </div>
+					<div class="board-ai-detail">
+							<ul>
+									<li>
+											<strong>모델 설명</strong>
+											<span>본 AI 모델은 Detection 모델로 000에 활용되는 000 학습모델</span>
+									</li>
+									<li>
+											<strong>입력 학습데이터</strong>
+											<span> 리싸이클링 학습데이터  : Tiff 형식의 정사영상, Tiff 형식의 수치표면모델(DSM)</span>
+									</li>
+									<li>
+										<strong>학습 알고리즘</strong>
+										<span>YOLOv8</span>
+								</li>
+							</ul>
+					</div>
 					
 					<div class="board-ai-gall">
-						<div class="board-ai-gall_tit">
-                            분석 결과(예시)
-                        </div>
+						<div class="board-ai-gall_tit">분석 결과(예시)</div>
 						<ul>
 							<li>
 								<div class="thumb">
-									<img src="./common/images/front/ai-p1-1.png" alt="">
+									<img src="./common/images/front/ai-p1-1.png" alt="원본이미지">
 								</div>
 							</li>
 							<li>
 								<div class="thumb">
-									<img src="./common/images/front/ai-p1-2.png" alt="">
+									<img src="./common/images/front/ai-p1-2.png" alt="검출결과 이미지">
 								</div>
 							</li>
 						</ul>
 					</div>
 
-                    <div class="board-ai-desc">
+					<div class="board-ai-gall ex4">
 						<div class="board-ai-gall_tit">
-                            클래스 및 하이퍼파라메터
-                        </div>
+							리싸이클링 자원 자동탐지 검출 예시
+            </div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-p1-3.png" alt="pvc">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-p1-4.png" alt="혼합건설 폐기물">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-p1-5.png" alt="건설폐재류">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-p1-6.png" alt="폐목재">
+								</div>
+							</li>
+						</ul>
+					</div>
 
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	클래스 및 하이퍼파라메터
+            </div>
 						<div class="cs-table">
 							<table>
 								<colgroup>
@@ -64,21 +93,48 @@
 								<tbody>
 									<tr>
 										<th>클래스</th>
-										<td>Waste</td>
+										<td>콘크리트</td>
 									</tr>
 									<tr>
 										<th>배치 사이즈</th>
-										<td>1</td>
+										<td>3</td>
 									</tr>
 									<tr>
 										<th>에포크(Epoch)</th>
-										<td>20(<span style="color:blue">성능이 안 나오면 에포크를 늘리는 방식으로 하면 됨</span>)</td>
+										<td>3</td>
 									</tr>
 								</tbody>
-
 							</table>
 						</div>
-                    </div>
+          </div>
+
+					<div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	추론 관련 정보
+            </div>
+						<div class="board-ai-dl">
+							<dl>
+								<dt>input data</dt>
+								<dd>JPG, PNG, TIF</dd>
+							</dl>
+							<dl>
+								<dt>output data</dt>
+								<dd>JPG, SHP, CSV</dd>
+							</dl>
+						</div>
+					</div>
+
+					<div class="board-ai-desc ex1">
+						<div class="board-ai-gall_tit">
+            	지도표출
+            </div>
+						<div>
+							<img src="./common/images/front/ai-p1-7.png" alt="">
+						</div>
+						<div class="ex-mark">
+							<p>지도 화면에 표출되는 추론 결과 레이어는 입력된 이미지의 중심점을 나타내며, 정확한 위치를 표시하지 않습니다.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

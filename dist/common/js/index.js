@@ -134,7 +134,7 @@ const s2Swiper = new Swiper(".section-2 .swiper", {
   direction: "horizontal",
   effect: "slide",
   speed: 1000,
-  autoplay: false,
+  autoplay: true,
   slidesPerView: 1,
   spaceBetween: 0,
   debugger: true,

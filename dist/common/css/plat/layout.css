@@ -13156,6 +13156,33 @@ textarea.cs-input {
   margin-top: 20px;
 }
 
+.board-ai-dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}
+
+.board-ai-dl dl {
+  width: calc(25% - 64px);
+  display: flex;
+  background: #f5f5f5;
+  border-radius: 5px;
+  padding: 0 23px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.board-ai-dl dl dt {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.board-ai-dl dl dd {
+  font-size: 14px;
+  color: #000000;
+}
+
 .board-ai-gall {
   border: 1px solid #e1e1e1;
   border-radius: 5px;
@@ -13207,10 +13234,46 @@ textarea.cs-input {
   height: 412px;
 }
 
+.board-ai-gall.ex4 ul li {
+  width: calc(25% - 18px);
+}
+
+.board-ai-gall.ex4 ul li .thumb {
+  height: 196px;
+}
+
 .board-ai-desc {
   border: 1px solid #e1e1e1;
   border-radius: 5px;
   padding: 22px 40px;
+}
+
+.ex-mark {
+  background: #f5f5f5;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ex-mark p {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  color: #999999;
+  margin: 0;
+}
+
+.ex-mark p:after {
+  position: absolute;
+  left: -20px;
+  top: 11px;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #f5f5f5 url("../../images/front/ex_mark_ico.png") no-repeat 50% 50%;
 }
 
 button[type=button] {
