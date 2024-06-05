@@ -214,7 +214,7 @@ document.querySelectorAll('.bafore').forEach(slider => {
 
     isDragging = false;
     document.body.style.cursor = 'default';
-    s2Swiper.autoplay.start()
+    //s2Swiper.autoplay.start()
   });
 
   document.addEventListener('mousemove', (e) => {
