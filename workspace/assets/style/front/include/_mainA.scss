@@ -1431,7 +1431,10 @@
 .section-4 .list li a {
   display: block;
 }
-
+.section-4 .list li a .img img{
+  width: 342px;
+  height: 180px;
+}
 .section-4 .list li a:hover .img img,
 .section-4 .list li a:focus .img img {
   transform: scale3d(1.6, 1.6, 1) rotate3d(0, 0, 0, 0.01deg);
