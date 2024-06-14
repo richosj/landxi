@@ -45,6 +45,13 @@ $pub: true;
     background:url('#{var.$image}/main/logo-black.png');
     overflow: hidden;line-height: 100px;
   }
+  &.logo-namwon{
+    a{
+      margin-top: -10px;
+      display: block;width: 419px;height: 19px;
+      background:url('#{var.$image}/agency/logo-black.png');
+    }
+  }
 }
 
 // gnb
@@ -204,6 +211,16 @@ $pub: true;
       justify-content: center;
     }
   }
+  &.namwon{
+    &.gnb-open{
+      .lay-gnb{
+        &> ul{
+          background: none;
+        }
+      }
+    }
+  }
+  
 }
 
 .lay-header-bg{
@@ -230,6 +247,10 @@ $pub: true;
     border-radius: 0 70px 0 0;
     padding: 30px 60px 0 0;
     box-sizing: border-box;
+  }
+  &.namwon{
+    background: url('#{var.$image}/agency/mega_bg.png') no-repeat center bottom;
+    background-size: cover;
   }
 }
 

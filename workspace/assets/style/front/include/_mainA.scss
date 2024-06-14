@@ -111,8 +111,13 @@
 
 .lay-header.v3:not(.gnb-open) .lay-logo a {
   background-image: url("../../images/main/logo.png");
-  height: 27px;
+  height: 24px;
   width: 314px;
+}
+.lay-header.v3:not(.gnb-open) .lay-logo.logo-namwon a{
+  background-image: url("../../images/main/logo-namwon.png");
+  height: 19px;
+  width: 419px;
 }
 
 .lay-header.v3:not(.gnb-open) .cs-icon-lock {
@@ -129,10 +134,17 @@
 .lay-header.v3:not(.gnb-open) .cs-icon-menu span {
   background-color: #01b2d4;
 }
+.lay-header.v3:not(.gnb-open) .cs-icon-menu.namwon-style span{
+  background: #f1628e;
+}
 
 .lay-header.v3:not(.gnb-open) .cs-icon-menu span::after,
 .lay-header.v3:not(.gnb-open) .cs-icon-menu span::before {
   background-color: #01b2d4;
+}
+.lay-header.v3:not(.gnb-open) .cs-icon-menu.namwon-style span::after,
+.lay-header.v3:not(.gnb-open) .cs-icon-menu.namwon-style span::before {
+  background: #f1628e;
 }
 
 .lay-header.v3:not(.gnb-open) .btn-search {
@@ -167,6 +179,10 @@
   background-image: url("../../images/main/logo-black.png");
   height: 27px;
 }
+.lay-header.v3:not(.gnb-open).black .lay-logo.logo-namwon a {
+  background-image: url("../../images/agency/logo-black.png");
+  height: 19px;
+}
 
 .lay-header.v3:not(.gnb-open).black .cs-icon-lock {
   background-image: url("../../images/main/icon-lock-black.png");
@@ -175,10 +191,17 @@
 .lay-header.v3:not(.gnb-open).black .cs-icon-menu span {
   background-color: #01b2d4;
 }
+.lay-header.v3:not(.gnb-open).black .cs-icon-menu.namwon-style span{
+  background: #f1628e;
+}
 
 .lay-header.v3:not(.gnb-open).black .cs-icon-menu span::after,
 .lay-header.v3:not(.gnb-open).black .cs-icon-menu span::before {
   background-color: #01b2d4;
+}
+.lay-header.v3:not(.gnb-open).black .cs-icon-menu.namwon-style span::after,
+.lay-header.v3:not(.gnb-open).black .cs-icon-menu.namwon-style span::before {
+  background: #f1628e;
 }
 
 .lay-header.v3:not(.gnb-open).black .btn-search {
@@ -219,8 +242,19 @@
   .btn-sitemap{
     background: #fff;
     border:1px solid #bbb !important;
-    .cs-icon-menu span{
-      background-color: #01b2d4;
+    .cs-icon-menu {
+      span{
+        background-color: #01b2d4;
+      }
+      &.namwon-style{
+        span{
+          background: #f1628e;
+          &::before,
+          &::after{
+            background: #f1628e;
+          }
+        }
+      }
     }
     span{
       &::before,
@@ -264,6 +298,9 @@
 .lay-sitemap{
   background:#f6f8f9 url('../../images/front/allmenu-bg.png') no-repeat 50% 100%;
   background-size: contain;
+  &.namwon{
+    background:#f6f8f9 url('../../images/agency/allmenu-bg.png') no-repeat 50% 100%;
+  }
   .lay-sitemap_bar{
     top: 0;
     height: 80px;
@@ -279,6 +316,14 @@
     background-image: url(../../images/main/logo-black.png);
     height: 24px;
     width: 314px;
+    &.namwon{
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-image: url(../../images/agency/logo-black.png);
+      height: 19px;
+      width: 419px;
+      margin-top: -10px;
+    }
   }
   .lay-sitemap_close{
     width: 157px;
@@ -286,6 +331,9 @@
     transform: rotate(0deg) !important;
     border-radius: 0 !important;
     background: url("../../images/front/close.png");
+    &.namwon-close{
+      background: url("../../images/front/close-namwon.png");
+    }
   }
 }
 .lay-sitemap .lay-sitemap-warp .sitem-map-nav{
@@ -831,7 +879,7 @@
   margin: 0 auto;
   height: 100%;
   position: relative;
-  z-index: 11;
+  
   [class^="deco"]{
     position: absolute;
     top: 0;
@@ -852,6 +900,7 @@
     top: 417px;
   }
   &-container{
+    z-index: 11;
     background: url("../../images/front/monitor.png") no-repeat 0 0;
     width: 898px;
     height: 581px;
@@ -881,6 +930,9 @@
     }
     &::before{background-image: url("../../images/main/s2-mark-1.png");left: 15px;}
     &::after{background-image: url("../../images/main/s2-mark-2.png");right: 15px;}
+    &.namwon{
+      border: 1px solid #4f61c6 ;
+    }
   }
   .bafore{
     overflow: hidden;
@@ -934,6 +986,12 @@
     opacity: 0;
     transition: opacity 0.3s 0.4s;
     visibility: hidden;
+    &.namwon{
+      background-color: #4f61c6;
+      &::after{
+        background:#4f61c6 url("../../images/front/scroller.png") no-repeat 50% 50%;
+      }
+    }
     &::after{
       content:"";
       display: block;
@@ -1050,6 +1108,10 @@
   -webkit-text-fill-color: transparent;
   //background-size: 100%;
 }
+.section-2 .group.namwon  .s-tit b{
+  background-color: #d25385;
+  background-image: linear-gradient(to right ,#d25385, #4c62c7);
+}
 
 .section-2 .group .txt {
   font-family: "GmarketSans";
@@ -1068,7 +1130,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 0 23px;
+  gap: 0 18px;
 }
 
 .section-2 .s2-control .fraction {
@@ -1087,6 +1149,8 @@
   color: #16cdc1;
   font-weight: 700;
   font-size: 20px;
+  width: 15px;
+  text-align: center;
 }
 
 .section-2 .s2-control .swiper-pagination-total {
@@ -1098,6 +1162,9 @@
 .section-2 .prev {
   border: 0;
   background: none;
+  svg{
+    vertical-align: text-top;
+  }
 }
 
 .section-2 .next:hover,
@@ -1105,6 +1172,41 @@
 .section-2 .prev:hover,
 .section-2 .prev:focus {
   opacity: 0.3;
+}
+
+.section-2 .s2-control .monitor-button-play{
+  display: none;
+  text-indent: -9999px;
+  font-size: 0px;
+  background: url("../../images/main/monitor-play.png") no-repeat;
+  width: 16px;
+  height: 15px;
+  background-size: contain;
+  transition: all 0.2s;
+  cursor:pointer;
+  &.active{
+    display: block;
+  }
+  &:hover{
+    opacity: 0.4;
+  }
+}
+.section-2 .s2-control .monitor-button-pause{
+  display: none;
+  text-indent: -9999px;
+  font-size: 0px;
+  background: url("../../images/main/monitor-pasue.png") no-repeat;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  transition: all 0.2s;
+  cursor: pointer;
+  &.active{
+    display: block;
+  }
+  &:hover{
+    opacity: 0.4;
+  }
 }
 
 .section-3 {
@@ -1214,6 +1316,12 @@
   background-color: #006ef6;
 }
 
+.section-3 .flex-wrap.namwon > div a:hover,
+.section-3 .flex-wrap.namwon > div a:focus {
+  background-image: url('../../images/main/section-3-box-namwon.png');
+  background-color: #d25385;
+}
+
 .section-3 .flex-wrap > div a:hover .num,
 .section-3 .flex-wrap > div a:focus .num {
   opacity: 0.5;
@@ -1308,6 +1416,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: space-between;
 }
 
 .section-4 .list li {
@@ -1872,6 +1981,11 @@ body.mobile .section-4 {
   background: url("../../images/main/visual-05-01.png") no-repeat 50% 50%;
   background-size: cover;
   height: 100vh;
+  &.visualty1_namwon{
+    background: url("../../images/main/visual-05-03.png") no-repeat 50% 50%;
+    background-size: cover;
+    height: 100vh;
+  }
   .container{
     display: flex;
     align-items: center;
@@ -1915,9 +2029,15 @@ body.mobile .section-4 {
         font-weight: 700;
         &:nth-child(1){
           background: url("../../images/main/link-bg-1.png") no-repeat 0 0;
+          &.namwon{
+            background: url("../../images/main/link-bg-1-01.png") no-repeat 0 0;
+          }
         }
         &:nth-child(2){
           background: url("../../images/main/link-bg-2.png") no-repeat 0 0;
+          &.namwon{
+            background: url("../../images/main/link-bg-2-01.png") no-repeat 0 0;
+          }
         }
         i{
           font-size: 0;
@@ -1932,6 +2052,15 @@ body.mobile .section-4 {
           width: 11px;
           height: 11px;
           background: url('../../images/main/link-arw.png') no-repeat 0 0;
+        }
+      }
+      &.namwon{
+        justify-content: center;
+        button{
+          width: 362px;
+          height: 80px;
+          background: url("../../images/main/link-bg-2-02.png") no-repeat 0 0 !important;
+          font-size: 24px;
         }
       }
     }

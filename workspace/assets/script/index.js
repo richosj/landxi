@@ -157,8 +157,8 @@ const s2Swiper = new Swiper(".section-2 .swiper", {
       document.querySelector(".s2-tpl").classList.add("first-active");
     },
   },
+  
 });
-
 
 s2Swiper.on("slideChange", function () {
   let html = `
@@ -191,8 +191,27 @@ s2Swiper.on("slideChange", function () {
     document.querySelector(".s2-tpl").classList.add("first-active");
   }, 250);
 });
+// 초기 전역변수.
+let stopPlay = false;
+
+$(".monitor-button-pause").click(function(){
+  $(this).siblings('.monitor-button-play').addClass('active');
+  $(this).removeClass('active')
+  stopPlay = true;
+  s2Swiper.autoplay.stop();
+  console.log('monitor stop')
+});
+$(".monitor-button-play").click(function(){
+  $(this).siblings('.monitor-button-pause').addClass('active');
+  $(this).removeClass('active')
+  stopPlay = false;
+  s2Swiper.autoplay.start();
+  console.log('monitor play')
+});
 
 $("svg").attr("aria-hidden", true);
+
+
 
 document.querySelectorAll('.bafore').forEach(slider => {
   const sliderHandle = slider.querySelector('.scroller');
@@ -214,7 +233,10 @@ document.querySelectorAll('.bafore').forEach(slider => {
 
     isDragging = false;
     document.body.style.cursor = 'default';
-    s2Swiper.autoplay.start()
+    if(stopPlay === false){
+      s2Swiper.autoplay.start();
+      console.log('start');
+    }
   });
 
   document.addEventListener('mousemove', (e) => {
