@@ -10,6 +10,9 @@ div.toggle-hidden{
     }
     .img-box{
         margin: 30px 0;
+				img{
+					max-width: 100%;
+				}
     }
 }
 
@@ -22,7 +25,7 @@ div.toggle-hidden{
 	border-bottom: 1px solid #000;
     li{
         height: 50px;
-		width: 230px;
+				flex: 1 1;
         button{
             width: 100%;
             height: 100%;
@@ -357,4 +360,92 @@ div.toggle-hidden{
 	font-size:12px;
 	padding:4px 8px;
 	margin-right: 3px;
+}
+html{
+	scroll-behavior: smooth
+}
+.service-guide{
+	display: flex;
+	gap: 60px;
+	
+	.service-snb{
+		position: relative;		
+		width: 250px;
+		ul{
+			position:sticky;
+			height:100vh;
+			overflow-y: scroll ;
+			padding: 0;
+			left: 0;
+			top:0;
+			li{
+				list-style: none;
+				&.service-guide-ti{
+					padding-left: 20px;
+					font-size: 14px;
+					margin-bottom: 7px;
+					margin-top: 40px;
+				}
+				a{
+					display: block;
+					transition:all 0.3s;
+					padding: 8px 8px 8px 20px;
+					font-size: 13px;
+					color:#666666;
+					background-position: 0px center;
+					
+				}
+				a.active{
+					color:#1b7aef;
+					background-color: #f8f8f8;
+					border-radius: 4px;
+					padding: 8px 8px 8px 44px;
+					background-image: url('#{var.$image}/front/service-snb-arrow.png');
+					background-position: 24px center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+	.service-content{
+		width: calc(100% - 250px);
+		.service-sec{
+			padding-top: 30px;
+			margin-bottom: 80px;
+			&:first-child{
+				
+			}
+		}
+		.txt-blue{
+			margin: 15px 0 25px;
+			font-size: 18px;
+			color:#2149a6;
+		}
+		.circle_list{
+			padding-left: 0;
+			margin-left: 28px;
+			li{
+				list-style: none;
+				counter-increment: item;
+				font-size: 16px;
+				color:#616161;
+				text-indent: -28px;
+				margin-bottom: 15px;
+				&::before {
+					display: inline-block;
+					content: counter(item);
+					width: 20px;
+					text-align: center;
+					line-height: 20px;
+					height: 20px;
+					border-radius:50%;
+					background: #2149a6;
+					color:#fff;
+					font-size: 13px;
+					margin-right: 8px;
+					text-indent: 0;
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+
+    @@include('./include/front/location.html',{cate1:'이용안내', cate2: '정보공유'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+        <div class="board-wrap">
+          <!-- board-search -->
+          <div class="board-search">
+            <form>
+              <select class="board-search_input">
+                <option>유형 선택</option>
+              </select>
+              <input type="text" class="board-search_input" placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
+              <button class="board-search_btn">검색</button>
+            </form>
+          </div>
+          
+          <!--// tab-nav -->
+          <ul class="tab-nav tab-type01 service-nav service-flex mt60" data-js="tabNav">
+            <li class="active">
+              <button type="button" class="" data-id="tabnav1">
+                전체
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav2">
+                공지사항
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav3">
+                자료공유
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav4">
+                교육정보
+              </button>
+            </li>
+            <li class="">
+              <button type="button" class="" data-id="tabnav5">
+                산업동향
+              </button>
+            </li>
+          </ul>
+          <!-- tab-nav //-->
+
+          <!-- tabnav1 전체 -->
+          <div data-toggle-id="tabnav1">
+            <div class="board-list-header">
+              <!-- 게시물 갯수 등 -->
+              <div class="board-stat">
+                총 게시물 <span>(<b>999</b>건/9999건)</span>
+              </div>
+
+              <!-- 선택옵션 등 -->
+              <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>최신순</option>
+                </select>
+                <select class="cs-input cs-input-point">
+                  <option>10개씩 보기</option>
+                </select>
+              </div>
+            </div>
+            <!-- board-list-text -->
+            <div class="board-list-text">
+              <table>
+                <colgroup>
+                  <col class="width150">
+                  <col class="width100">
+                  <col>
+                  <col class="width140">
+                  <col class="width170">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="row">번호</th>
+                    <th scope="row">구분</th>
+                    <th scope="row">제목</th>
+                    <th scope="row">등록일</th>
+                    <th scope="row">첨부파일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for(var i = 10; i > 7; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="tac"><span class="fc-blue">공지</span></td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>Land-XI통합관리시스템 서비스 오픈</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  @@for(var i = 7; i > 0; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="tac">안내</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="tac">안내</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="tac">안내</td>
+                    <td class="item_list-title">
+                      첨부파일 아이콘들
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                      <a href="#"><i class="cs-icon-file-pdf"></i></a>
+                      <a href="#"><i class="cs-icon-file-png"></i></a>
+                      <a href="#"><i class="cs-icon-file-pptx"></i></a>
+                      <a href="#"><i class="cs-icon-file-txt"></i></a>
+                      <a href="#"><i class="cs-icon-file-xlsx"></i></a>
+                    </td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="board-list-bottom">
+              @@include('./include/board-paging.html')
+            </div>
+          </div>
+          <!-- tabnav1 전체 -->
+
+          <!-- tabnav2 공지사항 -->
+          <div data-toggle-id="tabnav2">
+            <div class="board-list-header">
+              <!-- 게시물 갯수 등 -->
+              <div class="board-stat">
+                총 게시물 <span>(<b>999</b>건/9999건)</span>
+              </div>
+
+              <!-- 선택옵션 등 -->
+              <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>최신순</option>
+                </select>
+                <select class="cs-input cs-input-point">
+                  <option>10개씩 보기</option>
+                </select>
+              </div>
+            </div>
+            <!-- board-list-text -->
+            <div class="board-list-text">
+              <table>
+                <colgroup>
+                  <col class="width150">
+                  <col>
+                  <col class="width140">
+                  <col class="width170">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="row">번호</th>
+                    <th scope="row">제목</th>
+                    <th scope="row">등록일</th>
+                    <th scope="row">첨부파일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for(var i = 10; i > 7; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>Land-XI통합관리시스템 서비스 오픈</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  @@for(var i = 7; i > 0; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title">
+                      첨부파일 아이콘들
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                      <a href="#"><i class="cs-icon-file-pdf"></i></a>
+                      <a href="#"><i class="cs-icon-file-png"></i></a>
+                      <a href="#"><i class="cs-icon-file-pptx"></i></a>
+                      <a href="#"><i class="cs-icon-file-txt"></i></a>
+                      <a href="#"><i class="cs-icon-file-xlsx"></i></a>
+                    </td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="board-list-bottom">
+              @@include('./include/board-paging.html')
+            </div>
+          </div>
+          <!-- tabnav2 공지사항-->
+
+          <!-- tabnav3 자리공유-->
+          <div data-toggle-id="tabnav3">
+            <div class="board-list-header">
+              <!-- 게시물 갯수 등 -->
+              <div class="board-stat">
+                총 게시물 <span>(<b>999</b>건/9999건)</span>
+              </div>
+
+              <!-- 선택옵션 등 -->
+              <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>최신순</option>
+                </select>
+                <select class="cs-input cs-input-point">
+                  <option>10개씩 보기</option>
+                </select>
+              </div>
+            </div>
+            <!-- board-list-text -->
+            <div class="board-list-text">
+              <table>
+                <colgroup>
+                  <col class="width150">
+                  <col>
+                  <col class="width140">
+                  <col class="width170">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="row">번호</th>
+                    <th scope="row">제목</th>
+                    <th scope="row">등록일</th>
+                    <th scope="row">첨부파일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for(var i = 10; i > 7; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>Land-XI통합관리시스템 서비스 오픈</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  @@for(var i = 7; i > 0; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title">
+                      첨부파일 아이콘들
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                      <a href="#"><i class="cs-icon-file-pdf"></i></a>
+                      <a href="#"><i class="cs-icon-file-png"></i></a>
+                      <a href="#"><i class="cs-icon-file-pptx"></i></a>
+                      <a href="#"><i class="cs-icon-file-txt"></i></a>
+                      <a href="#"><i class="cs-icon-file-xlsx"></i></a>
+                    </td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="board-list-bottom">
+              @@include('./include/board-paging.html')
+            </div>
+          </div>
+          <!-- tabnav3 자리공유-->
+
+          <!-- tabnav4 교육정보-->
+          <div data-toggle-id="tabnav4">
+            <div class="board-list-header">
+              <!-- 게시물 갯수 등 -->
+              <div class="board-stat">
+                총 게시물 <span>(<b>999</b>건/9999건)</span>
+              </div>
+
+              <!-- 선택옵션 등 -->
+              <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>최신순</option>
+                </select>
+                <select class="cs-input cs-input-point">
+                  <option>10개씩 보기</option>
+                </select>
+              </div>
+            </div>
+            <!-- board-list-text -->
+            <div class="board-list-text">
+              <table>
+                <colgroup>
+                  <col class="width150">
+                  <col>
+                  <col class="width140">
+                  <col class="width170">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="row">번호</th>
+                    <th scope="row">제목</th>
+                    <th scope="row">등록일</th>
+                    <th scope="row">첨부파일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for(var i = 10; i > 7; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>Land-XI통합관리시스템 서비스 오픈</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  @@for(var i = 7; i > 0; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title">
+                      첨부파일 아이콘들
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                      <a href="#"><i class="cs-icon-file-pdf"></i></a>
+                      <a href="#"><i class="cs-icon-file-png"></i></a>
+                      <a href="#"><i class="cs-icon-file-pptx"></i></a>
+                      <a href="#"><i class="cs-icon-file-txt"></i></a>
+                      <a href="#"><i class="cs-icon-file-xlsx"></i></a>
+                    </td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="board-list-bottom">
+              @@include('./include/board-paging.html')
+            </div>
+          </div>
+          <!-- tabnav4 교육정보-->
+
+          <!-- tabnav5 산업동향-->
+          <div data-toggle-id="tabnav5">
+            <div class="board-list-header">
+              <!-- 게시물 갯수 등 -->
+              <div class="board-stat">
+                총 게시물 <span>(<b>999</b>건/9999건)</span>
+              </div>
+
+              <!-- 선택옵션 등 -->
+              <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>최신순</option>
+                </select>
+                <select class="cs-input cs-input-point">
+                  <option>10개씩 보기</option>
+                </select>
+              </div>
+            </div>
+            <!-- board-list-text -->
+            <div class="board-list-text">
+              <table>
+                <colgroup>
+                  <col class="width150">
+                  <col>
+                  <col class="width140">
+                  <col class="width170">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="row">번호</th>
+                    <th scope="row">제목</th>
+                    <th scope="row">등록일</th>
+                    <th scope="row">첨부파일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for(var i = 10; i > 7; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>Land-XI통합관리시스템 서비스 오픈</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  @@for(var i = 7; i > 0; i--){
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  }
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내</span></a></td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tac">${i}</td>
+                    <td class="item_list-title">
+                      첨부파일 아이콘들
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                      <a href="#"><i class="cs-icon-file-pdf"></i></a>
+                      <a href="#"><i class="cs-icon-file-png"></i></a>
+                      <a href="#"><i class="cs-icon-file-pptx"></i></a>
+                      <a href="#"><i class="cs-icon-file-txt"></i></a>
+                      <a href="#"><i class="cs-icon-file-xlsx"></i></a>
+                    </td>
+                    <td class="tac">2024.03.31</td>
+                    <td class="tac">
+                      <a href="#"><i class="cs-icon-file-hwp"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="board-list-bottom">
+              @@include('./include/board-paging.html')
+            </div>
+          </div>
+          <!-- tabnav5 산업동향-->
+
+        </div>
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

@@ -121,6 +121,41 @@
                 }
             }
         }
+        &.type02{
+            border-radius:25px;
+            .flex{
+                gap:16px;
+                &>ul{
+                    width: 60%;
+                    li{
+                        div{
+                            text-align: center;
+                        }
+                        &.main-sh-col01-item01{
+                            p{
+                                &:after{
+                                    background-image: url(../../images/platform/main_ico02.png);
+                                }
+                            }
+                        }
+                        &.main-sh-col01-item03{
+                            p{
+                                &:after{
+                                    background-image: url(../../images/platform/main_ico02.png);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .main-sh-col01-item04{
+                width: 40%;
+                background: #fff;
+                flex: 1;
+                border-radius:6px;
+                padding:24px;
+            }
+        }
     }
     .main-sh-col02{
         background-image: url('#{var.$image}/platform/main_bg02.png');
@@ -144,6 +179,9 @@
             .board-list-text:first-child{
                 margin-bottom: 16px;
             }
+        }
+        &.type02{
+
         }
     }
     .main-sh-col03{
@@ -171,6 +209,106 @@
             }
             span{
                 color:#888888;
+            }
+        }
+    }
+    .main-sh-col05{
+        border-radius:25px;
+        background-image: url('#{var.$image}/platform/main_bg02.png');
+        background-size: cover;
+        h3{
+            color: #fff;
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;  
+            gap:16px;
+            margin-bottom: 16px;
+            li{
+                background: #fff;
+                width:calc(50% - 8px);
+                border-radius: 6px;
+                height: 152px;
+                list-style: none;
+                padding: 24px;
+                box-sizing: border-box;
+                p{
+                    position: relative;
+                    color:#999999;
+                    margin: 0;
+                    padding: 7px 0;
+                    margin-bottom: 24px;
+                    &:after{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        display: block;
+                        content:'';
+                        background-color: #edf1f4;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 4px;
+                    }
+                }
+                div{
+                    font-size: 14px;
+                    text-align: center;
+                    strong{
+                        font-size: 22px;
+                    }
+                }
+                &.main-sh-col01-item01{
+                    p{
+                        &:after{
+                            background-image: url('#{var.$image}/platform/main_ico01.png');
+                        }
+                    }
+                }
+                &.main-sh-col01-item02{
+                    p{
+                        &:after{
+                            background-image: url('#{var.$image}/platform/main_ico02.png');
+                        }
+                    }
+                }
+                &.main-sh-col01-item03{
+                    p{
+                        &:after{
+                            background-image: url('#{var.$image}/platform/main_ico03.png');
+                        }
+                    }
+                }
+                &.main-sh-col01-item04{
+                    p{
+                        &:after{
+                            background-image: url('#{var.$image}/platform/main_ico04.png');
+                        }
+                    }
+                }
+            }
+        }
+        .main-sh-col05_bottom{
+            background: #fff;
+            display: flex;
+            gap:16px;
+            padding: 24px;
+            border-radius:6px;
+            .chart-sec{
+                width: 30%;
+            }
+            .thead-sm{
+                height: 105px;
+                overflow-y: scroll;
+                width: 70%;
             }
         }
     }

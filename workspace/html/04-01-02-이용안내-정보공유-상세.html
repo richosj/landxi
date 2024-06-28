@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+    
+    @@include('./include/front/location.html',{cate1:'이용안내', cate2: '정보공유'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="lay-wrap">
+        <div class="board-wrap">
+          <div class="board-viwer">
+            <div class="board-viwer_header">
+              <h3><span>[공지]</span>회원정보의 목적 외 이용 또는 제3자 제공</h3>
+              <span>2024-12-12</span>
+            </div>
+            <div class="board-viwer_attach">
+              <ul class="attach-list">
+                <li>
+                  <strong>
+                    <i class="cs-icon-file-pdf-active"></i>
+                    데이터 활용 자료.pdf
+                  </strong>
+                  <div>
+                    <a href="#" class="cs-btn"><i class="cs-icon-preview"></i> 미리보기</a>
+                    <a href="#" class="cs-btn"><i class="cs-icon-down"></i> 다운로드</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>
+                    <i class="cs-icon-file-pdf-active"></i>
+                    데이터 활용 자료.pdf
+                  </strong>
+                  <div>
+                    <a href="#" class="cs-btn"><i class="cs-icon-preview"></i> 미리보기</a>
+                    <a href="#" class="cs-btn"><i class="cs-icon-down"></i> 다운로드</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="board-viwer_text">
+              <p>Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+              <p>Land-XI 통합관리시스템 서비스 오픈</p>
+              <p>회원정보의 목적 외 이용 또는 제3자 제공 Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+              <div style="text-align:center;margin-top:25px;">
+                <img src="@@imageRoot/front/sample_image.jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="board-nav">
+            <a href="#" class="board-nav_prev">
+              <b>이전글</b>
+              <strong>Land-XI 통합관리시스템 서비스 오픈</strong>
+              <span>2024-12-12</span>
+            </a>
+            <a href="#" class="board-nav_next">
+              <b>다음글</b>
+              <strong>Land-XI 통합관리시스템 서비스 오픈</strong>
+              <span>2024-12-12</span>
+            </a>
+          </div>
+
+          <div class="board-btns">
+            <a href="#" class="cs-btn2 cs-btn-color1">목록</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>

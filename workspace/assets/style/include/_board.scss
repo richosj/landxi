@@ -548,6 +548,15 @@
     margin-left: 5px;
   }
 }
+.gal-btn-wrap{
+  margin-top: 20px;
+  text-align: center;
+  button{
+    font-size: 14px;
+    height: 38px;
+    width: 100%;
+  }
+}
 
 .board-manager-reply {
   margin-top: 40px;
@@ -775,28 +784,39 @@
   padding: 22px 40px;
 }
 
+.ex-mark-wrap{
+  position: relative;
+}
 .ex-mark{
-  background: #f5f5f5;
-  border-radius:5px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(24,36,64,0.7);
+  border: 1px solid rgba(24,36,64,0.7);
+  border-radius:20px;
   height: 40px;
-  line-height: 40px;
+  line-height: 38px;
   text-align: center;
-  margin-top: 30px;
+  padding: 0 33px 0 64px; 
+  box-sizing: border-box;
+  width: max-content;
   p{
     position: relative;
     display: inline-block;
     font-size: 13px;
-    color:#999999;
+    color:#fff;
     margin: 0;
+    padding: 0 5px;
     &:after{
       position: absolute;
       left: -20px;
-      top: 11px;
+      top: 8px;
       display: block;
       content:'';
-      width: 16px;
-      height: 16px;
-      background: #f5f5f5 url("../../images/front/ex_mark_ico.png") no-repeat 50% 50%;
+      width: 20px;
+      height: 20px;
+      background:  url("../../images/front/ex_mark_ico.png") no-repeat 50% 50%;
     }
   }
 }

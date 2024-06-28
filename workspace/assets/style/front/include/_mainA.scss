@@ -919,19 +919,32 @@
     position: relative;
     left: 130px;
     top: 54px;
-    &::before,
-    &::after{
-      content:"";display: block;width: 101px;height: 38px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      position: absolute;
-      top: 15px;
-      z-index: 5;
-    }
-    &::before{background-image: url("../../images/main/s2-mark-1.png");left: 15px;}
-    &::after{background-image: url("../../images/main/s2-mark-2.png");right: 15px;}
-    &.namwon{
-      border: 1px solid #4f61c6 ;
+    .swiper-slide-active{
+      &::before,
+      &::after{
+        content:"";display: block;width: 101px;height: 38px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        top: 15px;
+        z-index: 5;
+        transition: all 0.3s;
+      }
+      &::before{background-image: url("../../images/main/s2-mark-1.png");left: 15px;}
+      &::after{background-image: url("../../images/main/s2-mark-2.png");right: 15px;}
+      &.namwon{
+        border: 1px solid #4f61c6 ;
+      }
+      &.half-right{
+        &::before{
+          opacity: 0;
+        }
+      }
+      &.half-left{
+        &::after{
+          opacity: 0;
+        }
+      }
     }
   }
   .bafore{
@@ -1462,6 +1475,22 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      &.badge-notice01{
+        border: 1px solid #74e1da;
+        color:#091634
+      }
+      &.badge-notice02{
+        border: 1px solid #66bcf2;
+        color:#091634
+      }
+      &.badge-notice03{
+        border: 1px solid #6689bf;
+        color:#091634
+      }
+      &.badge-notice04{
+        border: 1px solid #989898;
+        color:#091634
+      }
     }
     
     .subject {
@@ -2003,6 +2032,7 @@ body.mobile .section-4 {
       font-weight: 700;
       font-size: 62px;
       padding-bottom: 35px;
+      text-shadow: 2px 2px 5px #000;
       small{
         font-weight: 400;
         font-size: 36px;
@@ -2010,6 +2040,7 @@ body.mobile .section-4 {
     }
     p{
       font-size: 36px;
+      text-shadow: 2px 2px 5px #000;
     }
     .btn-group{
       display: flex;

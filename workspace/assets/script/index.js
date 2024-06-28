@@ -104,31 +104,61 @@ function cutOffText(element) {
 //     }
 // })
 
-const s2Array = [
-  {
-    number: "01",
-    link: "#",
-    title: "불법쓰레기 탐지",
-    text: "식별되는 객체들의 위치와 관계 분석을 통한<br>공간정보를 문장(텍스트)으로 보여줍니다.",
-  },{
-    number: "02",
-    link: "#",
-    title: "리싸이클링 자원 탐지",
-    text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
-  },
-  {
-    number: "03",
-    link: "#",
-    title: "개발제한구역 불법행위 탐지",
-    text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
-  },
-  {
-    number: "04",
-    link: "#",
-    title: "재난 피해 객체 탐지",
-    text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
-  },
-];
+
+const monitorDiv = document.querySelector(".monitor-container");
+let s2Array; // s2Array를 if 블록 바깥에서 선언합니다.
+
+if (monitorDiv.classList.contains("lx-monitor")) {
+  s2Array = [
+    {
+      number: "01",
+      link: "#",
+      title: "불법쓰레기 탐지",
+      text: "식별되는 객체들의 위치와 관계 분석을 통한<br>공간정보를 문장(텍스트)으로 보여줍니다.",
+    },
+    {
+      number: "02",
+      link: "#",
+      title: "리싸이클링 자원 탐지",
+      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+    },
+    {
+      number: "03",
+      link: "#",
+      title: "개발제한구역 불법행위 탐지",
+      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+    },
+    {
+      number: "04",
+      link: "#",
+      title: "재난 피해 객체 탐지",
+      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+    },
+  ];
+} else if (monitorDiv.classList.contains("namwon-monitor")) {
+  s2Array = [
+    {
+      number: "01",
+      link: "#",
+      title: "불법 쓰레기 탐지",
+      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+    },
+    {
+      number: "02",
+      link: "#",
+      title: "불법소각",
+      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+    },
+    {
+      number: "03",
+      link: "#",
+      title: "방치폐가",
+      text: "식별되는 객체들의 위치와 관계 분석을 통한<br>공간정보를 문장(텍스트)으로 보여줍니다.",
+    },
+
+  ];
+}
+
 
 const s2Swiper = new Swiper(".section-2 .swiper", {
   direction: "horizontal",
@@ -216,16 +246,20 @@ $("svg").attr("aria-hidden", true);
 document.querySelectorAll('.bafore').forEach(slider => {
   const sliderHandle = slider.querySelector('.scroller');
   const sliderImageAfter = slider.querySelector('.original');
+  const coordinatesElement = document.querySelector('.monitor-wrapper');
 
   let isDragging = false;
   let startX = 0;
+  let lastX = 0;
+  let isMouseDown = false;
 
   sliderHandle.addEventListener('mousedown', (e) => {
       isDragging = true;
       document.body.style.cursor = 'ew-resize';
       startX = e.clientX;
       s2Swiper.autoplay.pause();
-
+      isMouseDown = true;
+      lastX = e.clientX;
   });
 
   document.addEventListener('mouseup', (e) => {
@@ -237,22 +271,79 @@ document.querySelectorAll('.bafore').forEach(slider => {
       s2Swiper.autoplay.start();
       console.log('start');
     }
+    isMouseDown = false;
+    coordinatesElement.classList.remove('move-right', 'move-left');
   });
 
   document.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
+    if (!isDragging) return;
 
-      const sliderRect = slider.getBoundingClientRect();
-      
-      let offsetX = e.clientX - sliderRect.left;
+    const sliderRect = slider.getBoundingClientRect();
+    
+    let offsetX = e.clientX - sliderRect.left;
 
-      if (offsetX < 0) offsetX = 0;
-      if (offsetX > sliderRect.width) offsetX = sliderRect.width;
+    if (offsetX < 0) offsetX = 0;
+    if (offsetX > sliderRect.width) offsetX = sliderRect.width;
 
-      const offsetPercentage = (offsetX / sliderRect.width) * 100;
-      sliderHandle.style.left = `${offsetPercentage}%`;
-      sliderImageAfter.style.width = `${offsetPercentage}%`;
+    const offsetPercentage = (offsetX / sliderRect.width) * 100;
+    sliderHandle.style.left = `${offsetPercentage}%`;
+    sliderImageAfter.style.width = `${offsetPercentage}%`;
+
+    const swiperActive = document.querySelector('.swiper-slide-active');
+    if (swiperActive) {
+      if (offsetPercentage > 50) {
+        swiperActive.classList.add('half-left');
+        swiperActive.classList.remove('half-right');
+      } else {
+        swiperActive.classList.remove('half-left');
+        swiperActive.classList.add('half-right');
+      }
+    }
   });
+
+
+  sliderHandle.addEventListener('mousemove', (event) => {
+    if (!isMouseDown) return;
+
+    const x = event.clientX;
+    const y = event.clientY;
+
+    // 좌우 이동 방향 감지
+    if (x > lastX) {
+        // 오른쪽으로 이동
+        coordinatesElement.classList.add('move-right');
+        coordinatesElement.classList.remove('move-left');
+    } else if (x < lastX) {
+        // 왼쪽으로 이동
+        coordinatesElement.classList.add('move-left');
+        coordinatesElement.classList.remove('move-right');
+    }    
+
+    // 마지막 X 좌표 업데이트
+    lastX = x;
+  });
+
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        const target = mutation.target;
+        if (target.classList.contains('swiper-slide-active')) {
+          // 현재 활성 슬라이드를 제외한 모든 형제 슬라이드에서 half-left 및 half-right 클래스 제거
+          document.querySelectorAll('.swiper-slide').forEach(slide => {
+            if (slide !== target) {
+              slide.classList.remove('half-left', 'half-right');
+            }
+          });
+        }
+      }
+    });
+  });
+
+  // 모든 swiper-slide 요소에 대해 MutationObserver 설정
+  document.querySelectorAll('.swiper-slide').forEach(slide => {
+    observer.observe(slide, { attributes: true });
+  });
+
 });
 
 
@@ -276,3 +367,8 @@ document.querySelectorAll(".tabs button").forEach((button) => {
     }
   });
 });
+
+
+
+
+

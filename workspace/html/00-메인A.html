@@ -37,8 +37,12 @@
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="24px" height="24px">
-                           <image  x="0px" y="0px" width="24px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBRULAB8YufmGAAAA20lEQVQ4y7WSMW7DMAxFn6muho+QO/RqXR2gU4Cid+pdcgNrEAoDsX8X2VVNRcnSz4lfJCjqCZ015RhlQlY4Pkb0rU1JvVBfOF7JuLFpJQChcLxWY9mTBfFQ5pyFl1a9P0xceLvb8NlpYshJ5EQE2B2vWB8f79+p3jC4xl9H0/7Gk4YDOI9y9A19E2XyzxqaKFfjsVTCbYMr/8Fu1cDFHBeSn3dcGqEhx5YVNf8GrrGDceaaY6ycPwHuzw7PgDtcIBSlXXWjrqwxh2lpO+HdeGVmZuaDL8SNruX8AOGKNSFzcprJAAAAAElFTkSuQmCC" />
-                           </svg></i>마이 스페이스 바로가기</button>
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="23px" height="24px">
+                           <image  x="0px" y="0px" width="23px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAYCAQAAAC7da7+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBhwLCSfb0c8LAAABfUlEQVQ4y7WSPWtUQRiFn9ld0rmmEAyIYcUixEZt/BFREJQ0IhjCgpIqaQw2phZBUqSKhV+FjcHCPyAp/CijxTYRDGETkhAISkIIyTwWO3t395pwsfBMc985550577kDOVj2ketqw1GK4VM1GlW9XSQ+5YExLV0qkl+2jaju5vmKo1zKqiYLHFIGAgH5CeAAt+jnU/gIZBe3TjzvXJf3u+CIu4l9Z5lEtBtq9vnE3+q642DVHTu4TpdT1RqAs0bHALzZJY7OVJLr0DtxZ7b0HYBAuYQ9q93cbl9knwCJXSpldEhp9CBsMUFM3Gc+VJjiKsNco8FXVljNJx1eusdzqkzzLBy2rE6qb+zLrM+qY57znq9dS1EPdSZ7oEZ/+d77DqZktrP0fzjvje4gqs74xaN0znebRqObvrXuhZPeyxnv+MqN1PTQQDG8aN1v6mOveLZIXPMovZlodC3Pl3J1f8q+9aMG/nrAJ11z/HaJf8L/lee9L/OC01nVyMv/AGPER7pnkhOxAAAAAElFTkSuQmCC" />
+                           </svg></i>신규 모델 개발 바로가기</button>
                         <button type="button" class="btn"><i><svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -54,8 +58,8 @@
         <section class="section section-2" id="section-2">
             <div class="monitor">
 
-                <div class="monitor-container">
-                    <div class="monitor-wrapper">
+                <div class="monitor-container lx-monitor">
+                    <div id="monitor-wrapper" class="monitor-wrapper">
                         <div class="swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -80,7 +84,7 @@
                                     <div class="bafore">
                                         <div class="original"><img src="./common/images/front/vs04_01original.png"
                                                 draggable="false"></div>
-                                        <div class="remodeling"><img src="./common/images/front/vs04_02result.jpg"
+                                        <div class="remodeling"><img src="./common/images/front/vs04_02result.png"
                                                 draggable="false"></div>
                                         <div class="scroller"></div>
                                     </div>
@@ -274,12 +278,13 @@
         <section class="section section-4" id="section-4">
             <div class="container">
                 <div class="latest-group">
-                    <h3>정보공유</h3>
+                    <h3>알림마당</h3>
                     <div class="tabs">
                         <nav>
                             <button type="button" class="btn-tabs active" data-tabs=".tabs-1">추천 AI 학습모델</button>
                             <button type="button" class="btn-tabs" data-tabs=".tabs-2">자주하는 질문</button>
-                            <button type="button" class="btn-tabs" data-tabs=".tabs-3">공지사항</button>
+                            <button type="button" class="btn-tabs" data-tabs=".tabs-3">정보공유</button>
+                            <button type="button" class="btn-tabs" data-tabs=".tabs-4">활용사례</button>
                         </nav>
                         <div class="tabs-cont tabs-1 show">
                             <ul class="list">
@@ -355,8 +360,8 @@
                             <ul class="bs-list">
                                 <li>
                                     <a href="#">
-                                        <span class="badge" style="--color:#0063de">모델</span>
-                                        <div class="subject">AI 학습자료 연구 모델 등록</div>
+                                        <span class="badge badge-notice01" style="--color:#b9f0ec">공지사항</span>
+                                        <div class="subject">Land-XI 통합관리시스템 서비스 오픈</div>
                                         <div class="info">
                                             <dl>
                                                 <dt>조회수</dt>
@@ -375,8 +380,8 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="badge" style="--color:#999999">안내</span>
-                                        <div class="subject">AI 학습자료 연구 모델 등록</div>
+                                        <span class="badge badge-notice02" style="--color:#b2ddf8">자료공유</span>
+                                        <div class="subject">Land-XI 방치폐가 학습 모델 공유</div>
                                         <div class="info">
                                             <dl>
                                                 <dt>조회수</dt>
@@ -393,7 +398,86 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li class="empty">등록된 글이 없습니다.</li>
+                                <li>
+                                    <a href="#">
+                                        <span class="badge badge-notice03" style="--color:#b2c4df">교육정보</span>
+                                        <div class="subject">레이어 분석을 위한 도구 활용</div>
+                                        <div class="info">
+                                            <dl>
+                                                <dt>조회수</dt>
+                                                <dd>999</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>등록일</dt>
+                                                <dd>2024/12/15</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>작성자</dt>
+                                                <dd>홍길동</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="badge badge-notice04" style="--color:#cbcbcb">산업동향</span>
+                                        <div class="subject">2024년 AI 분석 모델 활용 방안을 위한 연구</div>
+                                        <div class="info">
+                                            <dl>
+                                                <dt>조회수</dt>
+                                                <dd>999</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>등록일</dt>
+                                                <dd>2024/12/15</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>작성자</dt>
+                                                <dd>홍길동</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-cont tabs-4">
+                            <ul class="list">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            AI 모델 활용 사례
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            AI 모델 활용 사례
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            AI 모델 활용 사례
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            AI 모델 활용 사례
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -487,7 +571,6 @@
 
                         <div class="partners">
                             <a href="#"><img src="./common/images/main/lx.png" alt=""></a>
-                            <a href="#"><img src="./common/images/main/nia.png" alt=""></a>
                         </div>
                     </div>
                 </div>

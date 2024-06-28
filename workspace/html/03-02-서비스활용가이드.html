@@ -14,80 +14,155 @@
       <div class="lay-wrap">
         <div class="service-guide">
 
-          <!--// tab-nav -->
-          <ul class="tab-nav tab-type01 service-nav service-flex" data-js="tabNav">
-            <li class="active">
-              <button type="button" class="" data-id="tabnav1">
-                레이블 관리
-              </button>
-            </li>
-            <li class="">
-              <button type="button" class="" data-id="tabnav2">
-                파일 업로드
-              </button>
-            </li>
-            <li class="">
-              <button type="button" class="" data-id="tabnav3">
-                작업자 지정
-              </button>
-            </li>
-            <li class="">
-              <button type="button" class="" data-id="tabnav4">
-                어노테이션
-              </button>
-            </li>
-            <li class="">
-              <button type="button" class="" data-id="tabnav5">
-                라벨링 이미지
-              </button>
-            </li>
-            <li class="">
-              <button type="button" class="" data-id="tabnav6">
-                데이터셋 관리
-              </button>
-            </li>
-          </ul>
-          <!-- tab-nav //-->
+          <div class="service-snb">
+            <ul>
+              <li class="service-guide-ti">메인</li>
+              <li><a href="#service-guide01-01">회원가입</a></li>
+              <li><a href="#service-guide01-02">로그인</a></li>
+              <li><a href="#service-guide01-03">마이페이지</a></li>
+              <li><a href="#service-guide01-04">대시보드</a></li>
+              <li class="service-guide-ti">마이스페이스</li>
+              <li><a href="#service-guide0">마이스페이스 메인화면</a></li>
+              <li><a href="#service-guide0">프로젝트 개요</a></li>
+              <li><a href="#service-guide0">프로젝트 참여자 관리</a></li>
+              <li class="service-guide-ti">파일 업로드</li>
+              <li><a href="#service-guide0">내부 학습 데이터</a></li>
+              <li><a href="#service-guide0">외부 학습 데이터</a></li>
+              <li><a href="#service-guide0">추론 데이터</a></li>
+              <li class="service-guide-ti">레이블 관리</li>
+              <li><a href="#service-guide0">레이블 관리 메인화면</a></li>
+              <li class="service-guide-ti">어노테이션</li>
+              <li><a href="#service-guide0">어노테이션 메인화면</a></li>
+              <li><a href="#service-guide0">작업자 지정</a></li>
+              <li><a href="#service-guide0">어노테이션 미완료</a></li>
+              <li><a href="#service-guide0">어노테이션 팝업</a></li>
+              <li><a href="#service-guide0">검수하기 팝업</a></li>
+              <li><a href="#service-guide0">어노테이션 완료</a></li>
+              <li class="service-guide-ti">라벨링 이미지</li>
+              <li><a href="#service-guide0">라벨링 이미지 메인화면</a></li>
+              <li class="service-guide-ti">데이터셋 관리</li>
+              <li><a href="#service-guide0">학습 데이터셋</a></li>
+              <li><a href="#service-guide0">추론 데이터셋</a></li>
+              <li><a href="#service-guide0">공유 데이터셋</a></li>
+              <li><a href="#service-guide0">상세보기</a></li>              
+              <li class="service-guide-ti">워크플로우</li>
+              <li><a href="#service-guide0">신규 워크플로우 생성</a></li>
+              <li><a href="#service-guide0">모델 노드</a></li>
+              <li><a href="#service-guide0">데이터셋 노드</a></li>
+              <li><a href="#service-guide0">신규 학습 노드</a></li>
+              <li><a href="#service-guide0">학습 결과 노드</a></li>
+              <li><a href="#service-guide0">전이 학습 노드</a></li>
+              <li><a href="#service-guide0">추론 노드(추론 데이터셋 연결)</a></li>
+              <li><a href="#service-guide0">추론 노드(파일 업로드)</a></li>
+              <li class="service-guide-ti">학습 관리</li>
+              <li><a href="#service-guide0">학습 관리 목록</a></li>
+              <li><a href="#service-guide0">학습 관리 상세</a></li>
+              <li class="service-guide-ti">추론 관리</li>
+              <li><a href="#service-guide0">추론 관리 목록</a></li>
+              <li><a href="#service-guide0">추론 관리 상세</a></li>
+              <li class="service-guide-ti">실행 로그</li>
+              <li><a href="#service-guide0">실행로그 메인화면</a></li>
+              <li class="service-guide-ti">모델 실행 관리</li>
+              <li><a href="#service-guide0">모델 실행 괸리 메인화면</a></li>
+              <li class="service-guide-ti">프로젝트 초대</li>
+              <li><a href="#service-guide0">프로젝트 초대 메인화면</a></li>
+              <li class="service-guide-ti">즐겨찾기</a></li>
+              <li><a href="#service-guide0">즐겨찾기 메인화면</a></li>
+              <li class="service-guide-ti">서비스 활용</li>
+              <li><a href="#service-guide0">AI 활용 모델 목록</a></li>
+              <li><a href="#service-guide0">AI 활용 모델 상세</a></li>
+              <li><a href="#service-guide0">AI 활용 모델 실행</a></li>
+              <li><a href="#service-guide0">AI 활용 모델 실행 결과 상세 조회</a></li>
+            </ul>
+          </div>          
+          <div class="service-content">
 
-          <!--// tab-con -->
-          
-          <div data-toggle-id="tabnav1">
-            <h3 class="service-guide-ti">레이블 관리</h3>
-            <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
-              레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
-            </p>
-            <div class="img-box">
-              <img src="./common/images/front/service-test.png" alt="">
+            <div id="service-guide01-01" class="service-sec">
+              <h3 class="service-guide-ti">회원가입</h3>
+              <p class="txt-blue">LAND-XI 사용을 위한 계정을 만들기 위해 회원가입을 진행한다.</p>
+              <div class="img-box">
+                <img src="./common/images/front/service-01-01.png" alt="">
+              </div>
+              <ul class="circle_list">
+                <li>로그인 화면에서 사용자가 사용신청을 위해 ‘회원가입’ 버튼을 클릭하여 회원가입 페이지로 이동한다.</li>
+                <li>회원 가입을 위해 약관 동의 페이지에서 약관 확인 후 정보 입력 페이지로 이동한다.</li>
+                <li>사용신청을 위한 사용자 기본정보를 등록한다.기본 정보에 ‘기관 선택’을 통해 LX 사용자, 또는 기관(남원시) 사용자로 선택한다.</li>
+                <li>회원가입 완료 페이지에서 가입이 완료되었음을 확인한다.단, 사용 신청 완료 후 LX 담당자의 가입 승인 완료 처리가 되어야 로그인이 가능하며, LX 담당자의 승인 완료 처리 시 로그인이 가능하다는 안내 메일이 발송된다.</li>
+              </ul>
+              
             </div>
-            <h3 class="service-guide-ti">레이블 관리</h3>
-            <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
-              레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
-            </p>
+
+            <div id="service-guide01-02" class="service-sec">
+              <h3 class="service-guide-ti">로그인</h3>
+              <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
+                레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
+              </p>
+              <div class="img-box">
+                <img src="./common/images/front/service-01-01.png" alt="">
+              </div>
+              <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
+                레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
+              </p>
+            </div>
+
+            <div id="service-guide01-03" class="service-sec">
+              <h3 class="service-guide-ti">마이페이지</h3>
+              <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
+                레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
+              </p>
+              <div class="img-box">
+                <img src="./common/images/front/service-01-01.png" alt="">
+              </div>
+              <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
+                레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
+              </p>
+            </div>
+
+            <div id="service-guide01-04" class="service-sec">
+              <h3 class="service-guide-ti">대시보드</h3>
+              <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
+                레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
+              </p>
+              <div class="img-box">
+                <img src="./common/images/front/service-01-01.png" alt="">
+              </div>
+              <p class="txt">[신규 레이블 관리]를 통해 사용자 맞춤형 레이블을 생성할 수 있으며, 기존에 만들어진 레이블에 대한 속성 정보를 관리할 수 있습니다.
+                레이블 속성 정보는 [수정] 버튼을 선택하여 관리할 수 있습니다.
+              </p>
+            </div>
+
           </div>
-          <div data-toggle-id="tabnav2" class="toggle-hidden">
-            <h3 class="service-guide-ti">파일 업로드</h3>
-          </div>
-          <div data-toggle-id="tabnav3" class="toggle-hidden">
-            <h3 class="service-guide-ti">작업자 지정</h3>
-          </div>
-          <div data-toggle-id="tabnav4" class="toggle-hidden">
-            <h3 class="service-guide-ti">어노테이션</h3>
-          </div>
-          <div data-toggle-id="tabnav5" class="toggle-hidden">
-            <h3 class="service-guide-ti">라벨링 이미지</h3>
-          </div>
-          <div data-toggle-id="tabnav6" class="toggle-hidden">
-            <h3 class="service-guide-ti">데이터셋 관리</h3>
-          </div>
-          <!-- tab-con //-->
         </div>
       </div>
     </div>
     <!--// container -->
-
+    <script>
+      window.addEventListener('scroll', function() {
+          var sections = document.querySelectorAll('.service-sec');
+          var navLinks = document.querySelectorAll('.service-snb a');
+          var currentSection = '';
+  
+          sections.forEach(function(section) {
+              var sectionTop = section.offsetTop;
+              if (window.pageYOffset >= sectionTop - 60) { 
+                  currentSection = section.getAttribute('id');
+              }
+          });
+  
+          navLinks.forEach(function(link) {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + currentSection) {
+                  link.classList.add('active');
+              }
+          });
+      });
+    </script>
+    
     @@include('./include/front/footer.html')
 
   </div>
   <!--// lay-body -->
+
+
 </body>
 </html>
