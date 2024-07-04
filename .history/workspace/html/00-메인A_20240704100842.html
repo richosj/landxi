@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/front/head.html')
+    <link rel="stylesheet" href="./common/libjs/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="./common/libjs/fullpage.min.css"> -->
+    <script src="./common/libjs/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <!-- <script src="./common/libjs/fullpage.js"></script> -->
+</head>
+
+<body>
+    @@include('./include/front/header.v3.html')
+    <aside class="index-nav">
+        <i class="icon-home"></i>
+        <p class="current">01</p>
+        <div class="line"></div>
+        <p class="total">04</p>
+    </aside>
+    <!-- nav -->
+    <div class="section-container">
+        <section class="section visualty1">
+            <div class="container">
+                <div class="visualty1-center">
+                    <h3 class="h3-ani">Land-XI 플랫폼</h3>
+                    <div class="p-ani-1">
+                        <p class="cross-text">
+                            <span class="">누구나 쉽게 사용할 수 있는 노코드 기반의<br> AI 학습·분석 플랫폼입니다.</span>
+                            <span class="">드론·항공·위성과 AI 기술을<br> 활용하여 공공서비스 혁신을 지원합니다.</span>
+                        </p>
+                    </div>
+                    <!-- <p class="p-ani-2">
+                        공공서비스 혁신을 지원합니다.
+                    </p> -->
+                    <div class="btn-group">
+                        <button type="button" class="btn"><i><svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="24px" height="24px">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="23px" height="24px">
+                           <image  x="0px" y="0px" width="23px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAYCAQAAAC7da7+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBhwLCSfb0c8LAAABfUlEQVQ4y7WSPWtUQRiFn9ld0rmmEAyIYcUixEZt/BFREJQ0IhjCgpIqaQw2phZBUqSKhV+FjcHCPyAp/CijxTYRDGETkhAISkIIyTwWO3t395pwsfBMc985550577kDOVj2ketqw1GK4VM1GlW9XSQ+5YExLV0qkl+2jaju5vmKo1zKqiYLHFIGAgH5CeAAt+jnU/gIZBe3TjzvXJf3u+CIu4l9Z5lEtBtq9vnE3+q642DVHTu4TpdT1RqAs0bHALzZJY7OVJLr0DtxZ7b0HYBAuYQ9q93cbl9knwCJXSpldEhp9CBsMUFM3Gc+VJjiKsNco8FXVljNJx1eusdzqkzzLBy2rE6qb+zLrM+qY57znq9dS1EPdSZ7oEZ/+d77DqZktrP0fzjvje4gqs74xaN0znebRqObvrXuhZPeyxnv+MqN1PTQQDG8aN1v6mOveLZIXPMovZlodC3Pl3J1f8q+9aMG/nrAJ11z/HaJf8L/lee9L/OC01nVyMv/AGPER7pnkhOxAAAAAElFTkSuQmCC" />
+                           </svg></i>신규 모델 개발 바로가기</button>
+                        <button type="button" class="btn"><i><svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="24px" height="24px">
+                           <image  x="0px" y="0px" width="24px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBRULADpTvS3BAAABvklEQVQ4y5XUv2uTcRAG8EsKagexaE3UQcGlxQ5pFRVKoeDg5mYdFFE7WbD+nJzsn6CbIoKzg4NQQTuYxX9AsCKaQYqtDbZqiVgt7cfBN2/SN9Hifaf73vMcd8dzlxMZy8d4jEdX5GMx3sRUlOPVurjs22pVs6154EAj3gBeUDYqp8M9NUuWLKekz85kCdfAF9uEsFdRQcklk9YS0tVmwvnk85ktLSUe9zqJnmoQPoBJXaLN2+Ep+Gp/nXDbd2Xb28JDKHgH7jZ6OGpzW2ifCSXhmBX80BPCpr9mHlLFjE5hCtzIx0i8jOuRj1Y7FI9iZ+o9joiI4VDBmt1CKJnQl2QvmQNz+oUw4BfehkXUFIROM6gaFAYtgFkH08aXsFAn7EoJVIyqgAVDaT/FOqGCVXuE0G+2SUXzSk0DSEsaMe2mfPLd72MC/+TwuomNgSchMnIYNI+q4cyIk7HW3SNNtD630lk1FLWCZb1/3DtqG0jjPXj4f+L7prdOOJs0+lxnC/xEKu+TrQtU0y2EfYoKBlxOcsN4dkXPKRuT0+F+sqI/U3DV6dad/tcR6GnEc23OzMW4Et2Rj2pMx4vsmfkNDA2/Z47YydwAAAAASUVORK5CYII=" />
+                           </svg></i>분석 서비스 바로가기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section-1 -->
+        <section class="section section-2" id="section-2">
+            <div class="monitor">
+
+                <div class="monitor-container lx-monitor">
+                    <div id="monitor-wrapper" class="monitor-wrapper">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="bafore">
+                                        <div class="original"><img src="./common/images/front/vs01_01original.png"
+                                            draggable="false"></div>
+                                        <div class="remodeling"><img src="./common/images/front/vs01_02result.png"
+                                                draggable="false"></div>
+                                        <div class="scroller"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bafore">
+                                        <div class="original"><img src="./common/images/front/vs3_01original.png"
+                                                draggable="false"></div>
+                                        <div class="remodeling"><img src="./common/images/front/vs03_02result.png"
+                                                draggable="false"></div>
+                                        <div class="scroller"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bafore">
+                                        <div class="original"><img src="./common/images/front/vs04_01original.png"
+                                                draggable="false"></div>
+                                        <div class="remodeling"><img src="./common/images/front/vs04_02result.png"
+                                                draggable="false"></div>
+                                        <div class="scroller"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bafore">
+                                        <div class="original"><img src="./common/images/front/vs05_01original.png"
+                                                draggable="false"></div>
+                                        <div class="remodeling"><img src="./common/images/front/vs05_02result.png"
+                                                draggable="false"></div>
+                                        <div class="scroller"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- monitor-container -->
+
+                <div class="deco-1"><img src="./common/images/main/s2-deco-1.png" draggable="false"></div>
+                <div class="deco-2"><img src="./common/images/main/s2-deco-2.png" draggable="false"></div>
+                <div class="deco-3"><img src="./common/images/main/s2-deco-3.png" draggable="false"></div>
+            </div>
+            <div class="content-area">
+                <div class="container">
+                    <div class="group">
+                        <div class="s2-tpl">
+                            <div class="tit" style="--delay:0.25s">Land-XI 분석 서비스</div>
+                            <!-- <div class="link" style="--delay:0.55s">
+                                <a href="#">분석 서비스 바로가기<i>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px">
+                                            <image x="0px" y="0px" width="16px" height="16px"
+                                                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAJNAVXy/7nAAAATElEQVQoz4XQSQ4AIAgEwYH//xkPboAMcjKplhjFsOYc4ig+I8bE+g3nnjYsLHBcBYHfIHEOHo5BwT4o+QaE909SnhsaBrTn/QbKwAAvBhEZ9MuJewAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                    </i></a></div>-->
+                            <div class="s-tit" style="--delay:0.85s"><span class="num">01</span><b>방치쓰레기 탐지</b></div>
+                            <div class="txt" style="--delay:1.15s">불법으로 버려진 쓰레기를 신속하게 탐지함으로써 환경보호와<br>
+                                 위생 개선, 공공 안전 향상에 기여하기 위한 서비스입니다.
+                            </div>
+                        </div>
+                        
+
+                        <div class="s2-control">
+                            <button type="button" class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="9px" height="15px">
+                                    <image x="0px" y="0px" width="9px" height="15px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAPCAQAAACcwS2GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAKBRtp33pvAAAAQUlEQVQY02XQQRIAMAQEweH/f04OiCWOXUvBDqMO+AbMN2gqoelBkUDQAPAN4Fjm0MaFMX5gLSHYqz7UgxLt/8QFjAIRGXY6V18AAAAASUVORK5CYII=" />
+                                </svg>
+                            </button>
+                            <div class="fraction"></div>
+                            <button type="button" class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="9px" height="15px">
+                                    <image x="0px" y="0px" width="9px" height="15px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAPCAQAAACcwS2GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAKBQzqDP+oAAAARklEQVQY02XQQQ4AIQhD0d/e/87MQodAZWPyUiVVVYAYYwTUJhINib7nQHe+0ePdi1rLoHbqXJQTZqpbOOGn1dMJYJ6f+AAeixEaWHfpmgAAAABJRU5ErkJggg==" />
+                                </svg>
+                            </button>
+                            <div class="monitor-button monitor-button-play">play</div>
+                            <div class="monitor-button monitor-button-pause active">stop</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section-2 -->
+        <section class="section section-3" id="section-3">
+            <div class="container">
+                <h3 style="--delay:.15s"><img src="./common/images/main/s3-tit.png" alt=""></h3>
+                <div class="grid__template-auto">
+                    <div class="column">
+                        <div class="number">01</div>
+                        <div class="subject">학습데이터 구축/검수</div>
+                        <div class="desc">
+                            라벨링 도구를 사용하여 <br>
+                            손쉽게 다양한 종류의 학습 데이터를<br>
+                            구축할 수 있습니다. <br>
+                            외부에서 구축·수집된 데이터도 업로드 하여<br>
+                            검토 · 수정 할 수 있습니다.
+                        </div>
+                        <div class="icon"><img src="./common/images/main/s2-icon-01.png" alt=""></div>
+                    </div>
+                    <div class="column">
+                        <div class="number">01</div>
+                        <div class="subject">학습데이터 구축/검수</div>
+                        <div class="desc">
+                            라벨링 도구를 사용하여 <br>
+                            손쉽게 다양한 종류의 학습 데이터를<br>
+                            구축할 수 있습니다. <br>
+                            외부에서 구축·수집된 데이터도 업로드 하여<br>
+                            검토 · 수정 할 수 있습니다.
+                        </div>
+                        <div class="icon"><img src="./common/images/main/s2-icon-01.png" alt=""></div>
+                    </div>
+                    <div class="column">
+                        <div class="number">01</div>
+                        <div class="subject">학습데이터 구축/검수</div>
+                        <div class="desc">
+                            라벨링 도구를 사용하여 <br>
+                            손쉽게 다양한 종류의 학습 데이터를<br>
+                            구축할 수 있습니다. <br>
+                            외부에서 구축·수집된 데이터도 업로드 하여<br>
+                            검토 · 수정 할 수 있습니다.
+                        </div>
+                        <div class="icon"><img src="./common/images/main/s2-icon-01.png" alt=""></div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="flex-wrap">
+                    <div style="--delay:0.25s">
+                        <a href="#">
+                            <div class="num">01</div>
+                            <div class="subject">데이터 셋 구성</div>
+                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="48px">
+                                    <image x="0px" y="0px" width="48px" height="48px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PCyU4jM9oAAAEyUlEQVRYw63Xf2yVZxUH8LMi4zddtA5Y7GAZrBAYDJyajMEfbEgNqIwpxokiY67ESIYCMXExhixRE7d0GyzEhagj2ZbI2E+CDgR/kFUEZQTDYGYKhJ8dbTVgqZTSz/7oy8t7e997W1mfJ7np9/uec77vc59zzj0N0ev9Zdu0a7fNl3rv1fvwa2XX030tUAd+ZLQx1oBv9aXAQI1YkeLv4bSBfScwDc0FTDOm9sa3InqzBkdEawFzISIG9cq3VyeodNZlU1I8VaezhvXlJf8V+90qhLEOYG/fXfJou5LkvOx5z7ucoLeM6QuBuc7iPx7ycloFL1uiCU2+8GEFfpC861gh1IJaIdziT0ltXLNApVfB+gyHDOqq7i0+ei0Cn3EYnRZnuCpQlWG+5iL+5a7/V+BBcNCdBWyxQLjDAVBXXmCsxerMStB68OuiZpAnEPp7ATyrnxBmqbM4ubUIYYANOpP82GOhN8H3c94nXyCEVWCHB+xJInXaYIAI/fw+ebjZv5OHZ8zNPXBpgTDXycS7xWY7wE4VYTnOmyOEj9uMNuNL3Ew5gTBOG15Knn/OeXw7/B0Pp0bXO6nTp65J4NM4oX+K63CgIiZGxKtp72uPHXFdjC/RGVszn8VrQkTsjEspfiUiJlbExYgYkjGrjIi7orpk277y2X2NjE9GxPAMMzQi/hfexLPpsaZoTa5qqx+aXPAVrHAYHPJIAV9jVdqnWt2e8hvw2zATPKNGlUUasdcf07b2jnpfNFDYBJo0JTUS+pvtCQdT293244xFqtQktTQzhNUF88JfDBXGWeENlxKu0d9wyUMGGexhl9CQpmWnLVa6XRiWVkHXWnmlkmu97iL4Q7d2t8CT/pmYL0r5ryfMKc9Y1C2ruk5/0etdXTcbbCn+nJN+Fb6K0wXcaTzg+hzrBixVmdfshmvHpNwS4mQBc4or3aZgT0K74VeZ7FRxLhoiYkZOCrZEW9wUs1M8J0ZFW7TkWM6IiIY4d5UoHFt+FxH35Lg1R31EPBezIiLinvhVRNTnCtwbEdtLjy3T0ZI7sY1Jfup32w06jM6xGqgF0/N+D7r2EM2YkeO6CWc1g2bv46Ucq7vRbEhpga5AjxY5LgeTVZlvvipTwPIiu0exqZDrbrIMu7pxE3R0FU1mP4LLJnaz3IVl5QVq0FEwJVR4B78petutOKwiw3xMB2rKC4R/YH4G/xxNbiiyq9RU0CbDfXi3u12xwDo8laIF4LM5FxpmgwUpfgrrehaYh/eSv0c6j5/lhg/hp/ivUQl6D/N6FgjnsMb9PmG7nqboPdiu2v3W4FyxRbHLau1Jr7yAY7kFdXVXO5ZYQrvVPQn8GLxlo7fBL8qGD+GXYJ+NGsBj5QTuBN9J0Cq0qi4b/mYXsCpBXQU5LWvxkYLGtCQiXox1CXo8Zsbn4yexMUqvb8SgeC0eT9DamB5fiQdjX6lmtx0LM3ix3qzs/L0Q20qfoC0ibiwYRSLOx5EyJ7glhsWIDB6RRClxgu/ikOsSNMhRfLPsHSzBEQMSVOFd2X/Yiy55qEbsUavaPPtxLHXO3wMcw9vmqVZrL84YWi5Np3g/8+0eN67HNL3NiYxHY7dhLafQqq11XIej6o3sMXwII9U7qsNxa4uT+gPCr77HaWGM/AAAAABJRU5ErkJggg==" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="--delay:0.35s">
+                        <a href="#">
+                            <div class="num">02</div>
+                            <div class="subject">개인화 서비스</div>
+                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="47px">
+                                    <image x="0px" y="0px" width="48px" height="47px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAvCAQAAAAPi4FCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PCzEiVhsVAAACuklEQVRYw9WXT2hcVRSHvzfzwoQmjdhaaShRxIWLggtxkWahi8YsilAoGFxk48KFEFAbQ/7RCt0UioTgMitXUqNbN6UgKYV2YRoQIqQREatJLAFNbGCSzORzkTrMxMy7bzLPRc5b3fPu73zv3nvOee9FLtNJmRySrUXskmclph3IA1HGgL2o7ZE7xLzGDzyXcfg1XuUBpZgIWKPMH5mvYA2IcpmH3WdHHxA3MLeHAc4iC3zFndQqS2qXBK7YL622m+aDmi61lBZwWy057UUvOu2OeitLwJha9FxlfM6iOpYVoOCS+l6N73110ZZsAD3qim01vjZXtGpNdQFp0rQdeMxmjW+Tx8DxbOpgHTi9L1gHncBf2QDm+Ynn6a3x9XKKJeazAWzzDTBBvuLJMwF8zU4Kdao0Penv6kxlPKP+5oksC63PXfWhH/qxD9WyfdlWMna7WmkUq3anUHSppfTN7j6neZM3gDvMplYRWSLPCzwKzjzDcaQF2Ab+ZiWo6OJXyuEVnORtzvM6r9Rk3A6LfM9tvg3WQuAMBtys7Pyyc84661zVaWzY38whv6vqgld8y5csVLW/l73gNX9U9Z3DAo75SJ1MzJTP1V9sPRzgkrpknAgo+LN66XDd9EXgHqXEI9zi7tOZdSyURQWgs+7diGUKyQFCgH76acqSANvAJgWSvrsjtmhjO2FCQiXHtLKb4iFzFA88qWAll3jS3Pbs0f9nO/qAmCJtfMdW1Ru3Gv8M15lK0A9yhfUDU6FMASjihiEbrtsohoLajchuCnXagfzJAOPACDcOuD/EZ8ANvuDZOr+QMVvhN+uEqqP/8X+i6qchfRiw922t4zW+EVWvhtVpAP+Gm6iMR/eNmwbgcNUTj9fZtKYAeFnVQT8IZNahAdVJOZRe1QgAP1L1ciOaRn5jYYoOckw2IvkHHn3iaT6umfkAAAAASUVORK5CYII=" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="--delay:0.45s">
+                        <a href="#">
+                            <div class="num">03</div>
+                            <div class="subject">자동 라벨링</div>
+                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="51px">
+                                    <image x="0px" y="0px" width="48px" height="51px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAzCAQAAAB7n0OiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PDAQ7pEnxAAADr0lEQVRYw7XXX4jUVRTA8WOgWbmaaYFLmrJ/1cw/Jf6h1pJ6iMjoj2S95Uv40HNFWUn2UJTZH0iSiLBICHoJfCiK1BJUDAMJ2XJz1V3XdXXdVtOE/PQwM7vz2/n3G3e652Xm3HvO995zzzl3ZoyIiIjPY1WkGafjqdiXamVuyMhP0o6/LRPpZUz2BC0xJcVu6mJrTI+LcU8cqPYEaWWGo+i3IK1FtYAw0xH0mv9/AXKIMxamu4MnY2yqWB6Kg0Ofb4tdMSPOx8rYX/kO0o4r7s7b2SzdOF/5FGMMxMQ4Fpcq7GNa1MWFWJlXAw2xK+qjP9riUPkTDOKuFHH/Df2W5OkaHEWP28tf8iAWpbiueocxaHl1iAxgSQpAmOZ3XNKWQHThbOmkrQYQ6nXgsqV5uiancM689ICJ1tnuaxvMLYI4gr/cmaebrRd9ZqcDPOxYXnK+UmAyXTvOJBDNutCltTLgPnDSJhsdAC+WQPQncq/FMXQVniIJGKcde9yS/f4WaChA3OoILiQad7NunDKnHGAFLmvOW/Ar1heJ7XSduGhxnq7VGfQlEdckqq45ItqjPU+zIyJaitTn8WiL4zE+vo8FQ7rDsSL6Y0r8GM3DC5OAfyJiQkIzKastHJ3RFn9GXXwb8/MaYlucjpvjh2hKtopciOaA1UMHnKwXa0vWxUwdBW/DXN3o1FQ8i77CgDVCWGovut1QpvRm6sS5RNLO0YMTGosBpvoDHHYwWwn3VqjuWbowmGjcc/WjR1OxQpvqi6Ey25/oO6Wk0cmCZrHQILosywAWjzCZZ61nK+59WBocR0+itSwygG3hArkLGYU06sTJRA3c70v1mSdz86gBodEJ9I58G8KbYFMNEJnG3e+OJCC8B96pAaJVH85qSQLCu+CNGiBm60GHyUlAeLtmiFan8uMxPFE7xDPoc/1IQHi/RoibINf0k1NbaoKoB7OKAcJHYMOoABvRYWxxQPgAvHrV7teA5woveVg2g9euyv3TYMewpviyD68yUBn3O3PhKQ0IH4PXq3L/OPjZuHxt6eVbqwzUqqz7uqS+nEkmo9ancv8o2G3CyJnyZpm7eLmi+9Vgl/GFc5VMt6RAZNzvcW2x2cqH/7QC4pHs631d8fk08f0MvFR07kFXsM+NpazTZcgnJX5nP+Rf7DWptG3aJMzUxfNFgrOn7A+zKv7pZ+rihaHvT4C9ub4/ekDYBrZ7wPLsI/tL+d1XC8gFKje+G355awUIj/lGnwE7rUtn8R/FQQ1EMaEAwgAAAABJRU5ErkJggg==" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="--delay:0.65s">
+                        <a href="#">
+                            <div class="num">04</div>
+                            <div class="subject">워크플로우 </div>
+                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="48px">
+                                    <image x="0px" y="0px" width="48px" height="48px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PDA+sdpB5AAACjUlEQVRYw+2Xz0tUURTHPzM+1BHEsZGGFrNTKGgR7bOIcBFCoeugH4bLENpJO1du3JYEBf0LboLI2khuIiFKxFqEYySKyqgz6fS+LRpe77375s0de0JGZ+Bx75nv937vPffce95DWP5adE9zOtCB5nRfrbY82+H7tCC/LagvSYFurUr6rFEVVNCoPkkqKpucwCNJH30DZrUo6WFSAj3ak9Qf8F2WtKsTyQj0S1oxvCuSLjRmp2ls7cCG4d0EMo3JNgKrQB9dAV+WXqBowbY6AR8kTQZ8k5LeK51UFl2XJI0pJYTSGpMkXUsuTX/NWFrSlKa0JBkr+mMBdFtF7xyv6a4tLyWLfapZhqucQ7zjObu2pGYEDmU2afp3CzhNoVsZBGbYt6c0twcn+QbkWbOnNBci1/c8EoFD2JELNLcHLVQBhx/2FH8WZRvmVA6A3ojqELQqW17bd2/MqqIkrKLZ6IrWRVsiYW/zFyd/UMrALWZiQ7QInI4N0SBPKEcLABRZjyFvArAcu8mhMhpO087YxXf7nvUsNMLxP2h+gTzQYYGOn1RHbaSa+Tf5DjnexJK3GAbfIYqylwz7s+x/yWxoDg/qXBCveFFr9XKzDvspy7XWFS5FIr5T98qa9i6sobqYIQ8zXQ/iUCbDY0oB3Yuc99XdHWCdZ6G53aCHHa+3BrzldQDRyQhl5ErGC9+4pAmvNyBp3sDMSxrwehOSxg2M5KZxgUJodjkjlu0WnjCrALjHP03/BYEU5jfknoGrWnjCrA0g5eCS5ixfA3/lDXLGyDTzEzYfwpwCXAcHmI9Y2+80dIAzfInAOAH0CCMmwmGVTjKkAu59qmx7vQol0kbeV3CpeL1tSji0BhCiTOkns3RVxx0F6UkAAAAASUVORK5CYII=" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="--delay:0.85s">
+                        <a href="#">
+                            <div class="num">05</div>
+                            <div class="subject">라벨링 도구</div>
+                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="46px">
+                                    <image x="0px" y="0px" width="48px" height="46px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAuCAQAAADE11LnAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PDBrBq3SSAAACR0lEQVRYw+2Xz2oTURTGvwlJTCK12JV04UKxVEHMA4iClaqpxEXoygdwEXBjNz6BSwVprIHWlSIFwYUW3USKbyC4UGhaCFZrsLaUSGhMfi4ySTsxczP5MyDS72yGc879fnPv3LnDCLnEDNuUqHiIEtvMuPkE5aZhHZE3BSUNm4rtVZb0VHc9AO7ppsrdAySpqIIHQNFUDBiHRj0tkbHLDCh5Ahi73AEhSXGd7Wh/RnG7u63cn0FV0iV90Hu91Ut9bNMxrild00Szu71c34NR0uSoUFeOtKOaJgf7aqNuPu6AehznFm+oAjuO/A5Q5R23OWV26ASoRxLIOzJ5IOllrHkXNbQmiZaVrWc7yhtgqItsT4A+dAA4APw3gFoX2Z4AG11kW9XxuApznUWg6MgWgUVSxDqNNxUjpMiwYZ/6y47asp39yTwpot0CQiTJ8N02+cIsky0mUS5ynxW7o8iC22z+tp4iQ8EeuMYsE4ZlCHGeB3y2u9dZ4AaH3QARrvKI1ab1Yy6bpr4vglzgIZ/skQWekGTICRhjjrzdsEqWK6334SFCTJJtLlqBOcYagGnKTetE531hjBgJsvbNlplG4jQASySI9GXt3H8JlgAYF8+BVwOz3h+vgWdiEzjnCyAO/AjoqKSvgz7iJEnrkkYCqkkK+wIIS6oFhCTLF4AlCYuaLJ8AEiKoXR3SHW36YD8iadeCvo2MCuqFYj76/7J8nsC/8tHvQ3v/aMfcf+R6UEXf6hd7z2BFJwYIyOtk6wy29HuAgK3GxR9aUl6Wim/DhgAAAABJRU5ErkJggg==" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="--delay:1.0s">
+                        <a href="#">
+                            <div class="num">06</div>
+                            <div class="subject">학습 추론 분석</div>
+                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="48px">
+                                    <image x="0px" y="0px" width="48px" height="48px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PDCQAymk5AAAC7UlEQVRYw+2XTWhUVxTHfzMZmSZR2tSFGhsVpAU/aqkf+AVSzaaYjRAoWVSUQBEKxUAjggtXVkWDHyuFGkEFV1EQDKUfKm1paSntQmOx2GirRk2biK02Rify62JGE9/My0zeG+mmZzZz//ec+Z3z7r3n3UnYwwQqSRDXMmQ4TEtQTlEb+6ezVsEL1OTLKYZIsZhbsQEfsIkHhQBJoIuB2ICbheUkAhPL8IiqwwDP2f4H/PeAVGC8nnklxe3gz2iA7UwpKe5YVEArs0uKuxb1ER0vNTDP+oG/8uXyLHKa5dQDi1iRd6IdUusk8udV93jTYfvDQ84fno8LaHVQ1T4/8YSd9uQwbeUBfKzqOddYk1OqrbdD1dMm4wJ2q9paYOZdM2qHSMIhKpjG9dySzODFkIV8yKVnxis5C6zjaEHver4A1nMkWMHXhtlAIMsu9eAo9X2o9lsZrKCd1SEVXGXZiNEqzvA30wrt/Kf2G9NZF3UN9quHivhsUU9EPWgLgDNFfL4EFkYFTKZ4P7oGTI0KSAAW8RGi96LbwCtFfOqAW1EBPwFvFfFZDvwYdRc1qH1WjepzSX0veA4+Cs3rOk0jRkm6mcEuNofm30w7A0wNVvCz4fZsfmtUbQjJ/k0H1Zb8XrQk9LZ9n88CSjvNPKa5QDd6m+PUcI5VxGzXF1TtcFm2NYv4hgdU7bVazHsnj826mQs00kg333OPKuYzJzfXxz9ATEAlsI0UG5nJzJw2xDEu0kY6O4wHAPiKz9nNUl6jikGu8C29TKftyZ+y+IApwB066Ryh1Q1/jX9tcXQtSQKebtLnYCkypGmhf0xRJ7M7pDRAGtg7xrS+43LpgFNUjrnuuwW0JA18w508PfKdDvFTtVHEtXapPW60Snxd7c76xN9F41jJDxxlDhlq2cd5mnipnBXcVvWuW53lBm/kbqp6OesTH6AP3eGknDLeFn9X9ddyAH7xsTutDahp37fXR1bEB7zjrJCZl20yLfIvxv2UVrX2rNUAAAAASUVORK5CYII=" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="--delay:1.25s">
+                        <a href="#">
+                            <div class="num">07</div>
+                            <div class="subject">다양한 통계 정보</div>
+                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="48px">
+                                    <image x="0px" y="0px" width="48px" height="48px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PDC7gH4AnAAADh0lEQVRYw+2YW2hUVxSG/yRj6pUBkY4ySgneKCFFxBEFUSlWKL6XVtJ4FxxbFII+SDEUwRcvIJKCFQylSRkFxQfNQ1UafZxEQ0SrkWiMGU2k0UzqNJG05vNhdo7nMufMKX2SZp2Xtdf/7/Xvvfbe5+wZoYAnQh33yXGbvYE857OTNnI85jhRFEScTAvvLEVJqPQnbH3aiQZR9wP/UEuCOgC+DpF+HQBHSbCLYeBIELkD+M749cDVEAKNQMr424HeUvlbTNIV41+TNFvFLSbpN+P/KikWJHBT0jbjV0tqDSHQJulL4++Q9ChougcAaCLJRQC2hijRZwBcJclpAHb7U1fRh9Me8kmR9HFuOXo0+W/TBCPALTbyC2nOUE038JKPA9LP4SGQZSv1pLlEDfITWMog8Dsf2mLzyQD9LPJJH6MTGGGlM144/QvgHnNc8fn0AJmCEjHuA3+ywo0UKk4W6PSkF2IBT4BeFnrS3wUGWebt4w4s5y+gq2D6vMQz4JljFrO4A2QLpR8X2MRl0vzAZl4C3cQDlnIxA0APNTSQJsVGWoHX3uK8E2hybK125hbZjFV0uTZwP6v92OIbAE6R5AoA60Mcpy0AXCBpBnfAnys6ge9NswU4HEKgAThv/B+BS/7ciCoknTZvj5TWaHmIN05C0s/GP6MdWmYhG/SRgzkqMsA2o3cWaAwxg2tAvfEPAh0Wctu1OkSUUq1Oqlxt+kpfSGqw1Gs03TGaAZ0z3k/6VEn9octaozpJjRYnoyr1ql+SNFWVeiWitNsET1hjKXGPhUEblrLFW5hsIc3At9aZgZwQUY7RTY5WttvKUMIToJM0adI8AtodZdpDBznucZCILdoM1Frb2QgIUU7UVee8wOemtdkjkB9amSvSDOwz/hIgF7FWezTE7nHbUHFKaXHKf7MJgf+BQERLVeaIDOlB0V6Vmupoj6rDX6BNJY7Ida0tKnBRCxztrGYKP4FhTdOIxiRJ5Zqk1yHmPSJpVH+bDB9o2J+aX4P1iiuuuA5JRirY3kjaa/pUm7ZviSSpzxz6wRDJx+2F6fM8mJafwQzTmvIvBMaXeXow7f0/BxMCEwLvgUBESKrUJEnSPA++SAOSpAoPUqGEYbhtng1BnvvbDetelHUhXdbtx/37IGv9UXLDezfNaIbKzDdhTGO2l9dTyYH0WUifZqnUlBe90VMLea4hB/LqLTPBJdAm33PqAAAAAElFTkSuQmCC" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="--delay:1.5s">
+                        <a href="#">
+                            <div class="num">08</div>
+                            <div class="subject">차트기반의 결과가시화</div>
+                            <div class="text">Land-XI에서 직접 머신 러닝모델을 <br>사용하고 분석을 자동화하세요. </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="48px">
+                                    <image x="0px" y="0px" width="48px" height="48px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PDDbzcxhxAAADaElEQVRYw7WXTWhcVRSAv5kE/4qZpK2SmHRRIm7SNE2lhmi01dJgEVHqRhHarVT3KREUV9GlEBEk/cGNIAj+LIpp0VhxEcRKZWKaNEYMpBNSMVar47R1PheTtPMyP++96Xju4r173rnnO+fe8y73JiS2JEjTQZbLzJLmWyb4rYq1tbTfLZas7ztYybY2wEX1gLs87DtOr2JOu7t+gIzacaPX79tmVR2zuX6AnoCmzVFVz9v7/wAQB11Qc+4v1iZCqqiDLrbRSQvNXOIQBfMMrezgXIn1Rj5gEHmS8fAqSnnQk14tqpZ8SAaIDX6s5uyuPkV3Omxm1e2MHznkiLoYAYD4lTrnHZUBL/qLqtO+6oOruk3qUkTAXS6qx8oDkh5T9ZzPB/Tb1UxEAA6o2l8KaPM7VV8vGdITC4BH1cn1gHbn1SX3lBkQF7DZf9QBSd4opxQTbOUnHmYi/v5XIr9yHHiluExPqxnbK0QUNwPcqeZMrWVwhL1c4wkW6xB9Qc7yM7exuwDYyghwmOm6uQcYBwYKgBHgDGN1dQ/fA9sQOzV0ToNrsKS2hawBdqkzjcBLwMkyW1dlyQMDzIZYdQIpbPCi+nRINMEM/jKqXGukjzZW+DzW7KZpo5FEiJVc549G9gDjXI0F6ItsmUjSC0zGch9HTPIARKz/Go5QkOQ+iPj/hs15WbtG7gauRBrUSibULs+/fMmhYkCSQl1Hiao1UgYdwQyu0MKG0EHn2RHJ+QsMsRwELNNCKz+GDMxG/NP3ASvFiiTzwP2RBkeRh4C5ICAN9NQN0AdMBTQ+o86F7ozRWpeac3OxDlPm1J11AQyrp4I6xA/Vd+sCmFMPlgIeVbPBxGpqz6kra0fGYgBOqkdvGTCvDq3XFh79Wjgm3UJ7Q720Pv6bJ7vj6qIbanb/iKrPln5Ze7ndOfWMiZrcb3FZPVHu283X7WbVT22I7b7DC+rZ8sEVd/aZV8fdGMt9rwvqvPeW/x7s7jenLlS+Vpe0l82pU0WX2qoA7F29WI+6JcLCnlL1k2o5l6pSvqfqdUftr7DozR7ws1Wr4ephlL/GPsZr7AVgli/4gRmW+ZMkTbTTTQ9P0QTACd5kJmR/rcgedMy/K57YFnzLriirVP0i3sLj7KKbTu6hiTyXyZBmiq/5hoiHmP8AeYN9L/9T80QAAAAASUVORK5CYII=" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </section>
+        <!-- section-3 -->
+        <section class="section section-4" id="section-4">
+            <div class="container">
+                <div class="latest-group">
+                    <h3>알림마당</h3>
+                    <div class="tabs">
+                        <nav>
+                            <!-- <button type="button" class="btn-tabs active" data-tabs=".tabs-1">추천 AI 학습모델</button> -->
+                            <button type="button" class="btn-tabs active" data-tabs=".tabs-3">뉴스·소식</button>
+                            <button type="button" class="btn-tabs" data-tabs=".tabs-4">플랫폼 활용사례</button>
+                            <button type="button" class="btn-tabs" data-tabs=".tabs-2">자주 묻는 질문</button>
+                        </nav>
+                        <div class="tabs-cont tabs-1">
+                            <ul class="list">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            불법 쓰레기 탐지
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            컨텍스트 공간정보
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            불법 소각장 탐지
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            해양 쓰레기 탐지
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-cont tabs-2">
+                            <div class="board-list-qna main-qna">
+                                <ul>
+                                    <li class="qna_item">
+                                        <a href="javascript:void(0)" onclick="ui.qnaToggle(this)">
+                                            <i class="item_q">Q</i>
+                                            <span class="item_tag">신청</span>
+                                            <strong class="item_title">AI 학습자료 연구 분석 데이터 활용</strong>
+                                            <i class="item_toggle"></i>
+                                        </a>
+                                        <div class="qna_item_text">
+                                            <div class="qna_item_text-wrap">
+                                                <p>Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                                                <p>Land-XI 통합관리시스템 서비스 오픈</p>
+                                                <p>회원정보의 목적 외 이용 또는 제3자 제공 Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                                                <div style="text-align:center;margin-top:25px;">
+                                                <img src="@@imageRoot/front/sample_image.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="qna_item">
+                                        <a href="javascript:void(0)" onclick="ui.qnaToggle(this)">
+                                            <i class="item_q">Q</i>
+                                            <span class="item_tag">데이터</span>
+                                            <strong class="item_title">AI 학습자료 연구 분석 데이터 활용</strong>
+                                            <i class="item_toggle"></i>
+                                        </a>
+                                        <div class="qna_item_text">
+                                            <div class="qna_item_text-wrap">
+                                                <p>Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                                                <p>Land-XI 통합관리시스템 서비스 오픈</p>
+                                                <p>회원정보의 목적 외 이용 또는 제3자 제공 Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                                                <div style="text-align:center;margin-top:25px;">
+                                                <img src="@@imageRoot/front/sample_image.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="qna_item">
+                                        <a href="javascript:void(0)" onclick="ui.qnaToggle(this)">
+                                            <i class="item_q">Q</i>
+                                            <span class="item_tag">데이터</span>
+                                            <strong class="item_title">AI 학습자료 연구 분석 데이터 활용</strong>
+                                            <i class="item_toggle"></i>
+                                        </a>
+                                        <div class="qna_item_text">
+                                            <div class="qna_item_text-wrap">
+                                                <p>Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                                                <p>Land-XI 통합관리시스템 서비스 오픈</p>
+                                                <p>회원정보의 목적 외 이용 또는 제3자 제공 Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                                                <div style="text-align:center;margin-top:25px;">
+                                                <img src="@@imageRoot/front/sample_image.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="qna_item">
+                                        <a href="javascript:void(0)" onclick="ui.qnaToggle(this)">
+                                            <i class="item_q">Q</i>
+                                            <span class="item_tag">데이터</span>
+                                            <strong class="item_title">AI 학습자료 연구 분석 데이터 활용</strong>
+                                            <i class="item_toggle"></i>
+                                        </a>
+                                        <div class="qna_item_text">
+                                            <div class="qna_item_text-wrap">
+                                                <p>Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                                                <p>Land-XI 통합관리시스템 서비스 오픈</p>
+                                                <p>회원정보의 목적 외 이용 또는 제3자 제공 Land-XI 통합관리시스템 서비스 오픈 회원정보의 목적 외 이용 또는 제3자 제공</p>
+                                                <div style="text-align:center;margin-top:25px;">
+                                                <img src="@@imageRoot/front/sample_image.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabs-cont tabs-3 show">
+                            <ul class="bs-list">
+                                <li>
+                                    <a href="#">
+                                        <span class="badge" style="--color:#12baaf">공지사항</span>
+                                        <div class="subject">Land-XI 통합관리시스템 서비스 오픈</div>
+                                        <div class="info">
+                                            <dl>
+                                                <dt>조회수</dt>
+                                                <dd>999</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>등록일</dt>
+                                                <dd>2024/12/15</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>작성자</dt>
+                                                <dd>홍길동</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="badge" style="--color:#008fe9">자료공유</span>
+                                        <div class="subject">Land-XI 방치폐가 학습 모델 공유</div>
+                                        <div class="info">
+                                            <dl>
+                                                <dt>조회수</dt>
+                                                <dd>999</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>등록일</dt>
+                                                <dd>2024/12/15</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>작성자</dt>
+                                                <dd>홍길동</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="badge" style="--color:#003b94">교육정보</span>
+                                        <div class="subject">레이어 분석을 위한 도구 활용</div>
+                                        <div class="info">
+                                            <dl>
+                                                <dt>조회수</dt>
+                                                <dd>999</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>등록일</dt>
+                                                <dd>2024/12/15</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>작성자</dt>
+                                                <dd>홍길동</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="badge" style="--color:#535353">산업동향</span>
+                                        <div class="subject">2024년 AI 분석 모델 활용 방안을 위한 연구</div>
+                                        <div class="info">
+                                            <dl>
+                                                <dt>조회수</dt>
+                                                <dd>999</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>등록일</dt>
+                                                <dd>2024/12/15</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>작성자</dt>
+                                                <dd>홍길동</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-cont tabs-4">
+                            <ul class="list">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            AI 모델 활용 사례
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            AI 모델 활용 사례
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            AI 모델 활용 사례
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="./common/images/main/no-images.jpg" alt=""></div>
+                                        <div class="subject">
+                                            AI 모델 활용 사례
+                                        </div>
+                                        <div class="date">2024.10.14</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="notice-group">
+                    <h3>알림판</h3>
+                    <div class="boxing">
+                        <div class="control">
+                            <button type="button" class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30px" height="30px">
+                                    <image x="0px" y="0px" width="30px" height="30px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8RIieEfL/VAAABTklEQVQ4y6XVIU8DQRCG4bfb5qoIFgIJDgeSoBD8ggJ3RVRBQi0CgSZVbQgICBJcDRU1/IdqDAkVhUBSkjoIgqbJh6ClJewud8ecODH7XPZmNzOI7ydQUXV19CFbvOlOdUUKxmJMN9RWnGhr8yfOqhoLjqKq7Bgno198iMPEVJJCgQI9pcLPCgwR86SJOYqGQioKUMjogYWU+NEw41/xwg4rHNtSsxnJR+/ZpwfkaFmyxkdb7NEDYNeaz7npDRUGgOGA7WT4kgsA8lRYd6xx4BPqAExzyrJzb46CrTIYfmTNUxNHwYrD9xG3Huw8qjj/7Dnnv6vtvSQtDnkHoEzZil+ZcnPvDesbup6KsMgVSxhCW7KLrlO1AklqGJqkjeZ/2lAeoSgVjkatt5aY1iab/lkiej7Z9BHaij1uwt+zCgUqqaGO+lbUV0cNlSYH3SdDh+moqX+nYgAAAABJRU5ErkJggg==" />
+                                </svg>
+                            </button>
+
+                            <button type="button" class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30px" height="30px">
+                                    <image x="0px" y="0px" width="30px" height="30px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8RIi1kqVbLAAABSklEQVQ4y6XVv0vDQBjG8W+vJQ7iKCgKbm6u0v/BxR9JBzspuLjp3sGxRQfRqYtbQezQv8DBybmLQ4cqChWc1KlFfBxMbaWXmDvfLOEJH3J3HO+L+HkCldRQV33Z6l13aihSMBIjuqGOslRHm79xXtVMcFhV5UfYjX7zGIfOVJJCgQI9euEnBYaIRXxqgZJh3YsCrOd0z5InfjDM2fJjVtnhOR3P5yRbXuQDmOWU5RRt7PEuAC/scZuCE/4Ml5zwCRSosOaK4ZoKfQD245U4YGhzwCsA2xy6YriJUcG6d5NG2xzFbyXr90Iy/XvPiTjLaSfgOnUApqlSTFxbTm/MTMaZbtjA0LPlIYYVLlIvJz105dUKJKlpaOFbrf+0oSmEIi8cDVtvzZnWxpv+mRM9H2/6CG1lHjfh5KxCgcpqqquBFQ3UVVPl8UH3BcTg6ahAhc29AAAAAElFTkSuQmCC" />
+                                </svg>
+                            </button>
+                            <div class="fraction">01/12</div>
+                            <button type="button" class="selector">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="11px" height="13px" class="pause">
+                                    <image x="0px" y="0px" width="11px" height="13px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAQAAADV/FywAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8RNRg3mRZ+AAAAPUlEQVQY093IsQ2AMAwAMNMtR1SRysz/hzCDqHpEVh7gAjx6G49EOe5r7E6B2SQIHV2AbD79ricoC0uB+QKa8Qwc/08+MgAAAABJRU5ErkJggg==" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="11px" height="13px" class="play">
+                                    <image x="0px" y="0px" width="11px" height="13px"
+                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAQAAADV/FywAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8RNhFlaP0ZAAAAh0lEQVQY02NW2iE4Q/Cv4Kn3/xiQAKPSfwYGBgaG6wwZ9w4hhJmgtCbDQaUFSmLowgwMDAzxDDeU0pSY0IUZGAQZZjIcUzJAmI0M/jK0YBNmYPjNhEXwL0M7C4bgSYaMexdQVb9nSGewuneBgQFZ9SKG0nuvIEyYMJovGZR2KH1RKldiRbUAAPYPI8w3RVEmAAAAAElFTkSuQmCC" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="notic-swiper">
+                            <div class="swiper ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#"><img src="./common/images/main/dummy.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#"><img src="./common/images/main/dummy.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="more">
+                <a href="#">새로운 소식 더보기
+                    <i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px"
+                            height="18px">
+                            <image x="0px" y="0px" width="18px" height="18px"
+                                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBA8PGyuV9vA+AAAAKElEQVQoz2P8z4AKGP8zMPxnRBVjYiACDG9FjAz/CSsizqTRECdKEQCQWAcf9PRfVAAAAABJRU5ErkJggg==" />
+                        </svg></i>
+                </a>
+            </div>
+        </section>
+        <!-- section-4 -->
+
+        <section class="section footer" id="footer">
+            <div class="footer-content">
+                <div class="footer-content-1">
+                    <div class="container">
+                        <div class="block">
+                            <div class="landxi"><img src="./common/images/main/land.png" alt=""></div>
+                            <p class="copy">Copyright © 2024 LX All rights reserved.</p>
+                            <ul>
+                                <li><b>주소</b> (우)54870 전라북도 전주시 덕진구 기지로 120 (중동) LX</li>
+                                <li><b>고객센터</b> 063-713-1216</li>
+                            </ul>
+                        </div>
+                        <div class="family">
+                            <select name="" id="">
+                                <option value="">Family Site</option>
+                                <option value=""><a href="" target="_blank">LX홈페이지</a></option>
+                                <option value=""><a href="" target="_blank">LX플랫폼</a></option>
+                                <option value=""><a href="" target="_blank">NIA AI허브</a></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content-2">
+                    <div class="container">
+                        <ul>
+                            <li><a href="#"><b>개인정보처리방침</b></a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">이메일주소무단수집거부</a></li>
+                        </ul>
+
+                        <div class="partners">
+                            <a href="#"><img src="./common/images/main/lx.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+    </div>
+    <script src="./common/js/index.js?ver=240426"></script>
+    <script>
+
+        // section-4 세팅
+        // const s4 = document.getElementById('section-4')
+        // console.log(s4.offsetTop)
+        // IntersectionObserver 등록
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                // 주시 대상이 뷰포트 안으로 들어오면 active 클래스 추가
+                if (entry.intersectionRatio > 0) {
+                    entry.target.classList.add("active");
+                }
+                // 아니면 active 클래스 제거
+                else {
+                    //entry.target.classList.remove("active");
+                }
+            });
+        });
+
+        // 주시 대상 선언, 주시 시작
+        const boxElList = document.querySelectorAll(".section-3");
+        boxElList.forEach((el) => {
+            io.observe(el);
+        });
+        $(window).scroll(function () {
+            // 현재 스크롤 위치
+            var scrollPos = $(this).scrollTop();
+
+            if (scrollPos > 10) {
+                $('.lay-header').addClass('black')
+            }
+            $('.section-container .section').each(function (indx) {
+                if ($(this).offset().top <= scrollPos) {
+                    indx = indx + 1;
+                    $('.index-nav .current').text('').text("0" + indx);
+                    $('.index-nav .line').attr('id', '').attr('id', 'line-n-' + indx + '')
+                    if (indx == 4) {
+                        $('.index-nav').addClass('black');
+                    } else {
+                        $('.index-nav').removeClass('black');
+                    }
+                }
+            })
+        }).scroll()
+
+        const CrossText = $('.cross-text span');
+        let d1XC8gFKjection = 0;
+        setInterval(function(){
+            if(d1XC8gFKjection == 0){
+                d1XC8gFKjection = 1
+            } else {
+                d1XC8gFKjection = 0
+            }
+            CrossText.eq(d1XC8gFKjection).addClass('active').siblings('span').removeClass('active')
+        },5000);
+
+        // fist 
+        const dfirst = setTimeout(function(){
+            CrossText.eq(0).addClass('active')
+            clearTimeout(dfirst)
+        },500)
+    </script>
+</body>
+
+</html>

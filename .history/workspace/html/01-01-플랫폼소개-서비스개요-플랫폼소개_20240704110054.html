@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+
+    @@include('./include/front/location.html',{cate1:'플랫폼 소개', cate2: '서비스 소개'})
+
+    <!-- container -->
+    <div class="lay-container">
+      <div class="plat__service">
+        <div class="plat__service--title">
+          <h2>Land-XI 플랫폼</h2>
+          <p>Land-XI 플랫폼은 고해상도 드론·항공·위성 영상을 활용하여 공공서비스 혁신을 지원하는 AI플랫폼입니다.</p>
+        </div>
+
+        <div class="plat__service--impact">
+          <div class="plat__service--wrap">
+            <div class="hgroup">
+              <h3>주요특징</h3>
+              <p>누구나 쉽게 AI 모델을 개발하고 활용해볼 수 있는 플랫폼입니다. AI 기술을 잘 알지 못해도, 관련 인프라가 없어도,<br>
+                보유하고 있는 AI 모델이 없어도 Land-XI 플랫폼을 통해 쉽게 AI를 접하고 경험해볼 수 있습니다. 
+              </p>
+            </div>
+            <div class="div"><img src="./common/images/platform/logic-2.png" alt=""></div>
+          </div>
+        </div>
+
+        <div class="plat__service--logic">
+          <div class="plat__service--wrap">
+            <img src="./common/images/platform/logic-1.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!--
+      <div class="cont-pfinfo">
+        <div class="cont-pfinfo_text">
+          <div class="lay-wrap">
+            <strong>Land-XI 플랫폼 소개</strong>
+            <p>
+              Land-XI 플랫폼은 국토모니터링 지원 및 영상기반 관리업무의 활용 성 극대화를 위한 맞춤형 공간정보 서비스 기반마련을 위해 AI기반 드론 영상 분석 플랫폼  입니다.<br>
+              포털 서비스로 플랫폼에서 제공하는 서비스에 대한 사용기술, 활용 모델 등에 대 한 소개화면을  서비스 가이드로 제공합니다.
+            </p>
+            <p>
+              Land-XI 플랫폼은 마이 페이지를 통해 AI 학습을 위한 프로젝트를 생성하고 관리하는 기능을 제공합니다.<br>
+              사용자는 프로젝트에 대한 이름, 목표, 데이터 셋 등을 입력하여 초기 설정을 하고, 이후 개인별  데이터 셋 업로드 하거나 기존 데이터 셋 또는 AI  모델을 선택하여  모델 학습 평가를 실행할 수 있는 워크 스페이스를 제공합니다.
+            </p>
+            <p>공간정보 컨텐츠 활용 확대를 위해 사용자가 보유한 주제도를 업로드 하여 사용자 지도를 생성하고 중첩 조회할 수 있는 기능과, 레이어, 스타일을 쉽게 관리하고 공유할 수 있도록 공간정보 컨텐츠 관리 기능을 제공합니다.</p>
+          </div>
+        </div>
+
+        <div class="cont-pfinfo_gpinfo">
+          <div class="lay-wrap">
+            <strong>LAND-XI PLATFORM</strong>
+            <ul>
+              <li class="gpinfo_item1">
+                <strong>AI 프로젝트 생성 관리</strong>
+                <div></div>
+              </li>
+              <li class="gpinfo_item2">
+                <strong>사용자 레이어 주제도 생성</strong>
+                <div></div>
+              </li>
+              <li class="gpinfo_item3">
+                <strong>학습 데이터 구축</strong>
+                <div></div>
+              </li>
+            </ul>
+          </div>
+          <div class="cont-gpinfo_bg"></div>
+          <div class="cont-gpinfo_bg2"></div>
+        </div>
+      </div>
+      -->
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+</body>
+</html>
