@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<div class="lay-body">
+	<div class="lay-body max-width">
 		@@include('./include/front/header.html')
 		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
 		<!-- container -->
@@ -14,47 +14,96 @@
 			<div class="lay-wrap">
 				<div class="board-wrap">
 
-                    <div class="board-ai-header">
-                        <h3>작물재배면적(드론)</h3>
-                        <a href="#" class="btn btn-gra">모델 분석 실행</a>
-                    </div>
-
-                    <div class="board-ai-detail">
-                        <ul>
-                            <li>
-                                <strong>모델 설명</strong>
-                                <span>본 AI모델은 Image classification(Xception) 모델로</span>
-                            </li>
-                            <li>
-                                <strong>입력 학습데이터</strong>
-                                <span>작물재배면적(드론) 학습데이터: JPG</span>
-                            </li>
-                        </ul>
-                    </div>
-					
-					<div class="board-ai-gall">
-						<div class="board-ai-gall_tit">
-                            분석 결과(예시)
-                        </div>
-						<ul>
-							<li>
-								<div class="thumb">
-									<img src="./common/images/front/ai-p14-1.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="thumb">
-                                    
-								</div>
-							</li>
-						</ul>
+					<div class="board-ai-header">
+							<h3>작물 재배면적 탐지 (드론영상)</h3>
+							<a href="#" class="btn btn-gra">모델 분석 실행</a>
 					</div>
 
-                    <div class="board-ai-desc">
-						<div class="board-ai-gall_tit">
-                            클래스 및 하이퍼파라메터
-                        </div>
+					<div class="board-ai-detail">
+							<ul>
+									<li>
+											<strong>소개</strong>
+											<span>논/밭/과수/시설/비경지의 면적을 검출해주는 AI 분석 서비스</span>
+									</li>
+									<li>
+											<strong>개발목적</strong>
+											<span>드론영상을 기반으로 주요작물 재배 면적을 파악함으로써 작물 재배 계획을 최적화하고 농업 생산성 증진을 위한 정책결정에 활용</span>
+									</li>
+							</ul>
+					</div>
 
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	학습 데이터 
+            </div>
+						<div class="cs-table">
+							<table>
+								<colgroup>
+									<col class="width180">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>데이터 유형(형식)</th>
+										<td>이미지(JPG)  * 3개 고도(30/40/50m)에서 촬영된 고해상도 스냅샷(드론영상)
+										</td>
+									</tr>
+									<tr>
+										<th>데이터 구축량</th>
+										<td>
+											<div class="cs-table mtbl">
+												<table>
+													<tbody>
+														<tr>
+															<th>객체<br>(클래스) 15종</th>
+															<td>월동무</td>
+															<td>당근</td>
+															<td>양배추</td>
+															<td>마늘</td>
+															<td>양파</td>
+															<td>브로콜리</td>
+															<td>쪽파</td>
+															<td>콜라비</td>
+															<td>적채</td>
+															<td>비트</td>
+															<td>옥수수</td>
+															<td>감자</td>
+															<td>메밀</td>
+															<td>콩</td>
+															<td>기장</td>
+														</tr>
+														<tr>
+															<th>이미지<br>개수</th>
+															<td>691,673</td>
+															<td>199,717</td>
+															<td>92,112</td>
+															<td>145,619</td>
+															<td>2,886</td>
+															<td>64,860</td>
+															<td>39,125</td>
+															<td>24,113</td>
+															<td>6,930</td>
+															<td>2,550</td>
+															<td>3,345</td>
+															<td>109,732</td>
+															<td>38,113</td>
+															<td>397,456</td>
+															<td>171,87</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+          </div>
+
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	모델
+            </div>
 						<div class="cs-table">
 							<table>
 								<colgroup>
@@ -63,22 +112,331 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th>클래스</th>
-										<td></td>
+										<th>모델 유형</th>
+										<td>의미론적 분할 (Semantic Segmentation)</td>
 									</tr>
 									<tr>
-										<th>배치 사이즈</th>
-										<td></td>
+										<th>알고리즘</th>
+										<td>Xception</td>
 									</tr>
-									<tr>
-										<th>에포크(Epoch)</th>
-										<td></td>
-									</tr>
+                  <tr>
+                    <th>모델 성능</th>
+                    <td>
+											<div class="cs-table mtbl">
+												<table width="">
+													<tbody>
+														<tr>
+															<td width="">
+																	<p><strong>객체</strong><strong>(</strong><strong>클래스</strong><strong>)</strong></p>
+															</td>
+															<td width="">
+																	<p><strong>F1-score</strong></p>
+															</td>
+															<td width="">
+																	<p><strong>Precision</strong></p>
+															</td>
+															<td width="">
+																	<p><strong>Recall</strong></p>
+															</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>월동무</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>당근</p>
+																</td>
+																<td width="">
+																		<p>100</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>100</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>양배추</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>100</p>
+																</td>
+																<td width="">
+																		<p>98</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>마늘</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>98</p>
+																</td>
+																<td width="">
+																		<p>100</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>양파</p>
+																</td>
+																<td width="">
+																		<p>89</p>
+																</td>
+																<td width="">
+																		<p>96</p>
+																</td>
+																<td width="">
+																		<p>83</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>브로콜리</p>
+																</td>
+																<td width="">
+																		<p>96</p>
+																</td>
+																<td width="">
+																		<p>95</p>
+																</td>
+																<td width="">
+																		<p>97</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>쪽파</p>
+																</td>
+																<td width="">
+																		<p>96</p>
+																</td>
+																<td width="">
+																		<p>98</p>
+																</td>
+																<td width="">
+																		<p>95</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>콜라비</p>
+																</td>
+																<td width="">
+																		<p>95</p>
+																</td>
+																<td width="">
+																		<p>97</p>
+																</td>
+																<td width="">
+																		<p>93</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>적채</p>
+																</td>
+																<td width="">
+																		<p>97</p>
+																</td>
+																<td width="">
+																		<p>97</p>
+																</td>
+																<td width="">
+																		<p>98</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>비트</p>
+																</td>
+																<td width="">
+																		<p>96</p>
+																</td>
+																<td width="">
+																		<p>97</p>
+																</td>
+																<td width="">
+																		<p>95</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>옥수수</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>98</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>감자</p>
+																</td>
+																<td width="">
+																		<p>93</p>
+																</td>
+																<td width="">
+																		<p>96</p>
+																</td>
+																<td width="">
+																		<p>90</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>메밀</p>
+																</td>
+																<td width="">
+																		<p>96</p>
+																</td>
+																<td width="">
+																		<p>97</p>
+																</td>
+																<td width="">
+																		<p>96</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>콩</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+														</tr>
+														<tr>
+																<td width="">
+																		<p>기장</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+																<td width="">
+																		<p>99</p>
+																</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>모델 히스토리</th>
+                    <td>일자 / 컨텐츠 최초 등록</td>
+                  </tr>
 								</tbody>
-
 							</table>
 						</div>
-                    </div>
+          </div>
+
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	추론 정보
+            </div>
+						<div class="board-ai-dl">
+                <dl>
+                  <dt class="width100">input data</dt>
+                  <dd class="width100">TIFF 파일</dd>
+                  <dd>* 좌표 메터 정보를 포함한 TIFF 1장의 파일만 업로드만 가능</dd>
+                </dl>
+                <dl>
+                  <dt class="width100">output data</dt>
+                  <dd class="width100">SHP</dd>
+                  <dd>* 탐지결과에 해당하는 Geometry정보를 지도화면 표출 & SHP 파일 다운로드 가능</dd>
+                </dl>
+						</div>
+					</div>
+					
+					<div class="board-ai-gall">
+						<div class="board-ai-gall_tit">추론 결과(예시)</div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai14-01.png" alt="원본이미지">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-l-no.png" alt="검출결과 이미지">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="board-ai-gall ex4">
+						<div class="board-ai-gall_tit">
+							객체(클래스)별 추론 결과(예시)
+            </div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai14-03.png" alt="논">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai14-04.png" alt="밭">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai14-05.png" alt="과수">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai14-06.png" alt="시설">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="board-ai-desc ex1">
+						<div class="board-ai-gall_tit">
+            	지도표출
+            </div>
+						<div class="ex-mark-wrap">
+							<img src="./common/images/front/ai-p1-7.png" alt="">
+							<div class="ex-mark">
+								<p><span>해당 점</span>은 검출된 객체의 좌표가 아닌 입력된 사진의 중심점 좌표입니다. </p>
+							</div>
+						</div>
+						
+					</div>
 				</div>
 				<div class="board-btns">
 					<a href="#" class="cs-btn2 cs-btn-color1">목록</a>

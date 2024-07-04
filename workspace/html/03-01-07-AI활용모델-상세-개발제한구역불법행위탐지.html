@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<div class="lay-body">
+	<div class="lay-body max-width">
 		@@include('./include/front/header.html')
 		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
 		<!-- container -->
@@ -14,47 +14,56 @@
 			<div class="lay-wrap">
 				<div class="board-wrap">
 
-                    <div class="board-ai-header">
-                        <h3>개발 제한 구역 불법 행위 탐지-①</h3>
-                        <a href="#" class="btn btn-gra">모델 분석 실행</a>
-                    </div>
-
-                    <div class="board-ai-detail">
-                        <ul>
-                            <li>
-                                <strong>모델 설명</strong>
-                                <span>본 AI모델은 이며 적용 AI모델은 <span style="color:red">건축물 탐지</span></span>
-                            </li>
-                            <li>
-                                <strong>입력 학습데이터</strong>
-                                <span> 개발 제한 구역 불법 행위 탐지 학습데이터: </span>
-                            </li>
-                        </ul>
-                    </div>
-					
-					<div class="board-ai-gall">
-						<div class="board-ai-gall_tit">
-                            분석 결과(예시)
-                        </div>
-						<ul>
-							<li>
-								<div class="thumb">
-									<img src="./common/images/front/ai-p7-1.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="thumb">
-									<img src="./common/images/front/ai-p7-2.png" alt="">
-								</div>
-							</li>
-						</ul>
+					<div class="board-ai-header">
+							<h3>개발제한구역 불법행위 탐지</h3>
+							<a href="#" class="btn btn-gra">모델 분석 실행</a>
 					</div>
 
-                    <div class="board-ai-desc">
-						<div class="board-ai-gall_tit">
-                            클래스 및 하이퍼파라메터
-                        </div>
+					<div class="board-ai-detail">
+							<ul>
+									<li>
+											<strong>소개</strong>
+											<span>개발제한구역 내 불법행위(불법 건축물 및 무단 적치물) 의심지를 검출해주는 AI 분석 서비스</span>
+									</li>
+									<li>
+											<strong>개발목적</strong>
+											<span>GB내 건물, 비닐하우스, 적치물, 공작물을 탐지하여 지자체 구역관리 지원을 통한 업무 효율성 증대, 지자체별 세수 확대에도 기여 </span>
+									</li>
+							</ul>
+					</div>
 
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	학습 데이터 
+            </div>
+						<div class="cs-table">
+							<table>
+								<colgroup>
+									<col class="width180">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>데이터 유형(형식)</th>
+										<td>이미지(TIF, JPG, PNG) * 타일링된 드론영상(크기 512 X 512, GSD 0.02m ~ 0.05m)과 항공영상(크기 512 X 512,  GSD 0.25m) 기반</td>
+									</tr>
+									<tr>
+										<th>라벨링 유형(형식)</th>
+										<td>바운딩 박스</td>
+									</tr>
+									<tr>
+										<th>데이터 구축량</th>
+										<td>객체 4종(건물, 비닐하우스, 적치물, 공작물), 이미지 20,000 장, 라벨 개수 74,984</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+          </div>
+
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	모델
+            </div>
 						<div class="cs-table">
 							<table>
 								<colgroup>
@@ -63,22 +72,117 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th>클래스</th>
-										<td></td>
+										<th>모델 유형</th>
+										<td>객체 탐지 (Object Detection)</td>
 									</tr>
 									<tr>
-										<th>배치 사이즈</th>
-										<td></td>
+										<th>알고리즘</th>
+										<td>Yolov8</td>
 									</tr>
-									<tr>
-										<th>에포크(Epoch)</th>
-										<td></td>
-									</tr>
+                  <tr>
+                    <th>모델 성능</th>
+                    <td>
+											<dl class="flex_dl">
+												<dt class="width60">(건물)</dt>
+												<dd>정확도(mAP) 83</dd>
+											</dl>
+											<dl class="flex_dl">
+												<dt class="width60">(비닐하우스)</dt>
+												<dd>정확도(mAP) 67</dd>
+											</dl>
+											<dl class="flex_dl">
+												<dt class="width60">(적치물)</dt>
+												<dd>정확도(mAP) 30</dd>
+											</dl>
+											<dl class="flex_dl">
+												<dt class="width60">(공작물)</dt>
+												<dd>정확도(mAP) 51</dd>
+											</dl>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>모델 히스토리</th>
+                    <td>일자 / 컨텐츠 최초 등록</td>
+                  </tr>
 								</tbody>
-
 							</table>
 						</div>
           </div>
+
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	추론 정보
+            </div>
+						<div class="board-ai-dl">
+                <dl>
+                  <dt class="width100">input data</dt>
+                  <dd class="width100">JPG</dd>
+                  <dd>* GPS 위경도 좌표 메터 정보를 포함한 N개의 JPEG 파일만 업로드만 가능</dd>
+                </dl>
+                <dl>
+                  <dt class="width100">output data</dt>
+                  <dd class="width100">JPG</dd>
+                  <dd>* 입력 데이터에 좌표정보가 있어야만 지도화면 표출 & SHP 파일 다운로드 가능</dd>
+                </dl>
+						</div>
+					</div>
+					
+					<div class="board-ai-gall">
+						<div class="board-ai-gall_tit">추론 결과(예시)</div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai07-01.png" alt="원본이미지">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai07-02.png" alt="검출결과 이미지">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="board-ai-gall ex4">
+						<div class="board-ai-gall_tit">
+							객체(클래스)별 추론 결과(예시)
+            </div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai07-03.png" alt="논">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai07-04.png" alt="밭">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai07-05.png" alt="과수">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai07-06.png" alt="시설">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="board-ai-desc ex1">
+						<div class="board-ai-gall_tit">
+            	지도표출
+            </div>
+						<div class="ex-mark-wrap">
+							<img src="./common/images/front/ai-p1-7.png" alt="">
+							<div class="ex-mark">
+								<p><span>해당 점</span>은 검출된 객체의 좌표가 아닌 입력된 사진의 중심점 좌표입니다. </p>
+							</div>
+						</div>
+						
+					</div>
 				</div>
 				<div class="board-btns">
 					<a href="#" class="cs-btn2 cs-btn-color1">목록</a>

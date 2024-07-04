@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<div class="lay-body">
+	<div class="lay-body max-width">
 		@@include('./include/front/header.html')
 		@@include('./include/front/location.html',{cate1:'서비스 활용', cate2: 'AI 활용모델'})
 		<!-- container -->
@@ -14,47 +14,53 @@
 			<div class="lay-wrap">
 				<div class="board-wrap">
 
-                    <div class="board-ai-header">
-                        <h3>해양쓰레기 탐지(항공)</h3>
-                        <a href="#" class="btn btn-gra">모델 분석 실행</a>
-                    </div>
-
-                    <div class="board-ai-detail">
-                        <ul>
-                            <li>
-                                <strong>모델 설명</strong>
-                                <span>본 AI모델은 Semantic segmentation(Mask2Former)모델로</span>
-                            </li>
-                            <li>
-                                <strong>입력 학습데이터</strong>
-                                <span>해양쓰레기 탐지(항공) 학습데이터: TIF, JPG, 해양쓰레기 탐지를 위한 기반 자료</span>
-                            </li>
-                        </ul>
-                    </div>
-					
-					<div class="board-ai-gall">
-						<div class="board-ai-gall_tit">
-                            분석 결과(예시)
-                        </div>
-						<ul>
-							<li>
-								<div class="thumb">
-									<img src="./common/images/front/ai-p15-1.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="thumb">
-                                    <img src="./common/images/front/ai-p15-2.png" alt="">
-								</div>
-							</li>
-						</ul>
+					<div class="board-ai-header">
+							<h3>해양쓰레기 탐지 (항공영상)</h3>
+							<a href="#" class="btn btn-gra">모델 분석 실행</a>
 					</div>
 
-                    <div class="board-ai-desc">
-						<div class="board-ai-gall_tit">
-                            클래스 및 하이퍼파라메터
-                        </div>
+					<div class="board-ai-detail">
+							<ul>
+									<li>
+											<strong>소개</strong>
+											<span>해양쓰레기를 분류·검출해주는 AI 분석 서비스</span>
+									</li>
+									<li>
+											<strong>개발목적</strong>
+											<span>항공영상을 기반으로 해양쓰레기를 탐지하여 효율적인 쓰레기 관리 및 제거 전략을 마련, 해양생태계 보호 및 어업·관광산업 보호에 기여</span>
+									</li>
+							</ul>
+					</div>
 
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	학습 데이터 
+            </div>
+						<div class="cs-table">
+							<table>
+								<colgroup>
+									<col class="width180">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>데이터 유형(형식)</th>
+										<td>이미지(JPG) * 타일링된 항공영상(크기 512 x 512 / GSD 0.12m ~ 0.25m)
+										</td>
+									</tr>
+									<tr>
+										<th>데이터 구축량</th>
+										<td>객체 1종(해양쓰레기), 이미지 11,427 장, 라벨 개수 30,522 개</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+          </div>
+
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	모델
+            </div>
 						<div class="cs-table">
 							<table>
 								<colgroup>
@@ -63,22 +69,113 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th>클래스</th>
-										<td>쓰레기</td>
+										<th>모델 유형</th>
+										<td>의미론적 분할 (Semantic Segmentation)</td>
 									</tr>
 									<tr>
-										<th>배치 사이즈</th>
-										<td></td>
+										<th>알고리즘</th>
+										<td>Mask2Former</td>
 									</tr>
-									<tr>
-										<th>에포크(Epoch)</th>
-										<td></td>
-									</tr>
+                  <tr>
+                    <th>모델 성능</th>
+                    <td>
+											<dl class="flex_dl">
+												<dt class="width80">(평균)</dt>
+												<dd>F1-score 83.14, Precision 84.71, Recall 81.7</dd>
+											</dl>
+											<dl class="flex_dl">
+												<dt class="width80">(배경)</dt>
+												<dd>F1-score 99.91, Precision 99.9, Recall 99.92</dd>
+											</dl>
+											<dl class="flex_dl">
+												<dt class="width80">(해양쓰레기)</dt>
+												<dd>F1-score 66.37, Precision 69.52, Recall 63.48</dd>
+											</dl>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>모델 히스토리</th>
+                    <td>일자 / 컨텐츠 최초 등록</td>
+                  </tr>
 								</tbody>
-
 							</table>
 						</div>
-                    </div>
+          </div>
+
+          <div class="board-ai-gall">
+						<div class="board-ai-gall_tit">
+            	추론 정보
+            </div>
+						<div class="board-ai-dl">
+                <dl>
+                  <dt class="width100">input data</dt>
+                  <dd class="width100">TIFF 파일</dd>
+                  <dd>* 좌표 메터 정보를 포함한 TIFF 1장의 파일만 업로드만 가능</dd>
+                </dl>
+                <dl>
+                  <dt class="width100">output data</dt>
+                  <dd class="width100">SHP</dd>
+                  <dd>* 탐지결과에 해당하는 Geometry정보를 지도화면 표출 & SHP 파일 다운로드 가능</dd>
+                </dl>
+						</div>
+					</div>
+					
+					<div class="board-ai-gall">
+						<div class="board-ai-gall_tit">추론 결과(예시)</div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai15-01.png" alt="원본이미지">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai15-02.png" alt="검출결과 이미지">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="board-ai-gall ex4">
+						<div class="board-ai-gall_tit">
+							객체(클래스)별 추론 결과(예시)
+            </div>
+						<ul>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-s-no.png" alt="논">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-s-no.png" alt="밭">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-s-no.png" alt="과수">
+								</div>
+							</li>
+							<li>
+								<div class="thumb">
+									<img src="./common/images/front/ai-s-no.png" alt="시설">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="board-ai-desc ex1">
+						<div class="board-ai-gall_tit">
+            	지도표출
+            </div>
+						<div class="ex-mark-wrap">
+							<img src="./common/images/front/ai-p1-7.png" alt="">
+							<div class="ex-mark">
+								<p><span>해당 점</span>은 검출된 객체의 좌표가 아닌 입력된 사진의 중심점 좌표입니다. </p>
+							</div>
+						</div>
+						
+					</div>
 				</div>
 				<div class="board-btns">
 					<a href="#" class="cs-btn2 cs-btn-color1">목록</a>
