@@ -990,3 +990,12 @@ $pub: true;
 .max-width{
   min-width: 1390px;
 }
+
+.flex_dl{
+  display: flex;
+  dt{
+  }
+  dd{
+    margin-left: 0px; 
+  }
+}
