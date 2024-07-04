@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/front/head.html')
+</head>
+<body>
+  <div class="lay-body">
+    @@include('./include/front/header.html')
+    
+    @@include('./include/front/location.html',{cate1:'회원관리', cate2: '마이페이지'})
+
+    <!-- container -->
+    <div class="lay-container mypage-cont">
+      <div class="lay-wrap">
+        <div class="row">
+          <div class="col-4">
+            <div class="row">
+              <div class="col col-12" style="background: url('./common/images/platform/welcome-bg.png') no-repeat 100% 0;">
+                <div class="welcome-user">
+                  <div class="name">
+                    <b>DAVIS</b>님
+                  </div>
+                  <p class="ment">LAND-XI 플랫폼에 오신것을 환영합니다.</p>
+                </div>
+              </div>
+            <div class="col col-12 disk-view">
+            <header class="col-header"><h3><b style="font-size: 18px;">디스크 사용량</b></h3></header>        
+              <div class="disk-per"><b>20</b><span>%</span></div>
+                <div class="track-wrap">
+                  <div class="track-area" style="width: 100%;">
+                    <div class="track" style="width: 100%;">
+                      <div class="bg" style="width:50%;border-radius:5px;"></div>
+                    </div>
+                </div>
+              </div>
+              <div class="disk-volume">
+                <b>27</b>Gbyte/1TB
+              </div>
+              <div class="disk-inc-button"><button type="button" class="btn-gradient" onclick="diskIncModal()">증량 신청</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-8 col-gra-border">
+        <header class="col-header"><h3><b style="font-size: 18px;">기본 정보</b></h3></header>
+        <div class="cs-table">
+          <table>
+            <colgroup>
+              <col style="width:20%">
+              <col style="width:80%">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">아이디</th>
+                <td>Gildong.hong@mail.com</td>
+              </tr>
+              <tr>
+                <th scope="row">이름</th>
+                <td>홍길동</td>
+              </tr>
+              <tr>
+                <th scope="row">연락처</th>
+                <td class="cell-input">
+                  010-1111-1111
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">기관 <i class="cs-icon-req">필수 입력</i></th>
+                <td class="cell-input">
+                  LX 한국국토정보공사
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">직함</th>
+                <td class="cell-input">
+                  관리자
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">소속 <i class="cs-icon-req">필수 입력</i></th>
+                <td class="cell-input">
+                  LX 한국국토정보공사
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">부서</th>
+                <td class="cell-input">
+                  LX 한국국토정보공사
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">비밀번호</th>
+                <td class="cell-input">
+                  <input type="password" class="cs-input width100p">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">비밀번호 확인</th>
+                <td class="cell-input"><input type="password" class="cs-input width100p"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mypage-btn-group">
+          <button type="button" class="btn btn-3">내 정보 저장</button>
+          <button type="button" class="btn">회원 탈퇴</button>
+        </div>
+      </div>
+      <div class="col col-12">
+        <header class="col-header"><h3>디스크 증량 신청 이력</h3></header>
+          <div class="board-list-text thead-sm">
+            <table class="cs-table">
+                <colgroup>
+                    <col class="width90">
+                    <col class="width120">
+                    <col class="width200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">처리여부</th>
+                        <th scope="col">요청 일시</th>
+                        <th scope="col">요청 사유</th>
+                        <th scope="col">처리내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tac">
+                        <td>3</td>
+                        <td style="color:#18b0ef">승인</td>
+                        <td>2024-01-03 <span style="color:#888">14:37:51</span></td>
+                        <td>  용량 부족으로 인하여 3G 추가 요청 합니다.</td>
+                        <td>사용 권한 부족으로 요청내용을 거절 처리합니다.</td>
+                    </tr>
+                    <tr class="tac">
+                        <td>2</td>
+                        <td style="color:#ed1c24">거절</td>
+                        <td>2024-01-03 <span style="color:#888">14:37:51</span></td>
+                        <td>  용량 부족으로 인하여 3G 추가 요청 합니다.</td>
+                        <td>사용 권한 부족으로 요청내용을 거절 처리합니다.</td>
+                    </tr>
+                    <tr class="tac">
+                        <td>1s</td>
+                        <td style="color:#2149a6">신청</td>
+                        <td>2024-01-03 <span style="color:#888">14:37:51</span></td>
+                        <td>용량 부족으로 인하여 3G 추가 요청 합니다.</td>
+                        <td>사용 권한 부족으로 요청내용을 거절 처리합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--// container -->
+
+    @@include('./include/front/footer.html')
+
+  </div>
+  <!--// lay-body -->
+
+  <div class="popup-wrap" style="width: 470px;" id="diskIncModal">
+    <div class="popup-container">
+      <!-- header -->
+      <div class="popup-header">
+        <span class="popup-header-text">디스크 용량 신청</span>
+        <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+      </div>
+      <!-- content -->
+      <div class="popup-content">
+        <!-- popup-content-wrap -->
+        <div class="popup-content-wrap">
+          <div class="pop-inner-con">
+            <div class="disk-modal-view">
+				<div class="now-use-disk">
+					<div class="tit">현재 디스크 사용량</div>
+					<div class="disk-per"><b>20</b><span>%</span></div>
+				</div>
+				
+				<div class="track-wrap">
+					<div class="track-area" style="width: 100%;">
+						<div class="track" style="width: 100%;">
+							<div class="bg" style="width:50%;border-radius:5px;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="disk-volume">
+					<b>27</b>Gbyte/1TB
+				</div>
+			</div>
+
+			<div class="disk-inc-form">
+				<dl>
+					<dt>신청 용량</dt>
+					<dd>
+						<div class="g">
+							<input type="text" class="cs-input" title="용량 입력">
+							<select name="" id="" class="cs-input" title="용량 타입 선택">
+								<option value="">Mega/Gigi</option>
+							</select>
+						</div>
+					</dd>
+				</dl>	
+				<dl>
+					<dt>신청 사유</dt>
+					<dd>
+						<textarea class="cs-input"></textarea>
+					</dd>
+				</dl>	
+			</div>
+
+          </div>
+          <!-- footer -->
+          <div class="mypage-btn-group">
+            <button class="btn btn-3 width115" data-modal="closebtn">신청</button>
+            <button class="btn width115" data-modal="closebtn">취소</button>
+          </div>
+        </div>
+        <!-- popup-content-wrap -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+    
+    function diskIncModal(t){
+      uiModal.open({
+        elm:'diskIncModal',
+        bgBlock: true,
+        drag: false,
+        width: 450,
+        height: 'auto',
+      },t);
+    }
+  </script>
+
+</body>
+</html>

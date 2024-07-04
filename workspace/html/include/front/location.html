@@ -17,39 +17,38 @@
       </li>
       <li>
         <div class="cm-drop-select">
-          <button class="cm-drop-select_btn" type="button" id="drop">@@cate1</button>
+          <button class="cm-drop-select_btn" onClick="ui.dropSelector(this);" type="button" id="drop">@@cate1</button>
           <div>
             <ul>
               <li><a href="#">플랫폼 소개</a></li>
-              <li><a href="#">서비스 모델</a></li>
-              <li><a href="#">서비스 활용</a></li>
-              <li><a href="#">이용안내</a></li>
+              <li><a href="#">AI 서비스</a></li>
+              <li><a href="#">알림마당</a></li>
+              <li><a href="#">매뉴얼</a></li>
             </ul>
           </div>
         </div>
       </li>
       <li>
         <div class="cm-drop-select">
-          <button class="cm-drop-select_btn" type="button" id="drop2">@@cate2</button>
+          <button class="cm-drop-select_btn" onClick="ui.dropSelector(this);" type="button" id="drop2">@@cate2</button>
           <div>
             <ul>
               @@if(cate1 == '플랫폼 소개'){
-              <li><a href="#">서비스 소개</a></li>
-              <li><a href="#">서비스 로드맵</a></li>
+              <li><a href="#">플랫폼 개요</a></li>
               }
               @@if(cate1 == '서비스 활용'){
-              <li><a href="#">AI 활용 모델</a></li>
-              <li><a href="#">튜토리얼</a></li>
+              <li><a href="#">신규 모델 개발</a></li>
+              <li><a href="#">분석 서비스</a></li>
+              <li><a href="#">지도 서비스</a></li>
               }
-              @@if(cate1 == '이용안내'){
-              <li><a href="#">공지사항</a></li>
+              @@if(cate1 == '알림마당'){
+              <li><a href="#">뉴스·소식</a></li>
+              <li><a href="#">플랫폼 활용사례</a></li>
               <li><a href="#">자주 묻는 질문</a></li>
-              <li><a href="#">문의하기</a></li>
+              <li><a href="#">문의사항</a></li>
               }
-              @@if(cate1 == '정책'){
-              <li><a href="#">이용약관</a></li>
-              <li><a href="#">개인정보처리방침</a></li>
-              <li><a href="#">이메일무단수집거부</a></li>
+              @@if(cate1 == '매뉴얼'){
+              <li><a href="#">매뉴얼</a></li>
               }
             </ul>
           </div>
@@ -64,3 +63,7 @@
     }
   </div>
 </div>
+
+<script>
+  
+</script>

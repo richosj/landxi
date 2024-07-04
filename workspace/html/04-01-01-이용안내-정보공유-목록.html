@@ -7,7 +7,7 @@
   <div class="lay-body">
     @@include('./include/front/header.html')
 
-    @@include('./include/front/location.html',{cate1:'이용안내', cate2: '정보공유'})
+    @@include('./include/front/location.html',{cate1:'알림마당', cate2: '뉴스·소식'})
 
     <!-- container -->
     <div class="lay-container">
@@ -19,6 +19,11 @@
               <select class="board-search_input">
                 <option>유형 선택</option>
               </select>
+              <div class="cs-datepicker-set">
+                <input type="text" class="js__datepicker js__date-from cs-input-date front-date" placeholder="시작날짜" title="시작날짜">
+                <span> ~ </span>
+                <input type="text" class="js__datepicker js__date-to cs-input-date front-date" placeholder="종료날짜" title="종료날짜">
+              </div>
               <input type="text" class="board-search_input" placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
               <button class="board-search_btn">검색</button>
             </form>
@@ -65,6 +70,12 @@
               <!-- 선택옵션 등 -->
               <div class="board-extra">
                 <select class="cs-input cs-input-point">
+                  <option>기간선택</option>
+                  <option>오늘</option>
+                  <option>최근 일주일</option>
+                  <option>최근 한달</option>
+                </select>
+                <select class="cs-input cs-input-point">
                   <option>최신순</option>
                 </select>
                 <select class="cs-input cs-input-point">
@@ -95,7 +106,7 @@
                   @@for(var i = 10; i > 7; i--){
                   <tr>
                     <td class="tac">${i}</td>
-                    <td class="tac"><span class="fc-blue">공지</span></td>
+                    <td class="tac"><span class="fc-blue badge" style="color:#fff;background-color:#12baaf">공지사항</span></td>
                     <td class="item_list-title"><a href="#" class="cs-link-text"><span>Land-XI통합관리시스템 서비스 오픈</span></a></td>
                     <td class="tac">2024.03.31</td>
                     <td class="tac">
@@ -106,7 +117,7 @@
                   @@for(var i = 7; i > 0; i--){
                   <tr>
                     <td class="tac">${i}</td>
-                    <td class="tac">안내</td>
+                    <td class="tac"><span class="badge" style="color:#fff;background-color:#008fe9">자료공유</span></td>
                     <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내</span></a></td>
                     <td class="tac">2024.03.31</td>
                     <td class="tac">
@@ -116,7 +127,7 @@
                   }
                   <tr>
                     <td class="tac">${i}</td>
-                    <td class="tac">안내</td>
+                    <td class="tac"><span class="badge" style="color:#fff;background-color:#003b94">교육정보</span></td>
                     <td class="item_list-title"><a href="#" class="cs-link-text"><span>기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내기관 사용자 접속 장애 안내</span></a></td>
                     <td class="tac">2024.03.31</td>
                     <td class="tac">
@@ -125,7 +136,7 @@
                   </tr>
                   <tr>
                     <td class="tac">${i}</td>
-                    <td class="tac">안내</td>
+                    <td class="tac"><span class="badge" style="color:#fff;background-color:#535353">산업동향</span></td>
                     <td class="item_list-title">
                       첨부파일 아이콘들
                       <a href="#"><i class="cs-icon-file-hwp"></i></a>
@@ -150,7 +161,7 @@
           <!-- tabnav1 전체 -->
 
           <!-- tabnav2 공지사항 -->
-          <div data-toggle-id="tabnav2">
+          <div data-toggle-id="tabnav2" class="toggle-hidden">
             <div class="board-list-header">
               <!-- 게시물 갯수 등 -->
               <div class="board-stat">
@@ -159,6 +170,12 @@
 
               <!-- 선택옵션 등 -->
               <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>기간선택</option>
+                  <option>오늘</option>
+                  <option>최근 일주일</option>
+                  <option>최근 한달</option>
+                </select>
                 <select class="cs-input cs-input-point">
                   <option>최신순</option>
                 </select>
@@ -239,7 +256,7 @@
           <!-- tabnav2 공지사항-->
 
           <!-- tabnav3 자리공유-->
-          <div data-toggle-id="tabnav3">
+          <div data-toggle-id="tabnav3" class="toggle-hidden">
             <div class="board-list-header">
               <!-- 게시물 갯수 등 -->
               <div class="board-stat">
@@ -248,6 +265,12 @@
 
               <!-- 선택옵션 등 -->
               <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>기간선택</option>
+                  <option>오늘</option>
+                  <option>최근 일주일</option>
+                  <option>최근 한달</option>
+                </select>
                 <select class="cs-input cs-input-point">
                   <option>최신순</option>
                 </select>
@@ -328,7 +351,7 @@
           <!-- tabnav3 자리공유-->
 
           <!-- tabnav4 교육정보-->
-          <div data-toggle-id="tabnav4">
+          <div data-toggle-id="tabnav4" class="toggle-hidden">
             <div class="board-list-header">
               <!-- 게시물 갯수 등 -->
               <div class="board-stat">
@@ -337,6 +360,12 @@
 
               <!-- 선택옵션 등 -->
               <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>기간선택</option>
+                  <option>오늘</option>
+                  <option>최근 일주일</option>
+                  <option>최근 한달</option>
+                </select>
                 <select class="cs-input cs-input-point">
                   <option>최신순</option>
                 </select>
@@ -417,7 +446,7 @@
           <!-- tabnav4 교육정보-->
 
           <!-- tabnav5 산업동향-->
-          <div data-toggle-id="tabnav5">
+          <div data-toggle-id="tabnav5" class="toggle-hidden">
             <div class="board-list-header">
               <!-- 게시물 갯수 등 -->
               <div class="board-stat">
@@ -426,6 +455,12 @@
 
               <!-- 선택옵션 등 -->
               <div class="board-extra">
+                <select class="cs-input cs-input-point">
+                  <option>기간선택</option>
+                  <option>오늘</option>
+                  <option>최근 일주일</option>
+                  <option>최근 한달</option>
+                </select>
                 <select class="cs-input cs-input-point">
                   <option>최신순</option>
                 </select>

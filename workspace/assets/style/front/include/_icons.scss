@@ -50,6 +50,7 @@ a, button{
 @include var.setIcon('cs-icon-attach',18,18,'#{var.$image}/front/icon_attch.png');
 @include var.setIcon('cs-icon-preview',18,18,'#{var.$image}/front/icon_preview.png');
 @include var.setIcon('cs-icon-down',18,18,'#{var.$image}/front/icon_down.png');
+@include var.setIcon('cs-icon-my',16,18,'#{var.$image}/front/icon_my.png');
 
 .cs-icon-req{
   font-style: normal;color: #18c5f0;font-size: 16px;

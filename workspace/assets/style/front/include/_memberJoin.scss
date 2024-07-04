@@ -1,5 +1,5 @@
 @use 'var';
-
+@use "sass:math";
 .step-nav{
   @include var.listReset('ul');
   margin: 0 40px;
@@ -222,4 +222,206 @@
   .cons-btns{
     margin-top: 25px;
   }
+}
+
+/*
+  그리드 시스템
+*/
+$cols: 12;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  .col {
+    min-height: 1px;
+    box-sizing: border-box;
+    border: 1px solid #e0e4e7;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 32px 35px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+
+  @for $i from 1 to 12 {
+    $d: ($i - 1);
+
+    .col-#{$i} {
+      width: calc((math.div($i, 12) * 100%) - ($i*12px)/$d);
+    }
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+  .padding-0 {
+    padding: 0;
+  }
+
+  .border-dashed {
+    border-style: dashed;
+  }
+
+  @media (max-width:1780px) {
+    @for $i from 1 to 13 {
+      $d: ($i - 1);
+
+      .col-lg-#{$i} {
+        width: calc((math.div($i, 12) * 100%) - ($i*12px)/$d);
+      }
+    }
+
+    .col-lg-12 {
+      width: 100%;
+    }
+  }
+}
+
+.col.disk-view{
+  background-color: #edf1f4;
+  .col-header h3{
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  .track-wrap{
+      padding: 0;
+  }
+}
+.disk-per{
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+  transform: translateY(-12px);
+  padding-bottom: 10px;
+  b{
+      color: #2149a6;
+      font-size: 36px;
+  }
+  span{
+      color: #202432;
+      font-size: 18px;
+      display: block;
+      transform: translateY(-5px);
+  }
+}
+.disk-inc-button{
+  button{
+      display: block;
+      width: 100%;
+      height: 45px;
+      font-size: 16px;
+  }
+}
+.disk-volume{
+  text-align: right;
+  color: #666;
+  font-size: 14px;
+  padding: 12px 0 18px;
+  b{
+      color: #2149a6;
+  }
+}
+.disk-modal-view{
+  background-color: #edf1f4;
+  border: 1px solid #e0e4e7;
+  border-radius: 10px;
+  padding: 20px;
+  .track-wrap{
+      padding: 0;
+      border-radius: 0;
+      margin-top: 12px;
+      margin-bottom: 7px;
+  }
+  .disk-volume{
+      padding: 0;
+  }
+}
+.now-use-disk{
+  display: flex;
+  justify-content: space-between;
+  .tit{
+      font-weight: 700;
+      font-size: 18px;
+  }
+  .disk-per{
+      transform: translateY(0);
+  }
+}
+
+.disk-inc-form{
+  padding-top: 25px;
+  dl{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      +dl{
+          margin-top: 15px;
+      }
+      dt{
+          font-weight: 400;
+          width: 80px;
+      }
+      dd{
+          width: calc(100% - 80px);
+          margin: 0;
+          .g{
+              display: flex;
+              align-items: center;
+              gap: 0 8px;
+              .cs-input{
+                  width: calc(50% - 4px);
+              }
+          }
+          textarea{
+              width: 100%;
+              height: 90px;
+              
+          }
+      }
+  }
+}
+
+.mypage-btn-group{
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0 10px;
+  button{
+    background: none;
+    display: inline-block;
+    border: 0;
+    padding: 0 23px;
+    height: 44px;
+    border: 1px solid #8d9096;
+    border-radius: 3px;
+    color: #8d9096;
+    font-size: 16px;
+    transition: all 0.25s;
+    &.btn-3{
+      border-color: #033272;
+      background-color: #033272;
+      color: #fff;
+    }
+  }
+}
+.col-gra-border{
+  height: 420px;
+  overflow-y: auto;
+}
+
+.btn-gradient {
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #027aeb), color-stop(0.99, #18c5f0));
+  background: -moz-linear-gradient(left, #027aeb 0%, #18c5f0 99%);
+  background: -webkit-linear-gradient(left, #027aeb 0%, #18c5f0 99%);
+  background: -o-linear-gradient(left, #027aeb 0%, #18c5f0 99%);
+  background: -ms-linear-gradient(left, #027aeb 0%, #18c5f0 99%);
+  background: linear-gradient(left, #027aeb 0%, #18c5f0 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#027aeb', endColorstr='#18c5f0', gradientType=1);
 }

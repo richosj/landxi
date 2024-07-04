@@ -1,4 +1,4 @@
-const ui = {};
+let ui = {};
 
 
 ui.dropSelector = function(btn){
@@ -341,3 +341,416 @@ ui.toggle = function(toggleID, action, btn, opt){
       }
   }
 }
+
+
+var uiModal = {};
+// jQuery(function() {
+  // modal open
+  uiModal.layout = function(opt){
+    console.log('%clayout', 'color: blue');
+    var ct
+    ct = {
+      title: '알림',
+      type: 'default',
+      width: 500,
+      xbtn: true,
+    }
+
+    if(opt.type && opt.type == 'alert'){
+      ct = {
+        title: '알림',
+        type: 'default',
+        width: 300,
+        xbtn: 240,
+      } 
+    }
+
+    $.extend(ct, opt);
+
+    var temp = `
+    <div class="popup-wrap" style="max-width: ${ct.width}px">
+      <div class="popup-container">
+        <!-- header -->
+        <div class="popup-header">
+          <span class="popup-header-text">${ct.title}</span>
+          <button type="button" class="popup-header-cancle" data-modal="closebtn">모달 닫기</button>
+        </div>
+        <!-- content -->
+        <div class="popup-content">
+          <!-- popup-content-wrap -->
+          <div class="popup-content-wrap">
+            <div class="pop-inner-con">
+              ${ct.content}
+            </div>
+            <!-- footer -->
+            <div class="popup-footer"></div>
+          </div>
+          <!-- popup-content-wrap -->
+        </div>
+      </div>
+    </div>
+    `;
+    
+    var modal = $(temp);
+
+    // 타입 설정
+    if(ct.type) modal.addClass('modal-type-' + ct.type);
+
+    // 클래스 추가
+    if(ct.cssClass && ct.cssClass.length > 0){
+      modal.addClass(ct.cssClass.join(' '));
+    }
+    
+    // x 버튼
+    if(!ct.xbtn) modal.find('.popup-header-cancle').remove();
+
+    // 높이
+    if(ct.height){
+      modal.find('.popup-content-wrap').css({
+        'height': ct.height,
+        'max-height': 'none',
+    });
+    }
+    
+    var modalFooter = modal.find('.popup-footer');
+    // 버튼
+    var btnConfirm = $('<button class="confirm-btn btn btn_primary" data-modal="closebtn">확인</button>');
+    var btnCancel = $('<button class="cancle-btn btn btn_default-outline" data-modal="closebtn">취소</button>');
+    if(!ct.footerBtns){
+      if(ct.cancel){
+        if(ct.cancel.text) btnCancel.text(ct.cancel.text);
+        if(!ct.cancel.close) btnCancel.removeAttr('data-modal');
+        if(ct.cancel.done) btnCancel.on('click', function(){ ct.cancel.done() });
+
+        modalFooter.append(btnCancel);
+      }
+      
+      if(ct.confirm){
+        if(ct.confirm.text) btnConfirm.text(ct.confirm.text);
+        if(!ct.confirm.close) btnConfirm.removeAttr('data-modal');
+        if(ct.confirm.done) btnConfirm.on('click', function(){ ct.confirm.done() });
+
+        modalFooter.append(btnConfirm);
+      }
+
+      if(!ct.confirm && !ct.cancel){
+        modalFooter.append(btnConfirm);
+      }
+    }else if(ct.footerBtns && ct.footerBtns.length > 0){
+      $.each(ct.footerBtns, function(idx,elm){
+        modalFooter.append(elm);
+      });
+    }
+
+    if(ct.footerBtns === false){
+      modalFooter.remove();
+    }
+
+    // 아이디
+    if(ct.elm){
+      console.log(modal);
+      modal.attr('id',ct.elm);
+    }
+
+    return modal;
+  }
+  
+  uiModal.getIndex = function(){
+    var zIndex = 100000;
+    $('.popup-wrap.modal-active').each(function(){
+      if(zIndex < Number($(this).css('z-index'))){
+        zIndex = Number($(this).css('z-index'));
+      }
+    });
+
+    return zIndex+1;
+  }
+  
+  uiModal.getElm = function(elmName) {
+    return $('#' + elmName);
+  }
+
+  uiModal.open = function(opt, cbtn) {
+    console.log('%cuiModal.open', 'background:blue;color:#fff');
+
+    var modal;
+    var cbtn = $(cbtn);
+
+    if(opt.type != 'alert'){
+      opt.width = !opt.width ? 1100 : opt.width;
+    }
+    // opt.height = !opt.height ? 560 : opt.height;
+    
+    if(uiModal.getElm(opt.elm).length > 0){
+      modal = uiModal.getElm(opt.elm);
+    }else{
+      if(opt.content){
+        modal = uiModal.layout(opt);
+        $('body').append(modal);
+      }
+    }
+
+    if(opt.callBack && opt.callBack.init){
+      opt.callBack.init();
+    }
+
+    var pLeft;
+    var pTop;
+
+    opt.position = opt.position ? opt.position : 'center';
+
+    console.log('%ccreate', 'color: red');
+    if (typeof opt.position.target == 'object') {
+      var clickBtn = $(opt.position.target);
+      pLeft = Math.round(clickBtn.offset().left + clickBtn.outerWidth()) + 10;
+      pTop = Math.round(clickBtn.offset().top);
+      if (opt.position.left) {
+        pLeft = Math.round(clickBtn.offset().left + clickBtn.outerWidth()) + opt.position.left;
+      }
+      if (opt.position.top) {
+        pTop = Math.round(clickBtn.offset().top) + opt.position.top;
+      }
+    } else if (opt.position == 'center') {
+      pLeft = 'calc(50% - ' + modal.outerWidth() / 2 + 'px)';
+      pTop = Math.round($('html').scrollTop() + window.innerHeight/2 - modal.outerHeight() / 2);
+      // pTop = 'calc(50% - ' + modal.outerHeight() / 2 +'px)';
+    } else {
+      pLeft = opt.position.left;
+      pTop = opt.position.top;
+    }
+
+    modal.css({
+      left: pLeft,
+      top: pTop,
+    });
+
+    // zIndex 이벤트 추가
+    modal.click(function(event){
+      if(event.target.nodeName != 'BUTTON' && event.target.nodeName != 'A'){
+        modal.css('z-index',uiModal.getIndex());
+      }
+      // if($('.newmodal').length > 0){
+      //   $('.newmodal').css('z-index', uiModal.getIndex());
+      //   $('.newmodal').removeClass('newmodal');
+      // }
+    });
+
+    var bgBlock = $('<div data-modal="bg" style="background:rgba(0,0,0,.5);position:fixed;left:0;top:0;width:100%;height:100%;display:none;"></div>');
+
+    // 닫기이벤트 추가
+    modal.find('[data-modal=closebtn]').on('click', function(){
+      uiModal.close(this, cbtn);
+      bgBlock.fadeOut();
+      $('html,body').css('overflow','');
+    });
+
+    // 모달 열기
+    modal.addClass('modal-active');
+
+    if(opt.callBack && opt.callBack.before){
+      opt.callBack.before();
+    }
+
+    modal.css({
+      display: 'block',
+      zIndex: uiModal.getIndex(250),
+    });
+    modal.attr('tabindex', 0);
+    modal.focus();
+
+    if(opt.callBack && opt.callBack.after){
+      opt.callBack.after();
+    }
+
+    if(opt.bgBlock){
+      bgBlock.css('z-index', modal.css('z-index'));
+      $('html,body').css('overflow','hidden');
+      modal.before(bgBlock);
+      bgBlock.fadeIn(250);
+    }
+
+    $('.popup-wrap').removeClass('newmodal');
+    modal.addClass('newmodal');
+
+    // 드래그설정
+    if (typeof opt.drag == 'undefined' || opt.drag == true) {
+      modal.draggable({
+        handle: '.popup-header',
+      });
+      modal.find('.popup-header').css('cursor', 'move');
+    } else {
+      modal.find('.popup-header').css('cursor', 'default');
+    }
+
+    // XXX 테스트용
+    modal.find('input[type=text], select').each(function(){
+      if(!$(this).attr('title')){
+        $(this).css('border', '1px solid red');
+      }
+    });
+
+  $('*').on('focus', function(){
+    console.log('a');
+    console.log('%c'+$(this).text(),'color:#000');
+  });
+  }
+
+  // 모달닫기
+  /**
+   * @param {element} elm
+   */
+  uiModal.close = function(elm,cbtn) {
+    var obj;
+    if (typeof elm == 'object') {
+      obj = $(elm).closest('.popup-wrap');
+    } else {
+      obj = uiModal.getElm(elm);
+    }
+
+    if(cbtn) cbtn.focus();
+
+    if(!elm) obj = $('.modal-active');
+    obj.css('display', 'none');
+    obj.removeClass('modal-active');
+
+    $('[data-modal="bg"]').fadeOut(250);
+    $('html, body').css('overflow','');
+  }
+
+  uiModal.templete = function(type,text){
+    console.log('%ctemplete', 'color: red');
+    var templayout;
+
+    var alertLayout = function(icon,text){
+      var output =`<div class="modal-alert-templete">
+        <i class="cs-icon-${icon}">오류</i>
+        <div>${text}</div>
+        </div>`;
+      return output;
+    }
+
+    if(type == 'alertError') templayout = alertLayout('error', text);
+    if(type == 'alertAlert') templayout = alertLayout('alert', text);
+    if(type == 'alertWarning') templayout = alertLayout('warning', text);
+    if(type == 'alertcSuccess') templayout = alertLayout('success', text);
+    if(type == 'alertInfo') templayout = alertLayout('info', text);
+    return templayout;
+  }
+// });
+
+jQuery(function($){
+	// var datepicker = $("#datepicker");
+	if(!$.datepicker) return false;
+	var datePicker;
+	
+	var dateInit = function(){
+		$.datepicker.setDefaults({
+			dateFormat: 'yy-mm-dd',
+			prevText: '이전 달',
+			nextText: '다음 달',
+			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			dayNames: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+			dayNamesShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+			dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+			showMonthAfterYear: true,
+			changeYear: false,
+			yearSuffix: '년',
+		});
+	}
+
+	var dateRange = function(){
+		var dateRangSet = $('.cs-datepicker-set');
+		dateRangSet.each(function(){
+			var row = $(this);
+			var from = row.find('.js__date-from');
+			var to = row.find('.js__date-to');
+
+			// from.datepicker("setDate",new Date());
+			// to.datepicker("setDate","+ 1w");
+
+			from.datepicker({
+			}).on( "change", function() {
+				// console.log('나 바꼈다');
+				to.datepicker( "option", "minDate", getDateRang( this ) );
+			});
+
+			to.datepicker({
+			}).on( "change", function() {
+				from.datepicker( "option", "maxDate", getDateRang( this ) );
+			});
+
+		});
+	}
+
+	function getDateRang( element ) {
+		var date;
+		try {
+			date = $.datepicker.parseDate( "yy-mm-dd", element.value );
+		} catch( error ) {
+			date = null;
+		}
+
+		return date;
+	}
+
+	
+
+	var init = function(){
+		//datepicker 한글설정
+		dateInit();
+
+		$('.js__datepicker').datepicker({
+			changeMonth: false,
+			changeYear: false,
+		});
+
+		$('.modal-calendar').on('click',function(){
+		});
+		
+		dateRange();
+	}
+
+	init();
+
+	$('.modal-datepicker_close, .modal-datepicker_wrap').click(function(){
+			$('.modal-datepicker').hide();
+	});
+	
+	$('.datepicker').click(function(e){
+			e.stopPropagation();
+	});
+
+	//date
+	getDate = function(date){
+		if(!date) date = new Date();
+		var y = date.getFullYear();
+				m = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1;
+				d = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+
+				return y + '-' + m + '-' + d;
+	}
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.lay-gnb-item');
+  const contents = document.querySelectorAll('.gnb_bread_con');
+
+  tabs.forEach(tab => {
+      tab.addEventListener('mouseenter', function () {
+        tabs.forEach(tab => tab.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+
+        tab.classList.add('active');
+        const target = document.getElementById(tab.getAttribute('data-target'));
+        target.classList.add('active');
+      });
+
+      tab.addEventListener('mouseleave', function () {
+        tab.classList.remove('active');
+        const target = document.getElementById(tab.getAttribute('data-target'));
+        target.classList.remove('active');
+      });
+    });
+});

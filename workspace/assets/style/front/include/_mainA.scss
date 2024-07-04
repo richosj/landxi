@@ -91,6 +91,9 @@
 .lay-header.v3.gnb-open .cs-icon-lock {
   background-image: url("../../images/main/icon-lock-black.png") !important;
 }
+.lay-header.v3.gnb-open .cs-icon-my {
+  background-image: url("../../images/main/icon-my-black.png") !important;
+}
 .lay-header.v3{
   .lay-logo{
     width: 314px;
@@ -123,6 +126,9 @@
 .lay-header.v3:not(.gnb-open) .cs-icon-lock {
   background-image: url("../../images/main/icon-lock-white.png");
 }
+.lay-header.v3:not(.gnb-open) .cs-icon-my {
+  background-image: url("../../images/main/icon-my.png");
+}
 
 .lay-header.v3 {
   .btn-login,
@@ -152,7 +158,8 @@
 }
 
 .lay-header.v3:not(.gnb-open) .btn-login,
-.lay-header.v3:not(.gnb-open) .btn-sitemap {
+.lay-header.v3:not(.gnb-open) .btn-sitemap,
+.lay-header.v3:not(.gnb-open) .btn-my {
   color: #fff;
   font-weight: 400;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -163,7 +170,8 @@
 }
 
 .lay-header.v3:not(.gnb-open) .btn-login::after,
-.lay-header.v3:not(.gnb-open) .btn-sitemap::after {
+.lay-header.v3:not(.gnb-open) .btn-sitemap::after,
+.lay-header.v3:not(.gnb-open) .btn-my::after {
   display: none;
 }
 
@@ -186,6 +194,9 @@
 
 .lay-header.v3:not(.gnb-open).black .cs-icon-lock {
   background-image: url("../../images/main/icon-lock-black.png");
+}
+.lay-header.v3:not(.gnb-open).black .cs-icon-my {
+  background-image: url("../../images/main/icon-my-black.png");
 }
 
 .lay-header.v3:not(.gnb-open).black .cs-icon-menu span {
@@ -210,7 +221,8 @@
 
 .lay-header.v3:not(.gnb-open).black .btn-login,
 .lay-header.v3:not(.gnb-open).black .btn-sitemap,
-.lay-header.v3:not(.gnb-open).black .btn-bulb {
+.lay-header.v3:not(.gnb-open).black .btn-bulb,
+.lay-header.v3:not(.gnb-open).black .btn-my {
   color: #000;
   border: 1px solid #cfcfcf;
 }
@@ -221,7 +233,8 @@
 }
 .lay-header.v3:not(.gnb-open) .btn-login,
 .lay-header.v3:not(.gnb-open) .btn-sitemap,
-.lay-header.v3:not(.gnb-open) .btn-bulb{border: 1px solid #697685;}
+.lay-header.v3:not(.gnb-open) .btn-bulb,
+.lay-header.v3:not(.gnb-open) .btn-my{border: 1px solid #697685;}
 .lay-sitemap .lay-sitemap_bg1, .lay-sitemap .lay-sitemap_bg2{
   background-image: none;
 }
@@ -230,11 +243,13 @@
     opacity: 1;
   }
   .btn-login,
-  .btn-sitemap{
+  .btn-sitemap,
+  .btn-my{
     color: #091634;
     font-weight: 400;
   }
-  .btn-login{
+  .btn-login,
+  .btn-my{
     &::after{
       border: 1px solid #bbb;
     }
@@ -1050,7 +1065,7 @@
   line-height: 1;
   padding: 0;
   margin: 0;
-  
+  margin-bottom: 50px;
 }
 
   .s2-tpl{
@@ -1405,7 +1420,7 @@
 }
 .section-4 .tabs-cont {
   display: none;
-  height: 325px;
+  min-height: 325px;
 }
 
 .section-4 .tabs-cont.show {
@@ -1800,6 +1815,10 @@
   appearance: none;
 }
 
+.footer-content-1 .family select option{
+  background: #000;
+}
+
 .footer-content-1 .family select ::-ms-expand {
   display: none;
 }
@@ -1980,6 +1999,13 @@ body.mobile .section-4 {
         }
       }
     }
+    .btn-my{
+      i{
+        &.cs-icon-my {
+          background-image: url(../../images/main/icon-my-black.png);
+        }
+      }
+    }
     .btn-sitemap{
       background: #fff;
       color: #091634;
@@ -2044,6 +2070,7 @@ body.mobile .section-4 {
     }
     .btn-group{
       display: flex;
+      justify-content: center;
       gap:0 15px;
       margin-top: 60px;
       button{
@@ -2297,4 +2324,52 @@ body.mobile .section-4 {
     opacity: 0;
     transform: translateY(100%);
   }
+}
+
+
+.gnb_bread{
+  
+}
+
+.gnb_bread_con{
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 335px;
+  height: 120px;
+  background: #fff;
+  border-radius:40px 40px 40px 0;
+  padding: 0 30px;
+  .gnb-bread-ti{
+    font-size: 18px;
+    color:#033272;
+    margin: 23px 0 15px;
+    text-align: center;
+    &:before{
+      width: 33px;
+      height: 14px;
+      display: inline-block;
+      content:'';
+      background: url("../../images/front/tip_ico.png") no-repeat 0 0;
+      margin-right: 5px;
+    }
+  }  
+  p{
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  i{
+    position: absolute;
+    left: -75px;
+    top: 45px;
+    width: 110px;
+    height: 140px;
+    display: block;
+    background: url("../../images/front/gnb_txt_img.png") no-repeat 0 0;
+  }
+}
+.gnb_bread_con.active {
+  display: block;
 }

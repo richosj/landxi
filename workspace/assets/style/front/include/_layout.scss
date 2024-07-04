@@ -133,7 +133,8 @@ $pub: true;
 }
 
 // 로그인 로그아웃버튼
-.btn-login{
+.btn-login,
+.btn-my{
   border-radius: 8px;
   height: 40px;box-sizing: border-box;
   font-size: 16px;
@@ -835,7 +836,7 @@ $pub: true;
       background:url('#{var.$image}/front/logo_pink.png');
     }
   }
-  .btn-login, .btn-sitemap{
+  .btn-login, .btn-sitemap, .btn-my{
     color: #d13f6c;
     &::after{
       background: linear-gradient(90deg, rgba(210,83,134,1) 0%, rgba(76,98,199,1) 100%) border-box;
@@ -985,4 +986,7 @@ $pub: true;
   margin-left: 10px;
   color:#888888;
 
+}
+.max-width{
+  min-width: 1390px;
 }

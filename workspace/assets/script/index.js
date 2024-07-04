@@ -113,26 +113,26 @@ if (monitorDiv.classList.contains("lx-monitor")) {
     {
       number: "01",
       link: "#",
-      title: "불법쓰레기 탐지",
-      text: "식별되는 객체들의 위치와 관계 분석을 통한<br>공간정보를 문장(텍스트)으로 보여줍니다.",
+      title: "방치쓰레기 탐지",
+      text: "불법으로 버려진 쓰레기를 신속하게 탐지함으로써 환경보호와<br>위생 개선, 공공 안전 향상에 기여하기 위한 서비스입니다.",
     },
     {
       number: "02",
       link: "#",
       title: "리싸이클링 자원 탐지",
-      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+      text: "건설폐재류 등 7종의 재활용률이 높은 자원을 탐지하여<br> 재활용 자원의 수거율을 증대시키고<br> 지역 환경 문제를 개선하기 위한 서비스입니다.",
     },
     {
       number: "03",
       link: "#",
       title: "개발제한구역 불법행위 탐지",
-      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+      text: "국토환경 보호를 위해 관리되는 개발제한구역에서 발생하는<br> 불법 행위를 탐지하는 서비스입니다.",
     },
     {
       number: "04",
       link: "#",
       title: "재난 피해 객체 탐지",
-      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+      text: "재난 발생 시 신속한 피해상황 파악 및 의사결정<br> 지원을 위한 서비스입니다.",
     },
   ];
 } else if (monitorDiv.classList.contains("namwon-monitor")) {
@@ -140,20 +140,20 @@ if (monitorDiv.classList.contains("lx-monitor")) {
     {
       number: "01",
       link: "#",
-      title: "불법 쓰레기 탐지",
-      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+      title: "영농폐기물 탐지",
+      text: "영농 후 버려진 쓰레기를 신속하게 탐지함으로써 환경보호와<br> 산불방지, 환경개선에 기여하기 위한 서비스입니다.",
     },
     {
       number: "02",
       link: "#",
-      title: "불법소각",
-      text: "식별되는 객체들의 위치와 관계 분석을 통한<br> 공간정보를 문장(텍스트)으로 보여줍니다.",
+      title: "불법소각 탐지",
+      text: "불법 소각장을 탐지하여 환경보호와 산불 예방 등<br>효율적인 단속과 대형화재 관리를 위한 서비스입니다.",
     },
     {
       number: "03",
       link: "#",
-      title: "방치폐가",
-      text: "식별되는 객체들의 위치와 관계 분석을 통한<br>공간정보를 문장(텍스트)으로 보여줍니다.",
+      title: "방치폐가 탐지",
+      text: "방치된 폐가를 탐지하여 빈집정비 사업을 지원하고<br> 석면 폐가를 관리하여 주거환경 개선을 위한 서비스입니다.",
     },
 
   ];
@@ -193,19 +193,21 @@ const s2Swiper = new Swiper(".section-2 .swiper", {
 s2Swiper.on("slideChange", function () {
   let html = `
     <div class="tit" style="--delay:0.25s">Land-XI 분석 서비스</div>
-    <div class="link" style="--delay:0.55s"><a href="${
-      s2Array[this.realIndex].link
-    }">분석 서비스 바로가기<i>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" aria-hidden="true">
-                    <image x="0px" y="0px" width="16px" height="16px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAJNAVXy/7nAAAATElEQVQoz4XQSQ4AIAgEwYH//xkPboAMcjKplhjFsOYc4ig+I8bE+g3nnjYsLHBcBYHfIHEOHo5BwT4o+QaE909SnhsaBrTn/QbKwAAvBhEZ9MuJewAAAABJRU5ErkJggg=="></image>
-                </svg>
-            </i></a></div>
+    
     <div class="s-tit"  style="--delay:0.85s"><span class="num">${
       s2Array[this.realIndex].number
     }</span><b>${s2Array[this.realIndex].title}</b></div>
     <div class="txt"  style="--delay:1.15s">${
       s2Array[this.realIndex].text
     }</div>`;
+
+    // <div class="link" style="--delay:0.55s"><a href="${
+    //   s2Array[this.realIndex].link
+    // }">분석 서비스 바로가기<i>
+    //             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" aria-hidden="true">
+    //                 <image x="0px" y="0px" width="16px" height="16px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoBBAJNAVXy/7nAAAATElEQVQoz4XQSQ4AIAgEwYH//xkPboAMcjKplhjFsOYc4ig+I8bE+g3nnjYsLHBcBYHfIHEOHo5BwT4o+QaE909SnhsaBrTn/QbKwAAvBhEZ9MuJewAAAABJRU5ErkJggg=="></image>
+    //             </svg>
+    //         </i></a></div>
 
   document.querySelector(".s2-tpl").classList.remove("first-active");
   document.querySelector(".s2-tpl").innerHTML = html;
